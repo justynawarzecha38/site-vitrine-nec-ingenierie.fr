@@ -1,0 +1,196 @@
+/* ===========================
+ * MARGINS
+ * =========================== */
+.mt-30 { margin-top: 30px !important; }
+.mt-35 { margin-top: 35px !important; }
+.mt-40 { margin-top: 40px !important; }
+.mt-45 { margin-top: 45px !important; }
+.mt-60 { margin-top: 60px !important; }
+.mt-80 { margin-top: 80px !important; }
+
+.mb-30 { margin-bottom: 30px !important; }
+.mb-35 { margin-bottom: 35px !important; }
+.mb-40 { margin-bottom: 40px !important; }
+.mb-45 { margin-bottom: 45px !important; }
+.mb-60 { margin-bottom: 60px !important; }
+.mb-80 { margin-bottom: 80px !important; }
+
+/* ===========================
+ * OVERFLOW
+ * =========================== */
+@media (min-width: 992px) {
+    .overflow-lg-hidden {
+        overflow: hidden !important;
+    }
+}
+
+/* ===========================
+ * FLEXBOX
+ * =========================== */
+.flex-column-nowrap {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.flex-inline-column-nowrap {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.flex-adapt-height {
+    flex: 1 1 auto;
+    min-height: 1px;
+    width: 100%;
+}
+.flex-adapt-width {
+    flex: 1 1 auto;
+    min-width: 1px;
+}
+.flex-scrollable {
+    height: 0;
+    overflow-y: auto;
+}
+
+/* ===========================
+ * ASPECT RATIO
+ * =========================== */
+[style*="--aspect-ratio"] > :first-child {
+    width: 100%;
+}
+[style*="--aspect-ratio"] > img {
+    height: auto;
+}
+@supports (--custom:property) {
+    [style*="--aspect-ratio"] {
+        position: relative;
+    }
+    [style*="--aspect-ratio"]::before {
+        content: "";
+        display: block;
+        padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }
+    [style*="--aspect-ratio"] > :first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    /* ASPECT RATIO */
+    [style*="--md-aspect-ratio"] > :first-child {
+        width: 100%;
+    }
+    [style*="--md-aspect-ratio"] > img {
+        height: auto;
+    }
+    @supports (--custom:property) {
+        [style*="--md-aspect-ratio"] {
+            position: relative;
+        }
+        [style*="--md-aspect-ratio"]::before {
+            content: "";
+            display: block;
+            padding-bottom: calc(100% / (var(--md-aspect-ratio)));
+        }
+        [style*="--md-aspect-ratio"] > :first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+    }
+}
+
+/* ASPECT RATIO WITH OVERFLOW */
+[style*="--rel-aspect-ratio"]::before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-bottom: calc(100% / (var(--rel-aspect-ratio)));
+}
+[style*="--rel-aspect-ratio"]::after { /* to clear float */
+    content: "";
+    display: table;
+    clear: both;
+}
+/* ===========================
+ * WHITE SPACE
+ * =========================== */
+.ws-nowrap { white-space: nowrap; }
+
+/* ===========================
+ * IMAGE OBJECT FIT
+ * =========================== */
+.img-cover {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.img-contain {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ===========================
+ * MULTILINE TRUNCATE
+ * =========================== */
+.line-clamp {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp[data-limit="2"] { -webkit-line-clamp: 2; }
+.line-clamp[data-limit="3"] { -webkit-line-clamp: 3; }
+.line-clamp[data-limit="4"] { -webkit-line-clamp: 4; }
+.line-clamp[data-limit="5"] { -webkit-line-clamp: 5; }
+.line-clamp[data-limit="6"] { -webkit-line-clamp: 6; }
+
+
+/* ===========================
+ * COLORS
+ * =========================== */
+.text-white { color: white !important; }
+.text-primary { color: var(--primary-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.text-secondary { color: var(--secondary-color) !important; }
+.bg-secondary { background-color: var(--secondary-color) !important; }
+.text-tertiary { color: var(--tertiary-color) !important; }
+.bg-tertiary { background-color: var(--tertiary-color) !important; }
+.text-quaternary { color: var(--quaternary-color) !important; }
+.bg-quaternary { background-color: var(--quaternary-color) !important; }
+.text-quinary { color: var(--quinary-color) !important; }
+.bg-quinary { background-color: var(--quinary-color) !important; }
+.text-senary { color: var(--senary-color) !important; }
+.bg-senary { background-color: var(--senary-color) !important; }
+
+/* ===========================
+ * SCROLL SHADOW
+ * =========================== */
+.scroll-shadow-h {
+    background:
+            linear-gradient(90deg, white 0%, rgba(255,255,255,0)),
+            linear-gradient(-90deg, white 0%, rgba(255,255,255,0)) 100% 0,
+            radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
+            radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 100% 0%;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 100px 100%, 100px 100%, 14px 100%, 14px 100%;
+    background-attachment: local, local, scroll, scroll;
+}
+.scroll-shadow-v {
+    background:
+            linear-gradient(white 30%, hsla(0,0%,100%, 0)),
+            linear-gradient(hsla(0,0%,100%,0) 10px, white 70%) bottom,
+            radial-gradient(at top, rgba(0,0,0,0.2), transparent 70%),
+            radial-gradient(at bottom, rgba(0,0,0,0.2), transparent 70%) bottom;
+    background-repeat: no-repeat no-repeat;
+    background-color: #fff;
+    background-size: 100% 20px, 100% 20px, 100% 10px, 100% 10px;
+    background-attachment: local, local, scroll, scroll;
+}

@@ -1,0 +1,17 @@
+:root {
+    --standard-easing: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --decelerate-easing: cubic-bezier(0.0, 0.0, 0.2, 1);
+    --accelerate-easing: cubic-bezier(0.4, 0.0, 1, 1);
+    --primary-color: #3FB1E1;
+    --secondary-color: #003F65;
+    --tertiary-color: #1C3D9B;
+    --quaternary-color: #0090D2;
+    --quinary-color: #0065AD;
+    --senary-color: #0087A8;
+    --navbar-height: 60px;
+}
+@media (min-width: 992px) {
+    :root {
+        --navbar-height: 78px
+    }
+}
