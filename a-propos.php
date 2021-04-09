@@ -66,14 +66,24 @@
                         <?php endforeach; ?>
                     </ul>
                 </div>
-                <div class="text-center">
+                <!--div class="text-center">
                     <p class="page-section-block">Nos Techniciens sont qualifiés 8711 par Qualibat
                         <br>afin de réaliser les mesures de perméabilité à l’air et sont certifiés DPE par l’AFNOR.
                         <br>
-                        <br>Grâce à nos 8 agences régionales, les techniciens peuvent intervenir sur
+                        <br>Grâce à nos 8 agences régionales, les Techniciens peuvent intervenir sur
                         <br>tout le territoire national sur vos chantiers de maisons individuelles, logements collectifs
                         <br>mais également sur vos réalisations tertiaires, en neuf ou en rénovation.</p>
-                        <!--a href="#!" class="btn btn-primary tlink tsize-small text-uppercase text-white">En savoir +</a-->
+                </div-->
+                <div class="text-center">
+                    <div class="page-section-block">
+                        <p class="mb-3">Nos Techniciens sont :</p>
+                        <ul class="text-start mb-3">
+                            <li>Qualifiés 8711 et 8721 par Qualibat pour les mesures de Perméabilité à l'Air</li>
+                            <li>Certifiés DPE par AFNOR pour les DPE et Attestations de prise en compte de la Réglementation Thermique</li>
+                            <li>Formés aux Inspections CEE</li>
+                        </ul>
+                        <p>Grâce à nos agences régionales, nos Techniciens peuvent intervenir sur tout le territoire national aussi bien pour des Constructions neuves : Maisons Individuelles, Logements Collectifs que pour des Rénovations : Inspections CEE.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -108,6 +118,14 @@
                         ],
                         [
                             'size' => 1,
+                            'name' => 'Directeur Technique'
+                        ],
+                        [
+                            'size' => 1,
+                            'name' => 'Directrice Qualité et Administratif'
+                        ],
+                        [
+                            'size' => 1,
                             'name' => 'Responsable Qualité et Administratif'
                         ],
                         [
@@ -119,7 +137,11 @@
                             'name' => 'Assistantes'
                         ],
                         [
-                            'size' => 20,
+                            'size' => 2,
+                            'name' => 'Animatrices Qualité'
+                        ],
+                        [
+                            'size' => 28,
                             'name' => 'Techniciens'
                         ],
                     ];
@@ -127,7 +149,7 @@
                     ?>
                     <ul id="about-team-jobs-list" class="row list-unstyled justify-content-center">
                         <?php foreach($about_team_jobs_list as $item): ?>
-                            <li class="<?php echo($about_team_jobs_loop === 0 ? 'col-12' : 'col-6'); ?> col-lg-2 text-center mb-3">
+                            <li class="<?php echo($about_team_jobs_loop === 0 ? 'col-12' : 'col-6'); ?> col-lg-3 text-center mb-3">
                                 <div class="ttitle th2 text-primary"><?php echo($item['size']); ?></div>
                                 <p><?php echo($item['name']); ?></p>
                             </li>
@@ -193,7 +215,7 @@
                 <div class="page-section-block text-center">
                     <p>Vous souhaitez donner un nouvel élan à votre carrière et rejoindre une entreprise à taille humaine qui place l'esprit d'équipe au cœur de ses préoccupations ? Consultez nos offres ou faites nous parvenir une candidature spontanée.
                         <br>
-                        <br>Dans la mesure du possible nous privilégions la mobilité interne. Cependant nous sommes en croissance constante et avons toujours besoins de nouveaux collaborateurs / nouvelles collaboratrices pour venir renforcer les équipes en place.
+                        <br>Dans la mesure du possible nous privilégions la mobilité interne. Cependant nous sommes en croissance constante et avons toujours besoin de nouveaux talents pour venir renforcer les équipes en place. À bientôt !
                         </b>
                     </p>
                 </div>

@@ -37,7 +37,8 @@
                 <div style="height: 64px;">
                     <img class="img-contain" src="./images/logos/Logo_NrjDiags_Noir.png" alt="Logo NRJ Diags (noir)">
                 </div>
-                <p class="tsize-xsmall tfont-medium">NRJ Diags est spécialisé dans le contrôle sur site de la réglementation thermique. NRJ Diags, est sans cesse en évolution pour répondre aux nouvelles exigences.</p>
+                <!--p class="tsize-xsmall tfont-medium">NRJ Diags est spécialisé dans le contrôle sur site de la réglementation thermique. NRJ Diags, est sans cesse en évolution pour répondre aux nouvelles exigences.</p-->
+                <p class="tsize-xsmall tfont-medium">Contrôleurs Techniques spécialisés dans le Contrôle de la RT2012 et RE 2020 ainsi que dans les Inspections Certificats Energie</p>
             </div>
             <!-- Liens utiles -->
             <div class="col-6 col-lg-3">
@@ -59,14 +60,14 @@
                         <div style="width: 1.5rem">
                             <i class="fas fa-map-marker-alt tsize-small"></i>
                         </div>
-                        <p>Rue de Thann
-                            <br>68460 Lutterbach</p>
+                        <p>R80 rue Mstislav Rostropovitch
+                            <br>75017 Paris</p>
                     </li>
                     <li class="d-flex mb-2">
                         <div style="width: 1.5rem">
                             <i class="fas fa-phone-alt tsize-small"></i>
                         </div>
-                        <p>Tél. : 09 70 82 03 74</p>
+                        <p>Tél. : 09 72 599 799</p>
                     </li>
                     <li class="d-flex">
                         <div style="width: 1.5rem">

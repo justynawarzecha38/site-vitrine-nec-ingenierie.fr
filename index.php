@@ -33,7 +33,27 @@
                                     <div class="home-header-news-card card">
                                         <div class="card-body" style="padding: 35px 35px 22px;">
                                             <div class="ttitle titalic text-primary tsize-xsmall">Dernière news</div>
-                                            <h3 class="ttitle th4 text-truncate" style="margin-bottom: 30px;">Lancement Constéo</h3>
+                                            <h3 class="ttitle th4 text-truncate" style="margin-bottom: 30px;">Titre</h3>
+                                            <p class="tsize-small line-clamp" data-limit="5" style="margin-bottom: 30px;">Ihicate landeliquas diae oditiis re num quodis et ut aborerum acescid ut iuntist iberibus maio. Uci ulpa quiaestium cusa nemquid quiatqu amuscim olorem dipsum rempore ptatatur, aliquatur, utem atur solor suntio imus molupti onsequat.</p>
+                                            <a class="tlink tsize-small text-primary text-uppercase" href="./article.php">Lire l'article</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-header-news-card card">
+                                        <div class="card-body" style="padding: 35px 35px 22px;">
+                                            <div style="height: 18px;"></div>
+                                            <h3 class="ttitle th4 text-truncate" style="margin-bottom: 30px;">Titre</h3>
+                                            <p class="tsize-small line-clamp" data-limit="5" style="margin-bottom: 30px;">Ihicate landeliquas diae oditiis re num quodis et ut aborerum acescid ut iuntist iberibus maio. Uci ulpa quiaestium cusa nemquid quiatqu amuscim olorem dipsum rempore ptatatur, aliquatur, utem atur solor suntio imus molupti onsequat.</p>
+                                            <a class="tlink tsize-small text-primary text-uppercase" href="./article.php">Lire l'article</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-header-news-card card">
+                                        <div class="card-body" style="padding: 35px 35px 22px;">
+                                            <div style="height: 18px;"></div>
+                                            <h3 class="ttitle th4 text-truncate" style="margin-bottom: 30px;">Titre</h3>
                                             <p class="tsize-small line-clamp" data-limit="5" style="margin-bottom: 30px;">Ihicate landeliquas diae oditiis re num quodis et ut aborerum acescid ut iuntist iberibus maio. Uci ulpa quiaestium cusa nemquid quiatqu amuscim olorem dipsum rempore ptatatur, aliquatur, utem atur solor suntio imus molupti onsequat.</p>
                                             <a class="tlink tsize-small text-primary text-uppercase" href="./article.php">Lire l'article</a>
                                         </div>
@@ -53,7 +73,8 @@
             <div class="home-header-bottom page-container">
                 <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
                     <h1 class="home-header-bottom-title ttitle th4">NRJ Diags</h1>
-                    <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p>
+                    <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
+                    <p class="home-header-bottom-text th5 text-uppercase">Contrôleurs Techniques spécialisés dans le Contrôle de la RT2012 et <br class="d-none d-md-block">RE 2020 ainsi que dans les Inspections Certificats Economie Energie.</p>
                 </div>
             </div>
 
@@ -63,24 +84,40 @@
         <?php
             $home_about_list = [
                 [
-                    'color' => 'var(--tertiary-color)',
+                    'color' => 'var(--primary-color)',
+                    'picture' => '',
+                    'text' => "Certification \nPerméabilité à l'air - \nDémarche Qualité \nAnnexe VII",
+                ],
+                [
+                    //'color' => 'var(--tertiary-color)',
+                    'color' => 'var(--secondary-color)',
                     'picture' => './images/pages/about/intro/permeabilite.svg',
-                    'text' => "Mesure de \nperméabilité \nà l'air du bâti",
+                    'text' => "Mesure de \nperméabilité \nà l'air du bâti \net réseaux VMC",
                 ],
                 [
-                    'color' => 'var(--quaternary-color)',
+                    //'color' => 'var(--quaternary-color)',
+                    'color' => 'var(--tertiary-color)',
                     'picture' => './images/pages/about/intro/vmc.svg',
-                    'text' => "Mesure \nd'étanchéité \ndes réseaux \nde VMC",
+                    //'text' => "Mesure \nd'étanchéité \ndes réseaux \nde VMC",
+                    'text' => "Vérification \nVentilation \nselon protocole \nPROMEVENT",
                 ],
                 [
-                    'color' => 'var(--quinary-color)',
+                    //'color' => 'var(--quinary-color)',
+                    'color' => 'var(--quaternary-color)',
                     'picture' => './images/pages/about/intro/dpe.svg',
                     'text' => "DPE",
                 ],
                 [
-                    'color' => 'var(--senary-color)',
+                    //'color' => 'var(--senary-color)',
+                    'color' => 'var(--quinary-color)',
                     'picture' => './images/pages/about/intro/fin_chantier.svg',
-                    'text' => "Attestation \nthermique \nde fin \nde travaux",
+                    //'text' => "Attestation \nthermique \nde fin \nde travaux",
+                    'text' => "Attestation de \nprise en compte de \nla Réglementation \nthermique",
+                ],
+                [
+                    'color' => 'var(--senary-color)',
+                    'picture' => '',
+                    'text' => "Inspections CEE",
                 ],
             ];
         ?>
@@ -90,14 +127,15 @@
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                 </div>
                 <div class="page-section-block text-center">
-                    <p>Nous sommes spécialistes du contrôle et des mesures en fin de chantier qui attestent de la qualité de vos réalisations.
+                    <!--p>Nous sommes spécialistes du contrôle et des mesures en fin de chantier qui attestent de la qualité de vos réalisations.
                         <br><b>Nous intervenons principalement autour des prestations :</b>
-                    </p>
+                    </p-->
+                    <p>Nous sommes spécialisés dans le Contrôle de la RT2012 et RE 2020 ainsi que dans les Inspections Certificats Economie Energie.</p>
                 </div>
                 <div class="page-section-block">
                     <ul id="home-about-list" class="row list-unstyled justify-content-center gy-0 mb-0" style="--bs-gutter-x: 30px;">
                         <?php foreach($home_about_list as $item): ?>
-                        <li class="col-12 col-md-6 col-xl-3" style="margin-bottom: 35px;">
+                        <li class="col-12 col-md-6 col-xl-4" style="margin-bottom: 35px;">
                             <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                 <div class="card-body">
                                     <div class="mb-4" style="height: 80px;">
@@ -111,8 +149,16 @@
                     </ul>
                 </div>
                 <div class="text-center">
-                    <p class="page-section-block">Nos Techniciens sont qualifiés 8711 par Qualibat
-                        <br>afin de réaliser les mesures de perméabilité à l’air et sont certifiés DPE par l’AFNOR.</p>
+                    <!--p class="page-section-block">Nos Techniciens sont qualifiés 8711 par Qualibat
+                        <br>afin de réaliser les mesures de perméabilité à l’air et sont certifiés DPE par l’AFNOR.</p-->
+                    <div class="page-section-block">
+                        <p class="mb-3">Nos Techniciens sont :</p>
+                        <ul class="text-start mb-0">
+                            <li>Qualifiés 8711 et 8721 par Qualibat pour les mesures de Perméabilité à l'Air</li>
+                            <li>Certifiés DPE par AFNOR pour les DPE et Attestations de prise en compte de la Réglementation Thermique</li>
+                            <li>Formés aux Inspections CEE</li>
+                        </ul>
+                    </div>
                     <a href="./a-propos.php" class="btn btn-primary tlink tsize-small text-uppercase text-white">En savoir +</a>
                 </div>
             </div>
@@ -159,7 +205,7 @@
                 <div class="page-section-header text-center">
                     <h2 class="ttitle th1 text-center">Nos solutions</h2>
                 </div>
-                <div-- class="page-section-block">
+                <div class="page-section-block">
                     <ul id="home-solutions-list" class="row g-0 list-unstyled">
                         <?php foreach($home_solutions_list as $item): ?>
                             <li class="home-solutions-item col-12 col-md-6" style="--rel-aspect-ratio: 540/525;">
@@ -259,7 +305,7 @@
             $home_partners = [
                 ['img' => ['src' => './images/partner/2LGN.jpg', 'alt' => ""], 'href' => ''],
                 ['img' => ['src' => './images/partner/ab-maisons.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/alliance-constructions.jpg', 'alt' => ""], 'href' => ''],
+                //['img' => ['src' => './images/partner/alliance-constructions.jpg', 'alt' => ""], 'href' => ''],
                 ['img' => ['src' => './images/partner/alpha-construction.jpg', 'alt' => ""], 'href' => ''],
                 ['img' => ['src' => './images/partner/aquitaine-habitat.jpg', 'alt' => ""], 'href' => ''],
                 ['img' => ['src' => './images/partner/artisans-du-languedoc.jpg', 'alt' => ""], 'href' => ''],

@@ -12,6 +12,7 @@
     width: 100%;
     height: calc(var(--home-solutions-background-height) + 3rem);
     z-index: -1;
+    border-radius: 4px;
 }
 #solutions-list li .picture::after {
     content: "";
@@ -24,6 +25,7 @@
     mix-blend-mode: multiply;
     background-color: rgb(78, 76, 77);
     opacity: 0.8;
+    border-radius: 4px;
 }
 @media (min-width: 992px) {
     #solutions-list li .picture::after {
