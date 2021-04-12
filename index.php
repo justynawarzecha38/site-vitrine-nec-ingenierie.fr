@@ -85,7 +85,7 @@
             $home_about_list = [
                 [
                     'color' => 'var(--primary-color)',
-                    'picture' => '',
+                    'picture' => './images/pages/about/poles/qualite.svg',
                     'text' => "Certification \nPerméabilité à l'air - \nDémarche Qualité \nAnnexe VII",
                 ],
                 [
@@ -116,7 +116,7 @@
                 ],
                 [
                     'color' => 'var(--senary-color)',
-                    'picture' => '',
+                    'icon' => 'fab fa-searchengin',
                     'text' => "Inspections CEE",
                 ],
             ];
@@ -139,7 +139,11 @@
                             <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                 <div class="card-body">
                                     <div class="mb-4" style="height: 80px;">
-                                        <img class="h-100 w-auto" src="<?php echo($item['picture']); ?>">
+                                        <?php if(isset($item['icon'])) { ?>
+                                            <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
+                                        <?php } else { ?>
+                                            <img class="img-contain" src="<?php echo($item['picture']); ?>">
+                                        <?php } ?>
                                     </div>
                                     <h3 class="ttitle th5"><?php echo(nl2br($item['text'])); ?></h3>
                                 </div>

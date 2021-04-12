@@ -17,7 +17,7 @@
         <?php include_once('./includes/aside.php'); ?>
         <!-- QUI SOMMES-NOUS ? -->
         <?php
-        $about_intro_list = [
+        /*$about_intro_list = [
             [
                 'color' => 'var(--tertiary-color)',
                 'picture' => './images/pages/about/intro/permeabilite.svg',
@@ -38,6 +38,45 @@
                 'picture' => './images/pages/about/intro/fin_chantier.svg',
                 'text' => "Attestation \nthermique \nde fin \nde travaux",
             ],
+        ];*/
+        $about_intro_list = [
+            [
+                'color' => 'var(--primary-color)',
+                //'picture' => './images/pages/solutions/intro/vent.svg',
+                'picture' => './images/pages/about/poles/qualite.svg',
+                'text' => "Certification \nPerméabilité à l'air - \nDémarche Qualité \nAnnexe VII",
+            ],
+            [
+                //'color' => 'var(--tertiary-color)',
+                'color' => 'var(--secondary-color)',
+                'picture' => './images/pages/about/intro/permeabilite.svg',
+                'text' => "Mesure de \nperméabilité \nà l'air du bâti \net réseaux VMC",
+            ],
+            [
+                //'color' => 'var(--quaternary-color)',
+                'color' => 'var(--tertiary-color)',
+                'picture' => './images/pages/about/intro/vmc.svg',
+                //'text' => "Mesure \nd'étanchéité \ndes réseaux \nde VMC",
+                'text' => "Vérification \nVentilation \nselon protocole \nPROMEVENT",
+            ],
+            [
+                //'color' => 'var(--quinary-color)',
+                'color' => 'var(--quaternary-color)',
+                'picture' => './images/pages/about/intro/dpe.svg',
+                'text' => "DPE",
+            ],
+            [
+                //'color' => 'var(--senary-color)',
+                'color' => 'var(--quinary-color)',
+                'picture' => './images/pages/about/intro/fin_chantier.svg',
+                //'text' => "Attestation \nthermique \nde fin \nde travaux",
+                'text' => "Attestation de \nprise en compte de \nla Réglementation \nthermique",
+            ],
+            [
+                'color' => 'var(--senary-color)',
+                'icon' => 'fab fa-searchengin',
+                'text' => "Inspections CEE",
+            ],
         ];
         ?>
         <section id="about-intro" class="page-section">
@@ -53,11 +92,15 @@
                 <div class="page-section-block">
                     <ul id="about-intro-list" class="row g-0 justify-content-center list-unstyled">
                         <?php foreach($about_intro_list as $item): ?>
-                            <li class="col-12 col-md-6 col-lg-3">
+                            <li class="col-12 col-md-6 col-lg-4">
                                 <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                     <div class="card-body">
                                         <div class="mb-4" style="height: 80px;">
-                                            <img class="h-100 w-auto" src="<?php echo($item['picture']); ?>">
+                                            <?php if(isset($item['icon'])) { ?>
+                                                <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
+                                            <?php } else { ?>
+                                                <img class="img-contain" src="<?php echo($item['picture']); ?>">
+                                            <?php } ?>
                                         </div>
                                         <h3 class="ttitle th5"><?php echo(nl2br($item['text'])); ?></h3>
                                     </div>

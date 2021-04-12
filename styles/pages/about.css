@@ -1,5 +1,6 @@
 #about-timeline {
-    background: url(../../images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg) no-repeat center center;
+    background-color: var(--primary-color);
+    background: url(../../images/pages/about/timeline-background.jpg) no-repeat center center;
     background-size: cover;
 }
 #about-team-poles {

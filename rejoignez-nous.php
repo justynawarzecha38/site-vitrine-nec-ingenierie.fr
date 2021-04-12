@@ -43,6 +43,7 @@
         }
         #job-ads-accordion .accordion-button {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
@@ -93,11 +94,11 @@
             $job_ads_list = [
                 [
                     'uniq_id' => 'j0001',
-                    'title' => "Enienesti omnistiatur",
+                    'title' => "Technicien",
                     'description' => "Qui aut lam, nobis por autem iunti nectem ut ut harum evenimpedi con con reped que doluptius sint dolo vel maiorepe voluptat vellabore pre nos earuptur modit laborpor seque inti nos ditat parum rempore, sim imilite quia il ipiet et voluptat hariand uciantur magnatur, aut atem hillacc usapis non nullabore porrum estibusam veligenihil mod quae.",
-                    'city' => "Paris",
+                    'city' => "Différents secteurs géographiques",
                 ],
-                [
+                /*[
                     'uniq_id' => 'j0002',
                     'title' => "Enienesti omnistiatur",
                     'description' => "Qui aut lam, nobis por autem iunti nectem ut ut harum evenimpedi con con reped que doluptius sint dolo vel maiorepe voluptat vellabore pre nos earuptur modit laborpor seque inti nos ditat parum rempore, sim imilite quia il ipiet et voluptat hariand uciantur magnatur, aut atem hillacc usapis non nullabore porrum estibusam veligenihil mod quae.",
@@ -120,13 +121,14 @@
                     'title' => "Enienesti omnistiatur",
                     'description' => "Qui aut lam, nobis por autem iunti nectem ut ut harum evenimpedi con con reped que doluptius sint dolo vel maiorepe voluptat vellabore pre nos earuptur modit laborpor seque inti nos ditat parum rempore, sim imilite quia il ipiet et voluptat hariand uciantur magnatur, aut atem hillacc usapis non nullabore porrum estibusam veligenihil mod quae.",
                     'city' => "Paris",
-                ],
+                ],*/
             ];
         ?>
         <section id="job-ads" class="page-section">
             <div class="page-container">
                 <div class="page-section-header text-center mb-80">
-                    <h1 class="ttitle th1 mb-80">Offres d'emploi</h1>
+                    <!--h1 class="ttitle th1 mb-80">Offres d'emploi</h1-->
+                    <h1 class="ttitle th1 mb-80">Postes à pourvoir</h1>
                     <p>La liste suivante affiche nos postes actuellement requis. Cette liste sera mise à jour régulièrement.</p>
                 </div>
             </div>
@@ -139,7 +141,7 @@
                                         data-bs-toggle="collapse" data-bs-target="#job-ad-collapse-<?php echo($item['uniq_id']); ?>"
                                         aria-expanded="false" aria-controls="job-ad-collapse-<?php echo($item['uniq_id']); ?>">
                                     <span style="font-size: 1.125rem;""><?php echo($item['title']); ?></span>
-                                    <div style="margin-left: auto; font-size: 1rem; color: #C8C8C8;">
+                                    <div style="margin-left: auto; font-size: 1rem; text-align: right; color: #C8C8C8;">
                                         <span><?php echo($item['city']); ?></span>
                                         <i class="fas fa-map-marker-alt" aria-hidden="true" style="margin-left: 0.5rem;"></i>
                                     </div>
@@ -164,7 +166,8 @@
         <section id="join-us" class="page-section px-0">
             <div id="join-us-title" class="page-container page-section-block text-center mb-80">
                 <h1 class="ttitle th1 mb-80">Rejoignez-nous</h1>
-                <p>Borecepel incto dit aliqui sa por autae pa in rempos aut dolor maximus dantiunto cus enis re nus, quia vit, vitium vendit et as sinvelectem ni ut quodi inverum harum as et ea postis doluptaquis.</p>
+                <p>Vous souhaitez donner un nouvel élan à votre carrière et rejoindre une entreprise à taille humaine qui place l'esprit d'équipe au cœur de ses préoccupations ?
+                    <br>Consultez nos offres ou faites-nous parvenir une candidature spontanée.</p>
             </div>
             <div id="join-us-content" class="position-relative">
                 <div id="join-us-background"></div>

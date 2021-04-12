@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="fonts/fontawesome-pro-5.14.0-web/css/fontawesome.min.css">
 <link rel="stylesheet" type="text/css" href="fonts/fontawesome-pro-5.14.0-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/be-in-home-v1.3/style.css">
 <link rel="stylesheet" type="text/css" href="styles/materialize-imports.min.css">
 <link rel="stylesheet" type="text/css" href="styles/base.css">
 <link rel="stylesheet" type="text/css" href="styles/helpers.css">
