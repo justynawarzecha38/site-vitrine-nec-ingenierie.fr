@@ -15,6 +15,79 @@
     <?php include_once('./includes/header.php'); ?>
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0" style="overflow-x: hidden;">
         <?php include_once('./includes/aside.php'); ?>
+        <?php
+            /*$home_news = [
+                [
+                    'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                    'title' => "Lancement Constéo",
+                    'text' => "Ihicate landeliquas diae oditiis re num quodis et ut aborerum <b>acescid ut iuntist iberibus maio</b>. Uci ulpa quiaestium cusa…",
+                    'href' => './article.php',
+                ],
+                [
+                    'picture' => './images/originals/500_F_113420161_fKOMDPzVhn8cESPuN0KHa0myIef5x1QT.jpg',
+                    'title' => "OPIQIBI NEC",
+                    'text' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    'href' => './article.php',
+                ],
+                [
+                    'picture' => './images/originals/500_F_295355543_lZc2ueRdkMwUhUrXzVZ7oQGsz56mcXjE.jpg',
+                    'title' => "Le protocole Promevent",
+                    'text' => "La réglementation thermique impose la construction de bâtiments de plus en plus étanches à l’air, <b>il est donc…</b>",
+                    'href' => './article.php',
+                ],
+            ];*/
+            $home_news = [
+                [
+                    'uniq_id' => '0014',
+                    'created_at' => '2020-04-22 12:47',
+                    'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                    'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
+                    'title' => "Contrôle système de ventilation suivant le protocole PROMEVENT",
+                    'intro' => "<p>La réglementation thermique impose la construction de bâtiments de plus en plus étanches à l’air, <strong>il est donc indispensable de s’assurer du bon fonctionnement des systèmes de ventilation pour garantir une bonne qualité d’air intérieur.</strong></p>",
+                    'text' => "<p>Le contrôle du système de ventilation peut être réalisé en suivant le protocole PROMEVENT, il se décompose en plusieurs phases dont :</p>
+<ul>
+<li>Pré-Inscription</li>
+<li>Vérifications fonctionnelles</li>
+<li>Mesures fonctionnelles aux bouches</li>
+<li>Mesure spécifique de perméabilité à l’air des réseaux</li>
+</ul>
+<p>Ces phases peuvent-être réalisées individuellement à la demande du Maître d’ouvrage.</p>
+<p>Les Techniciens NRJ Diags sont tous formés à la réalisation de ce protocole. Pour les mesures de perméabilité à l’air des réseaux, ils sont également autorisés qualifiés 8721 par QUALIBAT</p>",
+                    'href' => './article.php',
+                ],
+                [
+                    'uniq_id' => '0013',
+                    'created_at' => '2020-04-22 12:14',
+                    'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                    'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
+                    'title' => "Contrôle conduit 3CEP",
+                    'intro' => "<p>L’<a href=\"https://www.legifrance.gouv.fr/loda/id/JORFTEXT000036667631/\" target=\"_blank\" rel=\"noopener\">arrêté du 23 février 2018</a>&nbsp;relatif aux règles techniques et de sécurité applicables aux installations de gaz combustible des bâtiments d'habitation individuelle ou collective, y compris les parties communes&nbsp;<b>modifie les contrôles à effectuer sur les conduits 3CEp</b>.</p>",
+                    'text' => "<p>En effet, depuis le 1er janvier 2020, chaque dépôt de permis de construire doit respecter cet arrêté et dans certains cas de figure, les bâtiments en cours de construction doivent également le respecter.</p>
+<p>A noter, le document&nbsp;<a href=\"medias/solutions/cerfa_16026-01.pdf\">Cerfa n°16026*01</a>&nbsp;: Certificat de Conformité pour une installation Individuelle de Gaz – Modèle 2, a été mis à jour pour se mettre en conformité avec l’arrêté du 23 février 2018.<br>A présent,&nbsp;<b>si le bâtiment comporte un conduit 3CEp, alors, il doit être accompagné de la phase 1 et 2 du&nbsp;<a href=\"medias/solutions/Nouveau%20Protocole%20conduit%203CEp%20extrait%20EVAPDC%20sept%202019.pdf\">« Protocole de mise en service du 3CEp et d’installation et de mise en service des chaudières associées »</a></b>.</p>
+<p>Vous trouverez ci-dessous les grandes lignes de chacune des phases :</p>
+<ul>
+<li>Phase 1 : Vérification du dimensionnement, de la mise en œuvre et de l’étanchéité du conduit 3CEp</li>
+<li>Phase 2 : Montage, raccordement et contrôle des appareils installés sur le conduit 3CEp</li>
+<li>Phase 3 : Mise en service et vérification du bon fonctionnement de l’installation complète</li>
+</ul>
+<p>NRJ DIAGS est donc en mesure de réaliser la phase 1 dudit protocole sur toute la France.</p>",
+                    'href' => './article.php',
+                ],
+                [
+                    'uniq_id' => '0012',
+                    'created_at' => '2019-09-18 09:02',
+                    'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                    'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
+                    'title' => "Air Sain",
+                    'intro' => "<p>Comme l’a annoncé la loi ELAN, la qualité d’air intérieur des logements sera prise en compte dans les années à venir… <strong>mais pourquoi attendre pour respirer un air sain ?</strong></p>",
+                    'text' => "<p>Nous passons 80% de notre temps dans des espaces clos, et la majorité de ce temps se passe dans votre maison. L’air que nous respirons à l’intérieur de notre logement est parfois plus pollué que l’air extérieur.</p>
+<p>Air Sain est la mise en place de différentes étapes et moyens pour améliorer la bonne qualité d’air intérieur dans le logement.
+Ces moyens permettent entre autres d’attester le bon fonctionnement du système de ventilation du logement, qui est une des causes principales de dégradation de la qualité d’air intérieur dans le logement.</p>
+<p>Pour en savoir plus sur les démarches à adopoter&nbsp;<a href=\"http://www.airsain.fr/\">www.airsain.fr</a></p>",
+                    'href' => './article.php',
+                ],
+            ];
+        ?>
         <header id="home-header">
             <!-- Background image -->
             <div class="home-header-background"></div>
@@ -244,26 +317,6 @@
         </section>
         <!-- NEWS -->
         <?php
-        $home_news = [
-            [
-                'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
-                'title' => "Lancement Constéo",
-                'text' => "Ihicate landeliquas diae oditiis re num quodis et ut aborerum <b>acescid ut iuntist iberibus maio</b>. Uci ulpa quiaestium cusa…",
-                'href' => './article.php',
-            ],
-            [
-                'picture' => './images/originals/500_F_113420161_fKOMDPzVhn8cESPuN0KHa0myIef5x1QT.jpg',
-                'title' => "OPIQIBI NEC",
-                'text' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                'href' => './article.php',
-            ],
-            [
-                'picture' => './images/originals/500_F_295355543_lZc2ueRdkMwUhUrXzVZ7oQGsz56mcXjE.jpg',
-                'title' => "Le protocole Promevent",
-                'text' => "La réglementation thermique impose la construction de bâtiments de plus en plus étanches à l’air, <b>il est donc…</b>",
-                'href' => './article.php',
-            ],
-        ];
         $home_news = array_merge($home_news, $home_news, $home_news);
         ?>
         <section id="home-news" class="page-section bg-gray">
@@ -286,7 +339,7 @@
                                         </div>
                                         <div class="card-body flex-column-nowrap">
                                             <h3 class="ttitle th4 mb-3 text-truncate"><?php echo(nl2br($item['title'])); ?></h3>
-                                            <p class="line-clamp mb-3 flex-adapt-height" data-limit="4"><?php echo(nl2br($item['text'])); ?></p>
+                                            <div class="line-clamp mb-3 flex-adapt-height" data-limit="4"><?php echo(nl2br($item['text'])); ?></div>
                                             <a class="tlink tfont-bold text-uppercase text-primary" href="<?php echo(nl2br($item['href'])); ?>">Lire l'article</a>
                                         </div>
                                     </div>
