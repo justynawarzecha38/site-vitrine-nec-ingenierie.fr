@@ -88,7 +88,7 @@
                                         <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
                                     </div>
 
-                                    <a class="btn btn-primary w-auto" href="#!" download="processus-appels-et-reclamations.pdf">
+                                    <a class="btn btn-primary w-auto mx-auto" href="medias/contact/Processus%20Gestion%20Appels%20et%20Réclamations.pdf" download>
                                         <i class="fas fa-download" aria-hidden="true"></i>
                                         <span>Télécharger nos processus en matière d'appels et de réclamations</span>
                                     </a>
