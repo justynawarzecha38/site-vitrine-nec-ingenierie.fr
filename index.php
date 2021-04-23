@@ -18,19 +18,19 @@
         <?php
             /*$home_news = [
                 [
-                    'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                    'picture' => './images/originals/old/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
                     'title' => "Lancement Constéo",
                     'text' => "Ihicate landeliquas diae oditiis re num quodis et ut aborerum <b>acescid ut iuntist iberibus maio</b>. Uci ulpa quiaestium cusa…",
                     'href' => './article.php',
                 ],
                 [
-                    'picture' => './images/originals/500_F_113420161_fKOMDPzVhn8cESPuN0KHa0myIef5x1QT.jpg',
+                    'picture' => './images/originals/old/500_F_113420161_fKOMDPzVhn8cESPuN0KHa0myIef5x1QT.jpg',
                     'title' => "OPIQIBI NEC",
                     'text' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                     'href' => './article.php',
                 ],
                 [
-                    'picture' => './images/originals/500_F_295355543_lZc2ueRdkMwUhUrXzVZ7oQGsz56mcXjE.jpg',
+                    'picture' => './images/originals/old/500_F_295355543_lZc2ueRdkMwUhUrXzVZ7oQGsz56mcXjE.jpg',
                     'title' => "Le protocole Promevent",
                     'text' => "La réglementation thermique impose la construction de bâtiments de plus en plus étanches à l’air, <b>il est donc…</b>",
                     'href' => './article.php',
@@ -40,7 +40,7 @@
                 [
                     'uniq_id' => '0014',
                     'created_at' => '2020-04-22 12:47',
-                    'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                    'picture' => './images/originals/old/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
                     'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
                     'title' => "Contrôle système de ventilation suivant le protocole PROMEVENT",
                     'intro' => "<p>La réglementation thermique impose la construction de bâtiments de plus en plus étanches à l’air, <strong>il est donc indispensable de s’assurer du bon fonctionnement des systèmes de ventilation pour garantir une bonne qualité d’air intérieur.</strong></p>",
@@ -58,7 +58,7 @@
                 [
                     'uniq_id' => '0013',
                     'created_at' => '2020-04-22 12:14',
-                    'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                    'picture' => './images/originals/old/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
                     'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
                     'title' => "Contrôle conduit 3CEP",
                     'intro' => "<p>L’<a href=\"https://www.legifrance.gouv.fr/loda/id/JORFTEXT000036667631/\" target=\"_blank\" rel=\"noopener\">arrêté du 23 février 2018</a>&nbsp;relatif aux règles techniques et de sécurité applicables aux installations de gaz combustible des bâtiments d'habitation individuelle ou collective, y compris les parties communes&nbsp;<b>modifie les contrôles à effectuer sur les conduits 3CEp</b>.</p>",
@@ -76,7 +76,7 @@
                 [
                     'uniq_id' => '0012',
                     'created_at' => '2019-09-18 09:02',
-                    'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                    'picture' => './images/originals/old/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
                     'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
                     'title' => "Air Sain",
                     'intro' => "<p>Comme l’a annoncé la loi ELAN, la qualité d’air intérieur des logements sera prise en compte dans les années à venir… <strong>mais pourquoi attendre pour respirer un air sain ?</strong></p>",

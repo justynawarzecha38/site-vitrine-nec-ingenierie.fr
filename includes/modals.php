@@ -26,8 +26,12 @@
                     <p>Site hébergé par OVH</p>
                 </div>
                 <div class="mb-4">
-                    <h6 class="ttitle th5 text-tertiary text-left">Graphisme et développement</h6>
-                    <p><a href="#!">PMB Software</a></p>
+                    <h6 class="ttitle th5 text-tertiary text-left">Design</h6>
+                    <p><a href="https://www.gaelledumay.com/">Gaëlle DUMAY</a></p>
+                </div>
+                <div class="mb-4">
+                    <h6 class="ttitle th5 text-tertiary text-left">Développement</h6>
+                    <p><a href="https://pmb-software.fr/">PMB Software</a></p>
                 </div>
             </div>
             <div class="modal-footer" style="border: none;">

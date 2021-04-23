@@ -43,7 +43,8 @@
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-        z-index: 2000;
+        /*z-index: 2000;*/
+        z-index: 1020;
     }
     #websites-nav .websites-item {
         display: flex;

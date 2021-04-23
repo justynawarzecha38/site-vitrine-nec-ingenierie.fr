@@ -6,7 +6,10 @@
         'home' => ['title' => 'Accueil' , 'href' => './'],
         'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
         'news' => ['title' => 'News', 'href' => './news.php'],
-        'solutions' => ['title' => 'Nos solutions', 'href' => './nos-solutions.php'],
+        'solutions' => ['title' => 'Nos solutions', 'href' => '#!', 'list' => [
+            ['title' => 'Constructions neuves', 'href' => './nos-solutions.php', 'nav_key' => 'solutions-1'],
+            ['title' => 'Rénovation – Inspection CEE', 'href' => './nos-solutions-suite.php', 'nav_key' => 'solutions-2'],
+        ]],
         'regulations' => ['title' => 'R&eacute;glementation', 'href' => './reglementation.php'],
         'contact' => ['title' => 'Contact', 'href' => './contact.php'],
         'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],
@@ -24,10 +27,36 @@
         <div class="collapse navbar-collapse" id="page-nav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <?php foreach($main_nav as $key => $item): ?>
-                <li class="nav-item<?php echo($main_nav_key === $key ? ' active' : ''); ?>">
-                    <a class="nav-link tlink tsize-small <?php echo($main_nav_key === $key ? ' active' : ''); ?>"
-                       <?php echo($main_nav_key === $key ? 'aria-current="page" ' : ''); ?>
-                       href="<?php echo($item['href']); ?>"><?php echo($item['title']); ?></a>
+                <?php
+                    $has_subnav = isset($item['list']) && !empty($item['list']);
+                    $is_active = $main_nav_key === $key;
+                    if ($has_subnav) {
+                        $is_active = strpos($main_nav_key, $key) !== false;
+                    }
+                ?>
+                <li class="nav-item<?php echo($is_active ? ' active' : ''); echo($has_subnav ? ' dropdown' : ''); ?>">
+                    <a id="main-nav-item-<?php echo($key); ?>" type="button"
+                       class="nav-link tlink tsize-small<?php echo($is_active ? ' active' : ''); ?>"
+                       <?php
+                            echo($has_subnav ? ' data-bs-toggle="dropdown" aria-expanded="false"' : ' href="'.$item['href'].'"');
+                            echo($is_active && !$has_subnav ? ' aria-current="page"' : '');
+                       ?>>
+                        <span><?php echo($item['title']); ?></span>
+                        <?php if($has_subnav): ?>
+                            <i class="fas fa-caret-down" aria-hidden="true"></i>
+                        <?php endif; ?>
+                    </a>
+                    <?php if($has_subnav): ?>
+                    <ul class="dropdown-menu" aria-labelledby="main-nav-item-<?php echo($key); ?>">
+                        <?php foreach($item['list'] as $subitem): ?>
+                            <li>
+                                <a class="tsize-small text-uppercase dropdown-item<?php echo($main_nav_key === $subitem['nav_key'] ? ' active' : ''); ?>"
+                                    <?php echo($main_nav_key === $subitem['nav_key'] ? 'aria-current="page" ' : ''); ?>
+                                   href="<?php echo($subitem['href']); ?>"><?php echo($subitem['title']); ?></a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <?php endif; ?>
                 </li>
                 <?php endforeach; ?>
             </ul>

@@ -25,19 +25,19 @@
         <?php
         $news = [
             [
-                'picture' => './images/originals/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
+                'picture' => './images/originals/old/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
                 'title' => "Lancement Constéo",
                 'text' => "Ihicate landeliquas diae oditiis re num quodis et ut aborerum <b>acescid ut iuntist iberibus maio</b>. Uci ulpa quiaestium cusa…",
                 'href' => './article.php',
             ],
             [
-                'picture' => './images/originals/500_F_113420161_fKOMDPzVhn8cESPuN0KHa0myIef5x1QT.jpg',
+                'picture' => './images/originals/old/500_F_113420161_fKOMDPzVhn8cESPuN0KHa0myIef5x1QT.jpg',
                 'title' => "OPIQIBI NEC",
                 'text' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                 'href' => './article.php',
             ],
             [
-                'picture' => './images/originals/500_F_295355543_lZc2ueRdkMwUhUrXzVZ7oQGsz56mcXjE.jpg',
+                'picture' => './images/originals/old/500_F_295355543_lZc2ueRdkMwUhUrXzVZ7oQGsz56mcXjE.jpg',
                 'title' => "Le protocole Promevent",
                 'text' => "La réglementation thermique impose la construction de bâtiments de plus en plus étanches à l’air, <b>il est donc…</b>",
                 'href' => './article.php',
