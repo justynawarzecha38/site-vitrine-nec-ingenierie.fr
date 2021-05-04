@@ -307,7 +307,7 @@ EOT,
         ];
         ?>
         <section id="news" class="page-section">
-            <div class="page-container">
+            <div class="page-container filtr-block">
                 <div class="page-section-header text-center">
                     <h1 class="ttitle th1 text-center mb-3">News</h1>
                     <p>Suivez toute l'actualité de NRJ Diags.</p>
@@ -315,7 +315,7 @@ EOT,
                 <div class="page-section-block">
                     <form class="row" action="" method="POST">
                         <div class="input-group mb-3 mb-lg-0 col-12 col-lg">
-                            <input id="news-field-search" type="text" class="form-control" name="search" style="border: 1px solid #ced4da !important;">
+                            <input id="news-field-search" type="text" class="filtr-search form-control" name="search" style="border: 1px solid #ced4da !important;">
                             <label for="news-field-search" class="input-group-text bg-secondary text-white" id="inputGroup-sizing-default">
                                 <i class="fas fa-search"></i>
                             </label>
@@ -332,10 +332,10 @@ EOT,
                     </form>
                 </div>
                 <div class="page-section-block">
-                    <ul id="news-list" class="row gy-0 list-unstyled" style="--bs-gutter-x: 30px; margin-left: -15px; margin-right: -15px;">
+                    <ul id="news-list" class="filtr-container row gy-0 list-unstyled" style="--bs-gutter-x: 30px; margin-left: -15px; margin-right: -15px;">
                         <?php foreach($news as $item): ?>
-                            <li class="col-12 col-md-6 col-lg-4" style="margin-bottom: 40px;">
-                                <div class="card h-100">
+                            <li class="filtr-item col-12 col-md-6 col-lg-4" style="margin-bottom: 40px;">
+                                <div class="filtr-item-content card h-100">
                                     <div style="--aspect-ratio: 16/9;">
                                         <?php if(isset($item['picture']) && $item['picture']): ?>
                                             <img class="card-img-top img-cover" src="<?php echo($item['picture']); ?>" alt="">
@@ -347,7 +347,7 @@ EOT,
                                         <?php endif; ?>
                                     </div>
                                     <div class="card-body">
-                                        <h3 class="ttitle th4 mb-40"><?php echo(nl2br($item['title'])); ?></h3>
+                                        <h3 class="filtr-item-name ttitle th4 mb-40"><?php echo(nl2br($item['title'])); ?></h3>
                                         <p class="line-clamp" data-limit="4"><?php echo(nl2br($item['intro'])); ?></p>
                                     </div>
                                     <footer class="card-footer" style="">
@@ -364,4 +364,28 @@ EOT,
     </main>
     <?php include_once('./includes/modals.php'); ?>
     <?php include_once('./includes/scripts.php'); ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.3.0/shuffle.min.js" integrity="sha512-Z2o9xls9hRQjtzU0G8qTxaj9cyVgqw/b2ocZ3X9LbF/OiXnbyR7E/d5+Yl8mSeulNW77w9vXq5hhUHarzacKKw==" crossorigin="anonymous"></script>
+    <script>
+        var Shuffle = window.Shuffle;
+
+        $('.filtr-container').each(function (index, container) {
+            var $container = $(container);
+            var $block = $($container.parents('.filtr-block')[0]);
+            var shuffle_component = new Shuffle(container, {
+                useTransforms: true
+            });
+
+            // Search
+            $block.find('.filtr-search').on('keyup', function(event) {
+                var search = event.target.value.toLowerCase();
+
+                shuffle_component.filter(function (element, shuffle) {
+                    var title_element = element.querySelector('.filtr-item-name');
+                    var title_text = title_element.textContent.toLowerCase().trim();
+
+                    return title_text.indexOf(search) !== -1;
+                });
+            });
+        });
+    </script>
 </body>
