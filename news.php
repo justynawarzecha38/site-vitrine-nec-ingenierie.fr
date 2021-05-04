@@ -320,7 +320,7 @@ EOT,
                                 <i class="fas fa-search"></i>
                             </label>
                         </div>
-                        <div class="form-group tselect-container mb-3 mb-lg-0 col-12 col-lg">
+                        <!--div class="form-group tselect-container mb-3 mb-lg-0 col-12 col-lg">
                             <select id="news-field-filter-society" class="form-select" name="filter[society]">
                                 <option selected>Toutes les sociétés</option>
                                 <option value="abm">ABM Énergie Conseil</option>
@@ -328,7 +328,7 @@ EOT,
                                 <option value="nec">NEW Énergie Concept</option>
                                 <option value="acc">Acousti Control</option>
                             </select>
-                        </div>
+                        </div-->
                     </form>
                 </div>
                 <div class="page-section-block">
