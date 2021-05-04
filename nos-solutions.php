@@ -3,7 +3,8 @@
 <head>
     <?php
         $main_title = 'Nos solutions';
-        $main_nav_key = 'solutions-1';
+        $main_nav_key = 'solutions';
+        //$main_nav_key = 'solutions-1';
         include_once('./includes/head.php');
     ?>
     <?php include_once('./includes/styles.php'); ?>
