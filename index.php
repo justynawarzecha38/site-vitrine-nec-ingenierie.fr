@@ -7,7 +7,7 @@
         include_once('./includes/head.php');
     ?>
     <?php include_once('./includes/styles.php'); ?>
-    <link rel="stylesheet" href="./styles/pages/home.css">
+    <link rel="stylesheet" href="./styles/pages/home.css?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./styles/pages/home.css'))) ?>">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 

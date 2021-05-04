@@ -7,7 +7,7 @@
         include_once('./includes/head.php');
     ?>
     <?php include_once('./includes/styles.php'); ?>
-    <link rel="stylesheet" href="./styles/pages/about.css">
+    <link rel="stylesheet" href="./styles/pages/about.css?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./styles/pages/about.css'))) ?>">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha512-Nh/FthCqOFq56kGp1DsNb6GKK29iIv2ZJc7Fylln1WRrWpeE5LjSBWeAp61dkBASDxZT12aL9mZyIrhsAqgRpw==" crossorigin="anonymous"></script>
 </head>
 

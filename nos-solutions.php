@@ -8,10 +8,8 @@
         include_once('./includes/head.php');
     ?>
     <?php include_once('./includes/styles.php'); ?>
-    <link rel="stylesheet" href="./styles/pages/our-solutions.css">
+    <link rel="stylesheet" href="./styles/pages/our-solutions.css?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./styles/pages/our-solutions.css'))) ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <style>
-    </style>
 </head>
 
 <body class="flex-column-nowrap" style="overflow: hidden;">
