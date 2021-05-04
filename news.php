@@ -348,7 +348,7 @@ EOT,
                                     </div>
                                     <div class="card-body">
                                         <h3 class="filtr-item-name ttitle th4 mb-40"><?php echo(nl2br($item['title'])); ?></h3>
-                                        <p class="line-clamp" data-limit="4"><?php echo(nl2br($item['intro'])); ?></p>
+                                        <div class="line-clamp" data-limit="4"><?php echo(nl2br($item['intro'])); ?></div>
                                     </div>
                                     <footer class="card-footer" style="">
                                         <a class="tlink tfont-bold text-uppercase text-primary" href="<?php echo($item['href']); ?>?id=<?php echo($item['uniq_id']); ?>">Lire l'article</a>
@@ -368,6 +368,20 @@ EOT,
     <script>
         var Shuffle = window.Shuffle;
 
+        function resizeCards() {
+            var bigger_height = Math.max.apply(Math, $('.filtr-item').map(function(){
+                return $(this).height();
+            }).get());
+            $('#test').remove();
+            $('head').append(`<style id="test">
+            .filtr-item {
+                height: ${bigger_height}px;
+            }
+            </style>`);
+        }
+
+        resizeCards();
+
         $('.filtr-container').each(function (index, container) {
             var $container = $(container);
             var $block = $($container.parents('.filtr-block')[0]);
@@ -386,6 +400,10 @@ EOT,
                     return title_text.indexOf(search) !== -1;
                 });
             });
+        });
+
+        $(window).on('resize orientationchange', function () {
+            resizeCards();
         });
     </script>
 </body>
