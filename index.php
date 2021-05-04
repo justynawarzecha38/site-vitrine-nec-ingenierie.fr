@@ -297,7 +297,7 @@ EOT,
                                             <div class="ttitle titalic text-primary tsize-xsmall">Dernière news</div>
                                             <h3 class="ttitle th4 text-truncate" style="margin-bottom: 30px;"><?php echo(nl2br($item['title'])); ?></h3>
                                             <div class="tsize-small line-clamp" data-limit="5" style="margin-bottom: 30px;"><?php echo(nl2br($item['intro'])); ?></div>
-                                            <a class="tlink tsize-small text-primary text-uppercase" href="./article.php">Lire l'article</a>
+                                            <a class="tlink tsize-small text-primary text-uppercase" href="./article.php?id=<?php echo($item['uniq_id']); ?>">Lire l'article</a>
                                         </div>
                                     </div>
                                 </div>
@@ -517,7 +517,7 @@ EOT,
                                         <div class="card-body flex-column-nowrap">
                                             <h3 class="ttitle th4 mb-3 text-truncate"><?php echo(nl2br($item['title'])); ?></h3>
                                             <div class="line-clamp mb-3 flex-adapt-height" data-limit="4"><?php echo(nl2br($item['text'])); ?></div>
-                                            <a class="tlink tfont-bold text-uppercase text-primary" href="<?php echo(nl2br($item['href'])); ?>">Lire l'article</a>
+                                            <a class="tlink tfont-bold text-uppercase text-primary" href="<?php echo(nl2br($item['href'])); ?>?id=<?php echo($item['uniq_id']); ?>">Lire l'article</a>
                                         </div>
                                     </div>
                                 </div>
