@@ -351,7 +351,7 @@ EOT,
                                         <p class="line-clamp" data-limit="4"><?php echo(nl2br($item['intro'])); ?></p>
                                     </div>
                                     <footer class="card-footer" style="">
-                                        <a class="tlink tfont-bold text-uppercase text-primary" href="<?php echo($item['href']); ?>">Lire l'article</a>
+                                        <a class="tlink tfont-bold text-uppercase text-primary" href="<?php echo($item['href']); ?>?id=<?php echo($item['uniq_id']); ?>">Lire l'article</a>
                                     </footer>
                                 </div>
                             </li>

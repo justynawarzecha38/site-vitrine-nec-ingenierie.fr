@@ -278,7 +278,7 @@ EOT,
         $news_by_id = group_by('uniq_id', $news);
 
         $article_id = $_GET["id"];
-        $article = $news_by_id[$article_id];
+        $article = $news_by_id[$article_id][0];
         $main_title = $article['title'];
         include_once('./includes/head.php');
     ?>
@@ -299,7 +299,7 @@ EOT,
         ];*/
 
         setlocale(LC_TIME, "fr_FR","French");
-        $date_formatted = strftime("%A, %d %B %Y à %Hh%M", strtotime($article['date']));
+        $date_formatted = strftime("%A, %d %B %Y à %Hh%M", strtotime($article['created_at']));
         ?>
         <section id="article" class="page-section">
             <div class="page-container">
@@ -308,9 +308,11 @@ EOT,
                     <h1 class="ttitle th1 text-start text-lg-center mb-3" style="white-space: break-spaces;"><?php echo($article['title']); ?></h1>
                 </div>
                 <div class="page-section-block">
+                    <?php if(isset($item['picture']) && $item['picture']): ?>
                     <div class="mb-5" style="--aspect-ratio: 16/9;">
                         <img class="img-cover" src="<?php echo($article['picture']); ?>" alt="">
                     </div>
+                    <?php endif; ?>
                     <p class="line-clamp mb-3" data-limit="4" style="min-height: 110px;"><?php echo(nl2br($article['text'])); ?></p>
                 </div>
             </div>
