@@ -440,7 +440,7 @@ EOT,
             [
                 'background' => './images/pages/solutions/list/co2.png',
                 'color' => 'var(--quaternary-color)',
-                'picture' => './images/pages/solutions/intro/co2.svg',
+                'picture' => './images/pages/solutions/intro/vent.svg',
                 /*'title' => "Contrôle sur conduit 3CEP",
                 'text' => "L’arrêté du 23 février 2018 et applicable au 1er janvier 2020 relatif aux règles techniques et de sécurité…",*/
                 'title' => "Vérification des systèmes VMC selon protocole PROMEVENT",
