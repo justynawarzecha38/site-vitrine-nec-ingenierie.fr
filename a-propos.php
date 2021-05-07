@@ -233,7 +233,7 @@
                                 <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                     <div class="card-body">
                                         <div class="mb-35" style="height: 80px;">
-                                            <img class="h-100 w-auto" src="<?php echo($item['picture']); ?><?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
+                                            <img class="h-100 w-auto" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
                                         </div>
                                         <h3 class="ttitle th3 mb-35"><?php echo($item['name']); ?></h3>
                                         <p class="roboto-condensed"><?php echo(nl2br($item['description'])); ?></p>
