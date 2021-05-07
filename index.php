@@ -441,8 +441,10 @@ EOT,
                 'background' => './images/pages/solutions/list/co2.png',
                 'color' => 'var(--quaternary-color)',
                 'picture' => './images/pages/solutions/intro/co2.svg',
-                'title' => "Contrôle sur conduit 3CEP",
-                'text' => "L’arrêté du 23 février 2018 et applicable au 1er janvier 2020 relatif aux règles techniques et de sécurité…",
+                /*'title' => "Contrôle sur conduit 3CEP",
+                'text' => "L’arrêté du 23 février 2018 et applicable au 1er janvier 2020 relatif aux règles techniques et de sécurité…",*/
+                'title' => "Vérification des systèmes VMC selon protocole PROMEVENT",
+                'text' => "Nos Techniciens se déplacent pour vérifier le système de ventilation selon le protocole PROMEVENT…",
                 'href' => './nos-solutions.php#3cep',
             ],
         ];
@@ -468,7 +470,7 @@ EOT,
                                     </div>
                                     <div class="home-solution-card card text-white" style="background-color: <?php echo($item['color']); ?>;">
                                         <div class="home-solution-card-body card-body">
-                                            <h3 class="home-solution-card-title ttitle th2"><?php echo(nl2br($item['title'])); ?></h3>
+                                            <h3 class="home-solution-card-title ttitle th2" style="letter-spacing: -0.35px;"><?php echo(nl2br($item['title'])); ?></h3>
                                             <div class="home-solution-card-text"><?php echo(nl2br($item['text'])); ?></div>
                                         </div>
                                         <div class="home-solution-card-footer card-footer">
