@@ -95,10 +95,10 @@
                 <a class="website-link" href="<?php echo($item['href']); ?>"
                    title="<?php echo($item['title']); ?>" style="--website-hover-color: <?php echo($item['hover_color']); ?>;">
                     <div class="website-logo-icon">
-                        <img class="img-contain" src="<?php echo($item['logo_icon']); ?>">
+                        <img class="img-contain" src="<?php echo($item['logo_icon']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['logo_icon']))) ?>">
                     </div>
                     <div class="website-logo-text">
-                        <img class="img-contain" src="<?php echo($item['logo_text']); ?>" style="height: 100%;">
+                        <img class="img-contain" src="<?php echo($item['logo_text']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['logo_text']))) ?>" style="height: 100%;">
                     </div>
                     <span class="sr-only"><?php echo($item['title']); ?></span>
                 </a>

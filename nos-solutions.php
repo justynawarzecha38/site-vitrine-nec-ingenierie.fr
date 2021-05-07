@@ -28,7 +28,7 @@
                     <a href="./images/pages/solutions/customer-journey.jpg" class="glightbox" data-zoomable="true" data-draggable="false">
                         <picture>
                             <source srcset="./images/pages/solutions/customer-journey.png" media="(min-width: 992px)">
-                            <img class="img-contain" src="./images/pages/solutions/customer-journey-mobile.png" alt="">
+                            <img class="img-contain" src="./images/pages/solutions/customer-journey-mobile.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/pages/solutions/customer-journey-mobile.png'))) ?>" alt="">
                         </picture>
                     </a>
 
@@ -93,11 +93,11 @@
                         <?php foreach($solutions_list as $item): ?>
                             <li class="col-12 flex-column-nowrap" id="<?php echo($item['anchor']); ?>">
                                 <div class="picture"<?php echo(isset($item['picture-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$item['picture-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
-                                    <img class="img-cover" src="<?php echo($item['background']); ?>">
+                                    <img class="img-cover" src="<?php echo($item['background']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['background']))) ?>">
                                 </div>
                                 <div class="icon-container"<?php echo(isset($item['icon-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$item['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <img class="img-contain" src="<?php echo($item['picture']); ?>">
+                                        <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
                                     </div>
                                 </div>
                                 <div class="card-container flex-adapt-height">

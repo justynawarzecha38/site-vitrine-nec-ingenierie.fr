@@ -13,9 +13,9 @@
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">MENTIONS JURIDIQUES</h6>
                     <p>NRJDIAGS</p>
-                    <p>Siège social :</p>
-                    <p>Rue de Thann<br>68460 Lutterbach</p>
-                    <p>SIRET : 492 188 917 00016<span style="font-size: 12pt; font-family: 'Times New Roman', serif;"></span></p>
+                    <p><b>Siège social :</b></p>
+                    <p>R80 rue Mstislav Rostropovitch<br>75017 Paris</p>
+                    <p><b>SIRET :</b> 492 188 917 00016<span style="font-size: 12pt; font-family: 'Times New Roman', serif;"></span></p>
                 </div>
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">MENTIONS CNIL</h6>

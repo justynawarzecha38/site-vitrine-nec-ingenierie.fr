@@ -72,7 +72,7 @@
                 <div class="page-section-block">
                     <div class="row g-0">
                         <div class="col-4 col-md-3 col-xl-2 pe-2">
-                            <img class="img-contain" src="images/pages/solutions/cofrac-logo.svg">
+                            <img class="img-contain" src="images/pages/solutions/cofrac-logo.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('images/pages/solutions/cofrac-logo.svg'))) ?>">
                         </div>
                         <div class="col-8 col-md-9 col-xl-10">
                             <div class="card h-100">
@@ -105,7 +105,7 @@
                                             <?php if(isset($item['icon'])) { ?>
                                                 <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
                                             <?php } else { ?>
-                                                <img class="img-contain" src="<?php echo($item['picture']); ?>">
+                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
                                             <?php } ?>
                                         </div>
                                         <h3 class="ttitle th5 mb-35"><?php echo(nl2br($item['title'])); ?></h3>

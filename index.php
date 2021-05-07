@@ -61,7 +61,7 @@
                     'text' => "<p>Nous passons 80% de notre temps dans des espaces clos, et la majorité de ce temps se passe dans votre maison. L’air que nous respirons à l’intérieur de notre logement est parfois plus pollué que l’air extérieur.</p>
 <p>Air Sain est la mise en place de différentes étapes et moyens pour améliorer la bonne qualité d’air intérieur dans le logement.
 Ces moyens permettent entre autres d’attester le bon fonctionnement du système de ventilation du logement, qui est une des causes principales de dégradation de la qualité d’air intérieur dans le logement.</p>
-<p>Pour en savoir plus sur les démarches à adopoter&nbsp;<a href=\"http://www.airsain.fr/\">www.airsain.fr</a></p>",
+<p>Pour en savoir plus sur les démarches à adopter&nbsp;<a href=\"http://www.airsain.fr/\">www.airsain.fr</a></p>",
                     'href' => './article.php',
                 ],
                 [
@@ -179,32 +179,32 @@ EOT,
                     'uniq_id' => '0010',
                     'created_at' => '2017-01-06 14:06',
                     'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
-                    'title' => "La RT 2012 = une obligation !",
-                    'intro' => "<p>La RT 2012 vient tout juste de souffler sa 4ème bougie.
-C’est la raison pour laquelle, nous avons décidé de réaliser un article de rappel des obligations de la RT 2012.</p>",
+                    'title' => "La RT2012 = une obligation !",
+                    'intro' => "<p>La RT2012 vient tout juste de souffler sa 4ème bougie.
+C’est la raison pour laquelle, nous avons décidé de réaliser un article de rappel des obligations de la RT2012.</p>",
                     'text' => <<<EOT
 <div class="itemFullText">
 	  	
-<p style="text-align: justify;">&nbsp;<span style="text-align: justify;">Bien que les habitués de la construction neuve, les professionnels du Bâtiment&nbsp;: Constructeurs de maisons, Promoteurs, Architectes, … ont intégrés le process de la RT 2012 et le respectent, de nombreux «&nbsp;Autoconstructeurs&nbsp;» nous interrogent régulièrement sur la RT 2012 et son caractère obligatoire.</span>&nbsp;</p>
-<p style="text-align: justify;"><strong>Etes-vous concerné par la RT 2012&nbsp;?</strong></p>
+<p style="text-align: justify;">&nbsp;<span style="text-align: justify;">Bien que les habitués de la construction neuve, les professionnels du Bâtiment&nbsp;: Constructeurs de maisons, Promoteurs, Architectes, … ont intégré le process de la RT2012 et le respectent, de nombreux «&nbsp;Autoconstructeurs&nbsp;» nous interrogent régulièrement sur la RT2012 et son caractère obligatoire.</span>&nbsp;</p>
+<p style="text-align: justify;"><strong>Etes-vous concerné par la RT2012&nbsp;?</strong></p>
 <p style="text-align: justify;">Quand vous signez une demande permis de construire (que vous soyez professionnel du Bâtiment ou «&nbsp;Autoconstructeur&nbsp;»), vous vous engagez à respecter la réglementation technique, et donc en particulier la réglementation thermique dans la limite de son domaine d'application. Le formulaire de demande de permis précise : <em>«&nbsp;Je m'engage à respecter les règles générales de la construction prévues par les articles L. 111-1 et suivants du Code de la construction et de l'habitation sous peine d'encourir des sanctions pénales applicables en cas de violation de ces règles (articles L. 152-1 à L. 152-11 du Code de la construction et de l'habitation)&nbsp;»</em></p>
-<p style="text-align: justify;"><strong>Qu’est-ce que la RT 2012&nbsp;? Et pourquoi&nbsp;?</strong></p>
-<p style="text-align: justify;">La RT 2012 est une réglementation dite thermique qui <span style="text-decoration: underline;">s’applique à tous les permis de construire de bâtiments neufs déposés depuis le 1<sup>er</sup> janvier 2013</span>. Autrement dit, les «&nbsp;Autoconstructeurs&nbsp;» ont l’obligation d’appliquer, respecter cette réglementation, même s’ils construisent pour leur propre compte.</p>
+<p style="text-align: justify;"><strong>Qu’est-ce que la RT2012&nbsp;? Et pourquoi&nbsp;?</strong></p>
+<p style="text-align: justify;">La RT2012 est une réglementation dite thermique qui <span style="text-decoration: underline;">s’applique à tous les permis de construire de bâtiments neufs déposés depuis le 1<sup>er</sup> janvier 2013</span>. Autrement dit, les «&nbsp;Autoconstructeurs&nbsp;» ont l’obligation d’appliquer, respecter cette réglementation, même s’ils construisent pour leur propre compte.</p>
 <p style="text-align: justify;">Cette réglementation s’inscrit dans le cadre de la politique de réduction des émissions de gaz à effets de serre que la France mène conformément aux différents engagements pris lors&nbsp;: du protocole de KYOTO signé le 11 décembre 1997, de l’accord de la COP 21 signé le 12 décembre 2015, …</p>
-<p style="text-align: justify;">Pour parvenir à atteindre ces objectifs de réduction des émissions de gaz à effets de serre, on ne peut pas imaginer que l’Etat accorde une dérogation aux «&nbsp;Autoconstructeurs&nbsp;». La RT 2012 s’applique donc bien à tous.</p>
-<p><strong style="text-align: justify;">Quel est le process OBLIGATOIRE de la RT 2012&nbsp;?</strong></p>
+<p style="text-align: justify;">Pour parvenir à atteindre ces objectifs de réduction des émissions de gaz à effets de serre, on ne peut pas imaginer que l’Etat accorde une dérogation aux «&nbsp;Autoconstructeurs&nbsp;». La RT2012 s’applique donc bien à tous.</p>
+<p><strong style="text-align: justify;">Quel est le process OBLIGATOIRE de la RT2012&nbsp;?</strong></p>
 <ol>
 <li><strong>Lors du dépôt du Permis de Construire = Joindre à votre demande</strong>&nbsp;:</li>
 </ol>
 <p style="text-align: justify;"><em>Formulaire d’attestation de la prise en compte de la réglementation thermique au dépôt de la demande de permis de construire et, pour les bâtiments de plus de 1000 m2, de la réalisation de l’étude de faisabilité</em>. Ce formulaire est appelé dans le métier communément&nbsp;: Attestation Bbio.</p>
 <p style="text-align: justify;">Il est, délivré par le Ministère du Logement et de l’Habitat Durable et le Ministère de l’Environnement, de l’Energie et de la Mer, et réalisé par un Bureau d’Etudes Thermiques après avoir réalisé le calcul du Besoin Bioclimatique de votre projet de construction.</p>
-<p style="text-align: justify;">A ce stade, votre Bureau d’Etudes Thermiques peut vous prescrire des modifications techniques et/ou architecturales si toutefois votre projet ne respecte pas certaines exigences émises par la RT 2012. Par exemple&nbsp;: une surface de vitrage &lt; 1/6 de la Surface Habitable, le renforcement de l’isolation, …</p>
+<p style="text-align: justify;">A ce stade, votre Bureau d’Etudes Thermiques peut vous prescrire des modifications techniques et/ou architecturales si toutefois votre projet ne respecte pas certaines exigences émises par la RT2012. Par exemple&nbsp;: une surface de vitrage &lt; 1/6 de la Surface Habitable, le renforcement de l’isolation, …</p>
 <p style="text-align: justify;">La présence de l’Attestation Bbio est contrôlée lors de l’instruction de votre demande de Permis de construire pour une maison individuelle et / ou ses annexes comprenant ou non des démolitions, Cerfa n°13406, PCMI14-1.</p>
 <p style="text-align: center;">Pas d’Attestation Bbio, pas de Permis de Construire accordé&nbsp;!</p>
 <ol>
 <li><strong>2.</strong><strong>Avant le démarrage de la Construction = Réaliser une Etude Thermique complète</strong></li>
 </ol>
-<p style="text-align: justify;">Avant d’entamer la Construction, il est nécessaire de réaliser une Etude Thermique complète par un Bureau d’Etudes Thermiques afin de <strong>faire valider ses choix techniques et par conséquence le respect des 3 exigences de résultat de la RT 2012</strong>&nbsp;:</p>
+<p style="text-align: justify;">Avant d’entamer la Construction, il est nécessaire de réaliser une Etude Thermique complète par un Bureau d’Etudes Thermiques afin de <strong>faire valider ses choix techniques et par conséquence le respect des 3 exigences de résultat de la RT2012</strong>&nbsp;:</p>
 <ul>
 <li><strong>L'efficacité énergétique du bâti</strong></li>
 </ul>
@@ -217,9 +217,9 @@ C’est la raison pour laquelle, nous avons décidé de réaliser un article de 
 <ul>
 <li><strong>Le confort d'été dans les bâtiments non climatisés</strong></li>
 </ul>
-<p style="margin-left: 60px; text-align: justify;">A l'instar de la RT 2005, la RT 2012 définit des catégories de bâtiments dans lesquels il est possible d'assurer un bon niveau de confort en été sans avoir à recourir à un système actif de refroidissement. Pour ces bâtiments, la réglementation impose que la température la plus chaude atteinte dans les locaux, au cours d'une séquence de 5 jours très chauds d'été n'excède pas un seuil.</p>
+<p style="margin-left: 60px; text-align: justify;">A l'instar de la RT 2005, la RT2012 définit des catégories de bâtiments dans lesquels il est possible d'assurer un bon niveau de confort en été sans avoir à recourir à un système actif de refroidissement. Pour ces bâtiments, la réglementation impose que la température la plus chaude atteinte dans les locaux, au cours d'une séquence de 5 jours très chauds d'été n'excède pas un seuil.</p>
 <p style="text-align: justify;">A ce stade, votre Bureau d’Etudes Thermiques peut vous prescrire des modifications techniques si toutefois votre projet ne respecte pas les exigences ci-dessus.</p>
-<p style="text-align: justify;">Des exigences de moyens sont également à prévoir pour respecter la RT 2012. Elle se limitent au strict nécessaire, pour refléter la volonté affirmée de faire pénétrer significativement une pratique. Parmi ces exigences, on retrouve&nbsp;:</p>
+<p style="text-align: justify;">Des exigences de moyens sont également à prévoir pour respecter la RT2012. Elle se limitent au strict nécessaire, pour refléter la volonté affirmée de faire pénétrer significativement une pratique. Parmi ces exigences, on retrouve&nbsp;:</p>
 <ul>
 <li>Surface vitrée &gt; 1/6 de la Surface Habitable</li>
 <li>Affichage des consommations énergétiques</li>
@@ -236,7 +236,7 @@ C’est la raison pour laquelle, nous avons décidé de réaliser un article de 
 </ul>
 <p style="margin-left: 60px; text-align: justify;">Pourquoi&nbsp;?</p>
 <p style="margin-left: 60px; text-align: justify;">Premièrement, car un contrôle de cohérence entre les produits cités dans l’Etude Thermique et ceux réellement installés dans votre Construction sera mené par un organisme indépendant de votre projet de Construction.</p>
-<p style="margin-left: 60px; text-align: justify;">Deuxièmement, car le résultat de l’Etude Thermique est issu d’un calcul réalisé à partir de performances de matériaux/équipements, les matériaux/équipements différents ont des performances différentes, le résultat du calcul peut in fine être différent. Le risque étant de ne plus respecter une des 3 exigences évoquées précédemment et donc de ne plus être «&nbsp;Conforme&nbsp;» à la RT 2012.</p>
+<p style="margin-left: 60px; text-align: justify;">Deuxièmement, car le résultat de l’Etude Thermique est issu d’un calcul réalisé à partir de performances de matériaux/équipements, les matériaux/équipements différents ont des performances différentes, le résultat du calcul peut in fine être différent. Le risque étant de ne plus respecter une des 3 exigences évoquées précédemment et donc de ne plus être «&nbsp;Conforme&nbsp;» à la RT2012.</p>
 <ul>
 <li>Soigner la mise en œuvre des différents matériaux de construction et le rebouchage des différents éléments traversant chaque paroi (gaines, tuyaux, câble, …). En effet, le niveau d’étanchéité à l’air de votre Construction devra être mesuré par une société habilitée à la fin de vos travaux de Construction. L’étanchéité à l’air de votre construction est en quelque sorte sa capacité à être hermétique et donc sa capacité à limiter les déperditions par renouvellement d’air parasite.</li>
 </ul>
@@ -249,10 +249,10 @@ C’est la raison pour laquelle, nous avons décidé de réaliser un article de 
 <p style="text-align: justify;">La présence de l’ATh est contrôlée lors de l’instruction de votre Déclaration Achèvement des Travaux, Cerfa n°13408, AT3.</p>
 <p style="text-align: center;">Pas d’ATh, pas d’Achèvement des Travaux accordé&nbsp;!</p>
 <p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><img src="images/news/imgnewsnrj.jpg" alt="RT 2012 une obligation" width="219" height="309"></p>
+<p style="text-align: center;"><img src="images/news/imgnewsnrj.jpg" alt="RT2012 une obligation" width="219" height="309"></p>
 <p style="text-align: center;">&nbsp;</p>
-<p style="text-align: justify;"><strong>Qui contrôle l’application, le respect de la RT 2012&nbsp;?</strong></p>
-<p style="text-align: justify;">Plusieurs organismes, personnes peuvent contrôler le respect de la RT 2012, qui nous le rappelons de nouveau, <span style="text-decoration: underline;">s’applique à tous les permis de construire de bâtiments neufs déposés depuis le 1er janvier 2013</span>&nbsp;:</p>
+<p style="text-align: justify;"><strong>Qui contrôle l’application, le respect de la RT2012&nbsp;?</strong></p>
+<p style="text-align: justify;">Plusieurs organismes, personnes peuvent contrôler le respect de la RT2012, qui nous le rappelons de nouveau, <span style="text-decoration: underline;">s’applique à tous les permis de construire de bâtiments neufs déposés depuis le 1er janvier 2013</span>&nbsp;:</p>
 <ul>
 <li>Le service instructeur du Permis de Construire et de l’Achèvement des Travaux</li>
 <li>Les agents du ministère en charge de la construction, assermentés et commissionnés à cet effet (article L. 151-1 du code de la construction) jusqu’à 3 ans après l’achèvement des travaux.</li>
@@ -261,13 +261,13 @@ C’est la raison pour laquelle, nous avons décidé de réaliser un article de 
 <li>Les Notaires en cas de revente du bien</li>
 <li>Le futur Propriétaire de votre Construction.</li>
 </ul>
-<p style="margin-left: 60px; text-align: justify;">En effet, le non-respect de la RT 2012, pourtant obligatoire, peut être perçu comme un vice caché par le nouveau Propriétaire de la Construction et une action en justice peut être mené par ce dernier.</p>
-<p style="text-align: justify;"><strong>Quelles sanctions en cas de non-respect de la RT 2012&nbsp;?</strong></p>
-<p style="text-align: justify;">Officiellement, la sanction prévue par la loi est d'ordre pénal, selon le droit pénal de la construction en cas de non-respect de la RT 2012. On retrouve ce champ d'application dans les "sanctions pénales" regroupant les articles L. 152-1 à L. 152-5 du Code de la construction et de l’habitation.</p>
+<p style="margin-left: 60px; text-align: justify;">En effet, le non-respect de la RT2012, pourtant obligatoire, peut être perçu comme un vice caché par le nouveau Propriétaire de la Construction et une action en justice peut être mené par ce dernier.</p>
+<p style="text-align: justify;"><strong>Quelles sanctions en cas de non-respect de la RT2012&nbsp;?</strong></p>
+<p style="text-align: justify;">Officiellement, la sanction prévue par la loi est d'ordre pénal, selon le droit pénal de la construction en cas de non-respect de la RT2012. On retrouve ce champ d'application dans les "sanctions pénales" regroupant les articles L. 152-1 à L. 152-5 du Code de la construction et de l’habitation.</p>
 <p style="text-align: justify;">Selon l'article L.152-4 du Code de la construction et de l'habitation, les personnes physiques (utilisateurs du sol, bénéficiaire des travaux, architectes, constructeurs ou toute autre personne responsable de l’exécution des travaux) ayant méconnu les obligations de la RT2012 sont passibles d'une amende de 45.000 € et d'une peine de 6 mois d'emprisonnement en cas de récidive.</p>
 <p style="text-align: justify;">Selon l'article 121-2 du Code Pénal, les personnes morales sont également responsables et peuvent encourir une amende jusqu'à 225.000 € ainsi qu'une interdiction d'exercer dans ce domaine d'activité.</p>
 <p style="text-align: justify;">L'article L. 152-2 du Code de la construction et de l'habitation prévoit l'interruption des travaux tant que les obligations thermiques n'auront pas été respectées.</p>
-<p style="text-align: justify;">En cas de condamnation, l'article L. 152-5 du Code de la construction prévoit la mise en conformité des ouvrages avec les règlements, la démolition ou la réaffection du sol en vue rétablir les lieux dans l'état antérieur.</p>
+<p style="text-align: justify;">En cas de condamnation, l'article L. 152-5 du Code de la construction prévoit la mise en conformité des ouvrages avec les règlements, la démolition ou la réaffection du sol en vue de rétablir les lieux dans l'état antérieur.</p>
 <p style="text-align: right;">Rafael PEDREGAL – 05 janvier 2017</p>
 	  </div>
 EOT,
@@ -317,7 +317,7 @@ EOT,
                 <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
                     <h1 class="home-header-bottom-title ttitle th4">NRJ Diags</h1>
                     <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                    <p class="home-header-bottom-text th5 text-uppercase">Contrôleurs Techniques spécialisés dans le Contrôle de la RT2012 et <br class="d-none d-md-block">RE 2020 ainsi que dans les Inspections Certificats Economie Energie.</p>
+                    <p class="home-header-bottom-text th5 text-uppercase">Contrôleurs Techniques spécialisés dans le Contrôle de la RT2012 et <br class="d-none d-md-block">RE 2020 ainsi que dans les Inspections Certificats d'Economie d'Energie.</p>
                 </div>
             </div>
 
@@ -373,7 +373,7 @@ EOT,
                     <!--p>Nous sommes spécialistes du contrôle et des mesures en fin de chantier qui attestent de la qualité de vos réalisations.
                         <br><b>Nous intervenons principalement autour des prestations :</b>
                     </p-->
-                    <p>Nous sommes spécialisés dans le Contrôle de la RT2012 et RE 2020 ainsi que dans les Inspections Certificats Economie Energie.</p>
+                    <p>Nous sommes spécialisés dans le Contrôle de la RT2012 et RE 2020 ainsi que dans les Inspections Certificats d'Economie d'Energie.</p>
                 </div>
                 <div class="page-section-block">
                     <ul id="home-about-list" class="row list-unstyled justify-content-center gy-0 mb-0" style="--bs-gutter-x: 30px;">
@@ -385,7 +385,7 @@ EOT,
                                         <?php if(isset($item['icon'])) { ?>
                                             <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
                                         <?php } else { ?>
-                                            <img class="img-contain" src="<?php echo($item['picture']); ?>">
+                                            <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
                                         <?php } ?>
                                     </div>
                                     <h3 class="ttitle th5"><?php echo(nl2br($item['text'])); ?></h3>
@@ -402,7 +402,7 @@ EOT,
                         <p class="mb-3">Nos Techniciens sont :</p>
                         <ul class="text-start mb-0">
                             <li>Qualifiés 8711 et 8721 par Qualibat pour les mesures de Perméabilité à l'Air</li>
-                            <li>Certifiés DPE par AFNOR pour les DPE et Attestations de prise en compte de la Réglementation Thermique</li>
+                            <li>Certifiés par AFNOR et VERITAS pour les DPE et Attestations de prise en compte de la Réglementation Thermique</li>
                             <li>Formés aux Inspections CEE</li>
                         </ul>
                     </div>
@@ -458,11 +458,11 @@ EOT,
                             <li class="home-solutions-item col-12 col-md-6" style="--rel-aspect-ratio: 540/525;">
                                 <div class="home-solution">
                                     <div class="home-solution-picture-block" style="--aspect-ratio: 510/370;">
-                                        <img class="home-solution-picture img-cover" src="<?php echo($item['background']); ?>">
+                                        <img class="home-solution-picture img-cover" src="<?php echo($item['background']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['background']))) ?>">
                                         <div class="home-solution-picture-overlay"></div>
                                         <div class="home-solution-icons-wrapper">
                                             <div class="home-solution-icons-container">
-                                                <img class="home-solution-icons-picture img-contain" src="<?php echo($item['picture']); ?>">
+                                                <img class="home-solution-icons-picture img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -506,7 +506,7 @@ EOT,
                                     <div class="card h-100">
                                         <div style="--aspect-ratio: 16/9;">
                                             <?php if(isset($item['picture']) && $item['picture']): ?>
-                                            <img class="card-img-top img-cover" src="<?php echo($item['picture']); ?>" alt="">
+                                            <img class="card-img-top img-cover" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" alt="">
                                             <?php else: ?>
                                             <div style="display: flex; flex-flow: column nowrap; align-items: center; justify-content: center; color: white; background-color: var(--primary-color);">
                                                 <i class="fas fa-camera-alt" aria-hidden="true" style="font-size: 48px; margin-bottom: 0.5rem;"></i>
@@ -627,7 +627,7 @@ EOT,
                                 <ul class="home-partners-list row list-unstyled">
                                     <?php foreach($chunk as $item): ?>
                                         <li class="col-4 col-sm-4 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3 p-2" style="height: 5rem;">
-                                            <img class="img-contain" src="<?php echo($item['img']['src']); ?>" alt="" style="filter: grayscale(1);">
+                                            <img class="img-contain" src="<?php echo($item['img']['src']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['img']['src']))) ?>" alt="" style="filter: grayscale(1);">
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>

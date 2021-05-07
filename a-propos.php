@@ -99,7 +99,7 @@
                                             <?php if(isset($item['icon'])) { ?>
                                                 <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
                                             <?php } else { ?>
-                                                <img class="img-contain" src="<?php echo($item['picture']); ?>">
+                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
                                             <?php } ?>
                                         </div>
                                         <h3 class="ttitle th5"><?php echo(nl2br($item['text'])); ?></h3>
@@ -122,7 +122,7 @@
                         <p class="mb-3">Nos Techniciens sont :</p>
                         <ul class="text-start mb-3">
                             <li>Qualifiés 8711 et 8721 par Qualibat pour les mesures de Perméabilité à l'Air</li>
-                            <li>Certifiés DPE par AFNOR pour les DPE et Attestations de prise en compte de la Réglementation Thermique</li>
+                            <li>Certifiés AFNOR et VERITAS pour les DPE et Attestations de prise en compte de la Réglementation Thermique</li>
                             <li>Formés aux Inspections CEE</li>
                         </ul>
                         <p>Grâce à nos agences régionales, nos Techniciens peuvent intervenir sur tout le territoire national aussi bien pour des Constructions neuves : Maisons Individuelles, Logements Collectifs que pour des Rénovations : Inspections CEE.</p>
@@ -140,7 +140,7 @@
                     <div class="w-100 text-center">
                         <picture>
                             <source srcset="./images/pages/about/timeline.svg" media="(min-width: 992px)">
-                            <img class="img-contain" src="./images/pages/about/timeline-mobile.svg" alt="">
+                            <img class="img-contain" src="./images/pages/about/timeline-mobile.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/pages/about/timeline-mobile.svg'))) ?>" alt="">
                         </picture>
                     </div>
                 </div>
@@ -168,12 +168,8 @@
                             'name' => 'Directrice Qualité et Administratif'
                         ],
                         [
-                            'size' => 1,
-                            'name' => 'Responsable Qualité et Administratif'
-                        ],
-                        [
                             'size' => 4,
-                            'name' => "Responsables d'agence"
+                            'name' => "Responsables d'Agences"
                         ],
                         [
                             'size' => 8,
@@ -208,7 +204,7 @@
                     'color' => 'var(--tertiary-color)',
                     'picture' => './images/pages/about/poles/schedule.svg',
                     'name' => "Administratif",
-                    'description' => "Centralisé à Toulouse, ce pôle a pour mission de planifier les interventions des techniciens.\nTél : 09 70 82 03 74",
+                    'description' => "Centralisé à Toulouse, ce pôle a pour mission de planifier les interventions des techniciens.\nTél : 09 72 599 799",
                 ],
                 [
                     'color' => 'var(--quaternary-color)',
@@ -220,7 +216,7 @@
                     'color' => 'var(--quinary-color)',
                     'picture' => './images/pages/about/poles/suivi_chantier.svg',
                     'name' => "Technique",
-                    'description' => "Répartis sur toute la France, les techniciens réalisent des contrôles de fin de chantier RT 2012 (Pack 2 ou Pack 3).",
+                    'description' => "Répartis sur toute la France, les techniciens réalisent des contrôles de fin de chantier RT2012 (Pack 2 ou Pack 3).",
                 ],
             ];
             ?>
@@ -237,7 +233,7 @@
                                 <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                     <div class="card-body">
                                         <div class="mb-35" style="height: 80px;">
-                                            <img class="h-100 w-auto" src="<?php echo($item['picture']); ?>">
+                                            <img class="h-100 w-auto" src="<?php echo($item['picture']); ?><?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
                                         </div>
                                         <h3 class="ttitle th3 mb-35"><?php echo($item['name']); ?></h3>
                                         <p class="roboto-condensed"><?php echo(nl2br($item['description'])); ?></p>

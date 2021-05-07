@@ -15,14 +15,14 @@
             bottom: auto;
             right: 0;
             height: 200px;
-            background: url(./images/bands/contact-mobile.png) no-repeat center center;
+            background: url(./images/bands/contact-mobile.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/bands/contact-mobile.png'))) ?>) no-repeat center center;
             background-size: cover;
             z-index: -1;
         }
         @media (min-width: 992px) {
             #contact-background {
                 height: 620px;
-                background: url(./images/bands/contact.png) no-repeat center center;
+                background: url(./images/bands/contact.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/bands/contact.png'))) ?>) no-repeat center center;
             }
         }
         #contact-content {
