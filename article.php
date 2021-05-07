@@ -23,7 +23,7 @@
             //'picture' => './images/originals/old/500_F_24220893_B8VqELkMRoi6k1fi18X9J0k41GaQ5YK6.jpg',
             'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
             'title' => "Contrôle système de ventilation suivant le protocole PROMEVENT",
-            'intro' => "<p>La réglementation thermique impose la construction de bâtiments de plus en plus étanches à l’air, <strong>il est donc indispensable de s’assurer du bon fonctionnement des systèmes de ventilation pour garantir une bonne qualité d’air intérieur.</strong></p>",
+            'intro' => "La réglementation thermique impose la construction de bâtiments de plus en plus étanches à l’air, <strong>il est donc indispensable de s’assurer du bon fonctionnement des systèmes de ventilation pour garantir une bonne qualité d’air intérieur.</strong>",
             'text' => "<p>Le contrôle du système de ventilation peut être réalisé en suivant le protocole PROMEVENT, il se décompose en plusieurs phases dont :</p>
 <ul>
 <li>Pré-Inscription</li>
@@ -40,7 +40,7 @@
             'created_at' => '2020-04-22 12:14',
             'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
             'title' => "Contrôle conduit 3CEP",
-            'intro' => "<p>L’<a href=\"https://www.legifrance.gouv.fr/loda/id/JORFTEXT000036667631/\" target=\"_blank\" rel=\"noopener\">arrêté du 23 février 2018</a>&nbsp;relatif aux règles techniques et de sécurité applicables aux installations de gaz combustible des bâtiments d'habitation individuelle ou collective, y compris les parties communes&nbsp;<b>modifie les contrôles à effectuer sur les conduits 3CEp</b>.</p>",
+            'intro' => "L’<a href=\"https://www.legifrance.gouv.fr/loda/id/JORFTEXT000036667631/\" target=\"_blank\" rel=\"noopener\">arrêté du 23 février 2018</a>&nbsp;relatif aux règles techniques et de sécurité applicables aux installations de gaz combustible des bâtiments d'habitation individuelle ou collective, y compris les parties communes&nbsp;<b>modifie les contrôles à effectuer sur les conduits 3CEp</b>.",
             'text' => "<p>En effet, depuis le 1er janvier 2020, chaque dépôt de permis de construire doit respecter cet arrêté et dans certains cas de figure, les bâtiments en cours de construction doivent également le respecter.</p>
 <p>A noter, le document&nbsp;<a href=\"medias/solutions/cerfa_16026-01.pdf\">Cerfa n°16026*01</a>&nbsp;: Certificat de Conformité pour une installation Individuelle de Gaz – Modèle 2, a été mis à jour pour se mettre en conformité avec l’arrêté du 23 février 2018.<br>A présent,&nbsp;<b>si le bâtiment comporte un conduit 3CEp, alors, il doit être accompagné de la phase 1 et 2 du&nbsp;<a href=\"medias/solutions/Nouveau%20Protocole%20conduit%203CEp%20extrait%20EVAPDC%20sept%202019.pdf\">« Protocole de mise en service du 3CEp et d’installation et de mise en service des chaudières associées »</a></b>.</p>
 <p>Vous trouverez ci-dessous les grandes lignes de chacune des phases :</p>
@@ -57,7 +57,7 @@
             'created_at' => '2019-09-18 09:02',
             'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
             'title' => "Air Sain",
-            'intro' => "<p>Comme l’a annoncé la loi ELAN, la qualité d’air intérieur des logements sera prise en compte dans les années à venir… <strong>mais pourquoi attendre pour respirer un air sain ?</strong></p>",
+            'intro' => "Comme l’a annoncé la loi ELAN, la qualité d’air intérieur des logements sera prise en compte dans les années à venir… <strong>mais pourquoi attendre pour respirer un air sain ?</strong>",
             'text' => "<p>Nous passons 80% de notre temps dans des espaces clos, et la majorité de ce temps se passe dans votre maison. L’air que nous respirons à l’intérieur de notre logement est parfois plus pollué que l’air extérieur.</p>
 <p>Air Sain est la mise en place de différentes étapes et moyens pour améliorer la bonne qualité d’air intérieur dans le logement.
 Ces moyens permettent entre autres d’attester le bon fonctionnement du système de ventilation du logement, qui est une des causes principales de dégradation de la qualité d’air intérieur dans le logement.</p>
@@ -69,7 +69,7 @@ Ces moyens permettent entre autres d’attester le bon fonctionnement du systèm
             'created_at' => '2017-02-20 18:26',
             'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
             'title' => "Différences entre DPE et Etude Thermique",
-            'intro' => "<p>Il n’est pas rare, dans la moitié Nord de la France, que des Maitres d’Ouvrage s’exclament après avoir vu l’étiquette énergétique du DPE de leur construction classée B alors que le logement construit respecte la réglementation thermique RT2012.</p>",
+            'intro' => "Il n’est pas rare, dans la moitié Nord de la France, que des Maitres d’Ouvrage s’exclament après avoir vu l’étiquette énergétique du DPE de leur construction classée B alors que le logement construit respecte la réglementation thermique RT2012.",
             'text' => <<<EOT
 <div class="itemFullText">
 <p style="margin-bottom: 0.0001pt; text-align: justify; line-height: normal;">Petit rappel des principales différences entre DPE et Etude Thermique&nbsp;:</p>
@@ -180,8 +180,8 @@ EOT,
             'created_at' => '2017-01-06 14:06',
             'tags' => ['construction', 'Grenelle Environnement', 'logement', 'norme 2012', 'permis de construire', 'rt', 'rt2012', 'réglementation thermique', 'thermique'],
             'title' => "La RT2012 = une obligation !",
-            'intro' => "<p>La RT2012 vient tout juste de souffler sa 4ème bougie.
-<br>C’est la raison pour laquelle, nous avons décidé de réaliser un article de rappel des obligations de la RT2012.</p>",
+            'intro' => "La RT2012 vient tout juste de souffler sa 4ème bougie.
+<br>C’est la raison pour laquelle, nous avons décidé de réaliser un article de rappel des obligations de la RT2012.",
             'text' => <<<EOT
 <div class="itemFullText">
 	  	
@@ -310,7 +310,7 @@ EOT,
                 <div class="page-section-block">
                     <?php if(isset($item['picture']) && $item['picture']): ?>
                     <div class="mb-5" style="--aspect-ratio: 16/9;">
-                        <img class="img-cover" src="<?php echo($article['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($article['picture'])))) ?>" alt="">
+                        <img class="img-cover" src="<?php echo($article['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($article['picture']))) ?>" alt="">
                     </div>
                     <?php endif; ?>
                     <p class="line-clamp mb-3" data-limit="4" style="min-height: 110px;"><?php echo(nl2br($article['text'])); ?></p>
