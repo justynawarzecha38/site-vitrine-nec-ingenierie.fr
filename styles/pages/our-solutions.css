@@ -29,6 +29,12 @@
     height: calc(85/370 * 100%);
 }
 
+@media (max-width: 991.98px) {
+    .solutions-list > li:not(:first-child) {
+        margin-top: 1rem;
+    }
+}
+
 @media (min-width: 992px) {
     .solutions-list {
         position: relative;

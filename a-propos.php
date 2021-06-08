@@ -17,65 +17,16 @@
         <?php include_once('./includes/aside.php'); ?>
         <!-- QUI SOMMES-NOUS ? -->
         <?php
-        /*$about_intro_list = [
-            [
-                'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/about/intro/permeabilite.svg',
-                'text' => "Mesure de \nperméabilité \nà l'air du bâti",
-            ],
-            [
-                'color' => 'var(--quaternary-color)',
-                'picture' => './images/pages/about/intro/vmc.svg',
-                'text' => "Mesure \nd'étanchéité \ndes réseaux \nde VMC",
-            ],
-            [
-                'color' => 'var(--quinary-color)',
-                'picture' => './images/pages/about/intro/dpe.svg',
-                'text' => "DPE",
-            ],
-            [
-                'color' => 'var(--senary-color)',
-                'picture' => './images/pages/about/intro/fin_chantier.svg',
-                'text' => "Attestation \nthermique \nde fin \nde travaux",
-            ],
-        ];*/
         $about_intro_list = [
             [
-                'color' => 'var(--primary-color)',
-                //'picture' => './images/pages/solutions/intro/vent.svg',
-                'picture' => './images/pages/about/poles/qualite.svg',
-                'text' => "Certification \nPerméabilité à l'air - \nDémarche Qualité \nAnnexe VII",
-            ],
-            [
-                //'color' => 'var(--tertiary-color)',
                 'color' => 'var(--secondary-color)',
-                'picture' => './images/pages/about/intro/permeabilite.svg',
-                'text' => "Mesure de \nperméabilité \nà l'air du bâti \net réseaux VMC",
+                'picture' => './images/pages/about/intro/plan.svg',
+                'text' => "Maîtrise d'œuvre complète \nou spécialisée \nen tant que mandataire \nou co-traitant",
             ],
             [
-                //'color' => 'var(--quaternary-color)',
                 'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/about/intro/vmc.svg',
-                //'text' => "Mesure \nd'étanchéité \ndes réseaux \nde VMC",
-                'text' => "Vérification \nVentilation \nselon protocole \nPROMEVENT",
-            ],
-            [
-                //'color' => 'var(--quinary-color)',
-                'color' => 'var(--quaternary-color)',
-                'picture' => './images/pages/about/intro/dpe.svg',
-                'text' => "DPE",
-            ],
-            [
-                //'color' => 'var(--senary-color)',
-                'color' => 'var(--quinary-color)',
-                'picture' => './images/pages/about/intro/fin_chantier.svg',
-                //'text' => "Attestation \nthermique \nde fin \nde travaux",
-                'text' => "Attestation de \nprise en compte de \nla Réglementation \nthermique",
-            ],
-            [
-                'color' => 'var(--senary-color)',
-                'icon' => 'fab fa-searchengin',
-                'text' => "Inspections CEE",
+                'picture' => './images/pages/about/intro/engineering.svg',
+                'text' => "Ingénierie \ntraditionnelle",
             ],
         ];
         ?>
@@ -85,8 +36,8 @@
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                 </div>
                 <div class="page-section-block text-center">
-                    <p>Nous sommes spécialistes du contrôle et des mesures en fin de chantier qui attestent de la qualité de vos réalisations.
-                        <br><b>Nous intervenons principalement autour des prestations :</b>
+                    <p>Nous sommes basés à Lyon, cela nous permet de rayonner sur la grande moitié Est de la France
+                        <br><b>et de vous accompagner dans les missons&nbsp;:</b>
                     </p>
                 </div>
                 <div class="page-section-block">
@@ -110,14 +61,6 @@
                     </ul>
                 </div>
                 <!--div class="text-center">
-                    <p class="page-section-block">Nos Techniciens sont qualifiés 8711 par Qualibat
-                        <br>afin de réaliser les mesures de perméabilité à l’air et sont certifiés DPE par l’AFNOR.
-                        <br>
-                        <br>Grâce à nos 8 agences régionales, les Techniciens peuvent intervenir sur
-                        <br>tout le territoire national sur vos chantiers de maisons individuelles, logements collectifs
-                        <br>mais également sur vos réalisations tertiaires, en neuf ou en rénovation.</p>
-                </div-->
-                <div class="text-center">
                     <div class="page-section-block">
                         <p class="mb-3">Nos Techniciens sont :</p>
                         <ul class="text-start mb-3">
@@ -127,7 +70,7 @@
                         </ul>
                         <p>Grâce à nos agences régionales, nos Techniciens peuvent intervenir sur tout le territoire national aussi bien pour des Constructions neuves : Maisons Individuelles, Logements Collectifs que pour des Rénovations : Inspections CEE.</p>
                     </div>
-                </div>
+                </div-->
             </div>
         </section>
         <!-- HISTORIQUE -->

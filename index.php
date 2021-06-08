@@ -345,7 +345,7 @@ EOT,
                 </div>
                 <div class="page-section-block text-center">
                     <p>Nous sommes basés à Lyon, cela nous permet de rayonner sur la grande moitié Est de la France
-                        <br class="d-none d-md-block"><b>et de vous accompagner dans les missons :</b>
+                        <br class="d-none d-md-block"><b>et de vous accompagner dans les missons&nbsp;:</b>
                     </p>
                 </div>
                 <div class="page-section-block">
