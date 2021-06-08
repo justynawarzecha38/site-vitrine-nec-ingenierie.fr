@@ -37,74 +37,167 @@
         </section>
         <!-- NOS SOLUTIONS -->
         <?php
-            $solutions_list = [
-                [
-                    'anchor' => 'pack-3',
-                    'background' => './images/pages/solutions/list/pack3.png',
-                    'color' => 'var(--senary-color)',
-                    'picture' => './images/pages/solutions/intro/pack3.png',
-                    'title' => "Pack 3",
-                    'text' => "Test de perméabilité à l’air, DPE et attestation de prise en compte de la réglementation Thermique à l’achèvement des travaux.\n\nNos Techniciens se déplacent une unique fois sur vos chantiers avant la livraison pour :\n<span class='tfont-bold' style='color: var(--senary-color);'>1. Effectuer le test de perméabilité à l’air.</span> Les Techniciens NRJ Diags sont d’ailleurs tous Opérateurs Autorisés par QUALIBAT pour réaliser ces mesures.\n<span class='tfont-bold' style='color: var(--senary-color);'>2.Etablir le DPE.</span> Les Techniciens NRJ Diags sont tous Diagnostiqueurs certifiés par Afnor Certification. Ils sont donc autorisés à vérifier la cohérence entre l’étude thermique et les équipements installés.\n<span class='tfont-bold text-senary'>3. Délivrer l’attestation de prise en compte de la réglementation thermique</span> si les 2 points précédents sont conformes.\n\n<i class='fas fa-plus text-senary' aria-hidden='true'></i>&nbsp;<span class='tfont-black'>Mesurer la pression des bouches VMC (conforme à l’Avis Technique)</span>",
-                    'picture-aspect-ratio-at-breakpoint' => '650/465',
-                    'icon-aspect-ratio-at-breakpoint' => '560/465',
+        $solutions_list = [
+            'economie-construction' => [
+                'anchor' => 'economie-construction',
+                'background' => './images/pages/solutions/list/economie-construction.png',
+                'color' => 'var(--primary-color)',
+                'picture' => './images/pages/solutions/intro/paper-pencil.svg',
+                'title' => "Économie de \nla construction",
+                'content' => [
+                    [
+                        'title' => "Avant-projet",
+                        'text' => "Estimatif financier sommaire du projet en fonction des surfaces et principales orientations techniques"
+                    ],
+                    [
+                        'title' => "DCE",
+                        'text' => <<<"EC_2"
+<ul class="my-0"><!--
+--><li>Elaborer les CCTP et CCAP<!--
+--><ul class="my-0"><!--
+--><li>Light – sans les mentions des DTU en version DQE</li><!--
+--><li>Classique – intégration des DTU et des normes</li><!--
+--></ul>
+</li><!--
+--><li>Réaliser le cadre de décomposition du prix global et forfaitaire (CDPGF)</li><!--
+--><li>Définir les quantités de chacun des matériaux</li><!--
+--><li>Estimatif financier définitif du projet en fonction des quantités réelles et des choix techniques définitifs avant consultation des entreprises</li><!--
+--></ul>
+EC_2,
+                    ],
+                    [
+                        'title' => "Appel d'offres",
+                        'text' => <<<"EC_3"
+<ul class="my-0"><!--
+--><li>Envoyer les appels d'offres aux entreprises</li><!--
+--><li>Analyser les réponses aux appels d'offres</li><!--
+--><li>Proposer la réponse la plus cohérente au maître d'ouvrage</li><!--
+--><li>Mettre à jour les pièces marchés conformément à la validation des appels d'offres</li><!--
+--></ul>
+EC_3,
+                    ],
                 ],
-                [
-                    'anchor' => 'demarche-qualite',
-                    'background' => './images/pages/solutions/list/qualite.png',
-                    'color' => 'var(--tertiary-color)',
-                    'picture' => './images/pages/solutions/intro/qualite.svg',
-                    'title' => "Démarche qualité",
-                    'text' => "Si vous souhaitez réaliser des économies substantielles, vous pouvez vous engager dans un <span class='tfont-bold text-tertiary'>process de Certification de la Perméabilité à l’Air</span>. Une fois obtenue, vous pouvez vous affranchir d’une mesure de perméabilité à l’air systématique sur vos chantiers en ne testant qu’un échantillon d’environ 10- 15 % de vos constructions.\n\nPour ce faire nous vous accompagnerons au quotidien, grâce à nos Techniciens terrain et votre assistante dédiée, depuis l’audit d’état des lieux jusqu’aux audits de renouvellement annuels.",
-                    'picture-aspect-ratio-at-breakpoint' => '557/465',
-                    'icon-aspect-ratio-at-breakpoint' => '557/335',
+                'picture-aspect-ratio-at-breakpoint' => '610/370',
+                'icon-aspect-ratio-at-breakpoint' => '610/370',
+            ],
+            'ingenierie-fluide' => [
+                'anchor' => 'ingenierie-fluide',
+                'background' => './images/pages/solutions/list/ingenierie-fluide.png',
+                'color' => 'var(--quaternary-color)',
+                'picture' => './images/pages/solutions/intro/measure.svg',
+                'title' => "Ingénierie fluide",
+                'content' => [
+                    [
+                        'title' => "Avant-projet définitif",
+                        'text' => <<<"IF_1"
+<ul class="my-0"><!--
+--><li>Vérification des plans et des besoins d'adaptations liés à l'implantation et à la circulation des équipements techniques</li><!--
+--><li>Bilan de puissance électrique et prédimensionnement des bassins de rétention d'eaux pluviales</li><!--
+--></ul>
+IF_1,
+                    ],
+                    [
+                        'title' => "DCE",
+                        'text' => <<<"IF_2"
+<ul class="my-0"><!--
+--><li>Elaborer les CCTP</li><!--
+--><li>Elaborer des plans de consultations ainsi que les plans de vente techniques</li><!--
+--><li>Réaliser le cadre de décomposition du prix global et forfaitaire (CDPGF)</li><!--
+--><li>Définir les quantités de chacun des matériaux</li><!--
+--><li>Estimatif financier définitif du projet en fonction des quantités réelles et des choix techniques définitifs avant consultation des entreprises</li><!--
+--></ul>
+IF_2,
+                    ],
+                    [
+                        'title' => "Appel d'offres",
+                        'text' => <<<"IF_3"
+<ul class="my-0"><!--
+--><li>Analyser les réponses aux appels d'offres</li><!--
+--><li>Proposer la réponse la plus cohérente au maître d'ouvrage</li><!--
+--><li>Mettre à jour les pièces marchés conformément à la validation des appels d'offres</li><!--
+--></ul>
+IF_3,
+                    ],
+                    [
+                        'title' => "Phase travaux pour les lots techniques",
+                        'text' => <<<"IF_4"
+<ul class="my-0"><!--
+--><li>Mise à jour des plans de vente pour intégration des TMA client</li><!--
+--><li>Elaborer le VISA des éléments d'exécution des entreprises</li><!--
+--><li>Accompagnement MOA et MOEx au suivi des travaux sur les lots techniques</li><!--
+--><li>Accompagnement à la réception des ouvrages et levés de réserves</li></ul>
+IF_4,
+                    ],
                 ],
-                [
-                    'anchor' => 'pack-2',
-                    'background' => './images/pages/solutions/list/pack2.png',
-                    'color' => 'var(--quinary-color)',
-                    'picture' => './images/pages/solutions/intro/pack2.png',
-                    'title' => "Pack 2",
-                    'text' => "DPE et attestation de prise en compte de la réglementation Thermique à l’achèvement des travaux.\n\nDans le cadre d’une démarche qualité perméabilité à l’air, seul un échantillon de vos maisons sera soumis au test de perméabilité à l’air. Dans ce cadre nos Techniciens se déplacent une unique fois sur vos chantiers avant la livraison pour :\n<span class='tfont-bold text-quinary'>1. Etablir le DPE.</span> Les Techniciens NRJ Diags sont tous Diagnostiqueurs certifiés par Afnor Certification. Ils sont donc autorisés à vérifier la cohérence entre l’étude thermique et les équipements installés.\n<span class='tfont-bold text-quinary'>2. Délivrer l’attestation de prise en compte de la réglementation thermique</span> si le point précédent est conforme.\n\n<i class='fas fa-plus text-senary' aria-hidden='true'></i>&nbsp;<span class='tfont-black'> Mesurer la pression des bouches VMC (conforme à l’Avis Technique)</span>",
-                    'picture-aspect-ratio-at-breakpoint' => '515/465',
-                    'icon-aspect-ratio-at-breakpoint' => '515/300',
-                ],
-                [
-                    'anchor' => '3cep',
-                    'background' => './images/pages/solutions/list/co2.png',
-                    'color' => 'var(--quaternary-color)',
-                    'picture' => './images/pages/solutions/intro/vent.svg',
-                    //'title' => "Contrôle sur conduit 3CEP",
-                    /*'text' => "L’arrêté du 23 février 2018 et applicable au 1er janvier 2020 relatif aux règles techniques et de sécurité applicables aux installations de gaz combustible des bâtiments d'habitation individuelle ou collective, y compris les parties communes modifie les contrôles à effectuer sur les conduits 3Cep.\nNos Techniciens se déplacent sur site pour effectuer les contrôles de la phase 1 : <span class='tfont-bold text-quaternary'>Vérification du dimensionnement, de la mise en œuvre et de l’étanchéité du conduit 3CEp.</span>",*/
-                    'title' => "Vérification des systèmes VMC selon protocole PROMEVENT",
-                    'text' => "Nos Techniciens se déplacent pour <span class='tfont-bold text-quaternary'>vérifier le système de ventilation selon le protocole PROMEVENT.</span>\nPréalablement, nous sommes en capacité de vous accompagner dans la mise en place d'un plan d'actions afin d'améliorer en continu la qualité de vos installations de ventilation.",
-                    'picture-aspect-ratio-at-breakpoint' => '650/495',
-                    'icon-aspect-ratio-at-breakpoint' => '560/495',
-                ],
-            ];
+                'picture-aspect-ratio-at-breakpoint' => '610/370',
+                'icon-aspect-ratio-at-breakpoint' => '610/370',
+            ],
+        ];
         ?>
         <section id="solutions-intro" class="page-section">
             <div class="page-container">
                 <div class="page-section-header text-center">
                     <h1 class="ttitle th1 text-center">Nos solutions</h1>
-                    <h2 class="ttitle th2 text-center text-primary">Constructions neuves</h2>
                 </div>
-                <div class="page-section-block">
-                    <ul id="solutions-list" class="row gx-0 list-unstyled" style="--bs-gutter-y: 50px;">
-                        <?php foreach($solutions_list as $item): ?>
-                            <li class="col-12 flex-column-nowrap" id="<?php echo($item['anchor']); ?>">
-                                <div class="picture"<?php echo(isset($item['picture-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$item['picture-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
-                                    <img class="img-cover" src="<?php echo($item['background']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['background']))) ?>">
+                <div class="page-section-block" id="<?php echo($solutions_list['economie-construction']['anchor']); ?>">
+                    <ul class="solutions-list m-0 list-unstyled">
+                        <li>
+                            <div class="picture"<?php echo(isset($solutions_list['economie-construction']['picture-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$solutions_list['economie-construction']['picture-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
+                                <img class="img-cover" src="<?php echo($solutions_list['economie-construction']['background']); ?>">
+                            </div>
+                            <div class="icon-container"<?php echo(isset($solutions_list['economie-construction']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['economie-construction']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img class="img-contain" src="<?php echo($solutions_list['economie-construction']['picture']); ?>">
                                 </div>
-                                <div class="icon-container"<?php echo(isset($item['icon-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$item['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
-                                    <div class="d-flex align-items-center justify-content-center">
-                                        <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
+                            </div>
+                            <div class="solution-header">
+                                <div class="solution-header-block card" style="background-color: <?php echo($solutions_list['economie-construction']['color']); ?>; color: white;">
+                                    <div class="card-body" style="padding: 65px 45px;">
+                                        <h3 class="ttitle th2" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['economie-construction']['title'])); ?></h3>
                                     </div>
                                 </div>
-                                <div class="card-container flex-adapt-height">
-                                    <div class="card">
-                                        <div class="card-body" style="padding: 45px;">
-                                            <h3 class="ttitle th2 mb-35" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($item['title'])); ?></h3>
-                                            <p style="font-size: 1rem;"><?php echo(nl2br($item['text'])); ?></p>
+                            </div>
+                        </li>
+                        <?php foreach($solutions_list['economie-construction']['content'] as $content): ?>
+                            <li>
+                                <div class="solution-content-card card flex-adapt-height">
+                                    <div class="card-body" style="padding: 50px 35px;">
+                                        <h4 class="ttitle th4 mb-35 text-primary"><?php echo(nl2br($content['title'])); ?></h4>
+                                        <div class="solution-content" style="font-size: 1rem;">
+                                            <?php echo($content['text']); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <div class="page-section-block" id="<?php echo($solutions_list['ingenierie-fluide']['anchor']); ?>">
+                    <ul class="solutions-list m-0 list-unstyled">
+                        <li>
+                            <div class="picture"<?php echo(isset($solutions_list['ingenierie-fluide']['picture-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$solutions_list['ingenierie-fluide']['picture-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
+                                <img class="img-cover" src="<?php echo($solutions_list['ingenierie-fluide']['background']); ?>">
+                            </div>
+                            <div class="icon-container"<?php echo(isset($solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img class="img-contain" src="<?php echo($solutions_list['ingenierie-fluide']['picture']); ?>">
+                                </div>
+                            </div>
+                            <div class="solution-header">
+                                <div class="solution-header-block card" style="background-color: <?php echo($solutions_list['ingenierie-fluide']['color']); ?>; color: white;">
+                                    <div class="card-body" style="padding: 65px 45px;">
+                                        <h3 class="ttitle th2" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['ingenierie-fluide']['title'])); ?></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <?php foreach($solutions_list['ingenierie-fluide']['content'] as $content): ?>
+                            <li>
+                                <div class="solution-content-card card flex-adapt-height">
+                                    <div class="card-body" style="padding: 50px 35px;">
+                                        <h4 class="ttitle th4 mb-35 text-primary"><?php echo(nl2br($content['title'])); ?></h4>
+                                        <div class="solution-content" style="font-size: 1rem;">
+                                            <?php echo($content['text']); ?>
                                         </div>
                                     </div>
                                 </div>

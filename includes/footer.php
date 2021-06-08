@@ -11,7 +11,7 @@
         }
     }
 </style>
-<aside id="aside-newsletter" class="page-section bg-secondary text-white py-4">
+<aside id="aside-newsletter" class="page-section bg-quinary text-white py-4">
     <div class="page-container">
         <form action="" method="post" class="row g-0">
             <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-4 text-center text-lg-start">
@@ -35,10 +35,10 @@
             <!-- Description -->
             <div class="col-12 col-lg-3 text-center text-lg-start" style="opacity: 0.65;">
                 <div style="height: 64px;">
-                    <img class="img-contain" src="./images/logos/Logo_NrjDiags_Noir.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NrjDiags_Noir.png'))) ?>" alt="Logo NRJ Diags (noir)">
+                    <img class="img-contain" src="./images/logos/Logo_NEC_Noir.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Noir.png'))) ?>" alt="Logo NRJ Diags (noir)">
                 </div>
                 <!--p class="tsize-xsmall tfont-medium">NRJ Diags est spécialisé dans le contrôle sur site de la réglementation thermique. NRJ Diags, est sans cesse en évolution pour répondre aux nouvelles exigences.</p-->
-                <p class="tsize-xsmall tfont-medium">Contrôleurs Techniques spécialisés dans le Contrôle de la RT2012 et RE 2020 ainsi que dans les Inspections Certificats Energie</p>
+                <p class="tsize-xsmall tfont-medium">New Energie Concept évolue sur les secteurs d'activités d'architecture et d'ingénierie et activités de contrôle et analyses techniques.</p>
             </div>
             <!-- Liens utiles -->
             <div class="col-6 col-lg-3">
@@ -60,20 +60,20 @@
                         <div style="width: 1.5rem">
                             <i class="fas fa-map-marker-alt tsize-small"></i>
                         </div>
-                        <p>R80 rue Mstislav Rostropovitch
-                            <br>75017 Paris</p>
+                        <p>1 rue Saint-Nicolas
+                            <br>88000 EPINAL</p>
                     </li>
                     <li class="d-flex mb-2">
                         <div style="width: 1.5rem">
                             <i class="fas fa-phone-alt tsize-small"></i>
                         </div>
-                        <p>Tél. : 09 72 599 799</p>
+                        <p>Tél. : 09 72 601 901</p>
                     </li>
                     <li class="d-flex">
                         <div style="width: 1.5rem">
                             <i class="fas fa-envelope tsize-small"></i>
                         </div>
-                        <p class="email-link-container" data-pre="contact" data-domain="nrjdiags.fr" data-classes="tlink tfont-regular tsize-xsmall"></p>
+                        <p class="email-link-container" data-pre="contact" data-domain="nec-ingenierie.fr" data-classes="tlink tfont-regular tsize-xsmall"></p>
                     </li>
                 </ul>
             </div>
@@ -85,7 +85,7 @@
             </div>
             <!-- Mentions légales -->
             <div class="col-6">
-                <a href="#!" class="tlink tsize-xsmall tfont-regular" data-bs-toggle="modal" data-bs-target="#modal-disclaimer">Mentions légales •&nbsp;©NRJ Diags</a>
+                <a href="#!" class="tlink tsize-xsmall tfont-regular" data-bs-toggle="modal" data-bs-target="#modal-disclaimer">Mentions légales •&nbsp;©NEW Énergie Concept</a>
             </div>
             <!-- Autres mentions
             <div class="col-6 text-end">

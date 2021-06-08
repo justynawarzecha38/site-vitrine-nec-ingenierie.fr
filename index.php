@@ -315,9 +315,9 @@ EOT,
             <!-- Bottom band -->
             <div class="home-header-bottom page-container">
                 <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
-                    <h1 class="home-header-bottom-title ttitle th4">NRJ Diags</h1>
+                    <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Concept</h1>
                     <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                    <p class="home-header-bottom-text th5 text-uppercase">Contrôleurs Techniques spécialisés dans le Contrôle de la RT2012 et <br class="d-none d-md-block">RE 2020 ainsi que dans les Inspections Certificats d'Economie d'Energie.</p>
+                    <p class="home-header-bottom-text th5 text-uppercase">Bureau d'étude technique spécialiste dans les études fluides<br class="d-none d-md-block">et électriques ainsi que dans l'économie de la construction.</p>
                 </div>
             </div>
 
@@ -327,40 +327,14 @@ EOT,
         <?php
             $home_about_list = [
                 [
-                    'color' => 'var(--primary-color)',
-                    'picture' => './images/pages/about/poles/qualite.svg',
-                    'text' => "Certification \nPerméabilité à l'air - \nDémarche Qualité \nAnnexe VII",
-                ],
-                [
-                    //'color' => 'var(--tertiary-color)',
                     'color' => 'var(--secondary-color)',
-                    'picture' => './images/pages/about/intro/permeabilite.svg',
-                    'text' => "Mesure de \nperméabilité \nà l'air du bâti \net réseaux VMC",
+                    'picture' => './images/pages/about/intro/plan.svg',
+                    'text' => "Maîtrise d'œuvre complète \nou spécialisée \nen tant que mandataire \nou co-traitant",
                 ],
                 [
-                    //'color' => 'var(--quaternary-color)',
                     'color' => 'var(--tertiary-color)',
-                    'picture' => './images/pages/about/intro/vmc.svg',
-                    //'text' => "Mesure \nd'étanchéité \ndes réseaux \nde VMC",
-                    'text' => "Vérification \nVentilation \nselon protocole \nPROMEVENT",
-                ],
-                [
-                    //'color' => 'var(--quinary-color)',
-                    'color' => 'var(--quaternary-color)',
-                    'picture' => './images/pages/about/intro/dpe.svg',
-                    'text' => "DPE",
-                ],
-                [
-                    //'color' => 'var(--senary-color)',
-                    'color' => 'var(--quinary-color)',
-                    'picture' => './images/pages/about/intro/fin_chantier.svg',
-                    //'text' => "Attestation \nthermique \nde fin \nde travaux",
-                    'text' => "Attestation de \nprise en compte de \nla Réglementation \nthermique",
-                ],
-                [
-                    'color' => 'var(--senary-color)',
-                    'icon' => 'fab fa-searchengin',
-                    'text' => "Inspections CEE",
+                    'picture' => './images/pages/about/intro/engineering.svg',
+                    'text' => "Ingénierie \ntraditionnelle",
                 ],
             ];
         ?>
@@ -370,10 +344,9 @@ EOT,
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                 </div>
                 <div class="page-section-block text-center">
-                    <!--p>Nous sommes spécialistes du contrôle et des mesures en fin de chantier qui attestent de la qualité de vos réalisations.
-                        <br><b>Nous intervenons principalement autour des prestations :</b>
-                    </p-->
-                    <p>Nous sommes spécialisés dans le Contrôle de la RT2012 et RE 2020 ainsi que dans les Inspections Certificats d'Economie d'Energie.</p>
+                    <p>Nous sommes basés à Lyon, cela nous permet de rayonner sur la grande moitié Est de la France
+                        <br class="d-none d-md-block"><b>et de vous accompagner dans les missons :</b>
+                    </p>
                 </div>
                 <div class="page-section-block">
                     <ul id="home-about-list" class="row list-unstyled justify-content-center gy-0 mb-0" style="--bs-gutter-x: 30px;">
@@ -396,16 +369,6 @@ EOT,
                     </ul>
                 </div>
                 <div class="text-center">
-                    <!--p class="page-section-block">Nos Techniciens sont qualifiés 8711 par Qualibat
-                        <br>afin de réaliser les mesures de perméabilité à l’air et sont certifiés DPE par l’AFNOR.</p-->
-                    <div class="page-section-block">
-                        <p class="mb-3">Nos Techniciens sont :</p>
-                        <ul class="text-start mb-0">
-                            <li>Qualifiés 8711 et 8721 par Qualibat pour les mesures de Perméabilité à l'Air</li>
-                            <li>Certifiés par AFNOR et VERITAS pour les DPE et Attestations de prise en compte de la Réglementation Thermique</li>
-                            <li>Formés aux Inspections CEE</li>
-                        </ul>
-                    </div>
                     <a href="./a-propos.php" class="btn btn-primary tlink tsize-small text-uppercase text-white">En savoir +</a>
                 </div>
             </div>
@@ -414,38 +377,20 @@ EOT,
         <?php
         $home_solutions_list = [
             [
-                'background' => './images/pages/solutions/list/pack3.png',
-                'color' => 'var(--senary-color)',
-                'picture' => './images/pages/solutions/intro/pack3.png',
-                'title' => "Pack 3",
-                'text' => "Test de perméabilité à l’air, DPE et attestation de prise en compte de la réglementation Thermique à l’achèvement des travaux…",
-                'href' => './nos-solutions.php#pack-3',
+                'background' => './images/pages/solutions/list/economie-construction.png',
+                'color' => 'var(--primary-color)',
+                'picture' => './images/pages/solutions/intro/paper-pencil.svg',
+                'title' => "Économie de la construction",
+                'text' => "Estimatif financier sommaire du projet en fonction des surfaces et principales orientations techniques…",
+                'href' => './nos-solutions.php#economie-construction',
             ],
             [
-                'background' => './images/pages/solutions/list/qualite.png',
-                'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/solutions/intro/qualite.svg',
-                'title' => "Démarche qualité",
-                'text' => "Si vous souhaitez réaliser des économies substantielles, vous pouvez vous engager dans un process de Certification de la Perméabilité à l’Air…",
-                'href' => './nos-solutions.php#demarche-qualite',
-            ],
-            [
-                'background' => './images/pages/solutions/list/pack2.png',
-                'color' => 'var(--quinary-color)',
-                'picture' => './images/pages/solutions/intro/pack2.png',
-                'title' => "Pack 2",
-                'text' => "DPE et attestation de prise en compte de la réglementation Thermique à l’achèvement des travaux…",
-                'href' => './nos-solutions.php#pack-2',
-            ],
-            [
-                'background' => './images/pages/solutions/list/co2.png',
+                'background' => './images/pages/solutions/list/ingenierie-fluide.png',
                 'color' => 'var(--quaternary-color)',
-                'picture' => './images/pages/solutions/intro/vent.svg',
-                /*'title' => "Contrôle sur conduit 3CEP",
-                'text' => "L’arrêté du 23 février 2018 et applicable au 1er janvier 2020 relatif aux règles techniques et de sécurité…",*/
-                'title' => "Vérification des systèmes VMC selon protocole PROMEVENT",
-                'text' => "Nos Techniciens se déplacent pour vérifier le système de ventilation selon le protocole PROMEVENT…",
-                'href' => './nos-solutions.php#3cep',
+                'picture' => './images/pages/solutions/intro/measure.svg',
+                'title' => "Ingénierie fluide",
+                'text' => "Vérification des plans et des besoins d'adaptations liés à l'implantation et à la circulation des équipements techniques…",
+                'href' => './nos-solutions.php#ingenierie-fluide',
             ],
         ];
         ?>

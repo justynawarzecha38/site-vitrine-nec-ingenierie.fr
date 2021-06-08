@@ -14,20 +14,20 @@
             'logo_icon' => './images/logos/compositions/insigne-acc.svg',
             'logo_text' => './images/logos/compositions/texte-acc.svg',
         ],
-        'nec' => [
+        /*'nec' => [
             'title' => 'New Énergie Concept',
             'href' => 'https://www.nec-ingenierie.fr/',
             'hover_color' => '#d92849',
             'logo_icon' => './images/logos/compositions/insigne-nec.svg',
             'logo_text' => './images/logos/compositions/texte-nec.svg',
-        ],
-        /*'nrj' => [
+        ],*/
+        'nrj' => [
             'title' => 'NRJ Diags',
             'href' => 'https://www.nrjdiags.fr/',
             'hover_color' => '#3FB1E1',
             'logo_icon' => './images/logos/compositions/insigne-nrj.svg',
             'logo_text' => './images/logos/compositions/texte-nrj.svg',
-        ],*/
+        ],
         'pmb' => [
             'title' => 'PMB Software',
             'href' => 'https://www.pmb-software.fr/',

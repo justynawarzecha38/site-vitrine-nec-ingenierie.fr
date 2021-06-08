@@ -12,10 +12,10 @@
                 </div>
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">MENTIONS JURIDIQUES</h6>
-                    <p>NRJDIAGS</p>
+                    <p>NEW  Énergie Concept</p>
                     <p><b>Siège social :</b></p>
-                    <p>R80 rue Mstislav Rostropovitch<br>75017 Paris</p>
-                    <p><b>SIRET :</b> 492 188 917 00016<span style="font-size: 12pt; font-family: 'Times New Roman', serif;"></span></p>
+                    <p>1 rue Saint-Nicolas<br>88000 EPINAL</p>
+                    <p><b>SIRET :</b> 483 192 357 00034</p>
                 </div>
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">MENTIONS CNIL</h6>
@@ -24,10 +24,6 @@
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">HEBERGEMENT</h6>
                     <p>Site hébergé par OVH</p>
-                </div>
-                <div class="mb-4">
-                    <h6 class="ttitle th5 text-tertiary text-left">Design</h6>
-                    <p><a href="https://www.gaelledumay.com/">Gaëlle DUMAY</a></p>
                 </div>
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">Développement</h6>

@@ -50,15 +50,15 @@
 .home-header-quote-picture {
     position: absolute;
     top: 142px;
-    left: calc(48/1920 * 100%);
+    left: calc(40/1920 * 100%);
     right: 0;
     bottom: 0;
-    height: calc(426/921 * 100%);
+    height: calc(369/927 * 100%);
     background-image: url(../../images/pages/home/Citation.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 center;
-    width: 921px;
+    width: 927px;
 }
 @media (max-width: 1500px) {
     .home-header-quote-picture {

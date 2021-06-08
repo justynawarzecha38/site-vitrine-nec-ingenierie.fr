@@ -1,20 +1,14 @@
-#solutions-list {
-    --home-solutions-background-height: 200px;
-    --home-solutions-picture-height: 55px;
-}
-#solutions-list li {
+.solutions-list li:first-child {
     position: relative;
 }
-#solutions-list li .picture {
+.solutions-list li:first-child .picture {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(var(--home-solutions-background-height) + 3rem);
     z-index: -1;
-    border-radius: 4px;
 }
-#solutions-list li .picture::after {
+.solutions-list li:first-child .picture::after {
     content: "";
     position: absolute;
     top: auto;
@@ -25,147 +19,158 @@
     mix-blend-mode: multiply;
     background-color: rgb(78, 76, 77);
     opacity: 0.8;
+}
+.solutions-list li:first-child .picture img {
     border-radius: 4px;
 }
+
+.solutions-list > li:first-child .icon-container img {
+    width: calc(85/610 * 100%);
+    height: calc(85/370 * 100%);
+}
+
 @media (min-width: 992px) {
-    #solutions-list li .picture::after {
+    .solutions-list {
+        position: relative;
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 40px;
+        grid-column-gap: 30px;
+    }
+    .solutions-list > li:first-child .picture {
+        width: calc(610/((1120 - 15) / 3 * 2) * 100%);
+        overflow: hidden;
+    }
+
+    .solutions-list li:first-child .picture::after {
         top: 0;
         height: auto;
         padding-bottom: calc(100% / (var(--md-aspect-ratio)));
     }
-}
-#solutions-list li .picture img {
-    border-radius: 4px;
-}
-#solutions-list li .icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--home-solutions-background-height);
-}
-#solutions-list > li .icon-container > div {
-    width: 100%;
-    height: 100%;
-}
-#solutions-list li .icon-container img {
-    height: var(--home-solutions-picture-height);
-}
-#solutions-list li .card-container {
-    position: relative;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-#solutions-list li .card-container::after {
-    content: "\f067";
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    color: white;
-}
-#solutions-list li .card-container .card {
-    height: 100%;
-}
-@media (min-width: 992px) {
-    #solutions-list {
-        --home-solutions-background-height: 300px;
-        --home-solutions-picture-height: 80px;
+
+    .solutions-list > li:first-child .picture img {
+        height: auto;
     }
-    @supports not (display: grid) {
-        #solutions-list > li {
-            width: calc(50% - 1rem);
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-        }
+
+    .solutions-list > li:first-child .icon-container {
+        width: calc(610/((1120 - 15) / 3 * 2) * 100%);
+        height: auto;
     }
-    @supports (display: grid) {
-        #solutions-list {
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            /*grid-gap: 1rem;*/
-            grid-gap: 0;
-        }
-        #solutions-list > li .picture img {
-            height: auto;
-        }
 
-        #solutions-list > li .icon-container {
-            height: auto;
-        }
+    .solutions-list .solution-content ul {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 1em;
+    }
 
-        #solutions-list > li:nth-child(1) {
-            grid-column: 1 / 3;
-            flex-flow: row nowrap;
-        }
+    .solutions-list .solution-content ul li:before {
+        display: inline-block;
+        margin-left: -1em;
+    }
 
-        #solutions-list > li:nth-child(1) .picture {
-            left: auto;
-            right: 0;
-            padding: 0;
-            width: calc(370/610 * 100%);
-        }
+    .solutions-list .solution-content > ul > li:before {
+        content: "•";
+        font-weight: bold;
+        color: var(--primary-color);
+        width: 0.65em;
+    }
 
-        #solutions-list > li:nth-child(1) .icon-container {
-            position: absolute;
-            right: 0;
-            width: 50%;
-            height: auto;
-        }
+    .solutions-list .solution-content > ul > li > ul > li:before {
+        content: "-";
+        width: 0.5em;
+    }
 
-        #solutions-list > li:nth-child(1) .card-container {
-            margin-top: 90px;
-            order: -1;
-            padding: 0;
-            flex-grow: 0;
-            width: 50%;
-        }
+    .solutions-list .solution-content > ul > li:not(:last-child) {
+        margin-bottom: 24px;
+    }
 
-        #solutions-list > li:nth-child(2) {
-            width: 50%;
-        }
+    .solutions-list .solution-content > ul > li > ul > li:before {
+        display: inline-block;
+        content: "-";
+        width: 0.5em;
+        margin-left: -1em;
+    }
 
-        #solutions-list > li:nth-child(3) {
-            order: -1;
-            position: absolute;
-            /*top: calc(var(--home-solutions-background-height) + 3rem + 2rem);*/
-            margin-top: calc(465/1120 * 100% + 70/1120 * 100%);
-            top: var(--bs-gutter-y);
-            right: 0;
-            width: calc(50% - var(--bs-gutter-y));
-        }
+    /* Structure spécifique à Economie Construction */
+    #economie-construction .solutions-list {
+        grid-template-areas:
+            "h h a"
+            "h h b"
+            "c c b";
+    }
 
-        #solutions-list > li:last-child {
-            flex-flow: row nowrap;
-            align-items: center;
-            grid-column: 1 / 3;
-        }
+    #economie-construction .solutions-list > li:first-child {
+        grid-area: h;
+        height: 500px;
+        flex-flow: row nowrap;
+    }
 
-        #solutions-list > li:last-child .picture {
-            padding: 0;
-            width: calc(650/1120 * 100%);
-        }
+    #economie-construction .solutions-list > li:first-child .solution-header {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 420px;
+    }
 
-        #solutions-list > li:last-child .icon-container {
-            width: 50%;
-        }
+    #economie-construction .solutions-list > li:nth-child(2) {
+        grid-area: a;
+    }
 
-        #solutions-list > li:last-child .card-container {
-            padding: 0;
-            flex-grow: 0;
-            width: 50%;
-        }
+    #economie-construction .solutions-list > li:nth-child(3) {
+        grid-area: b;
+        display: flex;
+        flex-flow: column nowrap;
+    }
 
-        #solutions-list li .card-container .card {
-            height: auto;
-        }
+    #economie-construction .solutions-list > li:nth-child(3) .card {
+        justify-content: center;
+    }
+
+    #economie-construction .solutions-list > li:nth-child(4) {
+        grid-area: c;
+    }
+
+    /* Structure spécifique à Ingénierie fluide */
+    #ingenierie-fluide .solutions-list {
+        grid-template-areas:
+            "a h h"
+            "b h h"
+            "b c d";
+    }
+
+    #ingenierie-fluide .solutions-list > li:first-child {
+        grid-area: h;
+        height: 500px;
+        flex-flow: row nowrap;
+    }
+
+    #ingenierie-fluide .solutions-list > li:first-child .solution-header {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 420px;
+    }
+
+    #ingenierie-fluide .solutions-list > li:nth-child(2) {
+        grid-area: a;
+    }
+
+    #ingenierie-fluide .solutions-list > li:nth-child(3) {
+        grid-area: b;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #ingenierie-fluide .solutions-list > li:nth-child(3) .card {
+        justify-content: center;
+    }
+
+    #ingenierie-fluide .solutions-list > li:nth-child(4) {
+        grid-area: c;
+    }
+
+    #ingenierie-fluide .solutions-list > li:nth-child(5) {
+        grid-area: d;
     }
 }
