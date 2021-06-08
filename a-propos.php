@@ -90,7 +90,7 @@
             </div>
         </section>
         <!-- NOTRE ÉQUIPE -->
-        <section id="about-team" class="page-section">
+        <!--section id="about-team" class="page-section">
             <div class="page-container">
                 <div class="page-section-header text-center">
                     <h2 class="ttitle th1">Notre équipe</h2>
@@ -140,7 +140,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- PÔLES -->
             <?php
             $about_poles_list = [
                 [
@@ -167,7 +166,6 @@
                 <h3 class="ttitle th2">Notre activité s'articule autour de 3 pôles</h3>
             </div>
             <div class="about-team-poles position-relative">
-                <!--div id="about-team-poles-background"></div-->
                 <div class="about-team-poles-content page-container text-center">
                     <div id="about-team-poles-background" style="/*--aspect-ratio: 1920/620;*/ "></div>
                     <ul id="about-team-poles-list" class="row g-0 list-unstyled justify-content-center">
@@ -187,7 +185,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section-->
         <!-- Rejoignez-nous -->
         <section id="about-join-us" class="page-section">
             <div class="page-container">
