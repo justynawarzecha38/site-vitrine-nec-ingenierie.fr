@@ -7,11 +7,6 @@
         'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
         'news' => ['title' => 'News', 'href' => './news.php'],
         'solutions' => ['title' => 'Nos solutions', 'href' => './nos-solutions.php'],
-        /*'solutions' => ['title' => 'Nos solutions', 'href' => '#!', 'list' => [
-            ['title' => 'Constructions neuves', 'href' => './nos-solutions.php', 'nav_key' => 'solutions-1'],
-            ['title' => 'Rénovation – Inspection CEE', 'href' => './nos-solutions-suite.php', 'nav_key' => 'solutions-2'],
-        ]],*/
-        'regulations' => ['title' => 'R&eacute;glementation', 'href' => './reglementation.php'],
         'contact' => ['title' => 'Contact', 'href' => './contact.php'],
         'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],
     ];

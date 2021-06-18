@@ -56,14 +56,9 @@
                                         <label class="form-label">Agence<sup>*</sup></label>
                                         <select name="agency" id="Agence" class="form-select" required>
                                             <option value="" selected disabled>Choisir votre agence de référence</option>
-                                            <option value="contact@nrjdiags.fr">Mulhouse</option>
-                                            <option value="contact@nrjdiags.fr">Lyon</option>
-                                            <option value="contact@nrjdiags.fr">Salon de Provence</option>
-                                            <option value="contact@nrjdiags.fr">Toulouse</option>
-                                            <option value="contact@nrjdiags.fr">Bordeaux</option>
-                                            <option value="contact@nrjdiags.fr">Rennes</option>
-                                            <option value="contact@nrjdiags.fr">Paris</option>
-                                            <option value="contact@nrjdiags.fr">Lille</option>
+                                            <option value="epinal">Epinal</option>
+                                            <option value="lyon">Lyon</option>
+                                            <option value="toulouse">Toulouse</option>
                                         </select>
                                     </div>
                                     <div class="col-12 col-lg-6 align-self-end">
@@ -87,11 +82,6 @@
                                         <textarea id="contact-message" class="form-control" name="message" placeholder="Votre message*" rows="6" required></textarea>
                                         <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
                                     </div>
-
-                                    <a class="btn btn-primary w-auto mx-auto" href="medias/contact/Processus%20Gestion%20Appels%20et%20Réclamations.pdf" download>
-                                        <i class="fas fa-download" aria-hidden="true"></i>
-                                        <span>Télécharger nos processus en matière d'appels et de réclamations</span>
-                                    </a>
                                 </div>
                                 <div class="mb-60">
                                     CAPTCHA A METTRE EN PLACE

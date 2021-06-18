@@ -35,7 +35,7 @@
             <!-- Description -->
             <div class="col-12 col-lg-3 text-center text-lg-start" style="opacity: 0.65;">
                 <div style="height: 64px;">
-                    <img class="img-contain" src="./images/logos/Logo_NEC_Noir.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Noir.png'))) ?>" alt="Logo NRJ Diags (noir)">
+                    <img class="img-contain" src="./images/logos/Logo_NEC_Noir.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Noir.png'))) ?>" alt="Logo NEW Énergie Concept (noir)">
                 </div>
                 <!--p class="tsize-xsmall tfont-medium">NRJ Diags est spécialisé dans le contrôle sur site de la réglementation thermique. NRJ Diags, est sans cesse en évolution pour répondre aux nouvelles exigences.</p-->
                 <p class="tsize-xsmall tfont-medium">New Energie Concept évolue sur les secteurs d'activités d'architecture et d'ingénierie et activités de contrôle et analyses techniques.</p>

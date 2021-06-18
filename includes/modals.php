@@ -8,18 +8,18 @@
             <div class="modal-body scroll-shadow-v">
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">MENTIONS GENERALES</h6>
-                    <p>Directeur de la publication : Yann Boukine</p>
+                    <p>Directeur de la publication : Maxime JAYMOND</p>
                 </div>
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">MENTIONS JURIDIQUES</h6>
-                    <p>NEW  Énergie Concept</p>
+                    <p>NEW Énergie Concept</p>
                     <p><b>Siège social :</b></p>
                     <p>1 rue Saint-Nicolas<br>88000 EPINAL</p>
                     <p><b>SIRET :</b> 483 192 357 00034</p>
                 </div>
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">MENTIONS CNIL</h6>
-                    <p>Conformément à la loi n° 78-17 du 6 janvier 1978 modifiée en 2004, relative à l'Informatique, aux Fichiers et aux Libertés, vous disposez d'un droit d'accès, de rectification et de suppression des données à caractère personnel vous concernant et faisant l’objet de traitements sous la responsabilité de NRJDIAGS</p>
+                    <p>Conformément à la loi n° 78-17 du 6 janvier 1978 modifiée en 2004, relative à l'Informatique, aux Fichiers et aux Libertés, vous disposez d'un droit d'accès, de rectification et de suppression des données à caractère personnel vous concernant et faisant l’objet de traitements sous la responsabilité de NEW Énergie Concept</p>
                 </div>
                 <div class="mb-4">
                     <h6 class="ttitle th5 text-tertiary text-left">HEBERGEMENT</h6>

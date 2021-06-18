@@ -274,6 +274,7 @@ EOT,
                     'href' => './article.php',
                 ],
             ];
+            $home_news = [];
         ?>
         <header id="home-header">
             <!-- Background image -->
@@ -281,7 +282,7 @@ EOT,
             <!-- Citation image -->
             <div class="home-header-quote-picture"></div>
             <!-- News -->
-            <div id="home-header-news">
+            <div id="home-header-news"<?php echo(empty($home_news) ? 'style="opacity: 0; visibility: hidden;"' : ''); ?>>
                 <div style="display: flow-root;">
                     <div style="float: right;">
                         <!-- Slider main container -->
@@ -290,25 +291,44 @@ EOT,
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
 
-                                <?php foreach($home_news as $item): ?>
-                                <div class="swiper-slide">
-                                    <div class="home-header-news-card card">
-                                        <div class="card-body" style="padding: 35px 35px 22px;">
-                                            <div class="ttitle titalic text-primary tsize-xsmall">Dernière news</div>
-                                            <h3 class="ttitle th4 text-truncate" style="margin-bottom: 30px;"><?php echo(nl2br($item['title'])); ?></h3>
-                                            <div class="tsize-small line-clamp" data-limit="5" style="margin-bottom: 30px;"><?php echo(nl2br($item['intro'])); ?></div>
-                                            <a class="tlink tsize-small text-primary text-uppercase" href="./article.php?id=<?php echo($item['uniq_id']); ?>">Lire l'article</a>
+                                <?php if(empty($home_news)): ?>
+                                    <div class="swiper-slide">
+                                        <div class="home-header-news-card card">
+                                            <div class="card-body" style="padding: 35px 35px 22px;">
+                                                <div class="ttitle titalic text-primary tsize-xsmall">Dernière news</div>
+                                                <h3 class="ttitle th4 text-truncate" style="margin-bottom: 30px;">Titre</h3>
+                                                <div class="tsize-small line-clamp" data-limit="5" style="margin-bottom: 30px;">Intro</div>
+                                                <a class="tlink tsize-small text-primary text-uppercase" href="#!">Lire l'article</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <?php endforeach; ?>
+                                <?php else: ?>
+                                    <?php foreach($home_news as $item): ?>
+                                    <div class="swiper-slide">
+                                        <div class="home-header-news-card card">
+                                            <div class="card-body" style="padding: 35px 35px 22px;">
+                                                <div class="ttitle titalic text-primary tsize-xsmall">Dernière news</div>
+                                                <h3 class="ttitle th4 text-truncate" style="margin-bottom: 30px;"><?php echo(nl2br($item['title'])); ?></h3>
+                                                <div class="tsize-small line-clamp" data-limit="5" style="margin-bottom: 30px;"><?php echo(nl2br($item['intro'])); ?></div>
+                                                <a class="tlink tsize-small text-primary text-uppercase" href="./article.php?id=<?php echo($item['uniq_id']); ?>">Lire l'article</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
                             </div>
                             <div class="slider-button-prev"></div>
                             <div class="slider-button-next"></div>
                         </div>
+                        <?php if(empty($home_news)): ?>
+                            <div class="text-center" style="margin-top: 20px;">
+                                <a href="#!" class="tlink tsize-small tfont-black titalic" style="text-shadow: 0 0 2px white;">Toutes les news</a>
+                            </div>
+                        <?php else: ?>
                         <div class="text-center" style="margin-top: 20px;">
                             <a href="./news.php" class="tlink tsize-small tfont-black titalic" style="text-shadow: 0 0 2px white;">Toutes les news</a>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -442,6 +462,12 @@ EOT,
                     <h2 class="ttitle th1 text-center mb-3">News</h2>
                     <p>Suivez toute l'actualité de NRJ Diags.</p>
                 </div>
+                <?php if(empty($home_news)): ?>
+                <div class="text-center">
+                    <i class="far fa-newspaper fa-3x text-muted"></i>
+                    <small class="d-block text-muted">Aucun article n'est encore disponible.</small>
+                </div>
+                <?php else: ?>
                 <div class="page-section-block">
                     <!-- Slider main container -->
                     <div id="home-news-slider" class="swiper-container overflow-visible overflow-lg-hidden">
@@ -478,6 +504,7 @@ EOT,
                 <div class="text-center">
                     <a href="./news.php" class="btn btn-primary tlink text-uppercase text-white px-4">Toutes les news</a>
                 </div>
+                <?php endif; ?>
             </div>
 
         </section>

@@ -17,7 +17,7 @@
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
         <?php include_once('./includes/aside.php'); ?>
         <!-- PARCOURS CLIENT -->
-        <section id="solutions-customer-journey" class="page-section" style="/*max-height: calc(100vh - var(--navbar-height) - 1rem);*/">
+        <!--section id="solutions-customer-journey" class="page-section">
             <div class="page-container flex-column-nowrap h-100">
                 <div class="page-section-header text-center">
                     <h1 class="ttitle th1 text-center mb-3">Parcours client</h1>
@@ -34,7 +34,7 @@
 
                 </div>
             </div>
-        </section>
+        </section-->
         <!-- NOS SOLUTIONS -->
         <?php
         $solutions_list = [

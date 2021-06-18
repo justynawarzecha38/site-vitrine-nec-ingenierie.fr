@@ -305,13 +305,21 @@ EOT,
                 'href' => './article.php',
             ],
         ];
+        $news = [];
         ?>
         <section id="news" class="page-section">
             <div class="page-container filtr-block">
                 <div class="page-section-header text-center">
                     <h1 class="ttitle th1 text-center mb-3">News</h1>
-                    <p>Suivez toute l'actualité de NRJ Diags.</p>
+                    <p>Suivez toute l'actualité de NEW Énergie Concept.</p>
                 </div>
+
+                <?php if(empty($news)): ?>
+                    <div class="text-center">
+                        <i class="far fa-newspaper fa-3x text-muted"></i>
+                        <small class="d-block text-muted">Aucun article n'est encore disponible.</small>
+                    </div>
+                <?php else: ?>
                 <div class="page-section-block">
                     <form class="row" action="" method="POST">
                         <div class="input-group mb-3 mb-lg-0 col-12 col-lg">
@@ -320,15 +328,6 @@ EOT,
                                 <i class="fas fa-search"></i>
                             </label>
                         </div>
-                        <!--div class="form-group tselect-container mb-3 mb-lg-0 col-12 col-lg">
-                            <select id="news-field-filter-society" class="form-select" name="filter[society]">
-                                <option selected>Toutes les sociétés</option>
-                                <option value="abm">ABM Énergie Conseil</option>
-                                <option value="nrj">NRJ Diags</option>
-                                <option value="nec">NEW Énergie Concept</option>
-                                <option value="acc">Acousti Control</option>
-                            </select>
-                        </div-->
                     </form>
                 </div>
                 <div class="page-section-block">
@@ -358,6 +357,7 @@ EOT,
                         <?php endforeach; ?>
                     </ul>
                 </div>
+                <?php endif; ?>
             </div>
         </section>
         <?php include_once('./includes/footer.php'); ?>
