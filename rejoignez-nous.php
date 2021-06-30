@@ -49,6 +49,13 @@ if ($data['first_name']):
                                                         'message' => "Votre candidature a été envoyée avec succès.",
                                                         'type' => 'success',
                                                     ];
+
+                                                    $from = "sebastien.colbe@pmb-software.fr";
+                                                    $to = "sebastien.colbe@pmb-software.fr";
+                                                    $subject = "Nouvelle candidature sur NEC";
+                                                    $message = "Nouvelle candidature sur NEC";
+                                                    $headers = "De :" . $from;
+                                                    mail($to,$subject,$message, $headers);
                                                 } catch (\Exception $e) {
                                                     $alert = [
                                                         'message' => $e->getMessage(),
