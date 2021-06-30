@@ -170,14 +170,14 @@ P_2,
             <div class="page-small-container">
                 <div class="accordion accordion-flush" id="job-ads-accordion">
                     <?php foreach($job_ads_list as $item): ?>
-                        <div class="accordion-item">
+                        <div class="accordion-item" data-ref="<?php echo($item['uniq_id']); ?>">
                             <h2 class="accordion-header" id="job-ad-heading-<?php echo($item['uniq_id']); ?>">
                                 <button type="button" class="accordion-button collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#job-ad-collapse-<?php echo($item['uniq_id']); ?>"
                                         aria-expanded="false" aria-controls="job-ad-collapse-<?php echo($item['uniq_id']); ?>">
-                                    <span style="font-size: 1.125rem;""><?php echo($item['title']); ?></span>
+                                    <span class="job-ad-title" style="font-size: 1.125rem;""><?php echo($item['title']); ?></span>
                                     <div style="margin-left: auto; font-size: 1rem; text-align: right; color: #C8C8C8;">
-                                        <span><?php echo($item['city']); ?></span>
+                                        <span class="job-ad-address"><?php echo($item['city']); ?></span>
                                         <i class="fas fa-map-marker-alt" aria-hidden="true" style="margin-left: 0.5rem;"></i>
                                     </div>
                                 </button>
@@ -186,8 +186,7 @@ P_2,
                                 <div class="accordion-body">
                                     <div class="mb-3" style="color: #7D7D7D; font-size: 1rem;"><?php echo($item['description']); ?></div>
                                     <div class="text-center">
-                                        <a href="#join-us-form" class="btn btn-primary tlink tsize-small text-uppercase text-white"
-                                           data-ref="<?php echo($item['uniq_id']); ?>">Postuler</a>
+                                        <a href="#join-us-form" class="candidate-prefill-form btn btn-primary tlink tsize-small text-uppercase text-white">Postuler</a>
                                     </div>
                                 </div>
                             </div>
@@ -263,7 +262,19 @@ P_2,
 </main>
 <?php include_once('./includes/modals.php'); ?>
 <?php include_once('./includes/scripts.php'); ?>
-<?php if(isset($input_data['submit']) && !empty($alert)): ?>
-    <script> alert("<?php echo($alert['message']); ?>"); </script>
-<?php endif; ?>
+    <script>
+        <?php if(isset($input_data['submit']) && !empty($alert)): ?>
+        alert("<?php echo($alert['message']); ?>");
+        <?php endif; ?>
+        var $form = $('#join-us-form');
+        $('.candidate-prefill-form').on('click', function() {
+            var $job_add_button = $(this);
+            var $job_add_item = $job_add_button.parents('.accordion-item');
+            var job_ad_title = $job_add_item.find('.job-ad-title').html();
+            var job_ad_address = $job_add_item.find('.job-ad-address').html();
+            var $object_field = $form.find('input[name="object"]');
+            $object_field.val(`Candidature au poste de ${job_ad_title} [${job_ad_address}]`);
+        });
+    </script>
+
 </body>
