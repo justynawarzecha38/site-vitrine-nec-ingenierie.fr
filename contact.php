@@ -39,7 +39,7 @@
 <body class="flex-column-nowrap" style="overflow: hidden;">
     <?php include_once('./includes/header.php'); ?>
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
-        <?php include_once('./includes/aside.php'); ?>
+        
         <!-- CONTACT -->
         <section id="contact" class="page-section px-0">
             <div id="contact-title" class="page-container page-section-block text-center">
@@ -50,15 +50,15 @@
                 <div class="page-container">
                     <div class="page-form-card card bg-quinary text-white">
                         <div class="card-body">
-                            <form id="contact-form" class="w-100" action="" method="POST">
+                            <form id="contact-form" class="w-100" action="./controllers/contact.php" method="POST">
                                 <div class="row gx-3 gy-4 mb-60">
                                     <div class="col-12">
                                         <label class="form-label">Agence<sup>*</sup></label>
                                         <select name="agency" id="Agence" class="form-select" required>
                                             <option value="" selected disabled>Choisir votre agence de référence</option>
-                                            <option value="epinal">Epinal</option>
-                                            <option value="lyon">Lyon</option>
-                                            <option value="toulouse">Toulouse</option>
+                                            <option value="Epinal">Épinal</option>
+                                            <option value="Lyon">Lyon</option>
+                                            <option value="Paris">Paris</option>
                                         </select>
                                     </div>
                                     <div class="col-12 col-lg-6 align-self-end">
@@ -83,9 +83,7 @@
                                         <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
                                     </div>
                                 </div>
-                                <div class="mb-60">
-                                    CAPTCHA A METTRE EN PLACE
-                                </div>
+                                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary tlink tsize-small text-uppercase">Envoyer</button>
                                 </div>
@@ -99,4 +97,47 @@
     </main>
     <?php include_once('./includes/modals.php'); ?>
     <?php include_once('./includes/scripts.php'); ?>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var form = document.getElementById('contact-form');
+            var method = form.getAttribute('method');
+            var action = form.getAttribute('action');
+            var data = {};
+            var form_data = new FormData(form);
+            var data_encoded = "";
+            for (var pair of form_data.entries()) {
+                console.log(pair);
+                data[encodeURIComponent(pair[0])] = encodeURIComponent(pair[1]);
+                data_encoded += (encodeURIComponent(pair[0])+"="+encodeURIComponent(pair[1])+"&");
+            }
+            if (data_encoded.length > 1) {
+                data_encoded = data_encoded.substring(0, data_encoded.length - 1);
+            }
+            console.log(data);
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onload = function(xhttp_event) {
+                console.log(xhttp_event.target.responseText);
+                try {
+                    var res = JSON.parse(xhttp_event.target.response);
+                    if (res !== null && typeof res === "object" && 'message' in res) {
+                        alert(res.message);
+                    }
+                    if (xhttp_event.target.status === 200) {
+                        document.location.reload(true);
+                    }
+                } catch (e) {
+                    console.error(e);
+                }
+            };
+            xhttp.open(method, action, true);
+            xhttp.setRequestHeader(
+                "Content-Type",
+                "application/x-www-form-urlencoded",
+            );
+            xhttp.send(data_encoded);
+            return false;
+        }, false);
+    </script>
 </body>

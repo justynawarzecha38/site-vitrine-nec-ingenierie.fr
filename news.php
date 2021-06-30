@@ -20,7 +20,7 @@
 <body class="flex-column-nowrap" style="overflow: hidden;">
     <?php include_once('./includes/header.php'); ?>
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
-        <?php include_once('./includes/aside.php'); ?>
+        
         <!-- NEWS -->
         <?php
         $news = [

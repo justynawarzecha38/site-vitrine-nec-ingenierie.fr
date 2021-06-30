@@ -98,51 +98,12 @@
         margin-left: -1em;
     }
 
-    /* Structure spécifique à Economie Construction */
-    #economie-construction .solutions-list {
-        grid-template-areas:
-            "h h a"
-            "h h b"
-            "c c b";
-    }
-
-    #economie-construction .solutions-list > li:first-child {
-        grid-area: h;
-        height: 500px;
-        flex-flow: row nowrap;
-    }
-
-    #economie-construction .solutions-list > li:first-child .solution-header {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 420px;
-    }
-
-    #economie-construction .solutions-list > li:nth-child(2) {
-        grid-area: a;
-    }
-
-    #economie-construction .solutions-list > li:nth-child(3) {
-        grid-area: b;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    #economie-construction .solutions-list > li:nth-child(3) .card {
-        justify-content: center;
-    }
-
-    #economie-construction .solutions-list > li:nth-child(4) {
-        grid-area: c;
-    }
-
     /* Structure spécifique à Ingénierie fluide */
     #ingenierie-fluide .solutions-list {
         grid-template-areas:
-            "a h h"
-            "b h h"
-            "b c d";
+            "h h a"
+            "h h b"
+            "c d b";
     }
 
     #ingenierie-fluide .solutions-list > li:first-child {
@@ -178,5 +139,79 @@
 
     #ingenierie-fluide .solutions-list > li:nth-child(5) {
         grid-area: d;
+    }
+
+    /* Structure spécifique à Economie Construction */
+    #economie-construction .solutions-list {
+        grid-template-areas:
+            "a h h"
+            "b h h"
+            "b c c";
+    }
+
+    #economie-construction .solutions-list > li:first-child {
+        grid-area: h;
+        height: 500px;
+        flex-flow: row nowrap;
+    }
+
+    #economie-construction .solutions-list > li:first-child .solution-header {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 420px;
+    }
+
+    #economie-construction .solutions-list > li:nth-child(2) {
+        grid-area: a;
+    }
+
+    #economie-construction .solutions-list > li:nth-child(3) {
+        grid-area: b;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #economie-construction .solutions-list > li:nth-child(3) .card {
+        justify-content: center;
+    }
+
+    #economie-construction .solutions-list > li:nth-child(4) {
+        grid-area: c;
+    }
+
+    /* Structure spécifique à Audit énergétique */
+    #audit-energetique .solutions-list {
+        grid-template-areas:
+            "h h a"
+            "h h a"
+            "b b b";
+    }
+
+    #audit-energetique .solutions-list > li:first-child {
+        grid-area: h;
+        height: 500px;
+        flex-flow: row nowrap;
+    }
+
+    #audit-energetique .solutions-list > li:first-child .solution-header {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 420px;
+    }
+
+    #audit-energetique .solutions-list > li:nth-child(2) {
+        grid-area: a;
+    }
+
+    #audit-energetique .solutions-list > li:nth-child(3) {
+        grid-area: b;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #audit-energetique .solutions-list > li:nth-child(3) .card {
+        justify-content: center;
     }
 }

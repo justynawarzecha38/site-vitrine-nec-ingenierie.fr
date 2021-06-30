@@ -1,2 +1,12 @@
-/.idea
-/node_modules
+.idea
+node_modules
+!forms
+!forms/list
+!forms/contact
+!forms/join
+!forms/join/files
+forms/*
+forms/list/*
+forms/contact/*
+forms/join/*
+forms/join/files/*

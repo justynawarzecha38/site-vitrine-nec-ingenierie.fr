@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <?php
-        $main_title = 'Rejoignez-nous';
-        $main_nav_key = 'join-us';
-        include_once('./includes/head.php');
+    $main_title = 'Rejoignez-nous';
+    $main_nav_key = 'join-us';
+    include_once('./includes/head.php');
     ?>
     <?php include_once('./includes/styles.php'); ?>
     <style>
@@ -82,56 +82,91 @@
         #job-ads-accordion .accordion-item:last-of-type .accordion-collapse {
             border: none;
         }
+
+        #job-ads-accordion ul {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
 <body class="flex-column-nowrap" style="overflow: hidden;">
-    <?php include_once('./includes/header.php'); ?>
-    <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
-        <?php include_once('./includes/aside.php'); ?>
-        <!-- OFFRES D'EMPLOI -->
-        <?php
-            $job_ads_list = [
-                [
-                    'uniq_id' => 'j0001',
-                    'title' => "Technicien",
-                    'description' => "Qui aut lam, nobis por autem iunti nectem ut ut harum evenimpedi con con reped que doluptius sint dolo vel maiorepe voluptat vellabore pre nos earuptur modit laborpor seque inti nos ditat parum rempore, sim imilite quia il ipiet et voluptat hariand uciantur magnatur, aut atem hillacc usapis non nullabore porrum estibusam veligenihil mod quae.",
-                    'city' => "Différents secteurs géographiques",
-                ],
-                /*[
-                    'uniq_id' => 'j0002',
-                    'title' => "Enienesti omnistiatur",
-                    'description' => "Qui aut lam, nobis por autem iunti nectem ut ut harum evenimpedi con con reped que doluptius sint dolo vel maiorepe voluptat vellabore pre nos earuptur modit laborpor seque inti nos ditat parum rempore, sim imilite quia il ipiet et voluptat hariand uciantur magnatur, aut atem hillacc usapis non nullabore porrum estibusam veligenihil mod quae.",
-                    'city' => "Paris",
-                ],
-                [
-                    'uniq_id' => 'j0003',
-                    'title' => "Enienesti omnistiatur",
-                    'description' => "Qui aut lam, nobis por autem iunti nectem ut ut harum evenimpedi con con reped que doluptius sint dolo vel maiorepe voluptat vellabore pre nos earuptur modit laborpor seque inti nos ditat parum rempore, sim imilite quia il ipiet et voluptat hariand uciantur magnatur, aut atem hillacc usapis non nullabore porrum estibusam veligenihil mod quae.",
-                    'city' => "Paris",
-                ],
-                [
-                    'uniq_id' => 'j0004',
-                    'title' => "Enienesti omnistiatur",
-                    'description' => "Qui aut lam, nobis por autem iunti nectem ut ut harum evenimpedi con con reped que doluptius sint dolo vel maiorepe voluptat vellabore pre nos earuptur modit laborpor seque inti nos ditat parum rempore, sim imilite quia il ipiet et voluptat hariand uciantur magnatur, aut atem hillacc usapis non nullabore porrum estibusam veligenihil mod quae.",
-                    'city' => "Paris",
-                ],
-                [
-                    'uniq_id' => 'j0005',
-                    'title' => "Enienesti omnistiatur",
-                    'description' => "Qui aut lam, nobis por autem iunti nectem ut ut harum evenimpedi con con reped que doluptius sint dolo vel maiorepe voluptat vellabore pre nos earuptur modit laborpor seque inti nos ditat parum rempore, sim imilite quia il ipiet et voluptat hariand uciantur magnatur, aut atem hillacc usapis non nullabore porrum estibusam veligenihil mod quae.",
-                    'city' => "Paris",
-                ],*/
-            ];
-        ?>
-        <section id="job-ads" class="page-section">
-            <div class="page-container">
-                <div class="page-section-header text-center mb-80">
-                    <!--h1 class="ttitle th1 mb-80">Offres d'emploi</h1-->
-                    <h1 class="ttitle th1 mb-80">Postes à pourvoir</h1>
-                    <p>La liste suivante affiche nos postes actuellement requis. Cette liste sera mise à jour régulièrement.</p>
-                </div>
+<?php include_once('./includes/header.php'); ?>
+<main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
+
+    <!-- OFFRES D'EMPLOI -->
+    <?php
+    $job_ads_list = [
+        [
+            'uniq_id' => 'j0001',
+            'title' => "Technicien CVC",
+            'description' => <<<"P_1"
+<b>Descriptif du poste :</b>
+<br>Vos missions seront les suivantes :
+<ul>
+<li>Réalisation d'audits thermiques en vue de réaliser des études thermiques énergétiques,</li>
+<li>Travailler en binôme avec un.e chargé.e d'affaires en suivant les règles et méthodes établies en interne,</li>
+<li>Élaborer un avant-projet détaillé ainsi qu'un cahier des charges techniques,</li>
+<li>Élaborer des quantitatifs et/ou estimatifs,</li>
+<li>Réaliser des études techniques et de dimensionnement,</li>
+<li>Élaborer des plans et pièces graphiques,</li>
+<li>Analyser des offres entreprises.</li>
+</ul>
+<br><b>Profil recherché :</b>
+<br>De formation Bac +2 en génie climatique et/ou énergie et/ou domotique, vous possédez idéalement une première expérience au sein d'une société soit comme installateur.trice soit en bureau d'études dans le domaine de la construction.
+<br>
+<br><b>Savoirs et savoir-faire :</b>
+<ul>
+<li>Élaborer des solutions techniques et financières,</li>
+<li>Définir la faisabilité et la rentabilité d'un projet,</li>
+<li>Analyser les besoins du client,</li>
+<li>Analyser les données économiques du projet,</li>
+<li>Définir un avant-projet.</li>
+</ul>
+<br><b>Type de contrat :</b> CDI de 39 heures hebdomadaires.
+<br><b>Salaire :</b> de 24 k€ à 30 k€ brut annuel.
+<br><b>Expérience exigée :</b> 3 ans. Cette expérience est indispensable.
+<br><b>Qualification :</b> Technicien.
+P_1,
+            'city' => "Agence de Lyon - Saint-Jean de Soudain (38)",
+        ],
+        [
+            'uniq_id' => 'j0002',
+            'title' => "Chargé d'affaires",
+            'description' => <<<"P_2"
+<b>Descriptif du poste :</b>
+<br>Dans le cadre de son implantation en IDF, notre entreprise de 15/20 personnes recherche un/e chargé/e d'affaires pour suivre les opérations et la clientèle sur la région IDF. En lien avec les autres collaborateurs, thermiciens/techniciens/dessinateurs en CVC-PB et ELEC vous assurer le management et l'ingénierie CVC-PB des projets de construction ou rénovation sur des bâtiments d'habitations et tertiaires.
+<br>
+<br><b>Profil recherché :</b>
+<br>Vous disposez d'un BAC + 5 en génie climatique et environnement.
+<br>Une expérience d'un minimum de 3 ans est exigée comme technicien ou chargé d'étude, vous devez être autonome et prêt à relever les défis, doté d'une fibre commerciale et d'un solide bagage technique.
+<br>Le lieu d'implantation de l'agence sur PARIS sera défini conjointement avec le candidat retenu.
+<br>
+<br><b>L'Entreprise :</b>
+<br>Bureau d'études fluides, électricité, économie de la construction, implanté sur ARA / GRAND EST avec pour ambition de s'installer prochainement en IDF
+<br>Vous évoluez dans une équipe de 15/20 personnes dans laquelle la convivialité et le travail d'équipe sont des valeurs importantes.
+<br>
+<br><b>Type de contrat :</b> CDI.
+<br><b>Salaire :</b> à partir de 40 k€ brut annuel.
+<br><b>Expérience exigée :</b> 2 ans. Cette expérience est indispensable.
+<br><b>Qualification :</b> Cadre.
+P_2,
+            'city' => "Paris",
+        ],
+    ];
+    //$job_ads_list = [];
+    ?>
+    <section id="job-ads" class="page-section">
+        <div class="page-container">
+            <div class="page-section-header text-center mb-80">
+                <!--h1 class="ttitle th1 mb-80">Offres d'emploi</h1-->
+                <h1 class="ttitle th1 mb-80">Postes à pourvoir</h1>
+                <p>La liste suivante affiche nos postes actuellement requis. Cette liste sera mise à jour régulièrement.</p>
             </div>
+            <?php if(empty($job_ads_list)): ?>
+                <p class="text-muted text-center">Aucun poste n'est disponible pour l'instant.</p>
+            <?php endif; ?>
+        </div>
+        <?php if(!empty($job_ads_list)): ?>
             <div class="page-small-container">
                 <div class="accordion accordion-flush" id="job-ads-accordion">
                     <?php foreach($job_ads_list as $item): ?>
@@ -149,7 +184,7 @@
                             </h2>
                             <div id="job-ad-collapse-<?php echo($item['uniq_id']); ?>" class="accordion-collapse collapse" aria-labelledby="job-ad-heading-<?php echo($item['uniq_id']); ?>" data-bs-parent="#job-ads-accordion">
                                 <div class="accordion-body">
-                                    <p class="mb-3" style="color: #7D7D7D; font-size: 1rem;"><?php echo($item['description']); ?></p>
+                                    <div class="mb-3" style="color: #7D7D7D; font-size: 1rem;"><?php echo($item['description']); ?></div>
                                     <div class="text-center">
                                         <a href="#join-us-form" class="btn btn-primary tlink tsize-small text-uppercase text-white"
                                            data-ref="<?php echo($item['uniq_id']); ?>">Postuler</a>
@@ -160,70 +195,75 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-        </section>
+        <?php endif; ?>
+    </section>
 
-        <!-- Rejoignez-nous -->
-        <section id="join-us" class="page-section px-0">
-            <div id="join-us-title" class="page-container page-section-block text-center mb-80">
-                <h1 class="ttitle th1 mb-80">Rejoignez-nous</h1>
-                <p>Vous souhaitez donner un nouvel élan à votre carrière et rejoindre une entreprise à taille humaine qui place l'esprit d'équipe au cœur de ses préoccupations ?
-                    <br>Consultez nos offres ou faites-nous parvenir une candidature spontanée.</p>
-            </div>
-            <div id="join-us-content" class="position-relative">
-                <div id="join-us-background"></div>
-                <div class="page-container">
-                    <div class="page-form-card card bg-senary text-white">
-                        <div class="card-body">
-                            <form id="join-us-form" class="w-100" action="" method="POST">
-                                <div class="row gx-3 gy-4 mb-60">
-                                    <div class="col-12 col-lg-6">
-                                        <input type="text" class="form-control" name="first_name" placeholder="Prénom*"
-                                               aria-label="Votre prénom" required>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <input type="text" class="form-control" name="last_name" placeholder="Nom*"
-                                               aria-label="Votre nom" required>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <input type="email" class="form-control" name="email" placeholder="Email*"
-                                               aria-label="Votre email" required>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <input type="text" class="form-control" name="tel" placeholder="Téléphone*"
-                                               aria-label="Votre numéro de téléphone"
-                                               pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="text" class="form-control" name="object" placeholder="Sujet*"
-                                               aria-label="Sujet" required>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <label for="join-us-resume" class="input-group">
-                                            <input type="text" class="form-control" placeholder="Ajouter votre CV*"
-                                                   aria-label="Ajouter votre CV*" style="pointer-events: none; user-select: none;">
-                                            <span class="input-group-text bg-primary text-white text-uppercase" style="pointer-events: none; user-select: none;">Parcourir…</span>
-                                        </label>
-                                        <input id="join-us-resume" class="d-none" type="file" name="file"
-                                               accept="image/*,application/pdf"
-                                               onchange="this.parentNode.querySelector('.input-group input').value = (this.files.length > 0 ? this.files[0].name : '');">
-                                        <div class="form-text text-white tsize-small mt-2">Format image ou PDF acceptés. Poids maximum : 1&nbsp;Mo.</div>
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea id="join-us-message" class="form-control" name="message" placeholder="Votre message*" rows="6" required></textarea>
-                                        <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
-                                    </div>
+    <!-- Rejoignez-nous -->
+    <section id="join-us" class="page-section px-0">
+        <div id="join-us-title" class="page-container page-section-block text-center mb-80">
+            <h1 class="ttitle th1 mb-80">Rejoignez-nous</h1>
+            <p>Vous souhaitez donner un nouvel élan à votre carrière et rejoindre une entreprise à taille humaine qui place l'esprit d'équipe au cœur de ses préoccupations ?
+                <br>Consultez nos offres ou faites-nous parvenir une candidature spontanée.</p>
+        </div>
+        <div id="join-us-content" class="position-relative">
+            <div id="join-us-background"></div>
+            <div class="page-container">
+                <div class="page-form-card card bg-senary text-white">
+                    <div class="card-body">
+                        <form id="join-us-form" class="w-100" action="./rejoignez-nous.php" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="submit" value="1">
+                            <div class="row gx-3 gy-4 mb-60">
+                                <div class="col-12 col-lg-6">
+                                    <input type="text" class="form-control" name="first_name" placeholder="Prénom*"
+                                           aria-label="Votre prénom" required>
                                 </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary tlink tsize-small text-uppercase">Envoyer</button>
+                                <div class="col-12 col-lg-6">
+                                    <input type="text" class="form-control" name="last_name" placeholder="Nom*"
+                                           aria-label="Votre nom" required>
                                 </div>
-                            </form>
-                        </div>
+                                <div class="col-12 col-lg-6">
+                                    <input type="email" class="form-control" name="email" placeholder="Email*"
+                                           aria-label="Votre email" required>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <input type="text" class="form-control" name="tel" placeholder="Téléphone*"
+                                           aria-label="Votre numéro de téléphone"
+                                           pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" name="object" placeholder="Sujet*"
+                                           aria-label="Sujet" required>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <label for="join-us-resume" class="input-group">
+                                        <input type="text" class="form-control" placeholder="Ajouter votre CV*"
+                                               aria-label="Ajouter votre CV*" style="pointer-events: none; user-select: none;">
+                                        <span class="input-group-text bg-primary text-white text-uppercase" style="pointer-events: none; user-select: none;">Parcourir…</span>
+                                    </label>
+                                    <input id="join-us-resume" class="d-none" type="file" name="file"
+                                           accept="image/*,application/pdf"
+                                           onchange="this.parentNode.querySelector('.input-group input').value = (this.files.length > 0 ? this.files[0].name : '');">
+                                    <div class="form-text text-white tsize-small mt-2">Format image ou PDF acceptés. Poids maximum : 1&nbsp;Mo.</div>
+                                </div>
+                                <div class="col-12">
+                                    <textarea id="join-us-message" class="form-control" name="message" placeholder="Votre message*" rows="6" required></textarea>
+                                    <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary tlink tsize-small text-uppercase">Envoyer</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
-        <?php include_once('./includes/footer.php'); ?>
-    </main>
-    <?php include_once('./includes/modals.php'); ?>
-    <?php include_once('./includes/scripts.php'); ?>
+        </div>
+    </section>
+    <?php include_once('./includes/footer.php'); ?>
+</main>
+<?php include_once('./includes/modals.php'); ?>
+<?php include_once('./includes/scripts.php'); ?>
+<?php if(isset($input_data['submit']) && !empty($alert)): ?>
+    <script> alert("<?php echo($alert['message']); ?>"); </script>
+<?php endif; ?>
 </body>

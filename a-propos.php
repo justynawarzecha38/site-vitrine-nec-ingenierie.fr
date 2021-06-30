@@ -14,7 +14,7 @@
 <body class="flex-column-nowrap" style="overflow: hidden;">
     <?php include_once('./includes/header.php'); ?>
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
-        <?php include_once('./includes/aside.php'); ?>
+        
         <!-- QUI SOMMES-NOUS ? -->
         <?php
         $about_intro_list = [
@@ -36,8 +36,8 @@
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                 </div>
                 <div class="page-section-block text-center">
-                    <p>Nous sommes basés à Lyon, cela nous permet de rayonner sur la grande moitié Est de la France
-                        <br><b>et de vous accompagner dans les missons&nbsp;:</b>
+                    <p>Nous sommes basés à Lyon et Épinal, cela nous permet de rayonner sur la grande moitié Est de la France jusqu'à Paris
+                        <br class="d-none d-md-block"><b>et de vous accompagner dans les missons&nbsp;:</b>
                     </p>
                 </div>
                 <div class="page-section-block">

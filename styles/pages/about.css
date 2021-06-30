@@ -3,28 +3,6 @@
     background: url(../../images/pages/about/timeline-background.jpg) no-repeat center center;
     background-size: cover;
 }
-#about-team-poles {
-}
-#about-team-poles-title {
-}
-/*#about-team-poles-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: auto;
-    right: 0;
-    min-height: 50vh;
-    background: url(../../images/originals/old/500_F_370177740_WiiQMmS08WWjgqMi0ZHl4K3eEUfuLJhh.jpg) no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-}
-@media(min-width: 992px) {
-    #about-team-poles-background {
-        top: auto;
-        min-height: 50%;
-        bottom: 0;
-    }
-}*/
 #about-intro-list {
     margin-left: -15px;
     margin-right: -15px;

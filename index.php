@@ -14,7 +14,7 @@
 <body class="flex-column-nowrap" style="overflow: hidden;">
     <?php include_once('./includes/header.php'); ?>
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0" style="overflow-x: hidden;">
-        <?php include_once('./includes/aside.php'); ?>
+        
         <?php
             /*$home_news = [
                 [
@@ -99,7 +99,7 @@
                 <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
                     <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Concept</h1>
                     <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                    <p class="home-header-bottom-text th5 text-uppercase">Bureau d'étude technique spécialiste dans les études fluides<br class="d-none d-md-block">et électriques ainsi que dans l'économie de la construction.</p>
+                    <p class="home-header-bottom-text th5 text-uppercase">Bureau d'étude technique spécialiste en Ingénierie Fluides, <br class="d-none d-md-block">Audits énergétiques et Économie de la Construction.</p>
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                 </div>
                 <div class="page-section-block text-center">
-                    <p>Nous sommes basés à Lyon, cela nous permet de rayonner sur la grande moitié Est de la France
+                    <p>Nous sommes basés à Lyon et Épinal, cela nous permet de rayonner sur la grande moitié Est de la France jusqu'à Paris
                         <br class="d-none d-md-block"><b>et de vous accompagner dans les missons&nbsp;:</b>
                     </p>
                 </div>
@@ -159,20 +159,28 @@
         <?php
         $home_solutions_list = [
             [
+                'background' => './images/pages/solutions/list/ingenierie-fluide.png',
+                'color' => 'var(--quaternary-color)',
+                'picture' => './images/pages/solutions/intro/measure.svg',
+                'title' => "Ingénierie Fluides",
+                'text' => "Vérification des plans et des besoins d'adaptations liés à l'implantation et à la circulation des équipements techniques…",
+                'href' => './nos-solutions.php#ingenierie-fluide',
+            ],
+            [
                 'background' => './images/pages/solutions/list/economie-construction.png',
                 'color' => 'var(--primary-color)',
                 'picture' => './images/pages/solutions/intro/paper-pencil.svg',
-                'title' => "Économie de la construction",
+                'title' => "Économie de la Construction",
                 'text' => "Estimatif financier sommaire du projet en fonction des surfaces et principales orientations techniques…",
                 'href' => './nos-solutions.php#economie-construction',
             ],
             [
-                'background' => './images/pages/solutions/list/ingenierie-fluide.png',
-                'color' => 'var(--quaternary-color)',
-                'picture' => './images/pages/solutions/intro/measure.svg',
-                'title' => "Ingénierie fluide",
-                'text' => "Vérification des plans et des besoins d'adaptations liés à l'implantation et à la circulation des équipements techniques…",
-                'href' => './nos-solutions.php#ingenierie-fluide',
+                'background' => './images/pages/solutions/list/audit-energetique.png',
+                'color' => 'var(--tertiary-color)',
+                'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
+                'title' => "Audit énergétique",
+                'text' => "Audit, certification et assistance sur la gestion de la plateforme OPERAT de l'ADEME pour la gestion du dispositif ECO ENERGIE TERTIAIRE.\n\nAudit établi suivant les normes en vigueur 16247-1 et 2 ainsi que les recommandations de l'ADEME.",
+                'href' => './nos-solutions.php#audit-energetique',
             ],
         ];
         ?>
@@ -182,7 +190,7 @@
                     <h2 class="ttitle th1 text-center">Nos solutions</h2>
                 </div>
                 <div class="page-section-block">
-                    <ul id="home-solutions-list" class="row g-0 list-unstyled">
+                    <ul id="home-solutions-list" class="row g-0 list-unstyled justify-content-center">
                         <?php foreach($home_solutions_list as $item): ?>
                             <li class="home-solutions-item col-12 col-md-6" style="--rel-aspect-ratio: 540/525;">
                                 <div class="home-solution">
@@ -222,7 +230,7 @@
             <div class="page-container">
                 <div class="page-section-header text-center">
                     <h2 class="ttitle th1 text-center mb-3">News</h2>
-                    <p>Suivez toute l'actualité de NRJ Diags.</p>
+                    <p>Suivez toute l'actualité de NEW Énergie Concept.</p>
                 </div>
                 <?php if(empty($home_news)): ?>
                 <div class="text-center">
@@ -269,112 +277,6 @@
                 <?php endif; ?>
             </div>
 
-        </section>
-        <!-- NOS PARTENAIRES -->
-        <?php
-            $home_partners = [
-                ['img' => ['src' => './images/partner/2LGN.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/ab-maisons.jpg', 'alt' => ""], 'href' => ''],
-                //['img' => ['src' => './images/partner/alliance-constructions.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/alpha-construction.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/aquitaine-habitat.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/artisans-du-languedoc.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/ast-groupe.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/atec.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/B2C-ingenierie.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/batim.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/batisseurs-bourguignons.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/batisseurs-d-ici.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/baty-bois.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/construction-zenith.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/couleur-villas.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/cta-construction.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/ed-construction.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/espace2lhabitat.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/flandres-batiment.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/groupe-mat.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/habitat-picard.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/hamster.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/harmony-home.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/la-maison-constructeur.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/lco-concept.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/le-pavillon-français.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/les maisons rennaises.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/les-bastides-du-midi.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/les-constructions-du-belon.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/les-maisons-by-chantal-b.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/les-maisons-clefs-d-or.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/les-maisons-françois-leon.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/logémaine.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/loonis.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/lugdunum-construction.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maison-eureka.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisonneuve.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-axial.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-babeau-seguin.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-battais-constructeur.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-clair-logis.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-clair-logis.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-clairlande.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-concept.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-crisalis.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-d-en-france.jpg', 'alt' => ""], 'href' => 'https://maisonsdenfrance-bretagne.fr/'],
-                ['img' => ['src' => './images/partner/maisons-domeo.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-florène.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-foyer-roannais.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-lca.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-marcou.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-optima.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-socopa.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-stephane-berger.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-sésame.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-villasclub.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maisons-vivre-ici.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/maitriz-habitat.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/metre-carre.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/natilia.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/nexity.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/ovalie-construction.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/pavillons-cognaçais.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/pep-s.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/perspective.png', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/primo-habitat.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/sm-maison.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/so-9-habitat.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/trabeco.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/villas-et-maisons-de-france.jpg', 'alt' => ""], 'href' => ''],
-                ['img' => ['src' => './images/partner/ya-k-construire.jpg', 'alt' => ""], 'href' => ''],
-            ];
-            $home_partners_list = array_chunk($home_partners, 12);
-        ?>
-        <section id="home-partners" class="page-section">
-            <div class="page-container">
-                <div class="page-section-header text-center">
-                    <h2 class="ttitle th1 text-center">Nos partenaires</h2>
-                </div>
-                <div>
-                    <!-- Slider main container -->
-                    <div id="home-partners-slider" class="swiper-container">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <?php foreach($home_partners_list as $chunk): ?>
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <ul class="home-partners-list row list-unstyled">
-                                    <?php foreach($chunk as $item): ?>
-                                        <li class="col-4 col-sm-4 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3 p-2" style="height: 5rem;">
-                                            <img class="img-contain" src="<?php echo($item['img']['src']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['img']['src']))) ?>" alt="" style="filter: grayscale(1);">
-                                        </li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="slider-button-prev"></div>
-                        <div class="slider-button-next"></div>
-                    </div>
-                </div>
-            </div>
         </section>
         <?php include_once('./includes/footer.php'); ?>
     </main>
