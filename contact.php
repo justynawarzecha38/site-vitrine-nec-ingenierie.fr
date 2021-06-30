@@ -83,7 +83,6 @@
                                         <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
                                     </div>
                                 </div>
-                                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary tlink tsize-small text-uppercase">Envoyer</button>
                                 </div>
