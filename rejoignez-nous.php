@@ -1,3 +1,128 @@
+<?php
+$input_data = $_POST;
+$data = [];
+$data['first_name'] = isset($input_data['first_name']) ? $input_data['first_name'] : "";
+$data['last_name'] = isset($input_data['last_name']) ? $input_data['last_name'] : "";
+$data['email'] = isset($input_data['email']) ? $input_data['email'] : "";
+$data['tel'] = isset($input_data['tel']) ? $input_data['tel'] : "";
+$data['object'] = isset($input_data['object']) ? $input_data['object'] : "";
+$data['message'] = isset($input_data['message']) ? $input_data['message'] : "";
+$data['file'] = isset($_FILES['file']) ? $_FILES['file'] : '';
+$alert = [];
+
+if ($data['first_name']):
+    if ($data['last_name']):
+        if ($data['email']):
+            if ($data['tel']):
+                if ($data['object']):
+                    if ($data['message']):
+                        if ($data['file']):
+                            //$dir = __DIR__;
+                            $dir = $_SERVER["DOCUMENT_ROOT"];
+                            $datetime = new \Datetime();
+                            $str_datetime = $datetime->format('Y-m-d-H-i-s');
+
+                            $file_extension = pathinfo($data['file']['name'], PATHINFO_EXTENSION);
+                            $new_filename = $dir ."/forms/join/files/".$str_datetime.".".$file_extension;
+
+                            if (!file_exists($new_filename)):
+                                // Check file size
+                                if ($data['file']["size"] <= 1048576):
+                                    // Allow certain file formats
+                                    if(in_array($file_extension, ['jpg', 'jpeg', 'png', 'gif', 'pdf'])):
+                                        // Try to upload file
+                                        if (move_uploaded_file($_FILES['file']["tmp_name"], $new_filename)):
+                                            if (!file_exists($dir ."/forms/join/".$str_datetime.".txt")):
+                                                try {
+                                                    $text = "Prénom : ".$data['first_name']."\r\n";
+                                                    $text .= "Nom : ".$data['last_name']."\r\n";
+                                                    $text .= "Email : ".$data['email']."\r\n";
+                                                    $text .= "Téléphone : ".$data['tel']."\r\n";
+                                                    $text .= "Sujet : ".$data['object']."\r\n";
+                                                    $text .= "Message : ".nl2br($data['message'])."\r\n";
+                                                    $text .= "Fichier : ".$new_filename;
+
+                                                    $new_file = fopen($dir ."/forms/join/".$str_datetime.".txt", "w");
+                                                    fwrite($new_file, $text);
+                                                    fclose($new_file);
+                                                    $alert = [
+                                                        'message' => "Votre candidature a été envoyée avec succès.",
+                                                        'type' => 'success',
+                                                    ];
+                                                } catch (\Exception $e) {
+                                                    $alert = [
+                                                        'message' => $e->getMessage(),
+                                                        'type' => 'warning',
+                                                    ];
+                                                }
+                                            endif;
+                                        else:
+                                            $alert = [
+                                                'message' => "Un problème est survenu lors de l'envoi du fichier.",
+                                                'type' => "warning",
+                                            ];
+                                        endif;
+                                    else:
+                                        $alert = [
+                                            'message' => "Le format du fichier n'est pas valide. Vous ne pouvez envoyer qu'une image ou un fichier au format PDF.",
+                                            'type' => "warning",
+                                        ];
+                                    endif;
+                                else:
+                                    $alert = [
+                                        'message' => "Le poids du fichier envoyé dépasse 1 Mo.",
+                                        'type' => "warning",
+                                    ];
+                                endif;
+                            else:
+                                $alert = [
+                                    'message' => "Un problème est survenu lors de l'exécution de la requête.",
+                                    'type' => "warning",
+                                ];
+                            endif;
+                        else:
+                            $alert = [
+                                'message' => "Le CV renseigné n'est pas valide.",
+                                'type' => "warning",
+                            ];
+                        endif;
+                    else:
+                        $alert = [
+                            'message' => "Le message renseigné n'est pas valide.",
+                            'type' => "warning",
+                        ];
+                    endif;
+                else:
+                    $alert = [
+                        'message' => "Le sujet renseigné n'est pas valide.",
+                        'type' => "warning",
+                    ];
+                endif;
+            else:
+                $alert = [
+                    'message' => "Le numéro de téléphone renseigné n'est pas valide.",
+                    'type' => "warning",
+                ];
+            endif;
+        else:
+            $alert = [
+                'message' => "L'adresse email renseignée n'est pas valide.",
+                'type' => "warning",
+            ];
+        endif;
+    else:
+        $alert = [
+            'message' => "Le nom renseigné n'est pas valide.",
+            'type' => "warning",
+        ];
+    endif;
+else:
+    $alert = [
+        'message' => "Le prénom renseigné n'est pas valide.",
+        'type' => "warning",
+    ];
+endif;
+?>
 <!DOCTYPE HTML>
 <html lang="fr">
 <head>
