@@ -262,11 +262,12 @@ P_2,
 </main>
 <?php include_once('./includes/modals.php'); ?>
 <?php include_once('./includes/scripts.php'); ?>
-    <script>
-        <?php if(isset($input_data['submit']) && !empty($alert)): ?>
-        alert("<?php echo($alert['message']); ?>");
-        <?php endif; ?>
-        var $form = $('#join-us-form');
+<script>
+    <?php if(isset($input_data['submit']) && !empty($alert)): ?>
+    alert("<?php echo($alert['message']); ?>");
+    <?php endif; ?>
+    var $form = $('#join-us-form');
+    if ($('.candidate-prefill-form').length > 0) {
         $('.candidate-prefill-form').on('click', function() {
             var $job_add_button = $(this);
             var $job_add_item = $job_add_button.parents('.accordion-item');
@@ -275,6 +276,6 @@ P_2,
             var $object_field = $form.find('input[name="object"]');
             $object_field.val(`Candidature au poste de ${job_ad_title} [${job_ad_address}]`);
         });
-    </script>
-
+    }
+</script>
 </body>
