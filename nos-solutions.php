@@ -43,7 +43,7 @@
                 'background' => './images/pages/solutions/list/ingenierie-fluide.png',
                 'color' => 'var(--quaternary-color)',
                 'picture' => './images/pages/solutions/intro/measure.svg',
-                'title' => "Ingénierie fluide",
+                'title' => "Ingénierie fluides",
                 'content' => [
                     [
                         'title' => "Avant-projet définitif",
@@ -155,7 +155,7 @@ AE_1,
                         'title' => "Audit",
                         'text' => <<<"AE_2"
 <ul class="my-0"><!--
---><li>Approche théorique via un logiciel de calcul dynamique permettant d’évaluer l’impact des mesures visant à réduire les consommations d’énergie sur les postes d’équipements CVC (relatifs à l’ambiance thermique générale et à la ventilation des locaux), les consommations d’eau chaude sanitaire et les équipements électriques tels que l’éclairage, les AUE (relatifs aux autres usages électriques domestiques liés au mobilier sont pris en compte forfaitairement).</li><!--
+--><li>Approche théorique via un logiciel de calcul dynamique permettant d’évaluer l’impact des mesures visant à réduire les consommations d’énergie sur les postes d’équipements CVC (relatifs à l’ambiance thermique générale et à la ventilation des locaux), les consommations d’eau chaude sanitaire et les équipements électriques tels que l’éclairage et les AUE.</li><!--
 --><li>Approche financière des coûts travaux</li><!--
 --><li>Approche des temps de retour sur investissement</li><!--
 --><li>Évaluation des éventuelles aides auxquelles peut être éligible le bâtiment en question</li><!--

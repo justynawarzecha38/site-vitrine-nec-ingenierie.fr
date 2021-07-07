@@ -228,8 +228,7 @@ endif;
 <b>Descriptif du poste :</b>
 <br>Vos missions seront les suivantes :
 <ul>
-<li>Réalisation d'audits thermiques en vue de réaliser des études thermiques énergétiques,</li>
-<li>Travailler en binôme avec un.e chargé.e d'affaires en suivant les règles et méthodes établies en interne,</li>
+<li>Travailler en binôme avec un chargé d'affaires en suivant les règles et méthodes établies en interne,</li>
 <li>Élaborer un avant-projet détaillé ainsi qu'un cahier des charges techniques,</li>
 <li>Élaborer des quantitatifs et/ou estimatifs,</li>
 <li>Réaliser des études techniques et de dimensionnement,</li>
@@ -248,7 +247,7 @@ endif;
 <li>Définir un avant-projet.</li>
 </ul>
 <br><b>Type de contrat :</b> CDI de 39 heures hebdomadaires.
-<br><b>Salaire :</b> de 24 k€ à 30 k€ brut annuel.
+<br><b>Salaire :</b> suivant expérience.
 <br><b>Expérience exigée :</b> 3 ans. Cette expérience est indispensable.
 <br><b>Qualification :</b> Technicien.
 P_1,
@@ -271,11 +270,25 @@ P_1,
 <br>Vous évoluez dans une équipe de 15/20 personnes dans laquelle la convivialité et le travail d'équipe sont des valeurs importantes.
 <br>
 <br><b>Type de contrat :</b> CDI.
-<br><b>Salaire :</b> à partir de 40 k€ brut annuel.
+<br><b>Salaire :</b> suivant expérience.
 <br><b>Expérience exigée :</b> 2 ans. Cette expérience est indispensable.
 <br><b>Qualification :</b> Cadre.
 P_2,
             'city' => "Paris",
+        ],
+        [
+            'uniq_id' => 'j0003',
+            'title' => "Technicien CVC",
+            'description' => <<<"P_1"
+<b>Descriptif du poste :</b>
+<br>Dans le cadre de son développement IDF, notre entreprise de 15/20 personnes recherche un/e technicien d'études CVC-PLOMBERIE génie climatique. En lien avec les autres collaborateurs, thermiciens/chargé d'affaires/dessinateurs en CVC-PB et ELEC vous assurez une partie du dessin, les études de dimensionnement et la rédaction des CCTP et DPGF des lots CVC-PB des projets de construction ou rénovation sur des bâtiments d'habitations et tertiaires. Vous assurez également les interfaces en réunion chez les clients sur votre secteur géographique IDF.
+<br>
+<br><b>Type de contrat :</b> CDI de 39 heures hebdomadaires.
+<br><b>Salaire :</b> suivant expérience.
+<br><b>Expérience exigée :</b> 3 ans. Cette expérience est indispensable.
+<br><b>Qualification :</b> Technicien.
+P_1,
+            'city' => "Paris / Île-de-France",
         ],
     ];
     //$job_ads_list = [];

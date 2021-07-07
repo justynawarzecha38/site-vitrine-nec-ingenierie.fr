@@ -37,7 +37,7 @@
                 <div style="height: 64px; opacity: 0.65;">
                     <img class="img-contain" src="./images/logos/Logo_NEC_Noir.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Noir.png'))) ?>" alt="Logo NEW Énergie Concept (noir)">
                 </div>
-                <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Concept est spécialisé en Ingénierie Fluides, Audit énergétiques et Économie de la Construction.</p>
+                <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Concept est spécialisé en Ingénierie Fluides, Audit énergétique et Économie de la Construction.</p>
                 <div class="row align-items-end justify-content-around">
                     <div class="col-6">
                         <img class="img-contain" src="./images/logos/NEC_OPQIBI.jpg" alt="Qualification OPQIBI 18 12 3727" style="max-width: 150px;">

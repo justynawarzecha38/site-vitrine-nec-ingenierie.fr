@@ -179,7 +179,7 @@
                 'color' => 'var(--tertiary-color)',
                 'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
                 'title' => "Audit énergétique",
-                'text' => "Audit, certification et assistance sur la gestion de la plateforme OPERAT de l'ADEME pour la gestion du dispositif ECO ENERGIE TERTIAIRE.\n\nAudit établi suivant les normes en vigueur 16247-1 et 2 ainsi que les recommandations de l'ADEME.",
+                'text' => "Audit et assistance sur la gestion de la plateforme OPERAT de l'ADEME pour la gestion du dispositif ECO ENERGIE TERTIAIRE.\n\nAudit établi suivant les normes en vigueur 16247-1 et 2 ainsi que les recommandations de l'ADEME.",
                 'href' => './nos-solutions.php#audit-energetique',
             ],
         ];
