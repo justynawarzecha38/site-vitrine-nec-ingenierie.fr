@@ -347,7 +347,7 @@ P_1,
             <div class="page-container">
                 <div class="page-form-card card bg-senary text-white">
                     <div class="card-body">
-                        <form id="join-us-form" class="w-100" action="./rejoignez-nous.php" method="POST" enctype="multipart/form-data">
+                        <form id="join-us-form" class="w-100" action="./controllers/join.php" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="submit" value="1">
                             <div class="row gx-3 gy-4 mb-60">
                                 <div class="col-12 col-lg-6">
@@ -384,6 +384,10 @@ P_1,
                                 </div>
                                 <div class="col-12">
                                     <textarea id="join-us-message" class="form-control" name="message" placeholder="Votre message*" rows="6" required></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <input class="form-control captcha" type="text" placeholder="Veuillez entrer le résultat de l'opération ci-dessus.*">
                                     <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
                                 </div>
                             </div>
@@ -400,7 +404,7 @@ P_1,
 </main>
 <?php include_once('./includes/modals.php'); ?>
 <?php include_once('./includes/scripts.php'); ?>
-<script>
+<!--script>
     <?php if(isset($input_data['submit']) && !empty($alert)): ?>
     alert("<?php echo($alert['message']); ?>");
     <?php endif; ?>
@@ -415,5 +419,80 @@ P_1,
             $object_field.val(`Candidature au poste de ${job_ad_title} [${job_ad_address}]`);
         });
     }
+</script-->
+<script>
+    var $form = $('#join-us-form');
+
+    var captcha_item = document.querySelector('.captcha');
+    var captcha_result = 0;
+    let captcha = new jCaptcha({
+        el: '.captcha',
+        canvasClass: 'captchaCanvas',
+        canvasStyle: {
+            width: 100,
+            height: 15,
+            textBaseline: 'top',
+            font: '15px Arial',
+            textAlign: 'left',
+            fillStyle: '#ddd'
+        },
+        resetOnError: false,
+        clearOnSubmit: false,
+        // set callback function for success and error messages:
+        callback: ( response, $captchaInputElement, numberOfTries ) => {
+            if ( response == 'success' ) {
+                captcha_item.setCustomValidity("");
+            }
+            if ( response == 'error' ) {
+                captcha_item.setCustomValidity("La résultat proposé est incorrecte. Veuillez réessayer.");
+            }
+        }
+    });
+    captcha_item.addEventListener('input', function() {
+        captcha_item.setCustomValidity("");
+    });
+
+    if ($('.candidate-prefill-form').length > 0) {
+        $('.candidate-prefill-form').on('click', function() {
+            var $job_add_button = $(this);
+            var $job_add_item = $job_add_button.parents('.accordion-item');
+            var job_ad_title = $job_add_item.find('.job-ad-title').html();
+            var job_ad_address = $job_add_item.find('.job-ad-address').html();
+            var $object_field = $form.find('input[name="object"]');
+            $object_field.val(`Candidature au poste de ${job_ad_title} [${job_ad_address}]`);
+        });
+    }
+
+    $form.on('submit', function(event) {
+        event.preventDefault();
+        var method = $form.attr('method');
+        var action = $form.attr('action');
+        var form = $form.get(0);
+        var form_data = new FormData(form);
+        captcha.validate();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            captcha.reset();
+            return false;
+        }
+
+        $.ajax({
+            url: action,
+            method: method,
+            data: form_data,
+            processData: false,
+            contentType: false,
+        }).done(function(response) {
+            console.log(response);
+            if (response !== null && typeof response === "object" && 'message' in response) {
+                alert(response.message);
+                document.location.reload(true);
+            }
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            console.error(jqXHR, textStatus, errorThrown);
+        });
+
+    });
 </script>
 </body>
