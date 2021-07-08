@@ -177,47 +177,4 @@
             return false;
         }, false);
     </script>
-    <!--script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var form = document.getElementById('contact-form');
-            var method = form.getAttribute('method');
-            var action = form.getAttribute('action');
-            var data = {};
-            var form_data = new FormData(form);
-            var data_encoded = "";
-            for (var pair of form_data.entries()) {
-                console.log(pair);
-                data[encodeURIComponent(pair[0])] = encodeURIComponent(pair[1]);
-                data_encoded += (encodeURIComponent(pair[0])+"="+encodeURIComponent(pair[1])+"&");
-            }
-            if (data_encoded.length > 1) {
-                data_encoded = data_encoded.substring(0, data_encoded.length - 1);
-            }
-            console.log(data);
-
-            var xhttp = new XMLHttpRequest();
-            xhttp.onload = function(xhttp_event) {
-                console.log(xhttp_event.target.responseText);
-                try {
-                    var res = JSON.parse(xhttp_event.target.response);
-                    if (res !== null && typeof res === "object" && 'message' in res) {
-                        alert(res.message);
-                    }
-                    if (xhttp_event.target.status === 200) {
-                        document.location.reload(true);
-                    }
-                } catch (e) {
-                    console.error(e);
-                }
-            };
-            xhttp.open(method, action, true);
-            xhttp.setRequestHeader(
-                "Content-Type",
-                "application/x-www-form-urlencoded",
-            );
-            xhttp.send(data_encoded);
-            return false;
-        }, false);
-    </script-->
 </body>
