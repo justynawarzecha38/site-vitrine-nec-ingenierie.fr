@@ -173,7 +173,7 @@ try {
         $mail->addAttachment($new_file, $data['file']['name']);
 
         //Content
-        $mail->Subject = htmlentities($data['object']);
+        $mail->Subject = utf8_encode($data['object']);
         $mail->Body    = nl2br($text);
         $mail->isHTML(true);
         $mail->send();
