@@ -404,22 +404,6 @@ P_1,
 </main>
 <?php include_once('./includes/modals.php'); ?>
 <?php include_once('./includes/scripts.php'); ?>
-<!--script>
-    <?php if(isset($input_data['submit']) && !empty($alert)): ?>
-    alert("<?php echo($alert['message']); ?>");
-    <?php endif; ?>
-    var $form = $('#join-us-form');
-    if ($('.candidate-prefill-form').length > 0) {
-        $('.candidate-prefill-form').on('click', function() {
-            var $job_add_button = $(this);
-            var $job_add_item = $job_add_button.parents('.accordion-item');
-            var job_ad_title = $job_add_item.find('.job-ad-title').html();
-            var job_ad_address = $job_add_item.find('.job-ad-address').html();
-            var $object_field = $form.find('input[name="object"]');
-            $object_field.val(`Candidature au poste de ${job_ad_title} [${job_ad_address}]`);
-        });
-    }
-</script-->
 <script>
     var $form = $('#join-us-form');
 
