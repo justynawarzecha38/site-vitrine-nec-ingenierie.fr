@@ -1,0 +1,69 @@
+#about-timeline {
+    background-color: var(--primary-color);
+    background: url(../../images/pages/about/timeline-background.jpg) no-repeat center center;
+    background-size: cover;
+}
+#about-intro-list {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+#about-intro-list li {
+    padding: 0 15px 35px;
+}
+
+.about-team-poles-content {
+    padding-top: 140px;
+}
+@media(min-width: 992px) {
+    .about-team-poles-content {
+        padding-top: 0;
+        padding-bottom: calc(220px + 35px);
+    }
+}
+
+#about-team-poles-list {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+/*@media(min-width: 1200px) {
+    #about-team-poles-list {
+        transform: translate(0, calc(100% - 200px));
+        margin-top: -180px;
+    }
+}*/
+#about-team-poles-list li {
+    padding: 0 15px 35px;
+}
+#about-team-poles-list li .card-body {
+    padding: 60px 40px;
+}
+#about-team-poles-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: 0;
+    /*min-height: 50vh;*/
+    background: url(../../images/pages/about/poles/background.png) no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    height: 330px;
+}
+@media(min-width: 992px) {
+    #about-team-poles-background {
+        top: 220px;
+        height: 620px;
+    }
+}
+#about-team-poles-background::after {
+    content: "";
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    mix-blend-mode: multiply;
+    background-color: rgb(78, 76, 77);
+    opacity: 0.4;
+}

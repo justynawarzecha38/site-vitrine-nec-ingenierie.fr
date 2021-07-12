@@ -1,0 +1,348 @@
+
+/* HEADER */
+#home-header {
+    position: relative;
+}
+/* Fond */
+.home-header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 733px;
+    background-image: url(../../images/pages/home/Photo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+@media (max-width: 1500px) {
+    .home-header-background {
+        height: 733px;
+    }
+}
+@media (max-width: 992px) {
+    .home-header-background {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 320px;
+    }
+    .home-header-background::before {
+        content: "";
+        display: block;
+        padding-bottom: calc(100% / (1920/733));
+    }
+}
+/* => Cache noir transparent sur l'image de fond */
+.home-header-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.25;
+}
+.home-header-quote-picture {
+    position: absolute;
+    top: 142px;
+    left: calc(40/1920 * 100%);
+    right: 0;
+    bottom: 0;
+    height: calc(369/927 * 100%);
+    background-image: url(../../images/pages/home/Citation.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 center;
+    width: 927px;
+}
+@media (max-width: 1500px) {
+    .home-header-quote-picture {
+        width: calc(921/1920 * 100%);
+    }
+}
+@media (max-width: 992px) {
+    .home-header-quote-picture {
+        top: calc(142/1920 * 100%);
+        left: auto;
+        right: auto;
+        background-position: center;
+        width: 100%;
+    }
+    .home-header-quote-picture::before {
+        content: "";
+        display: block;
+        padding-bottom: calc(100% / (921/426));
+    }
+}
+/* HEADER Slider */
+#home-header-slider {
+    position: relative;
+    width: 400px;
+}
+/* => Flèches blanches de défilement */
+#home-header-slider .slider-button-prev,
+#home-header-slider .slider-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 16px;
+    background: url(../../images/pictos/Fleche_blanc.svg) no-repeat center center;
+    z-index: 10;
+}
+#home-header-slider .slider-button-prev {
+    left: 0;
+    right: auto;
+}
+#home-header-slider .slider-button-next {
+    left: auto;
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+}
+#home-header-slider .slider-button-next.swiper-button-disabled,
+#home-header-slider .slider-button-prev.swiper-button-disabled {
+    opacity: 1;
+    cursor: auto;
+    pointer-events: none;
+}
+#home-header-slider .swiper-slide {
+    padding: 0 20px;
+}
+
+/* NEWS */
+#home-header-news {
+    padding-top: 142px;
+    padding-right: calc(200/1920 * 100%);
+    padding-bottom: 132px;
+}
+@media (max-width: 992px) {
+    #home-header-news {
+        display: none;
+    }
+}
+#home-header-news .home-header-news-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-top: 12px solid var(--primary-color);
+}
+/* Bloc du bas */
+.home-header-bottom {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width: 992px) {
+    .home-header-bottom {
+        margin-top: -65px;
+    }
+}
+.home-header-bottom-card {
+    padding: 45px 1rem;
+}
+@media(max-width: 992px) {
+    .home-header-bottom-card {
+        padding: 25px 1rem;
+    }
+}
+
+.home-header-bottom-title {
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 10px;
+    margin-bottom: 28px;
+    line-height: 1;
+}
+/* => Barre de soulignement sous le titre */
+.home-header-bottom-title::after {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: white;
+}
+.home-header-bottom-text {
+    position: relative;
+}
+@media (max-width: 991.98px) {
+    .home-header-bottom-text {
+        position: relative;
+        font-size: 1rem;
+    }
+}
+/* => Flèche blanche à côté du texte */
+.home-header-bottom-text::before {
+    display: inline-block;
+    transform: rotate(180deg);
+    width: calc(0.625rem * 0.875 + 1rem);
+    height: calc(1rem * 0.875);
+    background: url(../../images/pictos/Fleche_blanc.svg) no-repeat center center;
+    content: "";
+}
+
+/* NOS SOLUTIONS */
+
+#home-solutions-list {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.home-solutions-item {
+    position: relative;
+    padding: 0 20px 45px;
+}
+.home-solution {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+.home-solution-picture-block {
+    width: calc(510/540 * 100%);
+}
+.home-solution-picture-block .home-solution-picture,
+.home-solution-picture-block .home-solution-picture-overlay {
+    border-radius: 5px;
+}
+.home-solution-picture-block .home-solution-picture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+    background-color: rgb(78, 76, 77);
+    opacity: 0.8;
+}
+.home-solution-picture-block .home-solution-icons-wrapper {
+    position: absolute;
+    top: calc(100/370 * 100%);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(260/370 * 100%);
+}
+.home-solution-icons-wrapper .home-solution-icons-container {
+    height: calc(86/260 * 100%);
+}
+.home-solution-icons-container .home-solution-icons-picture {
+    width: 100%;
+    height: 100%;
+}
+.home-solution .home-solution-card {
+    position: relative;
+    align-self: flex-end;
+    flex: 1 1 auto;
+    min-height: 1px;
+    margin-top: calc(110/540 * -100%);
+    width: calc(420/540 * 100%);
+}
+.home-solution-card .home-solution-card-body {
+    padding: calc(45/420 * 100%) calc(30/420 * 100%);
+}
+.home-solution-card-title {
+    margin-bottom: calc(35/420 * 100%);
+}
+.home-solution-card-text {
+    margin-bottom: 0;
+    padding-right: calc(30/420 * 100%);
+}
+.home-solution-card-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: calc(24/540 * 100%) calc(28/540 * 100%);
+    border: none;
+    background: none;
+}
+
+/* NEWS Slider */
+@media(max-width: 575.98px) {
+    #home-news {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+}
+#home-news-slider {
+    position: relative;
+}
+#home-news-slider .swiper-slide {
+    height: auto;
+}
+@media(max-width: 575.98px) {
+    #home-news-slider .swiper-slide {
+        padding: 0 0.5rem !important;
+        width: calc(100% - 1.5rem);
+    }
+}
+/* => Flèches blanches de défilement */
+#home-news-slider .slider-button-prev,
+#home-news-slider .slider-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.625rem;
+    height: 1rem;
+    background: url(../../images/pictos/Fleche.svg) no-repeat center center;
+    z-index: 10;
+    outline: 0;
+}
+#home-news-slider .slider-button-prev {
+    left: 0;
+    right: auto;
+}
+#home-news-slider .slider-button-next {
+    left: auto;
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+}
+#home-news-slider .slider-button-next.swiper-button-disabled,
+#home-news-slider .slider-button-prev.swiper-button-disabled {
+    opacity: 1;
+    cursor: auto;
+    pointer-events: none;
+}
+#home-news-slider .swiper-slide {
+    padding: 0 20px;
+}
+
+/* PARTNERS Slider */
+#home-partners-slider {
+    position: relative;
+}
+/* => Flèches blanches de défilement */
+#home-partners-slider .slider-button-prev,
+#home-partners-slider .slider-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.625rem;
+    height: 1rem;
+    background: url(../../images/pictos/Fleche.svg) no-repeat center center;
+    z-index: 10;
+}
+#home-partners-slider .slider-button-prev {
+    left: 0;
+    right: auto;
+}
+#home-partners-slider .slider-button-next {
+    left: auto;
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+}
+#home-partners-slider .slider-button-next.swiper-button-disabled,
+#home-partners-slider .slider-button-prev.swiper-button-disabled {
+    opacity: 1;
+    cursor: auto;
+    pointer-events: none;
+}
+#home-partners-slider .swiper-slide {
+    padding: 0 20px;
+}

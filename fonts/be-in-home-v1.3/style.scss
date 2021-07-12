@@ -1,0 +1,390 @@
+@import "variables";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qsnjdk');
+    src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qsnjdk#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?qsnjdk') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?qsnjdk') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?qsnjdk##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="bih-"], [class*=" bih-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    display: inline-block;
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bih-attic {
+    &:before {
+        content: $bih-attic;
+    }
+}
+.bih-baby {
+    &:before {
+        content: $bih-baby;
+    }
+}
+.bih-bathroom {
+    &:before {
+        content: $bih-bathroom;
+    }
+}
+.bih-bedroom {
+    &:before {
+        content: $bih-bedroom;
+    }
+}
+.bih-bell {
+    &:before {
+        content: $bih-bell;
+    }
+}
+.bih-box {
+    &:before {
+        content: $bih-box;
+    }
+}
+.bih-calendar {
+    &:before {
+        content: $bih-calendar;
+    }
+}
+.bih-catchphrase {
+    &:before {
+        content: $bih-catchphrase;
+    }
+}
+.bih-cellar {
+    &:before {
+        content: $bih-cellar;
+    }
+}
+.bih-constructor-bubble {
+    &:before {
+        content: $bih-constructor-bubble;
+    }
+}
+.bih-dinning-room {
+    &:before {
+        content: $bih-dinning-room;
+    }
+}
+.bih-entrance {
+    &:before {
+        content: $bih-entrance;
+    }
+}
+.bih-eyed-bubbles {
+    &:before {
+        content: $bih-eyed-bubbles;
+    }
+}
+.bih-fan {
+    &:before {
+        content: $bih-fan;
+    }
+}
+.bih-file {
+    &:before {
+        content: $bih-file;
+    }
+}
+.bih-fire-alarm {
+    &:before {
+        content: $bih-fire-alarm;
+    }
+}
+.bih-flame {
+    &:before {
+        content: $bih-flame;
+    }
+}
+.bih-garage {
+    &:before {
+        content: $bih-garage;
+    }
+}
+.bih-garden {
+    &:before {
+        content: $bih-garden;
+    }
+}
+.bih-hi-fi {
+    &:before {
+        content: $bih-hi-fi;
+    }
+}
+.bih-house-cog {
+    &:before {
+        content: $bih-house-cog;
+    }
+}
+.bih-house-wrench {
+    &:before {
+        content: $bih-house-wrench;
+    }
+}
+.bih-key-house {
+    &:before {
+        content: $bih-key-house;
+    }
+}
+.bih-home {
+    &:before {
+        content: $bih-home;
+    }
+}
+.bih-homes {
+    &:before {
+        content: $bih-homes;
+    }
+}
+.bih-cog {
+    &:before {
+        content: $bih-cog;
+    }
+}
+.bih-contrariwise-arrows {
+    &:before {
+        content: $bih-contrariwise-arrows;
+    }
+}
+.bih-fireplace {
+    &:before {
+        content: $bih-fireplace;
+    }
+}
+.bih-firewood {
+    &:before {
+        content: $bih-firewood;
+    }
+}
+.bih-fuel-oil {
+    &:before {
+        content: $bih-fuel-oil;
+    }
+}
+.bih-kitchen {
+    &:before {
+        content: $bih-kitchen;
+    }
+}
+.bih-lightbulb {
+    &:before {
+        content: $bih-lightbulb;
+    }
+}
+.bih-living-room {
+    &:before {
+        content: $bih-living-room;
+    }
+}
+.bih-loft {
+    &:before {
+        content: $bih-loft;
+    }
+}
+.bih-logo {
+    &:before {
+        content: $bih-logo;
+    }
+}
+.bih-office {
+    &:before {
+        content: $bih-office;
+    }
+}
+.bih-picture {
+    &:before {
+        content: $bih-picture;
+    }
+}
+.bih-pictures-and-documents {
+    &:before {
+        content: $bih-pictures-and-documents;
+    }
+}
+.bih-plug {
+    &:before {
+        content: $bih-plug;
+    }
+}
+.bih-plug-inverse {
+    &:before {
+        content: $bih-plug-inverse;
+    }
+}
+.bih-recycle {
+    &:before {
+        content: $bih-recycle;
+    }
+}
+.bih-shower-room {
+    &:before {
+        content: $bih-shower-room;
+    }
+}
+.bih-snowflake {
+    &:before {
+        content: $bih-snowflake;
+    }
+}
+.bih-tachometer-inverse {
+    &:before {
+        content: $bih-tachometer-inverse;
+    }
+}
+.bih-thermometer {
+    &:before {
+        content: $bih-thermometer;
+    }
+}
+.bih-trash-can {
+    &:before {
+        content: $bih-trash-can;
+    }
+}
+.bih-water-closet {
+    &:before {
+        content: $bih-water-closet;
+    }
+}
+.bih-water-drop {
+    &:before {
+        content: $bih-water-drop;
+    }
+}
+.bih-wifi {
+    &:before {
+        content: $bih-wifi;
+    }
+}
+.bih-worker-wrench {
+    &:before {
+        content: $bih-worker-wrench;
+    }
+}
+.bih-wrench {
+    &:before {
+        content: $bih-wrench;
+    }
+}
+.bih-builder {
+    &:before {
+        content: $bih-builder;
+    }
+}
+.bih-box-opaque {
+    &:before {
+        content: $bih-box-opaque;
+    }
+}
+.bih-photovoltaic-panel {
+    &:before {
+        content: $bih-photovoltaic-panel;
+    }
+}
+.bih-owner {
+    &:before {
+        content: $bih-owner;
+    }
+}
+.bih-tenant {
+    &:before {
+        content: $bih-tenant;
+    }
+}
+.bih-tap {
+    &:before {
+        content: $bih-tap;
+    }
+}
+.bih-washer {
+    &:before {
+        content: $bih-washer;
+    }
+}
+.bih-mezzanine {
+    &:before {
+        content: $bih-mezzanine;
+    }
+}
+.bih-corridor {
+    &:before {
+        content: $bih-corridor;
+    }
+}
+.bih-dressing {
+    &:before {
+        content: $bih-dressing;
+    }
+}
+.bih-living-room-kitchen {
+    &:before {
+        content: $bih-living-room-kitchen;
+    }
+}
+.bih-storeroom {
+    &:before {
+        content: $bih-storeroom;
+    }
+}
+.bih-hot-water {
+    &:before {
+        content: $bih-hot-water;
+    }
+}
+.bih-sewerage-treatment {
+    &:before {
+        content: $bih-sewerage-treatment;
+    }
+}
+.bih-water-treatment {
+    &:before {
+        content: $bih-water-treatment;
+    }
+}
+.bih-outside {
+    &:before {
+        content: $bih-outside;
+    }
+}
+.bih-circle {
+    &:before {
+        content: $bih-circle;
+    }
+}
+.bih-circle-inprogress {
+    &:before {
+        content: $bih-circle-inprogress;
+    }
+}
+.bih-clock {
+    &:before {
+        content: $bih-clock;
+    }
+}
+.bih-inprogress {
+    &:before {
+        content: $bih-inprogress;
+    }
+}
+.bih-clock-hands {
+    &:before {
+        content: $bih-clock-hands;
+    }
+}
+

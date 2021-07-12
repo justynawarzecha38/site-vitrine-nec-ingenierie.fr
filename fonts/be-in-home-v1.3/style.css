@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'Be-in-home';
+    src:  url('fonts/Be-in-home.eot?qsnjdk');
+    src:  url('fonts/Be-in-home.eot?qsnjdk#iefix') format('embedded-opentype'),
+    url('fonts/Be-in-home.ttf?qsnjdk') format('truetype'),
+    url('fonts/Be-in-home.woff?qsnjdk') format('woff'),
+    url('fonts/Be-in-home.svg?qsnjdk#Be-in-home') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="bih-"], [class*=" bih-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    display: inline-block;
+    font-family: 'Be-in-home' !important;
+    font-display: block;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bih-attic:before {
+    content: "\e900";
+}
+.bih-baby:before {
+    content: "\e901";
+}
+.bih-bathroom:before {
+    content: "\e902";
+}
+.bih-bedroom:before {
+    content: "\e903";
+}
+.bih-bell:before {
+    content: "\e904";
+}
+.bih-box:before {
+    content: "\e905";
+}
+.bih-calendar:before {
+    content: "\e906";
+}
+.bih-catchphrase:before {
+    content: "\e907";
+}
+.bih-cellar:before {
+    content: "\e908";
+}
+.bih-constructor-bubble:before {
+    content: "\e909";
+}
+.bih-dinning-room:before {
+    content: "\e90a";
+}
+.bih-entrance:before {
+    content: "\e90b";
+}
+.bih-eyed-bubbles:before {
+    content: "\e90c";
+}
+.bih-fan:before {
+    content: "\e90d";
+}
+.bih-file:before {
+    content: "\e90e";
+}
+.bih-fire-alarm:before {
+    content: "\e90f";
+}
+.bih-flame:before {
+    content: "\e910";
+}
+.bih-garage:before {
+    content: "\e911";
+}
+.bih-garden:before {
+    content: "\e912";
+}
+.bih-hi-fi:before {
+    content: "\e913";
+}
+.bih-house-cog:before {
+    content: "\e914";
+}
+.bih-house-wrench:before {
+    content: "\e915";
+}
+.bih-key-house:before {
+    content: "\e916";
+}
+.bih-home:before {
+    content: "\e917";
+}
+.bih-homes:before {
+    content: "\e918";
+}
+.bih-cog:before {
+    content: "\e919";
+}
+.bih-contrariwise-arrows:before {
+    content: "\e91a";
+}
+.bih-fireplace:before {
+    content: "\e91b";
+}
+.bih-firewood:before {
+    content: "\e91c";
+}
+.bih-fuel-oil:before {
+    content: "\e91d";
+}
+.bih-kitchen:before {
+    content: "\e91e";
+}
+.bih-lightbulb:before {
+    content: "\e91f";
+}
+.bih-living-room:before {
+    content: "\e920";
+}
+.bih-loft:before {
+    content: "\e921";
+}
+.bih-logo:before {
+    content: "\e922";
+}
+.bih-office:before {
+    content: "\e923";
+}
+.bih-picture:before {
+    content: "\e924";
+}
+.bih-pictures-and-documents:before {
+    content: "\e925";
+}
+.bih-plug:before {
+    content: "\e926";
+}
+.bih-plug-inverse:before {
+    content: "\e927";
+}
+.bih-recycle:before {
+    content: "\e928";
+}
+.bih-shower-room:before {
+    content: "\e929";
+}
+.bih-snowflake:before {
+    content: "\e92a";
+}
+.bih-tachometer-inverse:before {
+    content: "\e92b";
+}
+.bih-thermometer:before {
+    content: "\e92c";
+}
+.bih-trash-can:before {
+    content: "\e92d";
+}
+.bih-water-closet:before {
+    content: "\e92e";
+}
+.bih-water-drop:before {
+    content: "\e92f";
+}
+.bih-wifi:before {
+    content: "\e930";
+}
+.bih-worker-wrench:before {
+    content: "\e931";
+}
+.bih-wrench:before {
+    content: "\e932";
+}
+.bih-builder:before {
+    content: "\e933";
+}
+.bih-box-opaque:before {
+    content: "\e934";
+}
+.bih-photovoltaic-panel:before {
+    content: "\e935";
+}
+.bih-owner:before {
+    content: "\e936";
+}
+.bih-tenant:before {
+    content: "\e937";
+}
+.bih-tap:before {
+    content: "\e938";
+}
+.bih-washer:before {
+    content: "\e939";
+}
+.bih-mezzanine:before {
+    content: "\e93a";
+}
+.bih-corridor:before {
+    content: "\e93b";
+}
+.bih-dressing:before {
+    content: "\e93c";
+}
+.bih-living-room-kitchen:before {
+    content: "\e93d";
+}
+.bih-storeroom:before {
+    content: "\e93e";
+}
+.bih-hot-water:before {
+    content: "\e93f";
+}
+.bih-sewerage-treatment:before {
+    content: "\e940";
+}
+.bih-water-treatment:before {
+    content: "\e941";
+}
+.bih-outside:before {
+    content: "\e942";
+}
+.bih-circle:before {
+    content: "\e943";
+}
+.bih-circle-inprogress:before {
+    content: "\e944";
+}
+.bih-clock:before {
+    content: "\e945";
+}
+.bih-inprogress:before {
+    content: "\e946";
+}
+.bih-clock-hands:before {
+    content: "\e947";
+}
