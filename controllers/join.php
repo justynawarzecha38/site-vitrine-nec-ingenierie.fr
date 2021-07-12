@@ -173,14 +173,14 @@ try {
         $mail->addAttachment($new_file, $data['file']['name']);
 
         //Content
-        $mail->Subject = $data['object'];
+        $mail->Subject = htmlentities($data['object']);
         $mail->Body    = nl2br($text);
         $mail->isHTML(true);
         $mail->send();
 
         header('Content-type: application/json');
         echo json_encode([
-            'message' => "Votre demande de contact a été envoyée avec succès.",
+            'message' => "Votre candidature a été envoyée avec succès.",
             'type' => 'success',
         ]);
     } catch (Exception $e) {
