@@ -134,6 +134,7 @@
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
+            console.log('Test')
             var method = form.getAttribute('method');
             var action = form.getAttribute('action');
             var data = {};
