@@ -87,8 +87,8 @@ try {
 
         //Recipients
         $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
-        //$mail->AddAddress("sebastien.colbe@pmb-software.fr");
-        $mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
+        $mail->AddAddress("sebastien.colbe@pmb-software.fr");
+        //$mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
 
         //Content
         $mail->Subject = 'Contact';
