@@ -127,9 +127,11 @@
                     var res = JSON.parse(xhttp_event.target.response);
                     if (res !== null && typeof res === "object" && 'message' in res) {
                         alert(res.message);
-                    }
-                    if (xhttp_event.target.status === 200) {
-                        document.location.reload(true);
+                        if (xhttp_event.target.status === 200) {
+                            if ('type' in res && res.type === 'success') {
+                                document.location.reload(true);
+                            }
+                        }
                     }
                 } catch (e) {
                     console.error(e);
