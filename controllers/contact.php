@@ -19,9 +19,17 @@ try {
     $data['email'] = isset($input_data['email']) ? $input_data['email'] : "";
     $data['tel'] = isset($input_data['tel']) ? $input_data['tel'] : "";
     $data['message'] = isset($input_data['message']) ? $input_data['message'] : "";
+    $data['g-recaptcha-response'] = isset($input_data['g-recaptcha-response']) ? $input_data['g-recaptcha-response'] : "";
 
     header('Content-type: application/json');
 
+    if (!$data['g-recaptcha-response']) {
+        echo json_encode([
+            'message' => "La réponse à la case « Je ne suis pas un robot » n'est pas valide.",
+            'type' => "warning",
+        ]);
+        exit();
+    }
     if (!$data['agency']) {
         echo json_encode([
             'message' => "L'agence renseignée n'est pas valide.",
@@ -58,57 +66,73 @@ try {
         exit();
     }
 
-    //$datetime = new \Datetime();
-    //$str_datetime = $datetime->format('Y-m-d-H-i-s');
-    //if (!file_exists($dir ."/forms/contact/".$str_datetime.".txt")) {
-    $text = "<b>Agence</b> : ".htmlentities($data['agency'])."\r\n\r\n";
-    $text .= "<b>".htmlentities("Société")."</b>  : ".htmlentities($data['company'])."\r\n\r\n";
-    $text .= "<b>Nom</b>  : ".htmlentities($data['name'])."\r\n\r\n";
-    $text .= "<b>Email</b>  : ".htmlentities($data['email'])."\r\n\r\n";
-    $text .= "<b>".htmlentities("Téléphone")."</b>  : ".htmlentities($data['tel'])."\r\n\r\n";
-    $text .= "<b>Message</b>  : ".nl2br(htmlentities($data['message']));
+    $secretKey = $_ENV['GC_SECRET_KEY'];
+    $ip = $_SERVER['REMOTE_ADDR'];
 
-    //$new_file = fopen($dir ."/forms/contact/".$str_datetime.".txt", "w");
-    //fwrite($new_file, $text);
-    //fclose($new_file);
+    // post request to server
+    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($data['g-recaptcha-response']);
+    $response = file_get_contents($url);
+    $responseKeys = json_decode($response,true);
+    // should return JSON with success as true
+    if($responseKeys["success"]) {
 
+        //$datetime = new \Datetime();
+        //$str_datetime = $datetime->format('Y-m-d-H-i-s');
+        //if (!file_exists($dir ."/forms/contact/".$str_datetime.".txt")) {
+        $text = "<b>Agence</b> : ".htmlentities($data['agency'])."\r\n\r\n";
+        $text .= "<b>".htmlentities("Société")."</b>  : ".htmlentities($data['company'])."\r\n\r\n";
+        $text .= "<b>Nom</b>  : ".htmlentities($data['name'])."\r\n\r\n";
+        $text .= "<b>Email</b>  : ".htmlentities($data['email'])."\r\n\r\n";
+        $text .= "<b>".htmlentities("Téléphone")."</b>  : ".htmlentities($data['tel'])."\r\n\r\n";
+        $text .= "<b>Message</b>  : ".nl2br(htmlentities($data['message']));
 
-    //Create an instance; passing `true` enables exceptions
-    $mail = new PHPMailer(true);
+        //$new_file = fopen($dir ."/forms/contact/".$str_datetime.".txt", "w");
+        //fwrite($new_file, $text);
+        //fclose($new_file);
 
-    try {
-        $mail->isSMTP();
-        $mail->SMTPAuth   = true;
-        $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
-        $mail->Host       = $_ENV['MAIL_HOST'];
-        $mail->Port       = $_ENV['MAIL_PORT'];
-        $mail->Username   = $_ENV['MAIL_USERNAME'];
-        $mail->Password   = $_ENV['MAIL_PASSWORD'];
+        //Create an instance; passing `true` enables exceptions
+        $mail = new PHPMailer(true);
 
-        //Recipients
-        $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
-        $mail->AddAddress("sebastien.colbe@pmb-software.fr");
-        //$mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
+        try {
+            $mail->isSMTP();
+            $mail->SMTPAuth   = true;
+            $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
+            $mail->Host       = $_ENV['MAIL_HOST'];
+            $mail->Port       = $_ENV['MAIL_PORT'];
+            $mail->Username   = $_ENV['MAIL_USERNAME'];
+            $mail->Password   = $_ENV['MAIL_PASSWORD'];
 
-        //Content
-        $mail->Subject = 'Contact';
-        $mail->Body    = nl2br($text);
-        $mail->isHTML(true);
-        $mail->send();
+            //Recipients
+            $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
+            $mail->AddAddress("sebastien.colbe@pmb-software.fr");
+            //$mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
 
-        header('Content-type: application/json');
+            //Content
+            $mail->Subject = 'Contact';
+            $mail->Body    = nl2br($text);
+            $mail->isHTML(true);
+            $mail->send();
+
+            header('Content-type: application/json');
+            echo json_encode([
+                'message' => "Votre demande de contact a été envoyée avec succès.",
+                'type' => 'success',
+            ]);
+        } catch (Exception $e) {
+            header('Content-type: application/json');
+            echo json_encode([
+                'message' => 'Mailer Error: ' .$mail->ErrorInfo,
+                'type' => 'warning',
+            ]);
+        }
+        //}
+    } else {
         echo json_encode([
-            'message' => "Votre demande de contact a été envoyée avec succès.",
-            'type' => 'success',
+            'message' => "La réponse à la case « Je ne suis pas un robot » n'est pas valide.",
+            'type' => "warning",
         ]);
-    } catch (Exception $e) {
-        header('Content-type: application/json');
-        echo json_encode([
-            'message' => 'Mailer Error: ' .$mail->ErrorInfo,
-            'type' => 'warning',
-        ]);
+        exit();
     }
-    //}
 } catch (\Exception $e) {
     header('Content-type: application/json');
     echo json_encode([
