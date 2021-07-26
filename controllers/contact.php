@@ -66,6 +66,7 @@ try {
         exit();
     }
     // Vérifier le captcha
+    $ip = $_SERVER['REMOTE_ADDR'];
     $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($_ENV['GC_SECRET_KEY']) .  '&response=' . urlencode($data['g-recaptcha-response']);
     $response = file_get_contents($url);
     $responseKeys = json_decode($response,true);

@@ -25,12 +25,13 @@ try {
     $data['file'] = isset($_FILES['file']) ? $_FILES['file'] : '';*/
 
     $options = [
-        'first_name' 	=> FILTER_SANITIZE_STRING,
-        'last_name' 	=> FILTER_SANITIZE_STRING,
-        'email' 		=> FILTER_VALIDATE_EMAIL,
-        'tel' 		    => FILTER_SANITIZE_NUMBER_INT,
-        'object' 		=> FILTER_SANITIZE_STRING,
-        'message' 		=> FILTER_SANITIZE_STRING
+        'first_name' 	 	 	=> FILTER_SANITIZE_STRING,
+        'last_name' 	        => FILTER_SANITIZE_STRING,
+        'email' 		        => FILTER_VALIDATE_EMAIL,
+        'tel' 		            => FILTER_SANITIZE_NUMBER_INT,
+        'object' 		        => FILTER_SANITIZE_STRING,
+        'message' 		        => FILTER_SANITIZE_STRING,
+        'g-recaptcha-response'  => FILTER_SANITIZE_STRING,
     ];
     $data = filter_input_array(INPUT_POST, $options);
     $data['file'] = isset($_FILES['file']) ? $_FILES['file'] : '';
@@ -99,9 +100,8 @@ try {
         ]);
         exit();
     }
-
-
     // Vérifier le captcha
+    $ip = $_SERVER['REMOTE_ADDR'];
     $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($_ENV['GC_SECRET_KEY']) .  '&response=' . urlencode($data['g-recaptcha-response']);
     $response = file_get_contents($url);
     $responseKeys = json_decode($response,true);
