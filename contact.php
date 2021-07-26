@@ -83,7 +83,8 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <input class="form-control captcha" type="text" placeholder="Veuillez entrer le résultat de l'opération ci-dessus.*">
+                                        <div class="g-recaptcha" data-sitekey="6LdDKr8bAAAAAF58VKC5KKs_vBG-dntwz6yHV5GT"></div>
+                                        <!--input class="form-control captcha" type="text" placeholder="Veuillez entrer le résultat de l'opération ci-dessus.*"-->
                                         <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
                                     </div>
                                 </div>
