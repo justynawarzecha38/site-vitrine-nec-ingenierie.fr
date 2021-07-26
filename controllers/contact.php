@@ -66,7 +66,6 @@ try {
         exit();
     }
     // Vérifier le captcha
-    $ip = $_SERVER['REMOTE_ADDR'];
     $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($_ENV['GC_SECRET_KEY']) .  '&response=' . urlencode($data['g-recaptcha-response']);
     $response = file_get_contents($url);
     $responseKeys = json_decode($response,true);
@@ -101,7 +100,7 @@ try {
 
             //Recipients
             $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
-            $mail->AddAddress("sebastien.colbe@pmb-software.fr");
+            $mail->AddAddress("colbesebastien@gmail.com");
             //$mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
 
             //Content
