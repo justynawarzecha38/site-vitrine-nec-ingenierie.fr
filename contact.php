@@ -103,34 +103,6 @@
     <?php include_once('./includes/scripts.php'); ?>
     <script>
         var form = document.getElementById('contact-form');
-        var captcha_item = document.querySelector('.captcha');
-        var captcha_result = 0;
-        let captcha = new jCaptcha({
-            el: '.captcha',
-            canvasClass: 'captchaCanvas',
-            canvasStyle: {
-                width: 100,
-                height: 15,
-                textBaseline: 'top',
-                font: '15px Arial',
-                textAlign: 'left',
-                fillStyle: '#ddd'
-            },
-            resetOnError: false,
-            clearOnSubmit: false,
-            // set callback function for success and error messages:
-            callback: ( response, $captchaInputElement, numberOfTries ) => {
-                if ( response == 'success' ) {
-                    captcha_item.setCustomValidity("");
-                }
-                if ( response == 'error' ) {
-                    captcha_item.setCustomValidity("La résultat proposé est incorrecte. Veuillez réessayer.");
-                }
-            }
-        });
-        captcha_item.addEventListener('input', function() {
-            captcha_item.setCustomValidity("");
-        });
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -147,13 +119,6 @@
             }
             if (data_encoded.length > 1) {
                 data_encoded = data_encoded.substring(0, data_encoded.length - 1);
-            }
-            captcha.validate();
-
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                captcha.reset();
-                return false;
             }
             var xhttp = new XMLHttpRequest();
             xhttp.onload = function(xhttp_event) {
