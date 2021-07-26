@@ -387,7 +387,7 @@ P_1,
                                 </div>
 
                                 <div class="col-12">
-                                    <input class="form-control captcha" type="text" placeholder="Veuillez entrer le résultat de l'opération ci-dessus.*">
+                                    <div class="g-recaptcha" data-sitekey="6LdDKr8bAAAAAF58VKC5KKs_vBG-dntwz6yHV5GT"></div>
                                     <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
                                 </div>
                             </div>
@@ -407,35 +407,6 @@ P_1,
 <script>
     var $form = $('#join-us-form');
 
-    var captcha_item = document.querySelector('.captcha');
-    var captcha_result = 0;
-    let captcha = new jCaptcha({
-        el: '.captcha',
-        canvasClass: 'captchaCanvas',
-        canvasStyle: {
-            width: 100,
-            height: 15,
-            textBaseline: 'top',
-            font: '15px Arial',
-            textAlign: 'left',
-            fillStyle: '#ddd'
-        },
-        resetOnError: false,
-        clearOnSubmit: false,
-        // set callback function for success and error messages:
-        callback: ( response, $captchaInputElement, numberOfTries ) => {
-            if ( response == 'success' ) {
-                captcha_item.setCustomValidity("");
-            }
-            if ( response == 'error' ) {
-                captcha_item.setCustomValidity("La résultat proposé est incorrecte. Veuillez réessayer.");
-            }
-        }
-    });
-    captcha_item.addEventListener('input', function() {
-        captcha_item.setCustomValidity("");
-    });
-
     if ($('.candidate-prefill-form').length > 0) {
         $('.candidate-prefill-form').on('click', function() {
             var $job_add_button = $(this);
@@ -453,13 +424,6 @@ P_1,
         var action = $form.attr('action');
         var form = $form.get(0);
         var form_data = new FormData(form);
-        captcha.validate();
-
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            captcha.reset();
-            return false;
-        }
 
         $.ajax({
             url: action,
@@ -471,7 +435,9 @@ P_1,
             console.log(response);
             if (response !== null && typeof response === "object" && 'message' in response) {
                 alert(response.message);
-                document.location.reload(true);
+                if('type' in response && response.type === 'success') {
+                    document.location.reload(true);
+                }
             }
         }).fail(function (jqXHR, textStatus, errorThrown) {
             console.error(jqXHR, textStatus, errorThrown);

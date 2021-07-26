@@ -65,12 +65,8 @@ try {
         ]);
         exit();
     }
-
-    $secretKey = $_ENV['GC_SECRET_KEY'];
-    $ip = $_SERVER['REMOTE_ADDR'];
-
-    // post request to server
-    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($data['g-recaptcha-response']);
+    // Vérifier le captcha
+    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($_ENV['GC_SECRET_KEY']) .  '&response=' . urlencode($data['g-recaptcha-response']);
     $response = file_get_contents($url);
     $responseKeys = json_decode($response,true);
     // should return JSON with success as true
@@ -104,8 +100,8 @@ try {
 
             //Recipients
             $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
-            $mail->AddAddress("sebastien.colbe@pmb-software.fr");
-            //$mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
+            //$mail->AddAddress("sebastien.colbe@pmb-software.fr");
+            $mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
 
             //Content
             $mail->Subject = 'Contact';

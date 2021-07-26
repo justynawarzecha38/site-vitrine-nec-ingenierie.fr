@@ -43,6 +43,13 @@ try {
     ], true);
     exit();*/
 
+    if (!$data['g-recaptcha-response']) {
+        echo json_encode([
+            'message' => "La réponse à la case « Je ne suis pas un robot » n'est pas valide.",
+            'type' => "warning",
+        ]);
+        exit();
+    }
     if (!$data['first_name']) {
         echo json_encode([
             'message' => "Le prénom renseigné n'est pas valide.",
@@ -93,102 +100,117 @@ try {
         exit();
     }
 
-    //$dir = __DIR__;
-    $datetime = new \Datetime();
-    $str_datetime = $datetime->format('Y-m-d-H-i-s');
 
-    $file_extension = pathinfo($data['file']['name'], PATHINFO_EXTENSION);
-    $new_filename = $dir ."/forms/join/files/".$str_datetime.".".$file_extension;
+    // Vérifier le captcha
+    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($_ENV['GC_SECRET_KEY']) .  '&response=' . urlencode($data['g-recaptcha-response']);
+    $response = file_get_contents($url);
+    $responseKeys = json_decode($response,true);
+    // should return JSON with success as true
+    if($responseKeys["success"]) {
 
-    if (file_exists($new_filename)){
-        echo json_encode([
-            'message' => "Un problème est survenu lors de l'exécution de la requête.",
-            'type' => "warning",
-        ]);
-        exit();
-    }
-    // Check file size
-    if ($data['file']["size"] > 1048576){
-        echo json_encode([
-            'message' => "Le poids du fichier envoyé dépasse 1 Mo.",
-            'type' => "warning",
-        ]);
-        exit();
-    }
-    // Allow certain file formats
-    if(!in_array($file_extension, ['jpg', 'jpeg', 'png', 'gif', 'pdf'])){
-        echo json_encode([
-            'message' => "Le format du fichier n'est pas valide. Vous ne pouvez envoyer qu'une image ou un fichier au format PDF.",
-            'type' => "warning",
-        ]);
-        exit();
-    }
-    // Try to upload file
-    /*if (!move_uploaded_file($_FILES['file']["tmp_name"], $new_filename)):
-        echo json_encode([
-            'message' => "Un problème est survenu lors de l'envoi du fichier.",
-            'type' => "warning",
-        ]);
-    endif;*/
+        //$dir = __DIR__;
+        $datetime = new \Datetime();
+        $str_datetime = $datetime->format('Y-m-d-H-i-s');
 
-    //if (!file_exists($dir ."/forms/join/".$str_datetime.".txt")):
-    $text = "<b>".htmlentities("Prénom")." : </b>".htmlentities($data['first_name'])."\r\n\r\n";
-    $text .= "<b>Nom</b> : ".htmlentities($data['last_name'])."\r\n\r\n";
-    $text .= "<b>Email</b> : ".htmlentities($data['email'])."\r\n\r\n";
-    $text .= "<b>".htmlentities("Téléphone")." : </b>".htmlentities($data['tel'])."\r\n\r\n";
-    $text .= "<b>Message</b> : ".nl2br(htmlentities($data['message']))."\r\n\r\n";
+        $file_extension = pathinfo($data['file']['name'], PATHINFO_EXTENSION);
+        $new_filename = $dir ."/forms/join/files/".$str_datetime.".".$file_extension;
 
-    $new_file = tempnam(sys_get_temp_dir(), hash('sha256', $data['file']['name']));
+        if (file_exists($new_filename)){
+            echo json_encode([
+                'message' => "Un problème est survenu lors de l'exécution de la requête.",
+                'type' => "warning",
+            ]);
+            exit();
+        }
+        // Check file size
+        if ($data['file']["size"] > 1048576){
+            echo json_encode([
+                'message' => "Le poids du fichier envoyé dépasse 1 Mo.",
+                'type' => "warning",
+            ]);
+            exit();
+        }
+        // Allow certain file formats
+        if(!in_array($file_extension, ['jpg', 'jpeg', 'png', 'gif', 'pdf'])){
+            echo json_encode([
+                'message' => "Le format du fichier n'est pas valide. Vous ne pouvez envoyer qu'une image ou un fichier au format PDF.",
+                'type' => "warning",
+            ]);
+            exit();
+        }
+        // Try to upload file
+        /*if (!move_uploaded_file($_FILES['file']["tmp_name"], $new_filename)):
+            echo json_encode([
+                'message' => "Un problème est survenu lors de l'envoi du fichier.",
+                'type' => "warning",
+            ]);
+        endif;*/
 
-    /*echo json_encode([
-        'message' => "Votre candidature a été envoyée avec succès.",
-        'type' => 'success',
-    ]);*/
-    //endif;
-    if (!move_uploaded_file($data['file']['tmp_name'], $new_file)){
-        echo json_encode([
-            'message' => "Un problème est survenu lors de l'envoi du fichier.",
-            'type' => "warning",
-        ]);
-        exit();
-    }
+        //if (!file_exists($dir ."/forms/join/".$str_datetime.".txt")):
+        $text = "<b>".htmlentities("Prénom")." : </b>".htmlentities($data['first_name'])."\r\n\r\n";
+        $text .= "<b>Nom</b> : ".htmlentities($data['last_name'])."\r\n\r\n";
+        $text .= "<b>Email</b> : ".htmlentities($data['email'])."\r\n\r\n";
+        $text .= "<b>".htmlentities("Téléphone")." : </b>".htmlentities($data['tel'])."\r\n\r\n";
+        $text .= "<b>Message</b> : ".nl2br(htmlentities($data['message']))."\r\n\r\n";
 
+        $new_file = tempnam(sys_get_temp_dir(), hash('sha256', $data['file']['name']));
 
-    //Create an instance; passing `true` enables exceptions
-    $mail = new PHPMailer(true);
-
-    try {
-        $mail->isSMTP();
-        $mail->SMTPAuth   = true;
-        $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
-        $mail->Host       = $_ENV['MAIL_HOST'];
-        $mail->Port       = $_ENV['MAIL_PORT'];
-        $mail->Username   = $_ENV['MAIL_USERNAME'];
-        $mail->Password   = $_ENV['MAIL_PASSWORD'];
-
-        //Recipients
-        $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
-        //$mail->AddAddress("sebastien.colbe@pmb-software.fr");
-        $mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
-        $mail->addAttachment($new_file, $data['file']['name']);
-
-        //Content
-        $mail->Subject = iconv('UTF-8', 'ISO-8859-1//TRANSLIT//IGNORE', $data['object']);
-        $mail->Body    = nl2br($text);
-        $mail->isHTML(true);
-        $mail->send();
-
-        header('Content-type: application/json');
-        echo json_encode([
+        /*echo json_encode([
             'message' => "Votre candidature a été envoyée avec succès.",
             'type' => 'success',
-        ]);
-    } catch (Exception $e) {
-        header('Content-type: application/json');
+        ]);*/
+        //endif;
+        if (!move_uploaded_file($data['file']['tmp_name'], $new_file)){
+            echo json_encode([
+                'message' => "Un problème est survenu lors de l'envoi du fichier.",
+                'type' => "warning",
+            ]);
+            exit();
+        }
+
+
+        //Create an instance; passing `true` enables exceptions
+        $mail = new PHPMailer(true);
+
+        try {
+            $mail->isSMTP();
+            $mail->SMTPAuth   = true;
+            $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
+            $mail->Host       = $_ENV['MAIL_HOST'];
+            $mail->Port       = $_ENV['MAIL_PORT'];
+            $mail->Username   = $_ENV['MAIL_USERNAME'];
+            $mail->Password   = $_ENV['MAIL_PASSWORD'];
+
+            //Recipients
+            $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
+            $mail->AddAddress("sebastien.colbe@pmb-software.fr");
+            //$mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
+            $mail->addAttachment($new_file, $data['file']['name']);
+
+            //Content
+            $mail->Subject = iconv('UTF-8', 'ISO-8859-1//TRANSLIT//IGNORE', $data['object']);
+            $mail->Body    = nl2br($text);
+            $mail->isHTML(true);
+            $mail->send();
+
+            header('Content-type: application/json');
+            echo json_encode([
+                'message' => "Votre candidature a été envoyée avec succès.",
+                'type' => 'success',
+            ]);
+        } catch (Exception $e) {
+            header('Content-type: application/json');
+            echo json_encode([
+                'message' => 'Mailer Error: ' .$mail->ErrorInfo,
+                'type' => 'warning',
+            ]);
+        }
+    } else {
         echo json_encode([
-            'message' => 'Mailer Error: ' .$mail->ErrorInfo,
-            'type' => 'warning',
+            'message' => "La réponse à la case « Je ne suis pas un robot » n'est pas valide.",
+            'type' => "warning",
         ]);
+        exit();
     }
 } catch (\Exception $e) {
     echo json_encode([
