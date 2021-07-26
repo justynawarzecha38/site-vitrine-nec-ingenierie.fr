@@ -100,8 +100,8 @@ try {
             $mail->Password   = $_ENV['MAIL_PASSWORD'];
 
             //Recipients
-            $mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
-            //$mail->AddAddress("sebastien.colbe@pmb-software.fr");
+            //$mail->setFrom($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);
+            $mail->AddAddress("sebastien.colbe@pmb-software.fr");
             $mail->AddAddress($_ENV['MAIL_FROM_ADDRESS']);
 
             //Content
