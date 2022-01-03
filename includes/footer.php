@@ -11,7 +11,7 @@
         }
     }
     #LOGO_Concept {
-        filter: brightness(1.75);
+        filter: brightness(-1);
     }
 </style>
 <aside id="aside-newsletter" class="page-section bg-quinary text-white py-4">
