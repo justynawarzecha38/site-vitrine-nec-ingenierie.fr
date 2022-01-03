@@ -10,9 +10,6 @@
             border-radius: 0.25rem;
         }
     }
-    #LOGO_Concept {
-        filter: brightness(100%);
-    }
 </style>
 <aside id="aside-newsletter" class="page-section bg-quinary text-white py-4">
     <div class="page-container">
@@ -37,7 +34,7 @@
         <div class="row gx-5 gy-4">
             <!-- Description -->
             <div class="col-12 col-lg-4 text-center text-lg-start">
-                <div style="height: 64px; opacity: 0.65;">
+                <div style="height: 64px;">
                     <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Concept.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.png'))) ?>" alt="Logo NEW Énergie Concept (noir)">
                 </div>
                 <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Concept est spécialisé en Ingénierie Fluides, Audit énergétique et Économie de la Construction.</p>
