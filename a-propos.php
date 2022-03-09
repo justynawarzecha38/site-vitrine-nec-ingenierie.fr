@@ -36,7 +36,7 @@
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                 </div>
                 <div class="page-section-block text-center">
-                    <p>Nous sommes basés à Lyon et Épinal, cela nous permet de rayonner sur la grande moitié Est de la France jusqu'à Paris
+                    <p>Nous sommes basés a Lyon et Épinal, cela nous permet de rayonner sur la grande moitié Est de la France jusqu'à Paris
                         <br class="d-none d-md-block"><b>et de vous accompagner dans les missons&nbsp;:</b>
                     </p>
                 </div>
