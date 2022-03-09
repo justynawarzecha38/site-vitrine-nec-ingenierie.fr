@@ -291,9 +291,9 @@ P_1,
             'city' => "Paris / Île-de-France",
         ],
     ];
-    //$job_ads_list = [];
+    $job_ads_list = [];
     ?>
-    <section id="job-ads" class="page-section">
+        <section id="job-ads" class="page-section">
         <div class="page-container">
             <div class="page-section-header text-center mb-80">
                 <!--h1 class="ttitle th1 mb-80">Offres d'emploi</h1-->
@@ -334,7 +334,6 @@ P_1,
             </div>
         <?php endif; ?>
     </section>
-
     <!-- Rejoignez-nous -->
     <section id="join-us" class="page-section px-0">
         <div id="join-us-title" class="page-container page-section-block text-center mb-80">
