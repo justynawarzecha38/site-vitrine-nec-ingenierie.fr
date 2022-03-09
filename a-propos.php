@@ -82,7 +82,7 @@
                 <div class="page-section-block">
                     <div class="w-100 text-center">
                         <picture>
-                            <source srcset="./images/pages/about/timeline.svg" media="(min-width: 992px)">
+                            <source srcset="./images/pages/about/timeline-2022.svg" media="(min-width: 992px)">
                             <img class="img-contain" src="./images/pages/about/timeline-mobile-2022.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/pages/about/timeline-mobile-2022.svg'))) ?>" alt="">
                         </picture>
                     </div>
