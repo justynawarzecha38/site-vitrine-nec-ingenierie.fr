@@ -83,7 +83,7 @@
                     <div class="w-100 text-center">
                         <picture>
                             <source srcset="./images/pages/about/timeline.svg" media="(min-width: 992px)">
-                            <img class="img-contain" src="./images/pages/about/timeline-mobile.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/pages/about/timeline-mobile.svg'))) ?>" alt="">
+                            <img class="img-contain" src="./images/pages/about/timeline-mobile-2022.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/pages/about/timeline-mobile-2022.svg'))) ?>" alt="">
                         </picture>
                     </div>
                 </div>
