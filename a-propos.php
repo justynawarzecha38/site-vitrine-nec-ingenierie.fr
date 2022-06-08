@@ -25,7 +25,7 @@
             ],
             [
                 'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/about/intro/engineering.svg',
+                'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
                 'text' => "Audits \nenergetique",
             ],
         ];
