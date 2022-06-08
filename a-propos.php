@@ -21,12 +21,12 @@
             [
                 'color' => 'var(--secondary-color)',
                 'picture' => './images/pages/about/intro/plan.svg',
-                'text' => "Maîtrise d'œuvre complète \nou spécialisée \nen tant que mandataire \nou co-traitant",
+                'text' => "Maîtrise d'œuvre fluides \nen tant que mandataire \nou co-traitant",
             ],
             [
                 'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/about/intro/engineering.svg',
-                'text' => "Ingénierie \ntraditionnelle",
+                'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
+                'text' => "Audits \nenergetique",
             ],
         ];
         ?>
@@ -36,7 +36,7 @@
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                 </div>
                 <div class="page-section-block text-center">
-                    <p>Nous sommes basés à Lyon et Épinal, cela nous permet de rayonner sur la grande moitié Est de la France jusqu'à Paris
+                    <p>Nous sommes basés à Lyon, Épinal et Paris, cela nous permet de rayonner sur la grande majorité du territoire
                         <br class="d-none d-md-block"><b>et de vous accompagner dans les missons&nbsp;:</b>
                     </p>
                 </div>
