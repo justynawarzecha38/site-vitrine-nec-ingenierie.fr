@@ -114,7 +114,7 @@
                     <h1 class="home-header-bottom-title ttitle th4">NEW Économie de la Construction</h1>
                     <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
                     <p class="home-header-bottom-text th5 text-uppercase">Buerau d'économie de la construction "Tous corps d'Etats"</p>
-                    <img class="w-auto h-100" src="./images/logos/RE2020.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/RE2020.png'))) ?>" alt="" width="215" height="84">
+                    <img class="w-auto h-100" src="./images/logos/RE2020.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/RE2020.png'))) ?>">
                 </div>
             </div>
 
