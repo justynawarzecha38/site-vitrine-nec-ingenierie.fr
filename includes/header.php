@@ -14,13 +14,13 @@
 <nav id="page-navbar" class="navbar navbar-expand-lg fixed-top navbar-light">
     <div class="container-md">
         <a class="navbar-brand" href="./index.php">
-            <img class="w-auto h-100" src="./images/logos/Logo_NEC_Concept.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.png'))) ?>" alt="" width="215" height="84">
+            <img class="w-auto h-100" src="./images/logos/Logo_NEC_Concept.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="" width="215" height="84">
         </a>
         <a class="navbar-brand" href="./index.php">
-            <img class="w-auto h-100" src="./images/logos/Logo_NEC_Concept.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.png'))) ?>" alt="" width="215" height="84">
+            <img class="w-auto h-100" src="./images/logos/Logo_NEC_Concept.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="" width="215" height="84">
         </a>
         <a class="navbar-brand" href="./index.php">
-            <img class="w-auto h-100" src="./images/logos/Logo_NEC_Concept.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.png'))) ?>" alt="" width="215" height="84">
+            <img class="w-auto h-100" src="./images/logos/Logo_NEC_Concept.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="" width="215" height="84">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#page-nav"
                 aria-controls="page-nav" aria-expanded="false" aria-label="Toggle navigation">
