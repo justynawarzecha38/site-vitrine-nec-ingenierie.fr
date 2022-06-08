@@ -21,12 +21,12 @@
             [
                 'color' => 'var(--secondary-color)',
                 'picture' => './images/pages/about/intro/plan.svg',
-                'text' => "Maîtrise d'œuvre complète \nou spécialisée \nen tant que mandataire \nou co-traitant",
+                'text' => "Maîtrise d'œuvre complète fuildes \nen tant que mandataire \nou co-traitant",
             ],
             [
                 'color' => 'var(--tertiary-color)',
                 'picture' => './images/pages/about/intro/engineering.svg',
-                'text' => "Ingénierie \ntraditionnelle",
+                'text' => "Audits \nenergetique",
             ],
         ];
         ?>
