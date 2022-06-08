@@ -101,6 +101,16 @@
                     <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
                     <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études technique spécialiste en Ingénierie Fluides, <br class="d-none d-md-block">Audits énergétiques</p>
                 </div>
+                <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
+                    <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Concept</h1>
+                    <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
+                    <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études technique spécialiste en Ingénierie Fluides, <br class="d-none d-md-block">Audits énergétiques</p>
+                </div>
+                <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
+                    <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Concept</h1>
+                    <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
+                    <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études technique spécialiste en Ingénierie Fluides, <br class="d-none d-md-block">Audits énergétiques</p>
+                </div>
             </div>
 
         </header>
