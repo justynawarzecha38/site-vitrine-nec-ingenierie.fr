@@ -21,7 +21,7 @@
             [
                 'color' => 'var(--secondary-color)',
                 'picture' => './images/pages/about/intro/plan.svg',
-                'text' => "Maîtrise d'œuvre complète fuildes \nen tant que mandataire \nou co-traitant",
+                'text' => "Maîtrise d'œuvre fluides \nen tant que mandataire \nou co-traitant",
             ],
             [
                 'color' => 'var(--tertiary-color)',
