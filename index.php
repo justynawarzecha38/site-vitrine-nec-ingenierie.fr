@@ -32,7 +32,7 @@
 <li>Mesure spécifique de perméabilité à l’air des réseaux</li>
 </ul>
 <p>Ces phases peuvent-être réalisées individuellement à la demande du Maître d’ouvrage.</p>
-<p>Les Techniciens NRJ Diags sont tous formés à la réalisation de ce protocole. Pour les mesures de perméabilité à l’air des réseaux, ils sont également autorisés qualifiés 8721 par QUALIBAT</p>",
+<p>Les tests Techniciens NRJ Diags sont tous formés à la réalisation de ce protocole. Pour les mesures de perméabilité à l’air des réseaux, ils sont également autorisés qualifiés 8721 par QUALIBAT</p>",
                     'href' => './article.php',
                 ],
             ];*/
