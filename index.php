@@ -130,7 +130,7 @@
                 [
                     'color' => 'var(--tertiary-color)',
                     'picture' => './images/pages/about/intro/engineering.svg',
-                    'text' => "Ingénierie \ntraditionnelle",
+                    'text' => "Audits energitiques",
                 ],
             ];
         ?>
