@@ -338,66 +338,66 @@ P_1,
     <section id="join-us" class="page-section px-0">
         <div id="join-us-title" class="page-container page-section-block text-center mb-80">
             <h1 class="ttitle th1 mb-80">Rejoignez-nous</h1>
-            <p>Vous souhaitez donner un nouvel élan à votre carrière et rejoindre une entreprise à taille humaine qui place l'esprit d'équipe au cœur de ses préoccupations ?
-                <br>Consultez nos offres ou faites-nous parvenir une candidature spontanée.</p>
+            <p>Vous souhaitez donner un nouvel élan à votre carrière et rejoindre une entreprise à taille humaine qui place l'esprit d'équipe et sans action face aux enjeux environnementaux au cœur de ses préoccupations ?
+                <br><br>Consultez nos offres ou faites-nous parvenir une candidature spontanée.</p>
         </div>
-        <div id="join-us-content" class="position-relative">
-            <div id="join-us-background"></div>
-            <div class="page-container">
-                <div class="page-form-card card bg-senary text-white">
-                    <div class="card-body">
-                        <form id="join-us-form" class="w-100" action="./controllers/join.php" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="submit" value="1">
-                            <div class="row gx-3 gy-4 mb-60">
-                                <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" name="first_name" placeholder="Prénom*"
-                                           aria-label="Votre prénom" required>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" name="last_name" placeholder="Nom*"
-                                           aria-label="Votre nom" required>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <input type="email" class="form-control" name="email" placeholder="Email*"
-                                           aria-label="Votre email" required>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" name="tel" placeholder="Téléphone*"
-                                           aria-label="Votre numéro de téléphone"
-                                           pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control" name="object" placeholder="Sujet*"
-                                           aria-label="Sujet" required>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <label for="join-us-resume" class="input-group">
-                                        <input type="text" class="form-control" placeholder="Ajouter votre CV*"
-                                               aria-label="Ajouter votre CV*" style="pointer-events: none; user-select: none;">
-                                        <span class="input-group-text bg-primary text-white text-uppercase" style="pointer-events: none; user-select: none;">Parcourir…</span>
-                                    </label>
-                                    <input id="join-us-resume" class="d-none" type="file" name="file"
-                                           accept="image/*,application/pdf"
-                                           onchange="this.parentNode.querySelector('.input-group input').value = (this.files.length > 0 ? this.files[0].name : '');">
-                                    <div class="form-text text-white tsize-small mt-2">Format image ou PDF acceptés. Poids maximum : 1&nbsp;Mo.</div>
-                                </div>
-                                <div class="col-12">
-                                    <textarea id="join-us-message" class="form-control" name="message" placeholder="Votre message*" rows="6" required></textarea>
-                                </div>
+            <div id="join-us-content" class="position-relative">
+                <div id="join-us-background"></div>
+                <div class="page-container">
+                    <div class="page-form-card card bg-senary text-white">
+                        <div class="card-body">
+                            <form id="join-us-form" class="w-100" action="./controllers/join.php" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="submit" value="1">
+                                <div class="row gx-3 gy-4 mb-60">
+                                    <div class="col-12 col-lg-6">
+                                        <input type="text" class="form-control" name="first_name" placeholder="Prénom*"
+                                               aria-label="Votre prénom" required>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <input type="text" class="form-control" name="last_name" placeholder="Nom*"
+                                               aria-label="Votre nom" required>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <input type="email" class="form-control" name="email" placeholder="Email*"
+                                               aria-label="Votre email" required>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <input type="text" class="form-control" name="tel" placeholder="Téléphone*"
+                                               aria-label="Votre numéro de téléphone"
+                                               pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" name="object" placeholder="Sujet*"
+                                               aria-label="Sujet" required>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <label for="join-us-resume" class="input-group">
+                                            <input type="text" class="form-control" placeholder="Ajouter votre CV*"
+                                                   aria-label="Ajouter votre CV*" style="pointer-events: none; user-select: none;">
+                                            <span class="input-group-text bg-primary text-white text-uppercase" style="pointer-events: none; user-select: none;">Parcourir…</span>
+                                        </label>
+                                        <input id="join-us-resume" class="d-none" type="file" name="file"
+                                               accept="image/*,application/pdf"
+                                               onchange="this.parentNode.querySelector('.input-group input').value = (this.files.length > 0 ? this.files[0].name : '');">
+                                        <div class="form-text text-white tsize-small mt-2">Format image ou PDF acceptés. Poids maximum : 1&nbsp;Mo.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea id="join-us-message" class="form-control" name="message" placeholder="Votre message*" rows="6" required></textarea>
+                                    </div>
 
-                                <div class="col-12">
-                                    <div class="g-recaptcha" data-sitekey="6LdDKr8bAAAAAF58VKC5KKs_vBG-dntwz6yHV5GT"></div>
-                                    <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
+                                    <div class="col-12">
+                                        <div class="g-recaptcha" data-sitekey="6LdDKr8bAAAAAF58VKC5KKs_vBG-dntwz6yHV5GT"></div>
+                                        <div class="form-text text-white tsize-small my-2"><sup>*</sup>Champs obligatoires</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary tlink tsize-small text-uppercase">Envoyer</button>
-                            </div>
-                        </form>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary tlink tsize-small text-uppercase">Envoyer</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <?php include_once('./includes/footer.php'); ?>
 </main>

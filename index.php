@@ -14,7 +14,7 @@
 <body class="flex-column-nowrap" style="overflow: hidden;">
     <?php include_once('./includes/header.php'); ?>
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0" style="overflow-x: hidden;">
-        
+
         <?php
             /*$home_news = [
                 [
@@ -52,7 +52,6 @@
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
-
                                 <?php if(empty($home_news)): ?>
                                     <div class="swiper-slide">
                                         <div class="home-header-news-card card">
@@ -95,42 +94,56 @@
                 </div>
             </div>
             <!-- Bottom band -->
-            <div class="home-header-bottom page-container p-2">
-                <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
-                    <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Concept</h1>
-                    <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                    <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études technique spécialiste en Ingénierie Fluides, <br class="d-none d-md-block">Audits énergétiques</p>
+            <center>
+                <div class="home-header-bottom page-container m-3">
+                    <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center text-white" style="background-color: #8E1113">
+                        <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Concept</h1>
+                        <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
+                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études technique spécialiste en Ingénierie Fluides, <br class="d-none d-md-block">Audits énergétiques</p>
+                    </div>
                 </div>
-            </div>
-            <div class="home-header-bottom page-container p-2">
-                <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
-                    <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Carbone</h1>
-                    <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                    <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études thermiques et envirennementales, spécialiste de la RE2020</p>
+                <div class="home-header-bottom page-container m-3">
+                    <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center text-white" style="background-color: #E20714">
+                        <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Carbone</h1>
+                        <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
+                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études thermiques et envirennementales, spécialiste de la RE2020</p>
+                        <div class="col-12 col-sm-3 col-md-2" style="position: relative;top: 100%; left: 40%; bottom: 20%">
+                            <img src="./images/logos/RE2020.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/RE2020.png'))) ?>" class="home-header-bottom-img rounded float-left img-contain h-100" alt="Responsive image">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="home-header-bottom page-container p-2">
-                <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center bg-primary text-white">
-                    <h1 class="home-header-bottom-title ttitle th4">NEW Économie de la Construction</h1>
-                    <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                    <p class="home-header-bottom-text th5 text-uppercase">Buerau d'économie de la construction "Tous corps d'Etats"</p>
+                <div class="home-header-bottom page-container m-3">
+                    <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center text-white" style="background-color: #ED6939">
+                        <h1 class="home-header-bottom-title ttitle th4">NEW Économie de la Construction</h1>
+                        <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
+                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'économie de la construction "Tous corps d'Etats"</p>
+                    </div>
                 </div>
-            </div>
-
+            </center>
         </header>
 
         <!-- QUI SOMMES-NOUS ? -->
         <?php
             $home_about_list = [
                 [
-                    'color' => 'var(--secondary-color)',
+                    'color' => '#8E1113',
                     'picture' => './images/pages/about/intro/plan.svg',
-                    'text' => "Maîtrise d'œuvre complète \nou spécialisée \nen tant que mandataire \nou co-traitant",
+                    'text' => "Maîtrise d'œuvre fluides \nen tant que mandataire \nou co-traitant",
                 ],
                 [
                     'color' => 'var(--tertiary-color)',
-                    'picture' => './images/pages/about/intro/engineering.svg',
+                    'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
                     'text' => "Audits energitiques",
+                ],
+                [
+                    'color' => '#E20714',
+                    'picture' => './images/pages/about/intro/engineering.svg',
+                    'text' => "Études thermiques et environnementales",
+                ],
+                [
+                    'color' => '#ED6939',
+                    'picture' => './images/pages/about/intro/engineering.svg',
+                    'text' => "Economie de la construction",
                 ],
             ];
         ?>
@@ -140,7 +153,7 @@
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                 </div>
                 <div class="page-section-block text-center">
-                    <p>Nous sommes basés à Lyon et Épinal, cela nous permet de rayonner sur la grande moitié Est de la France jusqu'à Paris
+                    <p>Nous sommes basés à Lyon, Épinal et Paris, cela nous permet de rayonner sur la grande majorité du territoire
                         <br class="d-none d-md-block"><b>et de vous accompagner dans les missons&nbsp;:</b>
                     </p>
                 </div>
@@ -174,7 +187,7 @@
         $home_solutions_list = [
             [
                 'background' => './images/pages/solutions/list/ingenierie-fluide.png',
-                'color' => 'var(--quaternary-color)',
+                'color' => '#8E1113',
                 'picture' => './images/pages/solutions/intro/measure.svg',
                 'title' => "Ingénierie Fluides",
                 'text' => "Vérification des plans et des besoins d'adaptations liés à l'implantation et à la circulation des équipements techniques…",
@@ -182,7 +195,7 @@
             ],
             [
                 'background' => './images/pages/solutions/list/economie-construction.png',
-                'color' => 'var(--primary-color)',
+                'color' => '#ED6939',
                 'picture' => './images/pages/solutions/intro/paper-pencil.svg',
                 'title' => "Économie de la Construction",
                 'text' => "Estimatif financier sommaire du projet en fonction des surfaces et principales orientations techniques…",
@@ -195,6 +208,14 @@
                 'title' => "Audit énergétique",
                 'text' => "Audit et assistance sur la gestion de la plateforme OPERAT de l'ADEME pour la gestion du dispositif ECO ENERGIE TERTIAIRE.\n\nAudit établi suivant les normes en vigueur 16247-1 et 2 ainsi que les recommandations de l'ADEME.",
                 'href' => './nos-solutions.php#audit-energetique',
+            ],
+            [
+                'background' => './images/pages/solutions/list/audit-energetique.png',
+                'color' => '#E20714',
+                'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
+                'title' => "Etude thermique",
+                'text' => "Maison individuelle.\n\nCollecteur\n\nTertiaires\n\nFormations aux différentes réglmentations",
+                'href' => './nos-solutions.php#etude-thermique',
             ],
         ];
         ?>
@@ -213,7 +234,7 @@
                                         <div class="home-solution-picture-overlay"></div>
                                         <div class="home-solution-icons-wrapper">
                                             <div class="home-solution-icons-container">
-                                                <img class="home-solution-icons-picture img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
+                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 100px; width: 100px">
                                             </div>
                                         </div>
                                     </div>
@@ -236,6 +257,7 @@
                 </div>
             </div>
         </section>
+
         <!-- NEWS -->
         <!--?php
         $home_news = array_merge($home_news, $home_news, $home_news);

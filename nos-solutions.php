@@ -67,16 +67,6 @@ IF_1,
 IF_2,
                     ],
                     [
-                        'title' => "Appel d'offres",
-                        'text' => <<<"IF_3"
-<ul class="my-0"><!--
---><li>Analyser les réponses aux appels d'offres</li><!--
---><li>Proposer la réponse la plus cohérente au maître d'ouvrage</li><!--
---><li>Mettre à jour les pièces marchés conformément à la validation des appels d'offres</li><!--
---></ul>
-IF_3,
-                    ],
-                    [
                         'title' => "Phase travaux pour les lots techniques",
                         'text' => <<<"IF_4"
 <ul class="my-0"><!--
@@ -85,6 +75,16 @@ IF_3,
 --><li>Accompagnement MOA et MOEx au suivi des travaux sur les lots techniques</li><!--
 --><li>Accompagnement à la réception des ouvrages et levés de réserves</li></ul>
 IF_4,
+                    ],
+                    [
+                        'title' => "Appel d'offres",
+                        'text' => <<<"IF_3"
+<ul class="my-0"><!--
+--><li>Analyser les réponses aux appels d'offres</li><!--
+--><li>Proposer la réponse la plus cohérente au maître d'ouvrage</li><!--
+--><li>Mettre à jour les pièces marchés conformément à la validation des appels d'offres</li><!--
+--></ul>
+IF_3,
                     ],
                 ],
                 'picture-aspect-ratio-at-breakpoint' => '610/370',
@@ -137,7 +137,7 @@ EC_3,
                 'background' => './images/pages/solutions/list/audit-energetique.png',
                 'color' => 'var(--tertiary-color)',
                 'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
-                'title' => "Audit énergétique",
+                'title' => "Audit énergétique et conseiler maître de l'énergie",
                 'content' => [
                     [
                         'title' => "Assistance énergétique",
@@ -166,6 +166,62 @@ AE_2,
                 'picture-aspect-ratio-at-breakpoint' => '610/370',
                 'icon-aspect-ratio-at-breakpoint' => '610/370',
             ],
+            'etude-thermique' => [
+                'anchor' => 'etude-thermique',
+                'background' => './images/pages/solutions/list/ingenierie-fluide.png',
+                'color' => 'var(--quaternary-color)',
+                'picture' => './images/pages/solutions/intro/measure.svg',
+                'title' => "Etudes thermiques et environnementales",
+                'content' => [
+                    [
+                        'title' => "Avant-projet définitif",
+                        'text' => <<<"ET_1"
+<ul class="my-0"><!--
+--><li>Maison individuelle (architect, maître d'oeuvre, constructeur de maisons individuelle)</li><!--
+--><li>Logement collectif (logements sociaux et promotion privée)</li><!--
+--><li>Batiment Tertiaire (Bureau, enseignement, activité médico social)</li><!--
+--><li>Résidences services (Etudiants, ségnars, tourisme)</li><!--
+--></ul>
+ET_1,
+                    ],
+                    [
+                        'title' => "Etude thermique",
+                        'text' => <<<"ET_2"
+<ul class="my-0"><!--
+--><li>Etude ACV</li><!--
+--><li>Calcul des déperditions</li><!--
+--><li>Optimisation et conseils</li><!--
+--><li>Labels (E+C- / NF / Batiment durable...)</li><!--
+--></ul>
+ET_2,
+                    ],
+                    [
+                        'title' => "Réglementation",
+                        'text' => <<<"ET_3"
+<ul class="my-0"><!--
+--><li>RT-Existant</li><!--
+--><li>RT 2012</li><!--
+--><li>RE 2020</li><!--
+--><li>Pré-étude thermique</li><!--
+--><li>Faisabilité ACV</li></ul>
+ET_3,
+                    ],
+                    [
+                        'title' => "Formation",
+                        'text' => <<<"ET_4"
+<ul class="my-0"><!--
+--><li>Constructeur</li><!--
+--><li>Promoteur</li><!--
+--><li>Bailleur</li><!--
+--><li>Industriels</li><!--
+--><li>Partenaires</li><!--
+--></ul>
+ET_4,
+                    ],
+                ],
+                'picture-aspect-ratio-at-breakpoint' => '610/370',
+                'icon-aspect-ratio-at-breakpoint' => '610/370',
+            ]
         ];
         ?>
         <section id="solutions-intro" class="page-section">
@@ -259,6 +315,39 @@ AE_2,
                             </div>
                         </li>
                         <?php foreach($solutions_list['audit-energetique']['content'] as $content): ?>
+                            <li>
+                                <div class="solution-content-card card flex-adapt-height">
+                                    <div class="card-body" style="padding: 50px 35px;">
+                                        <h4 class="ttitle th4 mb-35 text-primary"><?php echo(nl2br($content['title'])); ?></h4>
+                                        <div class="solution-content" style="font-size: 1rem;">
+                                            <?php echo($content['text']); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <div class="page-section-block" id="<?php echo($solutions_list['etude-thermique']['anchor']); ?>">
+                    <ul class="solutions-list m-0 list-unstyled">
+                        <li>
+                            <div class="picture"<?php echo(isset($solutions_list['etude-thermique']['picture-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$solutions_list['ingenierie-fluide']['picture-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
+                                <img class="img-cover" src="<?php echo($solutions_list['etude-thermique']['background']); ?>">
+                            </div>
+                            <div class="icon-container"<?php echo(isset($solutions_list['etude-thermique']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img class="img-contain" src="<?php echo($solutions_list['etude-thermique']['picture']); ?>">
+                                </div>
+                            </div>
+                            <div class="solution-header">
+                                <div class="solution-header-block card" style="background-color: <?php echo($solutions_list['ingenierie-fluide']['color']); ?>; color: white;">
+                                    <div class="card-body" style="padding: 65px 45px;">
+                                        <h3 class="ttitle th2" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['etude-thermique']['title'])); ?></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <?php foreach($solutions_list['etude-thermique']['content'] as $content): ?>
                             <li>
                                 <div class="solution-content-card card flex-adapt-height">
                                     <div class="card-body" style="padding: 50px 35px;">

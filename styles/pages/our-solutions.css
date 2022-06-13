@@ -214,4 +214,47 @@
     #audit-energetique .solutions-list > li:nth-child(3) .card {
         justify-content: center;
     }
+
+    /* Structure spécifique à Etude thermique et environnementales */
+    #etude-thermique .solutions-list {
+        grid-template-areas:
+            "h h a"
+            "h h b"
+            "c d b";
+    }
+
+    #etude-thermique .solutions-list > li:first-child {
+        grid-area: h;
+        height: 500px;
+        flex-flow: row nowrap;
+    }
+
+    #etude-thermique .solutions-list > li:first-child .solution-header {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 420px;
+    }
+
+    #etude-thermique .solutions-list > li:nth-child(2) {
+        grid-area: a;
+    }
+
+    #etude-thermique .solutions-list > li:nth-child(3) {
+        grid-area: b;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #etude-thermique .solutions-list > li:nth-child(3) .card {
+        justify-content: center;
+    }
+
+    #etude-thermique .solutions-list > li:nth-child(4) {
+        grid-area: c;
+    }
+
+    #etude-thermique .solutions-list > li:nth-child(5) {
+        grid-area: d;
+    }
 }

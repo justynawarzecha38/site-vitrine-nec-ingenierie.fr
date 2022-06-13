@@ -34,16 +34,17 @@
         <div class="row gx-5 gy-4">
             <!-- Description -->
             <div class="col-12 col-lg-4 text-center text-lg-start">
-                <div style="height: 64px;">
+                <div style="height: 66px;">
                     <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Concept.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="Logo NEW Énergie Concept (noir)">
+                    <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Construction.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="Logo NEW Énergie Concept (noir)">
                 </div>
                 <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Concept est spécialisé en Ingénierie Fluides, Audit énergétique et Économie de la Construction.</p>
                 <div class="row align-items-end justify-content-around">
                     <div class="col-6">
-                        <img class="img-contain" src="./images/logos/NEC_OPQIBI.jpg" alt="Qualification OPQIBI 18 12 3727" style="max-width: 150px;">
+                        <img class="img-contain" src="./images/logos/NEC_OPQIBI.jpg" alt="Qualification OPQIBI 18 12 3727" style="max-width: 130px;">
                     </div>
                     <div class="col-6">
-                        <img class="img-contain" src="./images/logos/NEC_RGE_OPQIBI.jpg" alt="Qualification OPQIBI RGE" style="max-width: 150px;">
+                        <img class="img-contain" src="./images/logos/NEC_RGE_OPQIBI.jpg" alt="Qualification OPQIBI RGE" style="max-width: 130px;">
                     </div>
                 </div>
             </div>
@@ -60,7 +61,7 @@
                 </ul>
             </div>
             <!-- Siège social -->
-            <div class="col-6 col-lg-3">
+            <!--<div class="col-6 col-lg-3">
                 <div class="ttitle tsize-small mb-2 mb-lg-3">Siège social</div>
                 <ul class="list-unstyled mb-0 tsize-xsmall">
                     <li class="d-flex mb-2">
@@ -83,12 +84,19 @@
                         <p class="email-link-container" data-pre="administratif" data-domain="nec-ingenierie.fr" data-classes="tlink tfont-regular tsize-xsmall"></p>
                     </li>
                 </ul>
-            </div>
+            </div>-->
             <!-- Contact -->
             <div class="col-12 col-lg-3 text-center text-lg-start">
                 <div class="ttitle tsize-small mb-2 mb-lg-3">Contact</div>
                 <p class="tsize-xsmall mb-2">Besoin de renseignements, d'un devis ?</p>
                 <a href="contact.php" class="btn btn-primary btn-xl text-uppercase px-4">Nous contacter</a>
+            </div>
+            <!-- Logo Carbone -->
+            <div class="col-12 col-lg-3">
+                <div style="height: 90px;">
+                    <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Carbone.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Carbone.jpg'))) ?>" alt="Logo NEW Énergie Carbone">
+                </div>
+                <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Carbone est spécialiste de la réglementation thermique et environnemental</p>
             </div>
             <!-- Mentions légales -->
             <div class="col-6">

@@ -53,6 +53,18 @@
                             <form id="contact-form" class="w-100" action="./controllers/contact.php" method="POST">
                                 <div class="row gx-3 gy-4 mb-60">
                                     <div class="col-12">
+                                        <label class="form-label">Adresses des agences de France :</label>
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li class="rounded m-1 nav-item" style="background-color: #e98a01">&nbsp; NEW ENERGIE CONCEPT 80 rue Mstislav Rostropovitch 75017 PARIS</li>
+                                            <li class="rounded m-1 nav-item" style="background-color: #fd5d57">&nbsp; NEW ENERGIE CONCEPT 1293 route de Lyon 38110 SAINT JEAN DE SOUDAIN</li>
+                                            <li class="rounded m-1 nav-item" style="background-color: #e93b01">&nbsp; NEW ENERGIE CONCEPT 29 ter Rue des Forges 88000 CANTRAINE</li>
+                                            <li class="rounded m-1 nav-item" style="background-color: #e93b01">&nbsp; NEW ENERGIE CARBONE 1 rue Saint Nicolas 88000 EPINAL</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 align-self-end">
+                                        <img class="mx-auto d-block w-50 rounded" src="./images/france/carte france image vierge.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte france image vierge.svg'))) ?>" alt="Responsive image">
+                                    </div>
+                                    <div class="col-12">
                                         <label class="form-label">Agence<sup>*</sup></label>
                                         <select name="agency" id="Agence" class="form-select" required>
                                             <option value="" selected disabled>Choisir votre agence de référence</option>
