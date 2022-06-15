@@ -19,14 +19,24 @@
         <?php
         $about_intro_list = [
             [
-                'color' => 'var(--secondary-color)',
+                'color' => '#8E1113',
                 'picture' => './images/pages/about/intro/plan.svg',
                 'text' => "Maîtrise d'œuvre fluides \nen tant que mandataire \nou co-traitant",
             ],
             [
                 'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
-                'text' => "Audits \nenergetique",
+                'picture' => './images/pages/about/intro/magnifying-glass.svg',
+                'text' => "Audits energitiques",
+            ],
+            [
+                'color' => '#E20714',
+                'picture' => './images/pages/about/intro/energy-performance-diagnostic.svg',
+                'text' => "Études thermiques et environnementales",
+            ],
+            [
+                'color' => '#ED6939',
+                'picture' => './images/pages/about/intro/pill-of-coins.svg',
+                'text' => "Economie de la construction",
             ],
         ];
         ?>
@@ -82,7 +92,7 @@
                 <div class="page-section-block">
                     <div class="w-100 text-center">
                         <picture>
-                            <source srcset="./images/pages/about/timeline-2022-2.svg" media="(min-width: 992px)">
+                            <source srcset="./images/pages/about/timeline-2022-4.svg" media="(min-width: 992px)">
                             <img class="img-contain" src="./images/pages/about/timeline-mobile-2022.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/pages/about/timeline-mobile-2022.svg'))) ?>" alt="">
                         </picture>
                     </div>

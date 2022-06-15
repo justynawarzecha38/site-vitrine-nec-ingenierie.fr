@@ -55,10 +55,10 @@
                                     <div class="col-12">
                                         <label class="form-label">Adresses des agences de France :</label>
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li class="rounded m-1 nav-item" style="background-color: #e98a01">&nbsp; NEW ENERGIE CONCEPT 80 rue Mstislav Rostropovitch 75017 PARIS</li>
-                                            <li class="rounded m-1 nav-item" style="background-color: #fd5d57">&nbsp; NEW ENERGIE CONCEPT 1293 route de Lyon 38110 SAINT JEAN DE SOUDAIN</li>
-                                            <li class="rounded m-1 nav-item" style="background-color: #e93b01">&nbsp; NEW ENERGIE CONCEPT 29 ter Rue des Forges 88000 CANTRAINE</li>
-                                            <li class="rounded m-1 nav-item" style="background-color: #e93b01">&nbsp; NEW ENERGIE CARBONE 1 rue Saint Nicolas 88000 EPINAL</li>
+                                            <li class="rounded m-1 nav-item" style="background-color: #ff5101">&nbsp; NEW ENERGIE CONCEPT - 80 rue Mstislav Rostropovitch 75017 PARIS</li>
+                                            <li class="rounded m-1 nav-item" style="background-color: #ff595f">&nbsp; NEW ENERGIE CONCEPT / CARBONE - 1293 route de Lyon 38110 SAINT JEAN DE SOUDAIN</li>
+                                            <li class="rounded m-1 nav-item" style="background-color: #e90001">&nbsp; NEW ENERGIE CARBONE - 29 ter Rue des Forges 88000 CHANTRAINE</li>
+                                            <li class="rounded m-1 nav-item" style="background-color: #ff9920">&nbsp; NEW ENERGIE CONCEPT - 1 rue Saint Nicolas 88000 EPINAL</li>
                                         </ul>
                                     </div>
                                     <div class="col-12 align-self-end">

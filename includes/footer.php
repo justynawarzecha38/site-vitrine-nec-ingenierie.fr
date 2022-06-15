@@ -41,10 +41,11 @@
                 <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Concept est spécialisé en Ingénierie Fluides, Audit énergétique et Économie de la Construction.</p>
                 <div class="row align-items-end justify-content-around">
                     <div class="col-6">
-                        <img class="img-contain" src="./images/logos/NEC_OPQIBI.jpg" alt="Qualification OPQIBI 18 12 3727" style="max-width: 130px;">
+                        <img class="img-contain" src="./images/logos/NEC_OPQIBI.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/NEC_OPQIBI.jpg'))) ?>" alt="Qualification OPQIBI" style="max-width: 130px;">
                     </div>
+                    <img class="img-contain" src="./images/logos/logo_OPQIBI_RGE_NEC_HD.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/logo_OPQIBI_RGE_NEC_HD.jpg'))) ?>" alt="Qualification OPQIBI RGE" style="max-width: 130px;">
                     <div class="col-6">
-                        <img class="img-contain" src="./images/logos/NEC_RGE_OPQIBI.jpg" alt="Qualification OPQIBI RGE" style="max-width: 130px;">
+                        <img src="./images/logos/logo_OPQIBI_RGE_NEC_HD.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/logo_OPQIBI_RGE_NEC_HD.jpg'))) ?>">
                     </div>
                 </div>
             </div>

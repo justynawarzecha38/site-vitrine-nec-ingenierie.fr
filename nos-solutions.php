@@ -41,7 +41,7 @@
             'ingenierie-fluide' => [
                 'anchor' => 'ingenierie-fluide',
                 'background' => './images/pages/solutions/list/ingenierie-fluide.png',
-                'color' => 'var(--quaternary-color)',
+                'color' => '#8E1113',
                 'picture' => './images/pages/solutions/intro/measure.svg',
                 'title' => "Ingénierie fluides",
                 'content' => [
@@ -93,7 +93,7 @@ IF_3,
             'economie-construction' => [
                 'anchor' => 'economie-construction',
                 'background' => './images/pages/solutions/list/economie-construction.png',
-                'color' => 'var(--primary-color)',
+                'color' => '#ED6939',
                 'picture' => './images/pages/solutions/intro/paper-pencil.svg',
                 'title' => "Économie de \nla construction",
                 'content' => [
@@ -168,9 +168,9 @@ AE_2,
             ],
             'etude-thermique' => [
                 'anchor' => 'etude-thermique',
-                'background' => './images/pages/solutions/list/ingenierie-fluide.png',
-                'color' => 'var(--quaternary-color)',
-                'picture' => './images/pages/solutions/intro/measure.svg',
+                'background' => './images/pages/solutions/list/audit-energetique.png',
+                'color' => '#E20714',
+                'picture' => './images/pages/solutions/intro/thermometer.svg',
                 'title' => "Etudes thermiques et environnementales",
                 'content' => [
                     [
@@ -331,18 +331,18 @@ ET_4,
                 <div class="page-section-block" id="<?php echo($solutions_list['etude-thermique']['anchor']); ?>">
                     <ul class="solutions-list m-0 list-unstyled">
                         <li>
-                            <div class="picture"<?php echo(isset($solutions_list['etude-thermique']['picture-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$solutions_list['ingenierie-fluide']['picture-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
+                            <div class="picture"<?php echo(isset($solutions_list['etude-thermique']['picture-aspect-ratio-at-breakpoint']) ? ' style="--md-aspect-ratio: '.$solutions_list['etude-thermique']['picture-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <img class="img-cover" src="<?php echo($solutions_list['etude-thermique']['background']); ?>">
                             </div>
-                            <div class="icon-container"<?php echo(isset($solutions_list['etude-thermique']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
+                            <div class="icon-container"<?php echo(isset($solutions_list['etude-thermique']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['etude-thermique']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
                                     <img class="img-contain" src="<?php echo($solutions_list['etude-thermique']['picture']); ?>">
                                 </div>
                             </div>
                             <div class="solution-header">
-                                <div class="solution-header-block card" style="background-color: <?php echo($solutions_list['ingenierie-fluide']['color']); ?>; color: white;">
+                                <div class="solution-header-block card" style="background-color: <?php echo($solutions_list['etude-thermique']['color']); ?>; color: white;">
                                     <div class="card-body" style="padding: 65px 45px;">
-                                        <h3 class="ttitle th2" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['etude-thermique']['title'])); ?></h3>
+                                        <h3 class="ttitle th2 text-center" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['etude-thermique']['title'])); ?></h3>
                                     </div>
                                 </div>
                             </div>

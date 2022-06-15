@@ -107,7 +107,7 @@
                         <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Carbone</h1>
                         <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
                         <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études thermiques et envirennementales, spécialiste de la RE2020</p>
-                        <div class="col-12 col-sm-3 col-md-2" style="position: relative;top: 100%; left: 40%; bottom: 20%">
+                        <div class="col-12 col-sm-3 col-md-2" style="position: relative; left: 40%; bottom: 40%">
                             <img src="./images/logos/RE2020.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/RE2020.png'))) ?>" class="home-header-bottom-img rounded float-left img-contain h-100" alt="Responsive image">
                         </div>
                     </div>
@@ -132,17 +132,17 @@
                 ],
                 [
                     'color' => 'var(--tertiary-color)',
-                    'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
+                    'picture' => './images/pages/about/intro/magnifying-glass.svg',
                     'text' => "Audits energitiques",
                 ],
                 [
                     'color' => '#E20714',
-                    'picture' => './images/pages/about/intro/engineering.svg',
+                    'picture' => './images/pages/about/intro/energy-performance-diagnostic.svg',
                     'text' => "Études thermiques et environnementales",
                 ],
                 [
                     'color' => '#ED6939',
-                    'picture' => './images/pages/about/intro/engineering.svg',
+                    'picture' => './images/pages/about/intro/pill-of-coins.svg',
                     'text' => "Economie de la construction",
                 ],
             ];
@@ -151,6 +151,8 @@
             <div class="page-container">
                 <div class="page-section-header text-center">
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
+                    <br>
+                    <img class="mx-auto d-block w-50 rounded" src="./images/france/carte france image vierge.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte france image vierge.svg'))) ?>" alt="Responsive image">
                 </div>
                 <div class="page-section-block text-center">
                     <p>Nous sommes basés à Lyon, Épinal et Paris, cela nous permet de rayonner sur la grande majorité du territoire
@@ -212,7 +214,7 @@
             [
                 'background' => './images/pages/solutions/list/audit-energetique.png',
                 'color' => '#E20714',
-                'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
+                'picture' => './images/pages/solutions/intro/thermometer.svg',
                 'title' => "Etude thermique",
                 'text' => "Maison individuelle.\n\nCollecteur\n\nTertiaires\n\nFormations aux différentes réglmentations",
                 'href' => './nos-solutions.php#etude-thermique',
@@ -259,9 +261,10 @@
         </section>
 
         <!-- NEWS -->
-        <!--?php
-        $home_news = array_merge($home_news, $home_news, $home_news);
-        ?-->
+        <?php
+        //$home_news = array_merge($home_news, $home_news, $home_news);
+        ?>
+        <?php if(!empty($home_news)): ?>
         <section id="home-news" class="page-section bg-gray">
             <div class="page-container">
                 <div class="page-section-header text-center">
@@ -314,6 +317,7 @@
             </div>
 
         </section>
+        <?php endif; ?>
         <?php include_once('./includes/footer.php'); ?>
     </main>
     <?php include_once('./includes/modals.php'); ?>

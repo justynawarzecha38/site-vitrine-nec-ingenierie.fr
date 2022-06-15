@@ -5,7 +5,7 @@
     $main_nav = [
         'home' => ['title' => 'Accueil' , 'href' => './'],
         'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
-        'news' => ['title' => 'News', 'href' => './news.php'],
+        //'news' => ['title' => 'News', 'href' => './news.php'],
         'solutions' => ['title' => 'Nos solutions', 'href' => './nos-solutions.php'],
         'contact' => ['title' => 'Contact', 'href' => './contact.php'],
         'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],

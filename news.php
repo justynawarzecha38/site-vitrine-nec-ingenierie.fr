@@ -44,6 +44,7 @@
         ];
         $news = [];
         ?>
+        <?php if(!empty($news)): ?>
         <section id="news" class="page-section">
             <div class="page-container filtr-block">
                 <div class="page-section-header text-center">
@@ -97,6 +98,7 @@
                 <?php endif; ?>
             </div>
         </section>
+        <?php endif; ?>
         <?php include_once('./includes/footer.php'); ?>
     </main>
     <?php include_once('./includes/modals.php'); ?>
