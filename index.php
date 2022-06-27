@@ -107,7 +107,8 @@
                         <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Carbone</h1>
                         <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
                         <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études thermiques et envirennementales, spécialiste de la RE2020</p>
-                        <div class="col-12 col-sm-3 col-md-2" style="position: relative; left: 40%; bottom: 40%">
+                        <br>
+                        <div class="col-12 col-sm-2 col-md-2 mt-4 mb-0" style="position: relative; left: 40%; bottom: 40%">
                             <img src="./images/logos/RE2020.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/RE2020.png'))) ?>" class="home-header-bottom-img rounded float-left img-contain h-100" alt="Responsive image">
                         </div>
                     </div>

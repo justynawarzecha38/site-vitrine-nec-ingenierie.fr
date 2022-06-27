@@ -291,7 +291,7 @@ P_1,
             'city' => "Paris / Île-de-France",
         ],
     ];
-    $job_ads_list = [];
+    //$job_ads_list = [];
     ?>
         <section id="job-ads" class="page-section">
         <div class="page-container">

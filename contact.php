@@ -41,6 +41,30 @@
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
         
         <!-- CONTACT -->
+        <?php
+        $list_locations_agency_NEC = [
+            [
+                'NEC' => 'NEW ENERGIE CONCEPT',
+                'adresse' => "80 rue Mstislav Rostropovitch 75017 PARIS",
+                'background-color' => "#ff5101",
+            ],
+            [
+                'NEC' => 'NEW ENERGIE CONCEPT / CARBONE',
+                'adresse' => "1293 route de Lyon 38110 SAINT JEAN DE SOUDAIN",
+                'background-color' => "#ff595f",
+            ],
+            [
+                'NEC' => 'NEW ENERGIE CARBONE',
+                'adresse' => "29 ter Rue des Forges 88000 CHANTRAINE",
+                'background-color' => "#e90001",
+            ],
+            [
+                'NEC' => 'NEW ENERGIE CONCEPT',
+                'adresse' => "1 rue Saint Nicolas 88000 EPINAL",
+                'background-color' => "#ff9920",
+            ],
+        ];
+        ?>
         <section id="contact" class="page-section px-0">
             <div id="contact-title" class="page-container page-section-block text-center">
                 <h1 class="ttitle th1">Contactez-nous</h1>
@@ -55,10 +79,9 @@
                                     <div class="col-12">
                                         <label class="form-label">Adresses des agences de France :</label>
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li class="rounded m-1 nav-item" style="background-color: #ff5101">&nbsp; NEW ENERGIE CONCEPT - 80 rue Mstislav Rostropovitch 75017 PARIS</li>
-                                            <li class="rounded m-1 nav-item" style="background-color: #ff595f">&nbsp; NEW ENERGIE CONCEPT / CARBONE - 1293 route de Lyon 38110 SAINT JEAN DE SOUDAIN</li>
-                                            <li class="rounded m-1 nav-item" style="background-color: #e90001">&nbsp; NEW ENERGIE CARBONE - 29 ter Rue des Forges 88000 CHANTRAINE</li>
-                                            <li class="rounded m-1 nav-item" style="background-color: #ff9920">&nbsp; NEW ENERGIE CONCEPT - 1 rue Saint Nicolas 88000 EPINAL</li>
+                                            <?php foreach($list_locations_agency_NEC as $item): ?>
+                                                <li class="rounded m-1 nav-item" style="background-color: <?php echo($item['background-color']); ?> ">&nbsp; <?php echo($item['NEC']); ?> - <?php echo($item['adresse']); ?></li>
+                                            <?php endforeach; ?>
                                         </ul>
                                     </div>
                                     <div class="col-12 align-self-end">
