@@ -77,7 +77,7 @@
                             <form id="contact-form" class="w-100" action="./controllers/contact.php" method="POST">
                                 <div class="row gx-3 gy-4 mb-60">
                                     <div class="col-12">
-                                        <label class="form-label">Adresses des agences de France :</label>
+                                        <label class="form-label">Nos Adresses :</label>
                                         <ul class="nav navbar-nav navbar-right">
                                             <?php foreach($list_locations_agency_NEC as $item): ?>
                                                 <li class="rounded m-1 nav-item" style="background-color: <?php echo($item['background-color']); ?> ">&nbsp; <?php echo($item['NEC']); ?> - <?php echo($item['adresse']); ?></li>

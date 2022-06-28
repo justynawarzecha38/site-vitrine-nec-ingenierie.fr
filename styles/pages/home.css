@@ -54,11 +54,11 @@
     right: 0;
     bottom: 0;
     height: calc(369/927 * 100%);
-    background-image: url(../../images/pages/home/Citation-2.svg);
+    background-image: url(../../images/pages/home/Citation-9.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 center;
-    width: 927px;
+    width: 1854px;
 }
 @media (max-width: 1500px) {
     .home-header-quote-picture {

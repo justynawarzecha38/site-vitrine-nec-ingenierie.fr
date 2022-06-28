@@ -7,7 +7,7 @@
    width="2905.0281"
    height="294.38"
    viewBox="0 0 2905.028 294.38"
-   sodipodi:docname="Citation-2.svg"
+   sodipodi:docname="Citation-8.svg"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -32,8 +32,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.43852551"
-     inkscape:cx="970.29703"
-     inkscape:cy="1.1401845"
+     inkscape:cx="2270.1074"
+     inkscape:cy="-363.71886"
      inkscape:window-width="1920"
      inkscape:window-height="976"
      inkscape:window-x="-8"
@@ -57,14 +57,22 @@
          sodipodi:role="line"
          id="tspan1669"
          x="25.962574"
-         y="84.018463">&quot;Le développement durable commence par </tspan><tspan
+         y="84.018463"><tspan
+   style="fill:#ff0000"
+   id="tspan38629">&quot;</tspan>Le développement durable commence par </tspan><tspan
          sodipodi:role="line"
          id="tspan1671"
          x="25.962574"
-         y="164.01846">une économie de la construction raisonnée&quot;...&quot;Et se termine dans  le bien être de celles et ceux </tspan><tspan
+         y="164.01846"> une économie de la construction raisonnée<tspan
+   style="fill:#ff0000"
+   id="tspan40227">&quot;</tspan>...<tspan
+   style="fill:#ff0000"
+   id="tspan42407">&quot;</tspan>Et se termine dans  le bien être de celles et ceux </tspan><tspan
          sodipodi:role="line"
          id="tspan1673"
          x="25.962574"
-         y="244.01846">                                                                                     qui vivent durablement dans nos batiments.&quot;</tspan></text>
+         y="244.01846">                                                                          qui vivent durablement dans nos batiments.<tspan
+   style="fill:#ff0000"
+   id="tspan48191">&quot;</tspan></tspan></text>
   </g>
 </svg>

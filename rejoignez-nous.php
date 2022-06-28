@@ -279,7 +279,7 @@ P_2,
         [
             'uniq_id' => 'j0003',
             'title' => "Technicien CVC",
-            'description' => <<<"P_1"
+            'description' => <<<"P_3"
 <b>Descriptif du poste :</b>
 <br>Dans le cadre de son développement IDF, notre entreprise de 15/20 personnes recherche un/e technicien d'études CVC-PLOMBERIE génie climatique. En lien avec les autres collaborateurs, thermiciens/chargé d'affaires/dessinateurs en CVC-PB et ELEC vous assurez une partie du dessin, les études de dimensionnement et la rédaction des CCTP et DPGF des lots CVC-PB des projets de construction ou rénovation sur des bâtiments d'habitations et tertiaires. Vous assurez également les interfaces en réunion chez les clients sur votre secteur géographique IDF.
 <br>
@@ -287,22 +287,22 @@ P_2,
 <br><b>Salaire :</b> suivant expérience.
 <br><b>Expérience exigée :</b> 3 ans. Cette expérience est indispensable.
 <br><b>Qualification :</b> Technicien.
-P_1,
+P_3,
             'city' => "Paris / Île-de-France",
         ],
     ];
-    //$job_ads_list = [];
+    $job_ads_list = [];
     ?>
-        <section id="job-ads" class="page-section">
+        <section id="job-ads" class="page-section pb-5">
         <div class="page-container">
-            <div class="page-section-header text-center mb-80">
+            <div class="page-section-header text-center mb-50">
                 <!--h1 class="ttitle th1 mb-80">Offres d'emploi</h1-->
                 <h1 class="ttitle th1 mb-80">Postes à pourvoir</h1>
-                <p>La liste suivante affiche nos postes actuellement requis. Cette liste sera mise à jour régulièrement.</p>
+                <p>Nous sommes toujour en recherche d'opportunité de coloboration avec de nouvelle personne souhaitant s'investir dans une entreprise. Respectueuse des humaines, morales et envirronementales. Si vous souhaitez nous rejoindre envoyer, nous étudions toute proposition.</p>
             </div>
-            <?php if(empty($job_ads_list)): ?>
+            <!--<?php if(empty($job_ads_list)): ?>
                 <p class="text-muted text-center">Aucun poste n'est disponible pour l'instant.</p>
-            <?php endif; ?>
+            <?php endif; ?>-->
         </div>
         <?php if(!empty($job_ads_list)): ?>
             <div class="page-small-container">
@@ -335,11 +335,14 @@ P_1,
         <?php endif; ?>
     </section>
     <!-- Rejoignez-nous -->
-    <section id="join-us" class="page-section px-0">
-        <div id="join-us-title" class="page-container page-section-block text-center mb-80">
+    <section id="join-us" class="page-section pt-5">
+        <div id="join-us-title" class="page-container page-section-block text-center mb-50">
+            <!--
             <h1 class="ttitle th1 mb-80">Rejoignez-nous</h1>
             <p>Vous souhaitez donner un nouvel élan à votre carrière et rejoindre une entreprise à taille humaine qui place l'esprit d'équipe et sans action face aux enjeux environnementaux au cœur de ses préoccupations ?
-                <br><br>Consultez nos offres ou faites-nous parvenir une candidature spontanée.</p>
+                <br><br>Consultez nos offres ou faites-nous parvenir une candidature spontanée.
+            </p>
+            -->
         </div>
             <div id="join-us-content" class="position-relative">
                 <div id="join-us-background"></div>

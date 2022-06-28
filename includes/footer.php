@@ -30,7 +30,7 @@
 </aside>
 <!-- PIED DE PAGE -->
 <footer class="page-footer bg-gray">
-    <div class="page-container">
+    <div class="page-container p-0"">
         <div class="row gx-5 gy-4">
             <!-- Description -->
             <div class="col-12 col-lg-4 text-center text-lg-start">
@@ -39,11 +39,11 @@
                     <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Construction.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="Logo NEW Énergie Concept (noir)">
                 </div>
                 <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Concept est spécialisé en Ingénierie Fluides, Audit énergétique et Économie de la Construction.</p>
-                <img class="img-contain" src="./images/logos/logo-opqibi-NEC HD.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/NEC_OPQIBI.jpg'))) ?>" alt="Qualification OPQIBI" style="width: 100px; height: 80px;">
+                <img class="img-contain" src="./images/logos/logo-opqibi-NEC HD.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/logo-opqibi-NEC HD.jpg'))) ?>" alt="Qualification OPQIBI" style="width: 100px; height: 100px;">
                 <img class="img-contain" src="./images/logos/logo OPQIBI RGE NEC HD.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/logo_OPQIBI_RGE_NEC_HD.jpg'))) ?>" alt="Qualification OPQIBI RGE" style="width: 100px; height: 80px;">
             </div>
             <!-- Liens utiles -->
-            <div class="col-6 col-lg-2">
+            <div class="col col-lg-2">
                 <div class="ttitle tsize-small mb-2 mb-lg-3">Liens utiles</div>
                 <ul class="list-unstyled mb-0">
                     <?php foreach($main_nav as $key => $item): ?>
@@ -86,11 +86,11 @@
                 <a href="contact.php" class="btn btn-primary btn-xl text-uppercase px-4">Nous contacter</a>
             </div>
             <!-- Logo Carbone -->
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-lg-3 p-1">
                 <div style="height: 66px;">
                     <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Carbone.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Carbone.jpg'))) ?>" alt="Logo NEW Énergie Carbone">
                 </div>
-                <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Carbone est spécialiste de la réglementation thermique et environnemental.</p>
+                <p class="tsize-xsmall tfont-medium mb-1" style="opacity: 0.65;">New Energie Carbone est spécialiste de la réglementation thermique et environnementale.</p>
             </div>
             <!-- Mentions légales -->
             <div class="col-6">

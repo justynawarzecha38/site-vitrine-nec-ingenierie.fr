@@ -42,7 +42,7 @@
                 'anchor' => 'ingenierie-fluide',
                 'background' => './images/pages/solutions/list/ingenierie-fluide.png',
                 'color' => '#8E1113',
-                'picture' => './images/pages/solutions/intro/measure.svg',
+                'picture' => './images/pages/about/intro/plan.svg',
                 'title' => "Ingénierie fluides",
                 'content' => [
                     [
@@ -94,7 +94,7 @@ IF_3,
                 'anchor' => 'economie-construction',
                 'background' => './images/pages/solutions/list/economie-construction.png',
                 'color' => '#ED6939',
-                'picture' => './images/pages/solutions/intro/paper-pencil.svg',
+                'picture' => './images/pages/about/intro/pill-of-coins.svg',
                 'title' => "Économie de \nla construction",
                 'content' => [
                     [
@@ -136,8 +136,8 @@ EC_3,
                 'anchor' => 'audit-energetique',
                 'background' => './images/pages/solutions/list/audit-energetique.png',
                 'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
-                'title' => "Audit énergétique et conseiler maître de l'énergie",
+                'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
+                'title' => "Audit énergétique et conseille en maîtrise de l'énergie",
                 'content' => [
                     [
                         'title' => "Assistance énergétique",
@@ -170,11 +170,11 @@ AE_2,
                 'anchor' => 'etude-thermique',
                 'background' => './images/pages/solutions/list/audit-energetique.png',
                 'color' => '#E20714',
-                'picture' => './images/pages/solutions/intro/thermometer.svg',
+                'picture' => './images/pages/about/intro/energy-performance-diagnostic3.svg',
                 'title' => "Etudes thermiques et environnementales",
                 'content' => [
                     [
-                        'title' => "Avant-projet définitif",
+                        'title' => "Types de Bâtiments ",
                         'text' => <<<"ET_1"
 <ul class="my-0"><!--
 --><li>Maison individuelle (architect, maître d'oeuvre, constructeur de maisons individuelle)</li><!--
@@ -185,9 +185,10 @@ AE_2,
 ET_1,
                     ],
                     [
-                        'title' => "Etude thermique",
+                        'title' => "Principaux Services",
                         'text' => <<<"ET_2"
 <ul class="my-0"><!--
+--><li>Etude Thermique</li><!--
 --><li>Etude ACV</li><!--
 --><li>Calcul des déperditions</li><!--
 --><li>Optimisation et conseils</li><!--
@@ -203,7 +204,9 @@ ET_2,
 --><li>RT 2012</li><!--
 --><li>RE 2020</li><!--
 --><li>Pré-étude thermique</li><!--
---><li>Faisabilité ACV</li></ul>
+--><li>Faisabilité ACV</li><!--
+--><li>Éco Énergie Tertiaire</li><!--
+--></ul>
 ET_3,
                     ],
                     [
@@ -243,7 +246,7 @@ ET_4,
                             <div class="solution-header">
                                 <div class="solution-header-block card" style="background-color: <?php echo($solutions_list['ingenierie-fluide']['color']); ?>; color: white;">
                                     <div class="card-body" style="padding: 65px 45px;">
-                                        <h3 class="ttitle th2" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['ingenierie-fluide']['title'])); ?></h3>
+                                        <h3 class="ttitle th2 text-center" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['ingenierie-fluide']['title'])); ?></h3>
                                     </div>
                                 </div>
                             </div>
@@ -276,7 +279,7 @@ ET_4,
                             <div class="solution-header">
                                 <div class="solution-header-block card" style="background-color: <?php echo($solutions_list['economie-construction']['color']); ?>; color: white;">
                                     <div class="card-body" style="padding: 65px 45px;">
-                                        <h3 class="ttitle th2" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['economie-construction']['title'])); ?></h3>
+                                        <h3 class="ttitle th2 text-center" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['economie-construction']['title'])); ?></h3>
                                     </div>
                                 </div>
                             </div>
@@ -309,7 +312,7 @@ ET_4,
                             <div class="solution-header">
                                 <div class="solution-header-block card" style="background-color: <?php echo($solutions_list['audit-energetique']['color']); ?>; color: white;">
                                     <div class="card-body" style="padding: 65px 45px;">
-                                        <h3 class="ttitle th2" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['audit-energetique']['title'])); ?></h3>
+                                        <h3 class="ttitle th2 text-center" style="color: <?php echo($item['color']); ?>;"><?php echo(nl2br($solutions_list['audit-energetique']['title'])); ?></h3>
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +321,7 @@ ET_4,
                             <li>
                                 <div class="solution-content-card card flex-adapt-height">
                                     <div class="card-body" style="padding: 50px 35px;">
-                                        <h4 class="ttitle th4 mb-35 text-primary"><?php echo(nl2br($content['title'])); ?></h4>
+                                        <h1 class="ttitle th5 mb-35 text-primary"><?php echo(nl2br($content['title'])); ?></h1>
                                         <div class="solution-content" style="font-size: 1rem;">
                                             <?php echo($content['text']); ?>
                                         </div>

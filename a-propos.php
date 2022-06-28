@@ -25,12 +25,12 @@
             ],
             [
                 'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/about/intro/magnifying-glass.svg',
+                'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                 'text' => "Audits energitiques",
             ],
             [
                 'color' => '#E20714',
-                'picture' => './images/pages/about/intro/energy-performance-diagnostic.svg',
+                'picture' => './images/pages/about/intro/energy-performance-diagnostic3.svg',
                 'text' => "Études thermiques et environnementales",
             ],
             [
@@ -53,10 +53,10 @@
                 <div class="page-section-block">
                     <ul id="about-intro-list" class="row g-0 justify-content-center list-unstyled">
                         <?php foreach($about_intro_list as $item): ?>
-                            <li class="col-12 col-md-6 col-lg-4">
+                            <li class="col-12 col-md-6 col-xl-5">
                                 <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                     <div class="card-body">
-                                        <div class="mb-4" style="height: 80px;">
+                                        <div class="mb-4" style="height: 120px;">
                                             <?php if(isset($item['icon'])) { ?>
                                                 <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
                                             <?php } else { ?>

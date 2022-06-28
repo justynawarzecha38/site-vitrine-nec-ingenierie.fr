@@ -99,7 +99,8 @@
                     <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center text-white" style="background-color: #8E1113">
                         <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Concept</h1>
                         <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études technique spécialiste en Ingénierie Fluides, <br class="d-none d-md-block">Audits énergétiques</p>
+                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialiste en Ingénierie Fluides</p>
+                        <p class="home-header-bottom-text th5 text-uppercase">Audits énergétiques</p>
                     </div>
                 </div>
                 <div class="home-header-bottom page-container m-3">
@@ -129,22 +130,26 @@
                 [
                     'color' => '#8E1113',
                     'picture' => './images/pages/about/intro/plan.svg',
-                    'text' => "Maîtrise d'œuvre fluides \nen tant que mandataire \nou co-traitant",
+                    'text' => "Ingénierie fluides",
+                    'href' => './nos-solutions.php#ingenierie-fluide',
                 ],
                 [
                     'color' => 'var(--tertiary-color)',
-                    'picture' => './images/pages/about/intro/magnifying-glass.svg',
+                    'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                     'text' => "Audits energitiques",
+                    'href' => './nos-solutions.php#audit-energetique',
                 ],
                 [
                     'color' => '#E20714',
-                    'picture' => './images/pages/about/intro/energy-performance-diagnostic.svg',
+                    'picture' => './images/pages/about/intro/energy-performance-diagnostic3.svg',
                     'text' => "Études thermiques et environnementales",
+                    'href' => './nos-solutions.php#etude-thermique',
                 ],
                 [
                     'color' => '#ED6939',
                     'picture' => './images/pages/about/intro/pill-of-coins.svg',
                     'text' => "Economie de la construction",
+                    'href' => './nos-solutions.php#economie-construction',
                 ],
             ];
         ?>
@@ -153,6 +158,8 @@
                 <div class="page-section-header text-center">
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                     <br>
+                    <img class="mx-auto d-block w-50 rounded" src="./images/france/carte.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte france image vierge.svg'))) ?>" alt="Responsive image">
+
                     <img class="mx-auto d-block w-50 rounded" src="./images/france/carte france image vierge.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte france image vierge.svg'))) ?>" alt="Responsive image">
                 </div>
                 <div class="page-section-block text-center">
@@ -163,19 +170,21 @@
                 <div class="page-section-block">
                     <ul id="home-about-list" class="row list-unstyled justify-content-center gy-0 mb-0" style="--bs-gutter-x: 30px;">
                         <?php foreach($home_about_list as $item): ?>
-                        <li class="col-12 col-md-6 col-xl-4" style="margin-bottom: 35px;">
-                            <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
-                                <div class="card-body">
-                                    <div class="mb-4" style="height: 80px;">
-                                        <?php if(isset($item['icon'])) { ?>
-                                            <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
-                                        <?php } else { ?>
-                                            <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
-                                        <?php } ?>
+                        <li class="col-12 col-md-6 col-xl-5" style="margin-bottom: 35px;">
+                            <a href="<?php echo($item['href']); ?>">
+                                <div class="card h-100 w-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
+                                    <div class="card-body">
+                                        <div class="mb-4" style="height: 120px;">
+                                            <?php if(isset($item['icon'])) { ?>
+                                                <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
+                                            <?php } else { ?>
+                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
+                                            <?php } ?>
+                                        </div>
+                                        <h3 class="ttitle th5"><?php echo(nl2br($item['text'])); ?></h3>
                                     </div>
-                                    <h3 class="ttitle th5"><?php echo(nl2br($item['text'])); ?></h3>
                                 </div>
-                            </div>
+                            </a>
                         </li>
                         <?php endforeach; ?>
                     </ul>
@@ -191,7 +200,7 @@
             [
                 'background' => './images/pages/solutions/list/ingenierie-fluide.png',
                 'color' => '#8E1113',
-                'picture' => './images/pages/solutions/intro/measure.svg',
+                'picture' => './images/pages/about/intro/plan.svg',
                 'title' => "Ingénierie Fluides",
                 'text' => "Vérification des plans et des besoins d'adaptations liés à l'implantation et à la circulation des équipements techniques…",
                 'href' => './nos-solutions.php#ingenierie-fluide',
@@ -199,7 +208,7 @@
             [
                 'background' => './images/pages/solutions/list/economie-construction.png',
                 'color' => '#ED6939',
-                'picture' => './images/pages/solutions/intro/paper-pencil.svg',
+                'picture' => './images/pages/about/intro/pill-of-coins.svg',
                 'title' => "Économie de la Construction",
                 'text' => "Estimatif financier sommaire du projet en fonction des surfaces et principales orientations techniques…",
                 'href' => './nos-solutions.php#economie-construction',
@@ -207,7 +216,7 @@
             [
                 'background' => './images/pages/solutions/list/audit-energetique.png',
                 'color' => 'var(--tertiary-color)',
-                'picture' => './images/pages/solutions/intro/magnifying-glass.svg',
+                'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                 'title' => "Audit énergétique",
                 'text' => "Audit et assistance sur la gestion de la plateforme OPERAT de l'ADEME pour la gestion du dispositif ECO ENERGIE TERTIAIRE.\n\nAudit établi suivant les normes en vigueur 16247-1 et 2 ainsi que les recommandations de l'ADEME.",
                 'href' => './nos-solutions.php#audit-energetique',
@@ -215,9 +224,9 @@
             [
                 'background' => './images/pages/solutions/list/audit-energetique.png',
                 'color' => '#E20714',
-                'picture' => './images/pages/solutions/intro/thermometer.svg',
-                'title' => "Etude thermique",
-                'text' => "Maison individuelle.\n\nCollecteur\n\nTertiaires\n\nFormations aux différentes réglmentations",
+                'picture' => './images/pages/about/intro/energy-performance-diagnostic3.svg',
+                'title' => "Etude thermique et environnementale",
+                'text' => "Maison individuelle.\n\nLogements Collectifs\n\nBâtiments tertiaires\n\nFormations aux différentes réglmentations",
                 'href' => './nos-solutions.php#etude-thermique',
             ],
         ];
@@ -237,7 +246,7 @@
                                         <div class="home-solution-picture-overlay"></div>
                                         <div class="home-solution-icons-wrapper">
                                             <div class="home-solution-icons-container">
-                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 100px; width: 100px">
+                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 200px; width: 200px">
                                             </div>
                                         </div>
                                     </div>
@@ -290,6 +299,7 @@
                                         <div style="--aspect-ratio: 16/9;">
                                             <?php if(isset($item['picture']) && $item['picture']): ?>
                                             <img class="card-img-top img-cover" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" alt="">
+                                                <img class="card-img-top img-cover" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" alt="" style="filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(151deg) brightness(106%) contrast(100%);">
                                             <?php else: ?>
                                             <div style="display: flex; flex-flow: column nowrap; align-items: center; justify-content: center; color: white; background-color: var(--primary-color);">
                                                 <i class="fas fa-camera-alt" aria-hidden="true" style="font-size: 48px; margin-bottom: 0.5rem;"></i>

@@ -173,7 +173,7 @@
     }
 
     #economie-construction .solutions-list > li:nth-child(3) .card {
-        justify-content: center;
+        justify-content: left;
     }
 
     #economie-construction .solutions-list > li:nth-child(4) {
@@ -190,7 +190,7 @@
 
     #audit-energetique .solutions-list > li:first-child {
         grid-area: h;
-        height: 500px;
+        height: 550px;
         flex-flow: row nowrap;
     }
 
@@ -198,7 +198,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 420px;
+        width: 430px;
     }
 
     #audit-energetique .solutions-list > li:nth-child(2) {
@@ -225,7 +225,7 @@
 
     #etude-thermique .solutions-list > li:first-child {
         grid-area: h;
-        height: 500px;
+        height: 550px;
         flex-flow: row nowrap;
     }
 
@@ -247,7 +247,7 @@
     }
 
     #etude-thermique .solutions-list > li:nth-child(3) .card {
-        justify-content: center;
+        justify-content: left;
     }
 
     #etude-thermique .solutions-list > li:nth-child(4) {
