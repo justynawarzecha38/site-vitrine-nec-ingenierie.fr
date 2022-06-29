@@ -163,7 +163,7 @@ AE_1,
 AE_2,
                     ],
                 ],
-                'picture-aspect-ratio-at-breakpoint' => '610/370',
+                'picture-aspect-ratio-at-breakpoint' => '820/370',
                 'icon-aspect-ratio-at-breakpoint' => '610/370',
             ],
             'etude-thermique' => [
