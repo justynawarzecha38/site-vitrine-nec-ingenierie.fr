@@ -134,7 +134,7 @@ EC_3,
             ],
             'audit-energetique' => [
                 'anchor' => 'audit-energetique',
-                'background' => './images/pages/solutions/list/audit-energetique.png',
+                'background' => './images/pages/solutions/list/audit-energetique-2.jpeg',
                 'color' => 'var(--tertiary-color)',
                 'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                 'title' => "Audit énergétique et conseille en maîtrise de l'énergie",
@@ -168,9 +168,9 @@ AE_2,
             ],
             'etude-thermique' => [
                 'anchor' => 'etude-thermique',
-                'background' => './images/pages/solutions/list/audit-energetique.png',
+                'background' => './images/pages/solutions/list/etude-thermique.jpeg',
                 'color' => '#E20714',
-                'picture' => './images/pages/about/intro/energy-performance-diagnostic3.svg',
+                'picture' => './images/pages/about/intro/energy-performance-diagnostic-environment.svg',
                 'title' => "Etudes thermiques et environnementales",
                 'content' => [
                     [
@@ -222,7 +222,7 @@ ET_3,
 ET_4,
                     ],
                 ],
-                'picture-aspect-ratio-at-breakpoint' => '610/370',
+                'picture-aspect-ratio-at-breakpoint' => '610/340',
                 'icon-aspect-ratio-at-breakpoint' => '610/370',
             ]
         ];

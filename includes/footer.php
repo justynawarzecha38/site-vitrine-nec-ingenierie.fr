@@ -39,8 +39,14 @@
                     <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Construction.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="Logo NEW Énergie Concept (noir)">
                 </div>
                 <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Concept est spécialisé en Ingénierie Fluides, Audit énergétique et Économie de la Construction.</p>
-                <img class="img-contain" src="./images/logos/logo-opqibi-NEC HD.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/logo-opqibi-NEC HD.jpg'))) ?>" alt="Qualification OPQIBI" style="width: 100px; height: 100px;">
-                <img class="img-contain" src="./images/logos/logo OPQIBI RGE NEC HD.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/logo_OPQIBI_RGE_NEC_HD.jpg'))) ?>" alt="Qualification OPQIBI RGE" style="width: 100px; height: 80px;">
+                <div class="row align-items-end justify-content-around">
+                    <div class="col">
+                        <img class="img-contain" src="./images/logos/OPQIBI Site 29 06.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/OPQIBI Site 29 06.png'))) ?>" alt="Qualification OPQIBI" style="max-width: 100px;">
+                    </div>
+                    <div class="col">
+                        <img class="img-contain" src="./images/logos/RGE Site 29 06.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/RGE Site 29 06.png'))) ?>" alt="Qualification OPQIBI RGE" style="max-width: 100px;">
+                    </div>
+                </div>
             </div>
             <!-- Liens utiles -->
             <div class="col col-lg-2">

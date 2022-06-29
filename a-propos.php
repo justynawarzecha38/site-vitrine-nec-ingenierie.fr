@@ -30,7 +30,7 @@
             ],
             [
                 'color' => '#E20714',
-                'picture' => './images/pages/about/intro/energy-performance-diagnostic3.svg',
+                'picture' => './images/pages/about/intro/energy-performance-diagnostic-environment.svg',
                 'text' => "Études thermiques et environnementales",
             ],
             [

@@ -141,7 +141,7 @@
                 ],
                 [
                     'color' => '#E20714',
-                    'picture' => './images/pages/about/intro/energy-performance-diagnostic3.svg',
+                    'picture' => './images/pages/about/intro/energy-performance-diagnostic-environment.svg',
                     'text' => "Études thermiques et environnementales",
                     'href' => './nos-solutions.php#etude-thermique',
                 ],
@@ -158,9 +158,7 @@
                 <div class="page-section-header text-center">
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                     <br>
-                    <img class="mx-auto d-block w-50 rounded" src="./images/france/carte.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte france image vierge.svg'))) ?>" alt="Responsive image">
-
-                    <img class="mx-auto d-block w-50 rounded" src="./images/france/carte france image vierge.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte france image vierge.svg'))) ?>" alt="Responsive image">
+                    <img class="mx-auto d-block w-50 rounded" src="./images/france/carte_france_NEC.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte_france_NEC.svg'))) ?>" alt="Responsive image">
                 </div>
                 <div class="page-section-block text-center">
                     <p>Nous sommes basés à Lyon, Épinal et Paris, cela nous permet de rayonner sur la grande majorité du territoire
@@ -214,7 +212,7 @@
                 'href' => './nos-solutions.php#economie-construction',
             ],
             [
-                'background' => './images/pages/solutions/list/audit-energetique.png',
+                'background' => './images/pages/solutions/list/audit-energetique-2.jpeg',
                 'color' => 'var(--tertiary-color)',
                 'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                 'title' => "Audit énergétique",
@@ -222,9 +220,9 @@
                 'href' => './nos-solutions.php#audit-energetique',
             ],
             [
-                'background' => './images/pages/solutions/list/audit-energetique.png',
+                'background' => './images/pages/solutions/list/etude-thermique.jpeg',
                 'color' => '#E20714',
-                'picture' => './images/pages/about/intro/energy-performance-diagnostic3.svg',
+                'picture' => './images/pages/about/intro/energy-performance-diagnostic-environment.svg',
                 'title' => "Etude thermique et environnementale",
                 'text' => "Maison individuelle.\n\nLogements Collectifs\n\nBâtiments tertiaires\n\nFormations aux différentes réglmentations",
                 'href' => './nos-solutions.php#etude-thermique',
@@ -246,7 +244,7 @@
                                         <div class="home-solution-picture-overlay"></div>
                                         <div class="home-solution-icons-wrapper">
                                             <div class="home-solution-icons-container">
-                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 200px; width: 200px">
+                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 500px; width: 500px" alt="Max-width 100%">
                                             </div>
                                         </div>
                                     </div>
