@@ -49,5 +49,5 @@ $sql_req = 'INSERT INTO `poste` (`poste_id`, `titre`, `descriptif_poste`,
 
 $res = $conn->multi_query($sql_req);
 
-header("Location: http://localhost/site-vitrine-nec-ingenierie.fr/formulaire_rejoignez-nous.php");
+header("Location: "+$_ENV["SERVER_HOST"]);
 exit();

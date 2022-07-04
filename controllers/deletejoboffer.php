@@ -26,6 +26,6 @@ $sql_req = 'DELETE FROM `poste` WHERE `poste`.`poste_id` = "'. $id_indice .'" ';
 
 $res = $conn->multi_query($sql_req);
 
-header("Location: http://localhost/site-vitrine-nec-ingenierie.fr/formulaire_rejoignez-nous.php");
+header("Location: "+$_ENV["SERVER_HOST"]);
 exit();
 
