@@ -25,7 +25,7 @@
             require("dotenv").config();
             var password = process.env.PAGE_FORMULAIRE_PASS;
 
-            var x = prompt("Enter in the password "," ");
+            var x = prompt("Enter in the password ","  ");
             if (x.toLowerCase() == password) {
                 alert("Come right in \n \n You've entered in the right password");
                 window.location = "./formulaire_rejoignez-nous.php";
