@@ -1,4 +1,7 @@
 <?php
+
+use Dotenv\Dotenv;
+
 require '../vendor/autoload.php';
 
 $input_data = $_POST;
@@ -12,17 +15,19 @@ $data['salary_job'] = isset($input_data['salary_job']) ? $input_data['salary_job
 $data['experience_job'] = isset($input_data['experience_job']) ? $input_data['experience_job'] : "";
 $data['qualification_job'] = isset($input_data['qualification_job']) ? $input_data['qualification_job'] : "";
 
-// accès base de donnée serveur plesk
-/*$host = "localhost";
-$username = "admin_nec";
-$password = "adminx2022@_8";
-$db = "database_nec";*/
+$dir = dirname(__DIR__, 1);
+// Remote directory
+// $dir = $_SERVER["DOCUMENT_ROOT"];
+$dotenv = Dotenv::createImmutable($dir);
+$dotenv->load();
+
+echo $_ENV["DB_HOST"];
 
 // accès base de donnée en local
-$host = "localhost";
-$username = "root";
-$password = "";
-$db = "new_energie_concept";
+$host = $_ENV["DB_HOST"];
+$username = $_ENV["DB_USERNAME"];
+$password = $_ENV["DB_PASSWORD"];
+$db = $_ENV["DB_NAME"];
 
 $value = 0;
 

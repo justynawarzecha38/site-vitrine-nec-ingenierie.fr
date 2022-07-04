@@ -6,6 +6,9 @@
 
 <head>
     <?php
+
+    use Dotenv\Dotenv;
+
     $main_title = 'Accueil';
     $main_nav_key = 'home';
     include_once('./includes/head.php');
@@ -34,11 +37,16 @@
 
         $job_offers_list = array();
 
+        require 'vendor/autoload.php';
+
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+
         // accès base de donnée serveur plesk
-        $host = "localhost";
+        $host = $_ENV["DB_HOST"];
         $username = $_ENV["DB_USERNAME"];
         $password = $_ENV["DB_PASSWORD"];
-        $db = "database_nec";
+        $db = $_ENV["DB_NAME"];
 
         // accès base de donnée en local
         /*$host = "localhost";

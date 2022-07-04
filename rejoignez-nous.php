@@ -1,4 +1,7 @@
 <?php
+
+use Dotenv\Dotenv;
+
 $input_data = $_POST;
 $data = [];
 $data['first_name'] = isset($input_data['first_name']) ? $input_data['first_name'] : "";
@@ -220,112 +223,118 @@ endif;
 
     <!-- OFFRES D'EMPLOI -->
     <?php
-    $job_ads_list = [
-        [
-            'uniq_id' => '0001',
-            'title' => "Technicien CVC",
-            'description' => <<<"P_1"
-<b>Descriptif du poste :</b>
-<br>Vos missions seront les suivantes :
-<ul>
-<li>Travailler en binôme avec un chargé d'affaires en suivant les règles et méthodes établies en interne,</li>
-<li>Élaborer un avant-projet détaillé ainsi qu'un cahier des charges techniques,</li>
-<li>Élaborer des quantitatifs et/ou estimatifs,</li>
-<li>Réaliser des études techniques et de dimensionnement,</li>
-<li>Élaborer des plans et pièces graphiques,</li>
-<li>Analyser des offres entreprises.</li>
-</ul>
-<br><b>Profil recherché :</b>
-<br>De formation Bac +2 en génie climatique et/ou énergie et/ou domotique, vous possédez idéalement une première expérience au sein d'une société soit comme installateur.trice soit en bureau d'études dans le domaine de la construction.
-<br>
-<br><b>Savoirs et savoir-faire :</b>
-<ul>
-<li>Élaborer des solutions techniques et financières,</li>
-<li>Définir la faisabilité et la rentabilité d'un projet,</li>
-<li>Analyser les besoins du client,</li>
-<li>Analyser les données économiques du projet,</li>
-<li>Définir un avant-projet.</li>
-</ul>
-<br><b>Type de contrat :</b> CDI de 39 heures hebdomadaires.
-<br><b>Salaire :</b> suivant expérience.
-<br><b>Expérience exigée :</b> 3 ans. Cette expérience est indispensable.
-<br><b>Qualification :</b> Technicien.
+
+        $job_ads_list = [
+            [
+                'uniq_id' => '0001',
+                'title' => "Technicien CVC",
+                'description' => <<<"P_1"
+    <b>Descriptif du poste :</b>
+    <br>Vos missions seront les suivantes :
+    <ul>
+    <li>Travailler en binôme avec un chargé d'affaires en suivant les règles et méthodes établies en interne,</li>
+    <li>Élaborer un avant-projet détaillé ainsi qu'un cahier des charges techniques,</li>
+    <li>Élaborer des quantitatifs et/ou estimatifs,</li>
+    <li>Réaliser des études techniques et de dimensionnement,</li>
+    <li>Élaborer des plans et pièces graphiques,</li>
+    <li>Analyser des offres entreprises.</li>
+    </ul>
+    <br><b>Profil recherché :</b>
+    <br>De formation Bac +2 en génie climatique et/ou énergie et/ou domotique, vous possédez idéalement une première expérience au sein d'une société soit comme installateur.trice soit en bureau d'études dans le domaine de la construction.
+    <br>
+    <br><b>Savoirs et savoir-faire :</b>
+    <ul>
+    <li>Élaborer des solutions techniques et financières,</li>
+    <li>Définir la faisabilité et la rentabilité d'un projet,</li>
+    <li>Analyser les besoins du client,</li>
+    <li>Analyser les données économiques du projet,</li>
+    <li>Définir un avant-projet.</li>
+    </ul>
+    <br><b>Type de contrat :</b> CDI de 39 heures hebdomadaires.
+    <br><b>Salaire :</b> suivant expérience.
+    <br><b>Expérience exigée :</b> 3 ans. Cette expérience est indispensable.
+    <br><b>Qualification :</b> Technicien.
 P_1,
-            'city' => "Agence de Lyon - Saint-Jean de Soudain (38)",
-        ],
-        [
-            'uniq_id' => '0002',
-            'title' => "Chargé d'affaires",
-            'description' => <<<"P_2"
-<b>Descriptif du poste :</b>
-<br>Dans le cadre de son implantation en IDF, notre entreprise de 15/20 personnes recherche un/e chargé/e d'affaires pour suivre les opérations et la clientèle sur la région IDF. En lien avec les autres collaborateurs, thermiciens/techniciens/dessinateurs en CVC-PB et ELEC vous assurer le management et l'ingénierie CVC-PB des projets de construction ou rénovation sur des bâtiments d'habitations et tertiaires.
-<br>
-<br><b>Profil recherché :</b>
-<br>Vous disposez d'un BAC + 5 en génie climatique et environnement.
-<br>Une expérience d'un minimum de 3 ans est exigée comme technicien ou chargé d'étude, vous devez être autonome et prêt à relever les défis, doté d'une fibre commerciale et d'un solide bagage technique.
-<br>Le lieu d'implantation de l'agence sur PARIS sera défini conjointement avec le candidat retenu.
-<br>
-<br><b>L'Entreprise :</b>
-<br>Bureau d'études fluides, électricité, économie de la construction, implanté sur ARA / GRAND EST avec pour ambition de s'installer prochainement en IDF
-<br>Vous évoluez dans une équipe de 15/20 personnes dans laquelle la convivialité et le travail d'équipe sont des valeurs importantes.
-<br>
-<br><b>Type de contrat :</b> CDI.
-<br><b>Salaire :</b> suivant expérience.
-<br><b>Expérience exigée :</b> 2 ans. Cette expérience est indispensable.
-<br><b>Qualification :</b> Cadre.
+                'city' => "Agence de Lyon - Saint-Jean de Soudain (38)",
+            ],
+            [
+                'uniq_id' => '0002',
+                'title' => "Chargé d'affaires",
+                'description' => <<<"P_2"
+    <b>Descriptif du poste :</b>
+    <br>Dans le cadre de son implantation en IDF, notre entreprise de 15/20 personnes recherche un/e chargé/e d'affaires pour suivre les opérations et la clientèle sur la région IDF. En lien avec les autres collaborateurs, thermiciens/techniciens/dessinateurs en CVC-PB et ELEC vous assurer le management et l'ingénierie CVC-PB des projets de construction ou rénovation sur des bâtiments d'habitations et tertiaires.
+    <br>
+    <br><b>Profil recherché :</b>
+    <br>Vous disposez d'un BAC + 5 en génie climatique et environnement.
+    <br>Une expérience d'un minimum de 3 ans est exigée comme technicien ou chargé d'étude, vous devez être autonome et prêt à relever les défis, doté d'une fibre commerciale et d'un solide bagage technique.
+    <br>Le lieu d'implantation de l'agence sur PARIS sera défini conjointement avec le candidat retenu.
+    <br>
+    <br><b>L'Entreprise :</b>
+    <br>Bureau d'études fluides, électricité, économie de la construction, implanté sur ARA / GRAND EST avec pour ambition de s'installer prochainement en IDF
+    <br>Vous évoluez dans une équipe de 15/20 personnes dans laquelle la convivialité et le travail d'équipe sont des valeurs importantes.
+    <br>
+    <br><b>Type de contrat :</b> CDI.
+    <br><b>Salaire :</b> suivant expérience.
+    <br><b>Expérience exigée :</b> 2 ans. Cette expérience est indispensable.
+    <br><b>Qualification :</b> Cadre.
 P_2,
-            'city' => "Paris",
-        ],
-        [
-            'uniq_id' => '0003',
-            'title' => "Technicien CVC",
-            'description' => <<<"P_3"
-<b>Descriptif du poste :</b>
-<br>Dans le cadre de son développement IDF, notre entreprise de 15/20 personnes recherche un/e technicien d'études CVC-PLOMBERIE génie climatique. En lien avec les autres collaborateurs, thermiciens/chargé d'affaires/dessinateurs en CVC-PB et ELEC vous assurez une partie du dessin, les études de dimensionnement et la rédaction des CCTP et DPGF des lots CVC-PB des projets de construction ou rénovation sur des bâtiments d'habitations et tertiaires. Vous assurez également les interfaces en réunion chez les clients sur votre secteur géographique IDF.
-<br>
-<br><b>Type de contrat :</b> CDI de 39 heures hebdomadaires.
-<br><b>Salaire :</b> suivant expérience.
-<br><b>Expérience exigée :</b> 3 ans. Cette expérience est indispensable.
-<br><b>Qualification :</b> Technicien.
+                'city' => "Paris",
+            ],
+            [
+                'uniq_id' => '0003',
+                'title' => "Technicien CVC",
+                'description' => <<<"P_3"
+    <b>Descriptif du poste :</b>
+    <br>Dans le cadre de son développement IDF, notre entreprise de 15/20 personnes recherche un/e technicien d'études CVC-PLOMBERIE génie climatique. En lien avec les autres collaborateurs, thermiciens/chargé d'affaires/dessinateurs en CVC-PB et ELEC vous assurez une partie du dessin, les études de dimensionnement et la rédaction des CCTP et DPGF des lots CVC-PB des projets de construction ou rénovation sur des bâtiments d'habitations et tertiaires. Vous assurez également les interfaces en réunion chez les clients sur votre secteur géographique IDF.
+    <br>
+    <br><b>Type de contrat :</b> CDI de 39 heures hebdomadaires.
+    <br><b>Salaire :</b> suivant expérience.
+    <br><b>Expérience exigée :</b> 3 ans. Cette expérience est indispensable.
+    <br><b>Qualification :</b> Technicien.
 P_3,
-            'city' => "Paris / Île-de-France",
-        ],
-    ];
+                'city' => "Paris / Île-de-France",
+            ],
+        ];
 
-    $job_ads_list = [];
+        $job_ads_list = [];
 
-    // accès base de donnée serveur plesk
-    $host = $_ENV["DB_HOST"];
-    $username = $_ENV["DB_USERNAME"];
-    $password = $_ENV["DB_PASSWORD"];
-    $db = $_ENV["DB_NAME"];
+        require 'vendor/autoload.php';
 
-    // accès base de donnée en local
-    /*$host = "localhost";
-    $username = "root";
-    $password = "";
-    $db = "new_energie_concept";*/
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
 
-    $n = 0;
+        // accès base de donnée serveur plesk
+        $host = $_ENV["DB_HOST"];
+        $username = $_ENV["DB_USERNAME"];
+        $password = $_ENV["DB_PASSWORD"];
+        $db = $_ENV["DB_NAME"];
 
-    $conn = new mysqli($host,$username, $password,$db) ;
+        // accès base de donnée en local
+        /*$host = "localhost";
+        $username = "root";
+        $password = "";
+        $db = "new_energie_concept";*/
 
-    if ($result = $conn -> query('SELECT * FROM poste;')) {
-        while($row = $result->fetch_assoc()) {
-            $job_ads_list[$n] = [
-                'uniq_id' => $row["poste_id"],
-                'title' => $row["titre"],
-                'description' => $row["descriptif_poste"],
-                'profil' => $row["profil_recherche"],
-                'contrat' => $row["type_contrat"],
-                'salaire' => $row["salaire"],
-                'experience' => $row["experience_exigee"],
-                'qualification' => $row["qualification"],
-                'city' => $row["city"],
-            ];
-            $n++;
+        $n = 0;
+
+        $conn = new mysqli($host,$username, $password,$db) ;
+
+        if ($result = $conn -> query('SELECT * FROM poste;')) {
+            while($row = $result->fetch_assoc()) {
+                $job_ads_list[$n] = [
+                    'uniq_id' => $row["poste_id"],
+                    'title' => $row["titre"],
+                    'description' => $row["descriptif_poste"],
+                    'profil' => $row["profil_recherche"],
+                    'contrat' => $row["type_contrat"],
+                    'salaire' => $row["salaire"],
+                    'experience' => $row["experience_exigee"],
+                    'qualification' => $row["qualification"],
+                    'city' => $row["city"],
+                ];
+                $n++;
+            }
         }
-    }
     ?>
         <section id="job-ads" class="page-section pb-5">
         <div class="page-container">
