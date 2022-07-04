@@ -222,7 +222,7 @@ endif;
     <?php
     $job_ads_list = [
         [
-            'uniq_id' => 'j0001',
+            'uniq_id' => '0001',
             'title' => "Technicien CVC",
             'description' => <<<"P_1"
 <b>Descriptif du poste :</b>
@@ -254,7 +254,7 @@ P_1,
             'city' => "Agence de Lyon - Saint-Jean de Soudain (38)",
         ],
         [
-            'uniq_id' => 'j0002',
+            'uniq_id' => '0002',
             'title' => "Chargé d'affaires",
             'description' => <<<"P_2"
 <b>Descriptif du poste :</b>
@@ -277,7 +277,7 @@ P_2,
             'city' => "Paris",
         ],
         [
-            'uniq_id' => 'j0003',
+            'uniq_id' => '0003',
             'title' => "Technicien CVC",
             'description' => <<<"P_3"
 <b>Descriptif du poste :</b>
@@ -291,7 +291,33 @@ P_3,
             'city' => "Paris / Île-de-France",
         ],
     ];
+
     $job_ads_list = [];
+
+    $host = "localhost";
+    $username = "root";
+    $password = "";
+    $db = "new_energie_concept";
+    $n = 0;
+
+    $conn = new mysqli($host,$username, $password,$db) ;
+
+    if ($result = $conn -> query('SELECT * FROM poste;')) {
+        while($row = $result->fetch_assoc()) {
+            $job_ads_list[$n] = [
+                'uniq_id' => $row["poste_id"],
+                'title' => $row["titre"],
+                'description' => $row["descriptif_poste"],
+                'profil' => $row["profil_recherche"],
+                'contrat' => $row["type_contrat"],
+                'salaire' => $row["salaire"],
+                'experience' => $row["experience_exigee"],
+                'qualification' => $row["qualification"],
+                'city' => $row["city"],
+            ];
+            $n++;
+        }
+    }
     ?>
         <section id="job-ads" class="page-section pb-5">
         <div class="page-container">
@@ -322,7 +348,18 @@ P_3,
                             </h2>
                             <div id="job-ad-collapse-<?php echo($item['uniq_id']); ?>" class="accordion-collapse collapse" aria-labelledby="job-ad-heading-<?php echo($item['uniq_id']); ?>" data-bs-parent="#job-ads-accordion">
                                 <div class="accordion-body">
-                                    <div class="mb-3" style="color: #7D7D7D; font-size: 1rem;"><?php echo($item['description']); ?></div>
+                                    <div class="mb-3" style="color: #7D7D7D; font-size: 1rem;">
+                                        <b>Descriptif du poste :</b>
+                                        <br><?php echo($item['description']); ?>
+                                        <br>
+                                        <br><b>Profil recherché :</b>
+                                        <br><?php echo($item['profil']); ?>
+                                        <br>
+                                        <br><b>Type de contrat :</b> <?php echo($item['contrat']); ?>
+                                        <br><b>Salaire :</b> <?php echo($item['salaire']); ?>
+                                        <br><b>Expérience exigée :</b> <?php echo($item['experience']); ?>
+                                        <br><b>Qualification :</b> <?php echo($item['qualification']); ?>
+                                    </div>
                                     <div class="text-center">
                                         <a href="#join-us-form" class="candidate-prefill-form btn btn-primary tlink tsize-small text-uppercase text-white">Postuler</a>
                                     </div>

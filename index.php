@@ -212,7 +212,7 @@
                 'href' => './nos-solutions.php#economie-construction',
             ],
             [
-                'background' => './images/pages/solutions/list/audit-energetique-2.jpeg',
+                'background' => './images/pages/solutions/list/audit-energetique-2.png',
                 'color' => 'var(--tertiary-color)',
                 'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                 'title' => "Audit énergétique",
@@ -220,7 +220,7 @@
                 'href' => './nos-solutions.php#audit-energetique',
             ],
             [
-                'background' => './images/pages/solutions/list/etude-thermique.jpeg',
+                'background' => './images/pages/solutions/list/etude-thermique.png',
                 'color' => '#E20714',
                 'picture' => './images/pages/about/intro/energy-performance-diagnostic-environment.svg',
                 'title' => "Etude thermique et environnementale",

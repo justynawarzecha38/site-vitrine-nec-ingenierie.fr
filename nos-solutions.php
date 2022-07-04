@@ -129,12 +129,12 @@ EC_2,
 EC_3,
                     ],
                 ],
-                'picture-aspect-ratio-at-breakpoint' => '610/370',
+                'picture-aspect-ratio-at-breakpoint' => '610/340',
                 'icon-aspect-ratio-at-breakpoint' => '610/370',
             ],
             'audit-energetique' => [
                 'anchor' => 'audit-energetique',
-                'background' => './images/pages/solutions/list/audit-energetique-2.jpeg',
+                'background' => './images/pages/solutions/list/audit-energetique-2.png',
                 'color' => 'var(--tertiary-color)',
                 'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                 'title' => "Audit énergétique et conseille en maîtrise de l'énergie",
@@ -163,7 +163,7 @@ AE_1,
 AE_2,
                     ],
                 ],
-                'picture-aspect-ratio-at-breakpoint' => '820/370',
+                'picture-aspect-ratio-at-breakpoint' => '610/370',
                 'icon-aspect-ratio-at-breakpoint' => '610/370',
             ],
             'etude-thermique' => [
@@ -240,7 +240,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['ingenierie-fluide']['picture']); ?>">
+                                    <img class="img-contain" src="<?php echo($solutions_list['ingenierie-fluide']['picture']); ?>" style="max-width: 400px; max-height: 400px">
                                 </div>
                             </div>
                             <div class="solution-header">
