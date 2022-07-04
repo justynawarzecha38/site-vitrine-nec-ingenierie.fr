@@ -26,6 +26,8 @@ $sql_req = 'DELETE FROM `poste` WHERE `poste`.`poste_id` = "'. $id_indice .'" ';
 
 $res = $conn->multi_query($sql_req);
 
-header("Location: "+$_ENV["SERVER_HOST"]);
+$server_host = $_ENV["SERVER_HOST"];
+
+header("Location: $server_host");
 exit();
 

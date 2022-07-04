@@ -42,5 +42,7 @@ $sql_req = 'INSERT INTO `poste` (`poste_id`, `titre`, `descriptif_poste`,
 
 $res = $conn->multi_query($sql_req);
 
-header("Location: "+$_ENV["SERVER_HOST"]);
+$server_host = $_ENV["SERVER_HOST"];
+
+header("Location: $server_host");
 exit();
