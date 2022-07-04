@@ -294,10 +294,10 @@ P_3,
 
     $job_ads_list = [];
 
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $db = "new_energie_concept";
+    $host = "riga.nec-ingenierie.fr";
+    $username = "admin_nec";
+    $password = "adminx2022@_8";
+    $db = "database";
     $n = 0;
 
     $conn = new mysqli($host,$username, $password,$db) ;
