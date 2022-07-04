@@ -12,10 +12,18 @@ $data['salary_job'] = isset($input_data['salary_job']) ? $input_data['salary_job
 $data['experience_job'] = isset($input_data['experience_job']) ? $input_data['experience_job'] : "";
 $data['qualification_job'] = isset($input_data['qualification_job']) ? $input_data['qualification_job'] : "";
 
+// accès base de donnée serveur plesk
+/*$host = "localhost";
+$username = "admin_nec";
+$password = "adminx2022@_8";
+$db = "database_nec";*/
+
+// accès base de donnée en local
 $host = "localhost";
 $username = "root";
 $password = "";
 $db = "new_energie_concept";
+
 $value = 0;
 
 $conn = new mysqli($host,$username, $password,$db) ;

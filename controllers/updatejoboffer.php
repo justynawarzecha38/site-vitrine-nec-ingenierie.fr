@@ -18,10 +18,18 @@ $data['job_experience'] = $table_job_split[5];
 $data['job_qualification'] = $table_job_split[6];
 $data['job_city'] = $table_job_split[7];
 
+// accès base de donnée serveur plesk
+/*$host = "localhost";
+$username = "admin_nec";
+$password = "adminx2022@_8";
+$db = "database_nec";*/
+
+// accès base de donnée en local
 $host = "localhost";
 $username = "root";
 $password = "";
 $db = "new_energie_concept";
+
 $value = 0;
 
 $conn = new mysqli($host,$username, $password,$db) ;

@@ -294,10 +294,18 @@ P_3,
 
     $job_ads_list = [];
 
-    $host = "localhost";
-    $username = "admin_nec";
-    $password = "adminx2022@_8";
-    $db = "database_nec";
+    // accès base de donnée serveur plesk
+    $host = $_ENV["DB_HOST"];
+    $username = $_ENV["DB_USERNAME"];
+    $password = $_ENV["DB_PASSWORD"];
+    $db = $_ENV["DB_NAME"];
+
+    // accès base de donnée en local
+    /*$host = "localhost";
+    $username = "root";
+    $password = "";
+    $db = "new_energie_concept";*/
+
     $n = 0;
 
     $conn = new mysqli($host,$username, $password,$db) ;

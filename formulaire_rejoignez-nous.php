@@ -21,8 +21,6 @@
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
 
         <script type="text/javascript">
-
-            require("dotenv").config();
             var password = process.env.PAGE_FORMULAIRE_PASS;
 
             var x = prompt("Enter in the password ","  ");
@@ -36,10 +34,18 @@
 
         $job_offers_list = array();
 
+        // accès base de donnée serveur plesk
         $host = "localhost";
+        $username = $_ENV["DB_USERNAME"];
+        $password = $_ENV["DB_PASSWORD"];
+        $db = "database_nec";
+
+        // accès base de donnée en local
+        /*$host = "localhost";
         $username = "root";
         $password = "";
-        $db = "new_energie_concept";
+        $db = "new_energie_concept";*/
+
         $n = 0;
 
         $conn = new mysqli($host,$username, $password,$db) ;
@@ -144,9 +150,9 @@
                 <input type="text" id="description_job" name="description_job" placeholder="Descriptif* :"/><br>
                 <input type="text" id="profil_job" name="profil_job" placeholder="Profil rechercher* :"/><br>
                 <input type="text" id="contract_job" name="contract_job" placeholder="Type de contrat* :"/><br>
-                <input type="text" id="salary_job" name="salary_job" placeholder="Salaires :"/><br>
-                <input type="text" id="experience_job" name="experience_job" placeholder="Expèrience exigée :"/><br>
-                <input type="text" id="qualification_job" name="qualification_job" placeholder="Qualification :"/><br>
+                <input type="text" id="salary_job" name="salary_job" placeholder="Salaires* :"/><br>
+                <input type="text" id="experience_job" name="experience_job" placeholder="Expèrience exigée* :"/><br>
+                <input type="text" id="qualification_job" name="qualification_job" placeholder="Qualification* :"/><br>
                 <input type="submit" id="button" value="submit"/>
             </form>
         </center>
