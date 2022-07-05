@@ -22,17 +22,6 @@
     <?php include_once('./includes/header.php'); ?>
 
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
-
-        <script type="text/javascript">
-            var password = process.env.PAGE_FORMULAIRE_PASS;
-
-            var x = prompt("Enter in the password ","  ");
-            if (x.toLowerCase() == password) {
-                alert("Come right in \n \n You've entered in the right password");
-                window.location = "./formulaire_rejoignez-nous.php";
-            }
-        </script>
-
         <?php
 
         $job_offers_list = array();
@@ -105,16 +94,34 @@
                 </thead>
                 <?php foreach($job_offers_list as $job_offers_row): ?>
                     <tr>
-                        <?php for ($i = 1; $i <= 8; $i ++): ?>
-                            <td>
-                                <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[$i-1]); ?>" name="<?php echo($job_name_list[$i]); ?>" value="<?php echo($job_offers_row[$i]); ?>">
-                            </td>
-                        <?php endfor; ?>
+                        <td>
+                            <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[0]); ?>" value="<?php echo($job_offers_row[1]); ?>">
+                        </td>
+                        <td>
+                            <textarea type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[1]); ?>" value="<?php echo($job_offers_row[2]); ?>"><?php echo($job_offers_row[2]); ?></textarea>
+                        </td>
+                        <td>
+                            <textarea type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[2]); ?>" value="<?php echo($job_offers_row[3]); ?>"><?php echo($job_offers_row[3]); ?></textarea>
+                        </td>
+                        <td>
+                            <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[3]); ?>" value="<?php echo($job_offers_row[4]); ?>">
+                        </td>
+                        <td>
+                            <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[4]); ?>" value="<?php echo($job_offers_row[5]); ?>">
+                        </td>
+                        <td>
+                            <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[5]); ?>" value="<?php echo($job_offers_row[6]); ?>">
+                        </td>
+                        <td>
+                            <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[6]); ?>" value="<?php echo($job_offers_row[7]); ?>">
+                        </td>
+                        <td>
+                            <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[7]); ?>" value="<?php echo($job_offers_row[8]); ?>">
+                        </td>
                         <td>
                             <input type="submit" id="button" name="button_job" value="delete" onclick="deleteJob(<?php echo($job_offers_row[0]); ?>)"/>
                         </td>
                         <td>
-
                             <input type="submit" id="button" name="button_job" value="update" onclick="updateJob('<?php echo($job_offers_row[0]); ?>')"/>
                         </td>
                     </tr>
@@ -148,21 +155,30 @@
             }
         </script>
 
-        <?php  ?>
+        <?php
+
+        ?>
+
+        <p>Merci d'entrer l'identifiant et mots de passe pour toutes action, mis à jour, supprimer ou ajouter :</p>
+        <input type="text" value="">
+        <input type="password" value="">
+        <input type="button" value="valider" onclick="">
+
         <center>
-            <form id="join-us-form" class="w-100" action="./controllers/addjoboffer.php" method="POST" enctype="multipart/form-data">
+            <form id="join-us-form" action="./controllers/addjoboffer.php" method="POST" enctype="multipart/form-data">
                 <br>
                 <label>*A remplir obligatoire</label><br>
                 <input type="text" id="tittle_job" name="tittle_job" placeholder="Titre du Poste à pourvoir* :"/><br>
-                <input type="text" id="adresse_job" name="adresse_job" placeholder="Adresse* :"/><br>
-                <input type="text" id="description_job" name="description_job" placeholder="Descriptif* :"/><br>
-                <input type="text" id="profil_job" name="profil_job" placeholder="Profil rechercher* :"/><br>
+                <input type="text" id="adresse_job" name="adresse_job" placeholder="Adresse Ville* :"/><br>
+                <textarea type="text" id="description_job" name="description_job" placeholder="Descriptif* :"></textarea><br>
+                <textarea type="text" id="profil_job" name="profil_job" placeholder="Profil rechercher* :"></textarea><br>
                 <input type="text" id="contract_job" name="contract_job" placeholder="Type de contrat* :"/><br>
                 <input type="text" id="salary_job" name="salary_job" placeholder="Salaires* :"/><br>
                 <input type="text" id="experience_job" name="experience_job" placeholder="Expèrience exigée* :"/><br>
                 <input type="text" id="qualification_job" name="qualification_job" placeholder="Qualification* :"/><br>
                 <input type="submit" id="button" value="submit"/>
             </form>
+
         </center>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
