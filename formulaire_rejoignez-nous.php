@@ -19,9 +19,17 @@
 </head>
 
 <body class="flex-column-nowrap" style="overflow: hidden;">
-    <?php include_once('./includes/header.php'); ?>
+    <?php
+        session_start();
+        include_once('./includes/header.php');
+    ?>
 
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
+
+        <?php if($_SESSION["role"] == "admin"): ?>
+        <?php
+            echo "hello welcome " . $_SESSION["username"];
+        ?>
         <?php
 
         $job_offers_list = array();
@@ -155,15 +163,6 @@
             }
         </script>
 
-        <?php
-
-        ?>
-
-        <p>Merci d'entrer l'identifiant et mots de passe pour toutes action, mis à jour, supprimer ou ajouter :</p>
-        <input type="text" value="">
-        <input type="password" value="">
-        <input type="button" value="valider" onclick="">
-
         <center>
             <form id="join-us-form" action="./controllers/addjoboffer.php" method="POST" enctype="multipart/form-data">
                 <br>
@@ -178,10 +177,16 @@
                 <input type="text" id="qualification_job" name="qualification_job" placeholder="Qualification* :"/><br>
                 <input type="submit" id="button" value="submit"/>
             </form>
-
         </center>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+        <?php else: ?>
+
+            <p>you do not have acces to this page</p>
+
+        <?php endif; ?>
+
         <?php include_once('./includes/footer.php'); ?>
     </main>
 </body>
