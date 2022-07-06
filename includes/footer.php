@@ -34,12 +34,16 @@
         <div class="row gx-5 gy-4">
             <!-- Description -->
             <div class="col-12 col-lg-4 text-center text-lg-start">
-                <div style="height: 66px;">
-                    <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Concept.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="Logo NEW Énergie Concept (noir)">
-                    <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Construction.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="Logo NEW Énergie Concept (noir)">
+                <div class="row align-items-end justify-content-around p-0">
+                    <div class="col">
+                        <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Concept.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="Logo NEW Énergie Concept (noir)">
+                    </div>
+                    <div class="col">
+                        <img class="img-contain" id="LOGO_Concept" src="./images/logos/Logo_NEC_Construction.jpg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/Logo_NEC_Concept.jpg'))) ?>" alt="Logo NEW Énergie Concept (noir)">
+                    </div>
                 </div>
                 <p class="tsize-xsmall tfont-medium mb-3" style="opacity: 0.65;">New Energie Concept est spécialisé en Ingénierie Fluides, Audit énergétique et Économie de la Construction.</p>
-                <div class="row align-items-end justify-content-around">
+                <div class="row align-items-end justify-content-around p-0">
                     <div class="col">
                         <img class="img-contain" src="./images/logos/OPQIBI Site 29 06.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/OPQIBI Site 29 06.png'))) ?>" alt="Qualification OPQIBI" style="max-width: 100px;">
                     </div>

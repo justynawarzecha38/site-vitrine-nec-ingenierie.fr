@@ -172,9 +172,9 @@
                             <a href="<?php echo($item['href']); ?>">
                                 <div class="card h-100 w-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                     <div class="card-body">
-                                        <div class="mb-4" style="height: 120px;">
+                                        <div class="mb-4" style="height: 160px;">
                                             <?php if(isset($item['icon'])) { ?>
-                                                <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
+                                                <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 90px;"></i>
                                             <?php } else { ?>
                                                 <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>">
                                             <?php } ?>
@@ -244,7 +244,7 @@
                                         <div class="home-solution-picture-overlay"></div>
                                         <div class="home-solution-icons-wrapper">
                                             <div class="home-solution-icons-container">
-                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 500px; width: 500px" alt="Max-width 100%">
+                                                <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 700px; width: 500px" alt="Max-width 100%">
                                             </div>
                                         </div>
                                     </div>

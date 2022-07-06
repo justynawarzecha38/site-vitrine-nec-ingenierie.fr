@@ -2,6 +2,8 @@
 <html lang="fr">
 
 <style>
+    table { border:solid 3px #000000; }
+    th    { text-align: center }
 </style>
 
 <head>
@@ -9,8 +11,6 @@
 
     use Dotenv\Dotenv;
 
-    $main_title = 'Accueil';
-    $main_nav_key = 'home';
     include_once('./includes/head.php');
     ?>
     <?php include_once('./includes/styles.php'); ?>
@@ -26,10 +26,8 @@
 
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0">
 
-        <?php if($_SESSION["role"] == "admin"): ?>
-            <?php
-                echo "hello welcome " . $_SESSION["username"];
-            ?>
+        <?php if((!empty($_SESSION["acces"])) && ($_SESSION["acces"] == "yes")): ?>
+
             <?php
 
             $job_offers_list = array();
@@ -90,26 +88,26 @@
 
                 ];
             ?>
-
             <?php if(!empty($job_offers_list)): ?>
+            <h2>Liste des postes :</h2>
                 <table>
                     <thead>
-                    <tr>
+                    <tr style="border:solid 3px #000000; align-content: center;">
                         <?php foreach($column_name_list as $column_name_list): ?>
-                            <th><?php echo($column_name_list); ?></th>
+                            <th style="text-align: center"><?php echo($column_name_list); ?></th>
                         <?php endforeach; ?>
                     </tr>
                     </thead>
                     <?php foreach($job_offers_list as $job_offers_row): ?>
-                        <tr>
+                        <tr style="border:solid 3px #000000; text-align: center;">
                             <td>
                                 <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[0]); ?>" value="<?php echo($job_offers_row[1]); ?>">
                             </td>
                             <td>
-                                <textarea type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[1]); ?>" value="<?php echo($job_offers_row[2]); ?>"><?php echo($job_offers_row[2]); ?></textarea>
+                                <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[1]); ?>" value="<?php echo($job_offers_row[2]); ?>"><?php echo($job_offers_row[2]); ?></textarea>
                             </td>
                             <td>
-                                <textarea type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[2]); ?>" value="<?php echo($job_offers_row[3]); ?>"><?php echo($job_offers_row[3]); ?></textarea>
+                                <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[2]); ?>" value="<?php echo($job_offers_row[3]); ?>"><?php echo($job_offers_row[3]); ?></textarea>
                             </td>
                             <td>
                                 <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[3]); ?>" value="<?php echo($job_offers_row[4]); ?>">
@@ -126,7 +124,7 @@
                             <td>
                                 <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[7]); ?>" value="<?php echo($job_offers_row[8]); ?>">
                             </td>
-                            <td>
+                            <td style="border:solid 3px #000000;">
                                 <input type="submit" id="button" name="button_job" value="delete" onclick="deleteJob(<?php echo($job_offers_row[0]); ?>)"/>
                             </td>
                             <td>
@@ -143,7 +141,6 @@
                 }
 
                 function updateJob(indice_id) {
-
                     let indice_col = ["_job_tittle",
                         "_job_description",
                         "_job_profil",
@@ -164,17 +161,18 @@
             </script>
 
             <center>
+                <h2>Formulaire pour ajouter un poste :</h2>
                 <form id="join-us-form" action="./controllers/addjoboffer.php" method="POST" enctype="multipart/form-data">
                     <br>
                     <label>*A remplir obligatoire</label><br>
-                    <input type="text" id="tittle_job" name="tittle_job" placeholder="Titre du Poste à pourvoir* :"/><br>
-                    <input type="text" id="adresse_job" name="adresse_job" placeholder="Adresse Ville* :"/><br>
-                    <textarea type="text" id="description_job" name="description_job" placeholder="Descriptif* :"></textarea><br>
-                    <textarea type="text" id="profil_job" name="profil_job" placeholder="Profil rechercher* :"></textarea><br>
-                    <input type="text" id="contract_job" name="contract_job" placeholder="Type de contrat* :"/><br>
-                    <input type="text" id="salary_job" name="salary_job" placeholder="Salaires* :"/><br>
-                    <input type="text" id="experience_job" name="experience_job" placeholder="Expèrience exigée* :"/><br>
-                    <input type="text" id="qualification_job" name="qualification_job" placeholder="Qualification* :"/><br>
+                    <input style='width: 300px;' type="text" id="tittle_job" name="tittle_job" placeholder="Titre du Poste à pourvoir* :" required/><br>
+                    <input style='width: 300px;' type="text" id="adresse_job" name="adresse_job" placeholder="Adresse Ville* :" required/><br>
+                    <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" id="description_job" name="description_job" placeholder="Descriptif* :" required></textarea><br>
+                    <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" id="profil_job" name="profil_job" placeholder="Profil rechercher* :" required></textarea><br>
+                    <input style='width: 300px;' type="text" id="contract_job" name="contract_job" placeholder="Type de contrat* :" required/><br>
+                    <input style='width: 300px;' type="text" id="salary_job" name="salary_job" placeholder="Salaires* :" required/><br>
+                    <input style='width: 300px;' type="text" id="experience_job" name="experience_job" placeholder="Expèrience exigée* :" required/><br>
+                    <input style='width: 300px;' type="text" id="qualification_job" name="qualification_job" placeholder="Qualification* :" required/><br>
                     <input type="submit" id="button" value="submit"/>
                 </form>
             </center>

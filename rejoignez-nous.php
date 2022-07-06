@@ -341,7 +341,7 @@ P_3,
             <div class="page-section-header text-center mb-50">
                 <!--h1 class="ttitle th1 mb-80">Offres d'emploi</h1-->
                 <h1 class="ttitle th1 mb-80">Postes à pourvoir</h1>
-                <p>Nous sommes toujour en recherche d'opportunité de coloboration avec de nouvelle personne souhaitant s'investir dans une entreprise. Respectueuse des humaines, morales et envirronementales. Si vous souhaitez nous rejoindre envoyer, nous étudions toute proposition.</p>
+                <p>Nous sommes toujours en recherche d'opportunité de coloboration avec de nouvelle personne souhaitant s'investir dans une entreprise. Respectueuse des humaines, morales et environnementales. Si vous souhaitez nous rejoindre envoyer nous, nous étudions toute proposition.</p>
             </div>
             <!--<?php if(empty($job_ads_list)): ?>
                 <p class="text-muted text-center">Aucun poste n'est disponible pour l'instant.</p>
@@ -351,7 +351,8 @@ P_3,
             <div class="page-small-container">
                 <div class="accordion accordion-flush" id="job-ads-accordion">
                     <?php foreach($job_ads_list as $item): ?>
-                        <div class="accordion-item" data-ref="<?php echo($item['uniq_id']); ?>">
+                        <?php if(($item['title']) || ($item['city'])): ?>
+                            <div class="accordion-item" data-ref="<?php echo($item['uniq_id']); ?>">
                             <h2 class="accordion-header" id="job-ad-heading-<?php echo($item['uniq_id']); ?>">
                                 <button type="button" class="accordion-button collapsed"
                                         data-bs-toggle="collapse" data-bs-target="#job-ad-collapse-<?php echo($item['uniq_id']); ?>"
@@ -366,16 +367,28 @@ P_3,
                             <div id="job-ad-collapse-<?php echo($item['uniq_id']); ?>" class="accordion-collapse collapse" aria-labelledby="job-ad-heading-<?php echo($item['uniq_id']); ?>" data-bs-parent="#job-ads-accordion">
                                 <div class="accordion-body">
                                     <div class="mb-3" style="color: #7D7D7D; font-size: 1rem;">
-                                        <b>Descriptif du poste :</b>
-                                        <br><?php echo($item['description']); ?>
-                                        <br>
-                                        <br><b>Profil recherché :</b>
-                                        <br><?php echo($item['profil']); ?>
-                                        <br>
-                                        <br><b>Type de contrat :</b> <?php echo($item['contrat']); ?>
-                                        <br><b>Salaire :</b> <?php echo($item['salaire']); ?>
-                                        <br><b>Expérience exigée :</b> <?php echo($item['experience']); ?>
-                                        <br><b>Qualification :</b> <?php echo($item['qualification']); ?>
+                                        <?php if(!empty($item['description'])): ?>
+                                            <b>Descriptif du poste :</b>
+                                            <br><?php echo($item['description']); ?>
+                                            <br>
+                                        <?php endif; ?>
+                                        <?php if(!empty($item['profil'])): ?>
+                                            <br><b>Profil recherché :</b>
+                                            <br><?php echo($item['profil']); ?>
+                                            <br>
+                                        <?php endif; ?>
+                                        <?php if(!empty($item['contrat'])): ?>
+                                            <br><b>Type de contrat :</b> <?php echo($item['contrat']); ?>
+                                        <?php endif; ?>
+                                        <?php if(!empty($item['salaire'])): ?>
+                                            <br><b>Salaire :</b> <?php echo($item['salaire']); ?>
+                                        <?php endif; ?>
+                                        <?php if(!empty($item['experience'])): ?>
+                                            <br><b>Expérience exigée :</b> <?php echo($item['experience']); ?>
+                                        <?php endif; ?>
+                                        <?php if(!empty($item['qualification'])): ?>
+                                            <br><b>Qualification :</b> <?php echo($item['qualification']); ?>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="text-center">
                                         <a href="#join-us-form" class="candidate-prefill-form btn btn-primary tlink tsize-small text-uppercase text-white">Postuler</a>
@@ -383,6 +396,7 @@ P_3,
                                 </div>
                             </div>
                         </div>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
             </div>

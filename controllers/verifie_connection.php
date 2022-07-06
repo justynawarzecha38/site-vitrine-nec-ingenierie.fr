@@ -37,20 +37,17 @@ if($data['submit'] == "S'authentifier") {
     $rows = mysqli_num_rows($result);
 
     if ($rows == 1) {
-        $_SESSION['username'] = $data['iden'];
-        $_SESSION['role'] = "admin";
+        $_SESSION['acces'] = "yes";
 
         $server_host = $_ENV["SERVER_HOST"];
 
         header("Location: $server_host");
     }else{
+        $_SESSION['acces'] = "no";
         header("Location: http://localhost/site-vitrine-nec-ingenierie.fr/connection_formulaire.php");
     }
-
-}
-if($data['submit'] == "Se déconnecter"){
-    $_SESSION['username'] = NULL;
-    $_SESSION['role'] = NULL;
+} else if($data['submit'] == "Se deconnecter") {
+    $_SESSION['acces'] = "no";
     header("Location: http://localhost/site-vitrine-nec-ingenierie.fr/connection_formulaire.php");
 }
 

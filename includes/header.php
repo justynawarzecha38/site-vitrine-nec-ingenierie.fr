@@ -2,14 +2,15 @@
     if(!isset($main_nav_key)) {
         $main_nav_key = '';
     }
+
     $main_nav = [
-        'home' => ['title' => 'Accueil' , 'href' => './'],
-        'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
-        //'news' => ['title' => 'News', 'href' => './news.php'],
-        'solutions' => ['title' => 'Nos solutions', 'href' => './nos-solutions.php'],
-        'contact' => ['title' => 'Contact', 'href' => './contact.php'],
-        'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],
-        'connexion' => ['title' => 'Connection', 'href' => './connection_formulaire.php'],
+            'home' => ['title' => 'Accueil' , 'href' => './'],
+            'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
+            //'news' => ['title' => 'News', 'href' => './news.php'],
+            'solutions' => ['title' => 'Nos solutions', 'href' => './nos-solutions.php'],
+            'contact' => ['title' => 'Contact', 'href' => './contact.php'],
+            'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],
+            'connexion' => ['title' => 'Connection', 'href' => './connection_formulaire.php'],
     ];
 ?>
 <nav id="page-navbar" class="navbar navbar-expand-lg fixed-top navbar-light">
