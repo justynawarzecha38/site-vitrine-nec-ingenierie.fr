@@ -1,5 +1,4 @@
 <?php
-    echo "testing";
     //$dir = explode('\controllers', __DIR__)[0];
     $dir = $_SERVER["DOCUMENT_ROOT"];
 
