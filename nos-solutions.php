@@ -168,7 +168,7 @@ AE_2,
             ],
             'etude-thermique' => [
                 'anchor' => 'etude-thermique',
-                'background' => './images/pages/solutions/list/etude-thermique.jpeg',
+                'background' => './images/pages/solutions/list/etude-thermique.png',
                 'color' => '#E20714',
                 'picture' => './images/pages/about/intro/energy-performance-diagnostic-environment.svg',
                 'title' => "Etudes thermiques et environnementales",
@@ -240,7 +240,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['ingenierie-fluide']['picture']); ?>" style="max-width: 400px; max-height: 400px">
+                                    <img class="img-contain" src="<?php echo($solutions_list['ingenierie-fluide']['picture']); ?>" style="width: 200px">
                                 </div>
                             </div>
                             <div class="solution-header">
@@ -273,7 +273,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['economie-construction']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['economie-construction']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['economie-construction']['picture']); ?>">
+                                    <img class="img-contain" src="<?php echo($solutions_list['economie-construction']['picture']); ?>" style="width: 200px">>
                                 </div>
                             </div>
                             <div class="solution-header">
@@ -306,7 +306,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['audit-energetique']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['audit-energetique']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['audit-energetique']['picture']); ?>">
+                                    <img class="img-contain" src="<?php echo($solutions_list['audit-energetique']['picture']); ?>" style="width: 400px">>
                                 </div>
                             </div>
                             <div class="solution-header">
@@ -339,7 +339,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['etude-thermique']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['etude-thermique']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['etude-thermique']['picture']); ?>">
+                                    <img class="img-contain" src="<?php echo($solutions_list['etude-thermique']['picture']); ?>" style="width: 200px">>
                                 </div>
                             </div>
                             <div class="solution-header">

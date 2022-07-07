@@ -243,7 +243,7 @@
                                         <img class="home-solution-picture img-cover" src="<?php echo($item['background']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['background']))) ?>">
                                         <div class="home-solution-picture-overlay"></div>
                                         <div class="home-solution-icons-wrapper">
-                                            <div class="home-solution-icons-container">
+                                            <div class="home-solution-icons-container" style="height: 160px">
                                                 <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 700px; width: 500px" alt="Max-width 100%">
                                             </div>
                                         </div>

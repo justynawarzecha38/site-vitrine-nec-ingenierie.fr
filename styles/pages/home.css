@@ -241,7 +241,7 @@
     align-self: flex-end;
     flex: 1 1 auto;
     min-height: 1px;
-    margin-top: calc(110/540 * -100%);
+    margin-top: calc(90/540 * -100%);
     width: calc(420/540 * 100%);
 }
 .home-solution-card .home-solution-card-body {

@@ -26,7 +26,7 @@
 
 .solutions-list > li:first-child .icon-container img {
     width: calc(140/610 * 100%);
-    height: calc(140/370 * 100%);
+    height: calc(140/270 * 100%);
 }
 
 @media (max-width: 991.98px) {

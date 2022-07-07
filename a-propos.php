@@ -56,7 +56,7 @@
                             <li class="col-12 col-md-6 col-xl-5">
                                 <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                     <div class="card-body">
-                                        <div class="mb-4" style="height: 120px;">
+                                        <div class="mb-4" style="height: 160px;">
                                             <?php if(isset($item['icon'])) { ?>
                                                 <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
                                             <?php } else { ?>
