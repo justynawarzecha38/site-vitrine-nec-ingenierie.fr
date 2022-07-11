@@ -100,14 +100,14 @@
                         <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Concept</h1>
                         <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
                         <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialiste en Ingénierie Fluides</p>
-                        <p class="home-header-bottom-text th5 text-uppercase">Audits énergétiques</p>
+                        <p class="home-header-bottom-text th5 text-uppercase">Audit énergétique</p>
                     </div>
                 </div>
                 <div class="home-header-bottom page-container m-3">
                     <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center text-white" style="background-color: #E20714">
                         <h1 class="home-header-bottom-title ttitle th4">NEW Énergie Carbone</h1>
                         <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études thermiques et envirennementales, spécialiste de la RE2020</p>
+                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'études thermiques et environnementales, spécialiste de la RE2020</p>
                         <br>
                         <div class="col-12 col-sm-2 col-md-2 mt-4 mb-0" style="position: relative; left: 40%; bottom: 40%">
                             <img src="./images/logos/RE2020.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/logos/RE2020.png'))) ?>" class="home-header-bottom-img rounded float-left img-contain h-100" alt="Responsive image">
@@ -118,7 +118,7 @@
                     <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center text-white" style="background-color: #ED6939">
                         <h1 class="home-header-bottom-title ttitle th4">NEW Économie de la Construction</h1>
                         <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
-                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'économie de la construction "Tous corps d'Etats"</p>
+                        <p class="home-header-bottom-text th5 text-uppercase">Bureau d'économie de la construction "Tout corps d'Etat"</p>
                     </div>
                 </div>
             </center>
@@ -134,7 +134,7 @@
                     'href' => './nos-solutions.php#ingenierie-fluide',
                 ],
                 [
-                    'color' => 'var(--tertiary-color)',
+                    'color' => '#F29170',
                     'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                     'text' => "Audits energitiques",
                     'href' => './nos-solutions.php#audit-energetique',
@@ -172,7 +172,7 @@
                             <a href="<?php echo($item['href']); ?>">
                                 <div class="card h-100 w-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                     <div class="card-body">
-                                        <div class="mb-4" style="height: 160px;">
+                                        <div class="mb-4" style="height: 200px;">
                                             <?php if(isset($item['icon'])) { ?>
                                                 <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 90px;"></i>
                                             <?php } else { ?>
@@ -200,7 +200,7 @@
                 'color' => '#8E1113',
                 'picture' => './images/pages/about/intro/plan.svg',
                 'title' => "Ingénierie Fluides",
-                'text' => "Vérification des plans et des besoins d'adaptations liés à l'implantation et à la circulation des équipements techniques…",
+                'text' => "Vérification des plans et des besoins d'adaptation liés à l'implantation et à la circulation des équipements techniques…",
                 'href' => './nos-solutions.php#ingenierie-fluide',
             ],
             [
@@ -213,7 +213,7 @@
             ],
             [
                 'background' => './images/pages/solutions/list/audit-energetique-2.png',
-                'color' => 'var(--tertiary-color)',
+                'color' => '#F29170',
                 'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
                 'title' => "Audit énergétique",
                 'text' => "Audit et assistance sur la gestion de la plateforme OPERAT de l'ADEME pour la gestion du dispositif ECO ENERGIE TERTIAIRE.\n\nAudit établi suivant les normes en vigueur 16247-1 et 2 ainsi que les recommandations de l'ADEME.",
@@ -223,8 +223,8 @@
                 'background' => './images/pages/solutions/list/etude-thermique.png',
                 'color' => '#E20714',
                 'picture' => './images/pages/about/intro/energy-performance-diagnostic-environment.svg',
-                'title' => "Etude thermique et environnementale",
-                'text' => "Maison individuelle.\n\nLogements Collectifs\n\nBâtiments tertiaires\n\nFormations aux différentes réglmentations",
+                'title' => "Etudes thermiques et environnementales",
+                'text' => "Maison individuelle\n\nLogements Collectifs\n\nBâtiments tertiaires\n\nFormations aux différentes réglementations",
                 'href' => './nos-solutions.php#etude-thermique',
             ],
         ];
@@ -243,7 +243,7 @@
                                         <img class="home-solution-picture img-cover" src="<?php echo($item['background']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['background']))) ?>">
                                         <div class="home-solution-picture-overlay"></div>
                                         <div class="home-solution-icons-wrapper">
-                                            <div class="home-solution-icons-container" style="height: 160px">
+                                            <div class="home-solution-icons-container" style="height: 200px">
                                                 <img class="img-contain" src="<?php echo($item['picture']); ?>?v=<?php echo(date("Y-m-d-H-i-s", filemtime($item['picture']))) ?>" style="height: 700px; width: 500px" alt="Max-width 100%">
                                             </div>
                                         </div>

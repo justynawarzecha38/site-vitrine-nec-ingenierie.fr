@@ -24,9 +24,9 @@
                 'text' => "Maîtrise d'œuvre fluides \nen tant que mandataire \nou co-traitant",
             ],
             [
-                'color' => 'var(--tertiary-color)',
+                'color' => '#F29170',
                 'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
-                'text' => "Audits energitiques",
+                'text' => "Audit energitique",
             ],
             [
                 'color' => '#E20714',
@@ -56,7 +56,7 @@
                             <li class="col-12 col-md-6 col-xl-5">
                                 <div class="card h-100 text-white text-center" style="background-color: <?php echo($item['color']); ?>;">
                                     <div class="card-body">
-                                        <div class="mb-4" style="height: 160px;">
+                                        <div class="mb-4" style="height: 200px;">
                                             <?php if(isset($item['icon'])) { ?>
                                                 <i class="<?php echo($item['icon']) ?>" aria-hidden="true" style="font-size: 80px;"></i>
                                             <?php } else { ?>
@@ -92,7 +92,7 @@
                 <div class="page-section-block">
                     <div class="w-100 text-center">
                         <picture>
-                            <source srcset="./images/pages/about/timeline-2022-4.svg" media="(min-width: 992px)">
+                            <source srcset="images/pages/about/timeline-2022-6.svg" media="(min-width: 992px)">
                             <img class="img-contain" src="./images/pages/about/timeline-mobile-2022.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/pages/about/timeline-mobile-2022.svg'))) ?>" alt="">
                         </picture>
                     </div>

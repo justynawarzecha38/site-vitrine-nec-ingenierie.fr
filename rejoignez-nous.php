@@ -309,12 +309,6 @@ P_3,
         $password = $_ENV["DB_PASSWORD"];
         $db = $_ENV["DB_NAME"];
 
-        // accès base de donnée en local
-        /*$host = "localhost";
-        $username = "root";
-        $password = "";
-        $db = "new_energie_concept";*/
-
         $n = 0;
 
         $conn = new mysqli($host,$username, $password,$db) ;
@@ -376,6 +370,34 @@ P_3,
                                             <br><b>Profil recherché :</b>
                                             <br><?php echo($item['profil']); ?>
                                             <br>
+                                        <?php endif; ?>
+                                        <?php
+                                            // accès base de donnée serveur plesk
+                                            $host = $_ENV["DB_HOST"];
+                                            $username = $_ENV["DB_USERNAME"];
+                                            $password = $_ENV["DB_PASSWORD"];
+                                            $db = $_ENV["DB_NAME"];
+
+                                            $i = 0;
+
+                                            $savoirs_list = [];
+
+                                            $conn = new mysqli($host,$username, $password,$db) ;
+
+                                            if ($result = $conn -> query('SELECT * FROM savoirs WHERE poste_id = "'.$item['uniq_id'].'"; ')) {
+                                                while($row = $result->fetch_assoc()) {
+                                                    $savoirs_list[$i] = $row["savoir_faire"];
+                                                    $i++;
+                                                }
+                                            }
+                                        ?>
+                                        <?php if(!empty($savoirs_list)): ?>
+                                            <br><b>Savoirs et savoir-faire :</b>
+                                            <ul>
+                                                <?php foreach($savoirs_list as $savoir_item): ?>
+                                                    <li><?php echo($savoir_item); ?></li>
+                                                <?php endforeach; ?>
+                                            </ul>
                                         <?php endif; ?>
                                         <?php if(!empty($item['contrat'])): ?>
                                             <br><b>Type de contrat :</b> <?php echo($item['contrat']); ?>

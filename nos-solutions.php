@@ -49,7 +49,7 @@
                         'title' => "Avant-projet définitif",
                         'text' => <<<"IF_1"
 <ul class="my-0"><!--
---><li>Vérification des plans et des besoins d'adaptations liés à l'implantation et à la circulation des équipements techniques</li><!--
+--><li>Vérification des plans et des besoins d'adaptation liés à l'implantation et à la circulation des équipements techniques</li><!--
 --><li>Bilan de puissance électrique et prédimensionnement des bassins de rétention d'eaux pluviales</li><!--
 --></ul>
 IF_1,
@@ -59,7 +59,7 @@ IF_1,
                         'text' => <<<"IF_2"
 <ul class="my-0"><!--
 --><li>Elaborer les CCTP</li><!--
---><li>Elaborer des plans de consultations ainsi que les plans de vente techniques</li><!--
+--><li>Elaborer des plans de consultation ainsi que les plans de vente techniques</li><!--
 --><li>Réaliser le cadre de décomposition du prix global et forfaitaire (CDPGF)</li><!--
 --><li>Définir les quantités de chacun des matériaux</li><!--
 --><li>Estimatif financier définitif du projet en fonction des quantités réelles et des choix techniques définitifs avant consultation des entreprises</li><!--
@@ -73,7 +73,7 @@ IF_2,
 --><li>Mise à jour des plans de vente pour intégration des TMA client</li><!--
 --><li>Elaborer le VISA des éléments d'exécution des entreprises</li><!--
 --><li>Accompagnement MOA et MOEx au suivi des travaux sur les lots techniques</li><!--
---><li>Accompagnement à la réception des ouvrages et levés de réserves</li></ul>
+--><li>Accompagnement à la réception des ouvrages et levées de réserves</li></ul>
 IF_4,
                     ],
                     [
@@ -135,9 +135,9 @@ EC_3,
             'audit-energetique' => [
                 'anchor' => 'audit-energetique',
                 'background' => './images/pages/solutions/list/audit-energetique-2.png',
-                'color' => 'var(--tertiary-color)',
+                'color' => '#F29170',
                 'picture' => './images/pages/about/intro/magnifying-glass-energy-performance-diagnostic.svg',
-                'title' => "Audit énergétique et conseille en maîtrise de l'énergie",
+                'title' => "Audit énergétique et conseil en maîtrise de l'énergie",
                 'content' => [
                     [
                         'title' => "Assistance énergétique",
@@ -145,7 +145,7 @@ EC_3,
 <ul class="my-0"><!--
 --><li>Saisie, assistance et conseil sur la gestion de la plateforme OPERAT</li><!--
 --><li>Saisie initiale de l’année de référence</li><!--
---><li>Récupération annuelle des données de consommations d’énergie</li><!--
+--><li>Récupération annuelle des données de consommation d’énergie</li><!--
 --><li>Génération et fourniture de l’attestation ECO ENERGIE TERTIAIRE</li><!--
 --><li>Analyse des éventuelles dérives constatées pouvant donner lieu à une visite sur site et à un rapport écrit.</li><!--
 --></ul>
@@ -174,13 +174,13 @@ AE_2,
                 'title' => "Etudes thermiques et environnementales",
                 'content' => [
                     [
-                        'title' => "Types de Bâtiments ",
+                        'title' => "Types de Bâtiment ",
                         'text' => <<<"ET_1"
 <ul class="my-0"><!--
---><li>Maison individuelle (architect, maître d'oeuvre, constructeur de maisons individuelle)</li><!--
+--><li>Maison individuelle (architecte, maître d'oeuvre, constructeur de maisons individuelles)</li><!--
 --><li>Logement collectif (logements sociaux et promotion privée)</li><!--
---><li>Batiment Tertiaire (Bureau, enseignement, activité médico social)</li><!--
---><li>Résidences services (Etudiants, ségnars, tourisme)</li><!--
+--><li>Bâtiment Tertiaire (Bureau, enseignement, activité médico sociale)</li><!--
+--><li>Résidences services (Etudiants, sénior, tourisme)</li><!--
 --></ul>
 ET_1,
                     ],
@@ -192,7 +192,7 @@ ET_1,
 --><li>Etude ACV</li><!--
 --><li>Calcul des déperditions</li><!--
 --><li>Optimisation et conseils</li><!--
---><li>Labels (E+C- / NF / Batiment durable...)</li><!--
+--><li>Labels (E+C- / NF / Bâtiment durable...)</li><!--
 --></ul>
 ET_2,
                     ],
@@ -240,7 +240,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['ingenierie-fluide']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['ingenierie-fluide']['picture']); ?>" style="width: 200px">
+                                    <img class="img-contain" src="<?php echo($solutions_list['ingenierie-fluide']['picture']); ?>" style="width: 200px;height: 200px;">
                                 </div>
                             </div>
                             <div class="solution-header">
@@ -273,7 +273,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['economie-construction']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['economie-construction']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['economie-construction']['picture']); ?>" style="width: 200px">>
+                                    <img class="img-contain" src="<?php echo($solutions_list['economie-construction']['picture']); ?>" style="width: 200px;height: 200px;">>
                                 </div>
                             </div>
                             <div class="solution-header">
@@ -306,7 +306,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['audit-energetique']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['audit-energetique']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['audit-energetique']['picture']); ?>" style="width: 400px">>
+                                    <img class="img-contain" src="<?php echo($solutions_list['audit-energetique']['picture']); ?>" style="width: 200px;height: 200px;">>
                                 </div>
                             </div>
                             <div class="solution-header">
@@ -339,7 +339,7 @@ ET_4,
                             </div>
                             <div class="icon-container"<?php echo(isset($solutions_list['etude-thermique']['icon-aspect-ratio-at-breakpoint']) ? ' style="--aspect-ratio: '.$solutions_list['etude-thermique']['icon-aspect-ratio-at-breakpoint'].';"' : ''); ?>>
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <img class="img-contain" src="<?php echo($solutions_list['etude-thermique']['picture']); ?>" style="width: 200px">>
+                                    <img class="img-contain" src="<?php echo($solutions_list['etude-thermique']['picture']); ?>" style="width: 400px;height: 200px;">>
                                 </div>
                             </div>
                             <div class="solution-header">

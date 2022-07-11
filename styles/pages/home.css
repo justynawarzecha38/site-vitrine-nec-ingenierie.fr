@@ -222,7 +222,7 @@
 }
 .home-solution-picture-block .home-solution-icons-wrapper {
     position: absolute;
-    top: calc(100/370 * 100%);
+    top: calc(50/370 * 100%);
     left: 0;
     display: flex;
     justify-content: center;

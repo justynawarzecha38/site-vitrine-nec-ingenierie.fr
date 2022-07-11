@@ -42,6 +42,41 @@ $sql_req = 'INSERT INTO `poste` (`poste_id`, `titre`, `descriptif_poste`,
 
 $res = $conn->multi_query($sql_req);
 
+$conn = new mysqli($host,$username, $password,$db) ;
+
+$sql = "SELECT poste_id FROM poste ORDER BY poste_id DESC LIMIT 1;";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $poste_id = $row["poste_id"];
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+
+$i = 1;
+$value = "knowledge_required_job_";
+$value .= "$i";
+
+while(isset($input_data[$value]) ? $input_data[$value] : ""){
+    $data[$value] = isset($input_data[$value]) ? $input_data[$value] : "";
+
+    $conn = new mysqli($host,$username, $password,$db) ;
+
+    $sql_req = 'INSERT INTO `savoirs` (`savoirs_id`, `savoir_faire`, `poste_id`) 
+            VALUES (NULL, "'.$data[$value].'", "'.$poste_id.'");';
+
+    $res = $conn->multi_query($sql_req);
+
+    $value = "knowledge_required_job_";
+    $i++;
+    $value .= "$i";
+}
+
 $server_host = $_ENV["SERVER_HOST"];
 
 header("Location: $server_host");

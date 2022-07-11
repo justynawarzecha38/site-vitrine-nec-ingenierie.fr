@@ -74,7 +74,8 @@
                         "salaire",
                         "expérience exigée",
                         "qualification",
-                        "ville"
+                        "ville",
+                        "savoirs"
                 ];
                 $job_name_list = [
                         "job_tittle",
@@ -84,7 +85,8 @@
                         "job_salary",
                         "job_experience",
                         "job_qualification",
-                        "job_city"
+                        "job_city",
+                        "job_savoir"
 
                 ];
             ?>
@@ -124,11 +126,42 @@
                             <td>
                                 <input type="text" size="10" id="<?php echo($job_offers_row[0]); ?>_<?php echo($job_name_list[7]); ?>" value="<?php echo($job_offers_row[8]); ?>">
                             </td>
+                            <td>
+                                <?php
+                                    $host = $_ENV["DB_HOST"];
+                                    $username = $_ENV["DB_USERNAME"];
+                                    $password = $_ENV["DB_PASSWORD"];
+                                    $db = $_ENV["DB_NAME"];
+
+                                    $i = 0;
+                                    $savoirs_list_value = [];
+
+                                    $conn = new mysqli($host,$username, $password,$db);
+
+                                    if ($result = $conn -> query('SELECT * FROM savoirs WHERE poste_id = "'.$job_offers_row[0].'"; ')) {
+                                        while($row = $result->fetch_assoc()) {
+                                            $savoirs_list_value[$i] = [
+                                                    $i,
+                                                    $row["savoir_faire"]
+                                            ];
+                                            $i++;
+                                        }
+                                    }
+
+                                    $n = 0;
+                                ?>
+                                <?php $indice_savoir_faire = 0; ?>
+                                <?php foreach($savoirs_list_value as $savoirs_faire): ?>
+                                    <?php echo($job_offers_row[0]); ?>_<?php echo($savoirs_faire[0]); ?>_<?php echo($job_name_list[8]); ?>
+                                    <input type="text" size="10"  id="<?php echo($job_offers_row[0]); ?>_<?php echo($savoirs_faire[0]); ?>_<?php echo($job_name_list[8]); ?>" value="<?php echo($savoirs_faire[1]); ?>"><br>
+                                    <?php $indice_savoir_faire++; ?>
+                                <?php endforeach; ?>
+                            </td>
                             <td style="border:solid 3px #000000;">
                                 <input type="submit" id="button" name="button_job" value="delete" onclick="deleteJob(<?php echo($job_offers_row[0]); ?>)"/>
                             </td>
                             <td>
-                                <input type="submit" id="button" name="button_job" value="update" onclick="updateJob('<?php echo($job_offers_row[0]); ?>')"/>
+                                <input type="submit" id="button" name="button_job" value="update" onclick="updateJob('<?php echo($job_offers_row[0]); ?>','<?php echo($indice_savoir_faire); ?>')"/>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -140,7 +173,7 @@
                     window.location  = "./controllers/deletejoboffer.php?id="+indice_id;
                 }
 
-                function updateJob(indice_id) {
+                function updateJob(indice_id, indice_savoir_faire) {
                     let indice_col = ["_job_tittle",
                         "_job_description",
                         "_job_profil",
@@ -156,7 +189,15 @@
                         new_value_col[i] = document.getElementById(indice_id+indice_col[i]).value;
                     }
 
-                    window.location  = "./controllers/updatejoboffer.php?id="+indice_id+"&table="+new_value_col;
+                    let savoir_list = [];
+
+                    for(let i = 0; i < indice_savoir_faire; i++){
+                        var id_savoir = indice_id+"_"+i+"_job_savoir";
+                        savoir_list[i] = document.getElementById(id_savoir).value;
+                        id_savoir = indice_id+"_"+i+"_job_savoir";
+                    }
+
+                    window.location  = "./controllers/updatejoboffer.php?id="+indice_id+"&table="+new_value_col+"&table_savoir="+savoir_list;
                 }
             </script>
 
@@ -169,6 +210,46 @@
                     <input style='width: 300px;' type="text" id="adresse_job" name="adresse_job" placeholder="Adresse Ville* :" required/><br>
                     <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" id="description_job" name="description_job" placeholder="Descriptif* :" required></textarea><br>
                     <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" id="profil_job" name="profil_job" placeholder="Profil rechercher* :" required></textarea><br>
+
+                    <legend>Savoirs et savoir-faire :</legend>
+
+                    <div id="pieceCompteAjoute">
+
+                    </div>
+                    <input type="button" value="ajouter un champ" onclick="ajouterPieceCompte()"/><br>
+                    <input type="button" style="display:none" id="supCompte" value="supprimer un champ" onclick="supprimerPieceCompte()" /></p>
+
+                    <script type="text/javascript">
+                        var zoneAjoutPieceCompte;
+                        var nbPieceCompte=1;
+                        function ajouterPieceCompte(){
+                            if(nbPieceCompte==1){ //si il s'agit du premier ajout
+                                zoneAjoutPieceCompte = document.getElementById('pieceCompteAjoute') //on séléctionne l'emplacement où on veux effectuer les ajouts de champs
+                                document.getElementById('supCompte').style.display='inline' //on rend disponible le bouton supprimer
+                            }
+
+                            //on ajoute un nouveau champ
+                            var input = document.createElement("input");
+                            input.type = "text";
+                            input.name = "pieceCompteAjoute["+nbPieceCompte+"]";
+                            input.id  = "knowledge_required_job_"+nbPieceCompte;
+                            input.name = "knowledge_required_job_"+nbPieceCompte;
+                            input.placeholder = "Savoir faire "+nbPieceCompte;
+                            input.style = 'width: 300px;'
+                            input.style.display = "block";
+                            zoneAjoutPieceCompte.appendChild(input);
+                            nbPieceCompte++;
+                        }
+
+                        function supprimerPieceCompte(){
+                            nbPieceCompte--;
+                            zoneAjoutPieceCompte.removeChild(document.getElementById("knowledge_required_job_"+nbPieceCompte)) //on supprime le dernier champs ajouté
+                            if(nbPieceCompte==1){
+                                document.getElementById('supCompte').style.display='none';// on rend indisponible le bouton supprimer
+                            }
+                        }
+                    </script>
+
                     <input style='width: 300px;' type="text" id="contract_job" name="contract_job" placeholder="Type de contrat* :" required/><br>
                     <input style='width: 300px;' type="text" id="salary_job" name="salary_job" placeholder="Salaires* :" required/><br>
                     <input style='width: 300px;' type="text" id="experience_job" name="experience_job" placeholder="Expèrience exigée* :" required/><br>
