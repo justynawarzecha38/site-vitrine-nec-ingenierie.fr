@@ -20,22 +20,23 @@ $data['password'] = isset($input_data['password']) ? $input_data['password'] : "
 $data['submit'] = isset($input_data['button']) ? $input_data['button'] : "";
 
 if($data['submit'] == "S'authentifier") {
-// accès base de donnée en local
+    // Accès base de donnée
     $host = $_ENV["DB_HOST"];
     $username = $_ENV["DB_USERNAME"];
     $password = $_ENV["DB_PASSWORD"];
     $db = $_ENV["DB_NAME"];
 
+    // On récupère les deux indice qui sont le mot de passe et l'identifiant ou recherche si les deux corresponde à une ligne du tableau user de la bse de donnée
     $conn = new mysqli($host, $username, $password, $db);
-
     $data['iden'] = mysqli_real_escape_string($conn, $data['iden']);
     $data['password'] = mysqli_real_escape_string($conn, $data['password']);
-
     $query = "SELECT * FROM `user` WHERE username = '" . $data['iden'] . "' and password='" . hash('sha256', $data['password']) . "' and role='admin'";
 
+    // Récupère le nombre de ligne
     $result = mysqli_query($conn, $query);
     $rows = mysqli_num_rows($result);
 
+    // Si ou trouve une ligne alors...
     if ($rows == 1) {
         $_SESSION['acces'] = "yes";
 

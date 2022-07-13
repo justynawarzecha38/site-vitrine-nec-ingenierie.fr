@@ -303,16 +303,15 @@ P_3,
         $dotenv = Dotenv::createImmutable(__DIR__);
         $dotenv->load();
 
-        // accès base de donnée serveur plesk
+        // Accès base de donnée serveur plesk
         $host = $_ENV["DB_HOST"];
         $username = $_ENV["DB_USERNAME"];
         $password = $_ENV["DB_PASSWORD"];
         $db = $_ENV["DB_NAME"];
 
+        // Récupère toutes les valeur du tableau poste de la base de donnée
         $n = 0;
-
         $conn = new mysqli($host,$username, $password,$db) ;
-
         if ($result = $conn -> query('SELECT * FROM poste;')) {
             while($row = $result->fetch_assoc()) {
                 $job_ads_list[$n] = [
@@ -335,7 +334,7 @@ P_3,
             <div class="page-section-header text-center mb-50">
                 <!--h1 class="ttitle th1 mb-80">Offres d'emploi</h1-->
                 <h1 class="ttitle th1 mb-80">Postes à pourvoir</h1>
-                <p>Nous sommes toujours en recherche d'opportunité de coloboration avec de nouvelle personne souhaitant s'investir dans une entreprise. Respectueuse des humaines, morales et environnementales. Si vous souhaitez nous rejoindre envoyer nous, nous étudions toute proposition.</p>
+                <p>Nous sommes toujours en recherche d'opportunité de collaboration avec de nouvelles personnes souhaitant s'investir dans une entreprise respectueuse des valeurs humaines, morales et environnementales. Si vous souhaitez nous rejoindre envoyer nous votre formulaire, nous étudions toutes propositions.</p>
             </div>
             <!--<?php if(empty($job_ads_list)): ?>
                 <p class="text-muted text-center">Aucun poste n'est disponible pour l'instant.</p>
@@ -372,7 +371,7 @@ P_3,
                                             <br>
                                         <?php endif; ?>
                                         <?php
-                                            // accès base de donnée serveur plesk
+                                            // Accès base de donnée serveur plesk
                                             $host = $_ENV["DB_HOST"];
                                             $username = $_ENV["DB_USERNAME"];
                                             $password = $_ENV["DB_PASSWORD"];
@@ -382,8 +381,8 @@ P_3,
 
                                             $savoirs_list = [];
 
+                                            // Récupère la liste des savoir faire
                                             $conn = new mysqli($host,$username, $password,$db) ;
-
                                             if ($result = $conn -> query('SELECT * FROM savoirs WHERE poste_id = "'.$item['uniq_id'].'"; ')) {
                                                 while($row = $result->fetch_assoc()) {
                                                     $savoirs_list[$i] = $row["savoir_faire"];

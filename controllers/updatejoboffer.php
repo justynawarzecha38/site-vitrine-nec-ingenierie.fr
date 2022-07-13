@@ -9,16 +9,16 @@ $indice_id = $_GET['id'];
 
 $table_job_split = [];
 $table_savoir_job_split = [];
-$i = 0;
 
+// Récupère le lien url des 7 première valeur du tableau
 for ($i = 0; $i <= 7; $i++){
     $indice_table = 'table'.$i;
     $table_job_split[$i] = $_GET[$indice_table];
     echo "/" . $table_job_split[$i] . "/";
 }
 
+// Récupère le lien url des valeur du tableau pour le savoir faire
 $y = 0;
-
 while ($_GET['table_savoir'.$y]){
     $table_savoir_job_split[$y] = $_GET['table_savoir'.$y];
     $y++;

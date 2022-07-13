@@ -189,7 +189,7 @@
                         "_job_qualification",
                         "_job_city"];
 
-                    // Table qui stocker les valeur
+                    // Table qui stocker les valeurs
                     let new_value_col = [];
 
                     // On va récupérer la valeur de chaque champ de texte qui corresponde à l'identifiant du champ de texte de la ligne
