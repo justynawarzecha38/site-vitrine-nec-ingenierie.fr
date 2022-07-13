@@ -152,7 +152,6 @@
                                 ?>
                                 <?php $indice_savoir_faire = 0; ?>
                                 <?php foreach($savoirs_list_value as $savoirs_faire): ?>
-                                    <?php echo($job_offers_row[0]); ?>_<?php echo($savoirs_faire[0]); ?>_<?php echo($job_name_list[8]); ?>
                                     <input type="text" size="10"  id="<?php echo($job_offers_row[0]); ?>_<?php echo($savoirs_faire[0]); ?>_<?php echo($job_name_list[8]); ?>" value="<?php echo($savoirs_faire[1]); ?>"><br>
                                     <?php $indice_savoir_faire++; ?>
                                 <?php endforeach; ?>
@@ -169,11 +168,18 @@
             <?php endif; ?>
 
             <script type="text/javascript">
+
+                require('dotenv').config();
+
+                // Méthode ou va aller dans le fichier php pour supprimer la ligne du poste
                 function deleteJob(indice_id) {
                     window.location  = "./controllers/deletejoboffer.php?id="+indice_id;
                 }
 
+                // Méthode qui va faire une mis à jour sur la ligne d'un poste, il aura en paramètre: l'identifiant de la ligne qui vient de la base de donnée du poste et le nombre de champ de texte de la colonne savoirs
                 function updateJob(indice_id, indice_savoir_faire) {
+
+                    // Indice sur les identifiants de chaque colonne de la ligne qu'on va faire la mis à jour
                     let indice_col = ["_job_tittle",
                         "_job_description",
                         "_job_profil",
@@ -183,21 +189,49 @@
                         "_job_qualification",
                         "_job_city"];
 
+                    // Table qui stocker les valeur
                     let new_value_col = [];
 
+                    // On va récupérer la valeur de chaque champ de texte qui corresponde à l'identifiant du champ de texte de la ligne
                     for(let i = 0; i <= 7; i++){
                         new_value_col[i] = document.getElementById(indice_id+indice_col[i]).value;
                     }
 
-                    let savoir_list = [];
+                    // Tableau qui stocker la liste des savoir faire pour la ligne séléctionner
+                    let savoir_list_value = [];
 
+                    // Boucle qui durera jusqu'au au nombre maximum de la liste savoir faire
                     for(let i = 0; i < indice_savoir_faire; i++){
                         var id_savoir = indice_id+"_"+i+"_job_savoir";
-                        savoir_list[i] = document.getElementById(id_savoir).value;
+                        savoir_list_value[i] = document.getElementById(id_savoir).value;
                         id_savoir = indice_id+"_"+i+"_job_savoir";
+
+                        // Si une des valeurs qu'on récupérer n'a rien dans le champ de texte alors...
+                        if(savoir_list_value[i] == ""){
+
+                            // Affiche un message d'alert
+                            alert("vous mit aucun texte sur une des listes de savoir faire!");
+
+                            // Sort de la méthode
+                            return;
+                        }
                     }
 
-                    window.location  = "./controllers/updatejoboffer.php?id="+indice_id+"&table="+new_value_col+"&table_savoir="+savoir_list;
+                    // Lien de redirection vers le fichier php
+                    var lien_url_updateposte = "./controllers/updatejoboffer.php?id="+indice_id
+
+                    // Récupère les valeur des 7 premiere valeur d'une ligne
+                    for (let i = 0; i <= 7; i++) {
+                        lien_url_updateposte += "&table"+i+"="+new_value_col[i]
+                    }
+
+                    // Récupère les valeur de la colonne savoir faire
+                    for (let i = 0; i <=indice_savoir_faire-1; i++){
+                        lien_url_updateposte += "&table_savoir"+i+"="+savoir_list_value[i]
+                    }
+
+                    // Redirection vers un fichier.php qui aura des paramètre en lien url
+                    window.location = lien_url_updateposte;
                 }
             </script>
 
@@ -222,28 +256,32 @@
                     <script type="text/javascript">
                         var zoneAjoutPieceCompte;
                         var nbPieceCompte=1;
+
+                        // Méthode qui rajoute une case de champ de texte pour le savoir faire
                         function ajouterPieceCompte(){
                             if(nbPieceCompte==1){ //si il s'agit du premier ajout
                                 zoneAjoutPieceCompte = document.getElementById('pieceCompteAjoute') //on séléctionne l'emplacement où on veux effectuer les ajouts de champs
                                 document.getElementById('supCompte').style.display='inline' //on rend disponible le bouton supprimer
                             }
 
-                            //on ajoute un nouveau champ
+                            // On ajoute un nouveau champ
                             var input = document.createElement("input");
                             input.type = "text";
                             input.name = "pieceCompteAjoute["+nbPieceCompte+"]";
                             input.id  = "knowledge_required_job_"+nbPieceCompte;
                             input.name = "knowledge_required_job_"+nbPieceCompte;
-                            input.placeholder = "Savoir faire "+nbPieceCompte;
+                            input.placeholder = "Savoir faire "+nbPieceCompte+"* :";
                             input.style = 'width: 300px;'
                             input.style.display = "block";
+                            input.required = true;
                             zoneAjoutPieceCompte.appendChild(input);
                             nbPieceCompte++;
                         }
 
+                        // Méthode qui enlève le dernier champ de texte de la partie savoir faire
                         function supprimerPieceCompte(){
                             nbPieceCompte--;
-                            zoneAjoutPieceCompte.removeChild(document.getElementById("knowledge_required_job_"+nbPieceCompte)) //on supprime le dernier champs ajouté
+                            zoneAjoutPieceCompte.removeChild(document.getElementById("knowledge_required_job_"+nbPieceCompte)) // on supprime le dernier champs ajouté
                             if(nbPieceCompte==1){
                                 document.getElementById('supCompte').style.display='none';// on rend indisponible le bouton supprimer
                             }

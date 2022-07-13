@@ -4,12 +4,25 @@ use Dotenv\Dotenv;
 
 require '../vendor/autoload.php';
 
+// Récupère les valeur venant de l'url
 $indice_id = $_GET['id'];
-$table_job = $_GET['table'];
-$table_savoir_job = $_GET['table_savoir'];
 
-$table_job_split = explode(",", $table_job);
-$table_savoir_job_split = explode(",", $table_savoir_job);
+$table_job_split = [];
+$table_savoir_job_split = [];
+$i = 0;
+
+for ($i = 0; $i <= 7; $i++){
+    $indice_table = 'table'.$i;
+    $table_job_split[$i] = $_GET[$indice_table];
+    echo "/" . $table_job_split[$i] . "/";
+}
+
+$y = 0;
+
+while ($_GET['table_savoir'.$y]){
+    $table_savoir_job_split[$y] = $_GET['table_savoir'.$y];
+    $y++;
+}
 
 $data = [];
 
@@ -33,8 +46,6 @@ while($table_savoir_job_split[$i]){
 }
 
 $dir = dirname(__DIR__, 1);
-// Remote directory
-// $dir = $_SERVER["DOCUMENT_ROOT"];
 $dotenv = Dotenv::createImmutable($dir);
 $dotenv->load();
 
@@ -44,41 +55,35 @@ $username = $_ENV["DB_USERNAME"];
 $password = $_ENV["DB_PASSWORD"];
 $db = $_ENV["DB_NAME"];
 
+// Supprime la ligne du tableau poste
 $conn = new mysqli($host,$username, $password,$db) ;
-
 $sql_req = 'DELETE FROM savoirs WHERE poste_id = "'.$indice_id.'";';
-
 $res = $conn->multi_query($sql_req);
 
-$value = 0;
-
+// Suppriment les ligne du tableau savoirs
 $conn = new mysqli($host,$username, $password,$db) ;
-
 $sql_req = 'DELETE FROM `poste` WHERE `poste`.`poste_id` = "'. $indice_id .'" ';
-
 $res = $conn->multi_query($sql_req);
 
+// Re insere une nouvelle ligne dans le tableau poste
 $conn = new mysqli($host,$username, $password,$db) ;
-
 $sql_req = 'INSERT INTO `poste` (`poste_id`, `titre`, `descriptif_poste`, 
                                  `profil_recherche`, `type_contrat`, `salaire`, 
                                  `experience_exigee`, `qualification`, `city`) 
             VALUES ("'.$indice_id.'", "'.$data['job_tittle'].'", "'.$data['job_description'].'",
                     "'.$data['job_profil'].'", "'.$data['job_contract'].'", "'.$data['job_salary'].'",
                     "'.$data['job_experience'].'", "'.$data['job_qualification'].'","'.$data['job_city'].'");';
-
 $res = $conn->multi_query($sql_req);
 
 $i = 0;
-$value = $indice_id . "_" . $i . "_job_savoir";
 
-while($data[$value]){
+// Pour chaque valeur qu'on récupérer pour les savoirs faire
+while($table_savoir_job_split[$i]){
 
+    // Re inserent dans le tableau de savoirs une ou plusieur ligne que nous avions supprimer avant
     $conn = new mysqli($host,$username, $password,$db) ;
-
     $sql_req = 'INSERT INTO `savoirs` (`savoirs_id`, `savoir_faire`, `poste_id`) 
-            VALUES (NULL, "'.$data[$value].'", "'.$indice_id.'");';
-
+            VALUES (NULL, "'.$table_savoir_job_split[$i].'", "'.$indice_id.'");';
     $res = $conn->multi_query($sql_req);
 
     $value = $indice_id . "_" . $i . "_job_savoir";
