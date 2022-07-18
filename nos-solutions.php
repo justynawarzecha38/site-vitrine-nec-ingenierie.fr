@@ -192,7 +192,7 @@ ET_1,
 --><li>Etude ACV</li><!--
 --><li>Calcul des déperditions</li><!--
 --><li>Optimisation et conseils</li><!--
---><li>Labels (E+C- / NF / Bâtiment durable...)</li><!--
+--><li>Labels (E+C- / NF / Bâtiment durable / HQE...)</li><!--
 --></ul>
 ET_2,
                     ],

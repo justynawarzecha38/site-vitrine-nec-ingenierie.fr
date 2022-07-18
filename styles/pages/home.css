@@ -58,7 +58,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 center;
-    width: 1854px;
+    width: 100%;
 }
 @media (max-width: 1500px) {
     .home-header-quote-picture {

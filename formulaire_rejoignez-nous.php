@@ -243,7 +243,7 @@
                     <input style='width: 300px;' type="text" id="tittle_job" name="tittle_job" placeholder="Titre du Poste à pourvoir* :" required/><br>
                     <input style='width: 300px;' type="text" id="adresse_job" name="adresse_job" placeholder="Adresse Ville* :" required/><br>
                     <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" id="description_job" name="description_job" placeholder="Descriptif* :" required></textarea><br>
-                    <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" id="profil_job" name="profil_job" placeholder="Profil rechercher* :" required></textarea><br>
+                    <textarea style='width: 300px; height: 100px; min-height: 100px' type="text" id="profil_job" name="profil_job" placeholder="Profil recherché* :" required></textarea><br>
 
                     <legend>Savoirs et savoir-faire :</legend>
 
@@ -289,8 +289,8 @@
                     </script>
 
                     <input style='width: 300px;' type="text" id="contract_job" name="contract_job" placeholder="Type de contrat* :" required/><br>
-                    <input style='width: 300px;' type="text" id="salary_job" name="salary_job" placeholder="Salaires* :" required/><br>
-                    <input style='width: 300px;' type="text" id="experience_job" name="experience_job" placeholder="Expèrience exigée* :" required/><br>
+                    <input style='width: 300px;' type="text" id="salary_job" name="salary_job" placeholder="Salaire* :" required/><br>
+                    <input style='width: 300px;' type="text" id="experience_job" name="experience_job" placeholder="Expérience exigée* :" required/><br>
                     <input style='width: 300px;' type="text" id="qualification_job" name="qualification_job" placeholder="Qualification* :" required/><br>
                     <input type="submit" id="button" value="submit"/>
                 </form>

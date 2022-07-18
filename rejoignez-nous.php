@@ -334,7 +334,7 @@ P_3,
             <div class="page-section-header text-center mb-50">
                 <!--h1 class="ttitle th1 mb-80">Offres d'emploi</h1-->
                 <h1 class="ttitle th1 mb-80">Postes à pourvoir</h1>
-                <p>Nous sommes toujours en recherche d'opportunité de collaboration avec de nouvelles personnes souhaitant s'investir dans une entreprise respectueuse des valeurs humaines, morales et environnementales. Si vous souhaitez nous rejoindre envoyer nous votre formulaire, nous étudions toutes propositions.</p>
+                <p>Nous sommes toujours en recherche d'opportunité de collaboration avec de nouvelles personnes souhaitant s'investir dans une entreprise respectueuse des valeurs humaines, morales et environnementales. Si vous souhaitez nous rejoindre envoyer nous votre CV via le formulaire, nous étudions toutes propositions.</p>
             </div>
             <!--<?php if(empty($job_ads_list)): ?>
                 <p class="text-muted text-center">Aucun poste n'est disponible pour l'instant.</p>
