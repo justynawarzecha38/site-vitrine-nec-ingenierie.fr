@@ -32,9 +32,6 @@ include_once('./includes/header.php');
                     <input  type="submit" class="btn btn-primary btn-lg tlink tfont-bold text-uppercase m-1"  name="button"  value="S'authentifier"  />
                 <?php elseif($_SESSION['acces'] == "no"): ?>
                     <input  type="submit" class="btn btn-primary btn-lg tlink tfont-bold text-uppercase m-1"  name="button"  value="S'authentifier"  />
-                <?php elseif ($_SESSION["acces"] == "yes"): ?>
-                    <input  type="submit" class="btn btn-primary btn-lg tlink tfont-bold text-uppercase m-1" name="button"  value="S'authentifier"  /><br>
-                    <input  type="submit" class="btn btn-primary btn-lg tlink tfont-bold text-uppercase m-1" name="button"  value="Se deconnecter"  />
                 <?php endif; ?>
             </form>
         </center>

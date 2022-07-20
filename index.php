@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
-<body class="flex-column-nowrap" style="overflow: hidden;">
-    <?php include_once('./includes/header.php'); ?>
+<body class="flex-column-nowrap" style="overflow: hidden;" onload="teste()">
+    <?php
+        session_start();
+        include_once('./includes/header.php'); ?>
     <main class="container-fluid flex-column-nowrap flex-adapt-height flex-scrollable p-0" style="overflow-x: hidden;">
 
         <?php
@@ -371,5 +373,10 @@
                 },
             }
         });
+    </script>
+    <script type="text/javascript">
+        window.onbeforeunload = function(){
+            alert('Vous devez vous déconnecter !');
+        }
     </script>
 </body>

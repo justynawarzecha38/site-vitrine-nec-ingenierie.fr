@@ -10,7 +10,8 @@
     <?php
 
     use Dotenv\Dotenv;
-
+    $main_title = 'Formulaire';
+    $main_nav_key = 'form';
     include_once('./includes/head.php');
     ?>
     <?php include_once('./includes/styles.php'); ?>
@@ -42,12 +43,6 @@
             $username = $_ENV["DB_USERNAME"];
             $password = $_ENV["DB_PASSWORD"];
             $db = $_ENV["DB_NAME"];
-
-            // accès base de donnée en local
-            /*$host = "localhost";
-            $username = "root";
-            $password = "";
-            $db = "new_energie_concept";*/
 
             $n = 0;
 
@@ -90,6 +85,13 @@
 
                 ];
             ?>
+            <?php if ($_SESSION["acces"] == "yes"): ?>
+                <center>
+                    <form  name="form" method="post" action="./controllers/verifie_connection.php">
+                        <input  type="submit" class="btn btn-primary btn-lg tlink tfont-bold text-uppercase m-1" name="button"  value="Se deconnecter de votre compte"  />
+                    </form>
+                </center>
+            <?php endif; ?>
             <?php if(!empty($job_offers_list)): ?>
             <h2>Liste des postes :</h2>
                 <table>

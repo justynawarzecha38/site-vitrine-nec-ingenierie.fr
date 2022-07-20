@@ -1,9 +1,11 @@
 <?php
+
     if(!isset($main_nav_key)) {
         $main_nav_key = '';
     }
 
-    $main_nav = [
+    if(empty($_SESSION['acces'])){
+        $main_nav = [
             'home' => ['title' => 'Accueil' , 'href' => './'],
             'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
             //'news' => ['title' => 'News', 'href' => './news.php'],
@@ -11,7 +13,41 @@
             'contact' => ['title' => 'Contact', 'href' => './contact.php'],
             'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],
             'connexion' => ['title' => 'Connexion', 'href' => './connection_formulaire.php'],
-    ];
+        ];
+    }
+    if(!empty($_SESSION['acces'])){
+        if($_SESSION['acces'] == "no"){
+            $main_nav = [
+                'home' => ['title' => 'Accueil' , 'href' => './'],
+                'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
+                //'news' => ['title' => 'News', 'href' => './news.php'],
+                'solutions' => ['title' => 'Nos solutions', 'href' => './nos-solutions.php'],
+                'contact' => ['title' => 'Contact', 'href' => './contact.php'],
+                'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],
+                'connexion' => ['title' => 'Connexion', 'href' => './connection_formulaire.php'],
+            ];
+        }elseif($_SESSION['acces'] == "yes"){
+            $main_nav = [
+                'home' => ['title' => 'Accueil' , 'href' => './'],
+                'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
+                //'news' => ['title' => 'News', 'href' => './news.php'],
+                'solutions' => ['title' => 'Nos solutions', 'href' => './nos-solutions.php'],
+                'contact' => ['title' => 'Contact', 'href' => './contact.php'],
+                'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],
+                'form' => ['title' => 'Formulaire', 'href' => './formulaire_rejoignez-nous.php'],
+            ];
+        }else{
+            $main_nav = [
+                'home' => ['title' => 'Accueil' , 'href' => './'],
+                'about' => ['title' => '&Agrave; propos', 'href' => './a-propos.php'],
+                //'news' => ['title' => 'News', 'href' => './news.php'],
+                'solutions' => ['title' => 'Nos solutions', 'href' => './nos-solutions.php'],
+                'contact' => ['title' => 'Contact', 'href' => './contact.php'],
+                'join-us' => ['title' => 'Rejoignez-nous', 'href' => './rejoignez-nous.php'],
+                'connexion' => ['title' => 'Connexion', 'href' => './connection_formulaire.php'],
+            ];
+        }
+    }
 ?>
 <nav id="page-navbar" class="navbar navbar-expand-lg fixed-top navbar-light">
     <div class="container-md">

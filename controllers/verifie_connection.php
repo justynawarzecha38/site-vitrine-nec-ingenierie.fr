@@ -30,7 +30,7 @@ if($data['submit'] == "S'authentifier") {
     $conn = new mysqli($host, $username, $password, $db);
     $data['iden'] = mysqli_real_escape_string($conn, $data['iden']);
     $data['password'] = mysqli_real_escape_string($conn, $data['password']);
-    $query = "SELECT * FROM `user` WHERE username = '" . $data['iden'] . "' and password='" . hash('sha256', $data['password']) . "' and role='admin'";
+    $query = "SELECT * FROM `user` WHERE username = '" . $data['iden'] . "' and password='" . hash('sha256', $data['password']) . "';";
 
     // Récupère le nombre de ligne
     $result = mysqli_query($conn, $query);
@@ -39,6 +39,7 @@ if($data['submit'] == "S'authentifier") {
     // Si ou trouve une ligne alors...
     if ($rows == 1) {
         $_SESSION['acces'] = "yes";
+        $_SESSION['iden'] = $data['iden'];
 
         $server_host = $_ENV["SERVER_HOST"];
 
@@ -47,8 +48,9 @@ if($data['submit'] == "S'authentifier") {
         $_SESSION['acces'] = "no";
         header("Location: http://localhost/site-vitrine-nec-ingenierie.fr/connection_formulaire.php");
     }
-} else if($data['submit'] == "Se deconnecter") {
+} else if($data['submit'] == "Se deconnecter de votre compte") {
     $_SESSION['acces'] = "no";
+
     header("Location: http://localhost/site-vitrine-nec-ingenierie.fr/connection_formulaire.php");
 }
 

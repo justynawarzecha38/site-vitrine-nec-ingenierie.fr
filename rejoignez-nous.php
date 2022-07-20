@@ -2,6 +2,8 @@
 
 use Dotenv\Dotenv;
 
+session_start();
+
 $input_data = $_POST;
 $data = [];
 $data['first_name'] = isset($input_data['first_name']) ? $input_data['first_name'] : "";
