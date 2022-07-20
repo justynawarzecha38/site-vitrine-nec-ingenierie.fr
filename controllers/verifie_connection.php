@@ -46,11 +46,11 @@ if($data['submit'] == "S'authentifier") {
         header("Location: $server_host");
     }else{
         $_SESSION['acces'] = "no";
-        header("Location: http://localhost/site-vitrine-nec-ingenierie.fr/connection_formulaire.php");
+        header("Location: ../connection_formulaire.php");
     }
 } else if($data['submit'] == "Se deconnecter de votre compte") {
     $_SESSION['acces'] = "no";
-
-    header("Location: http://localhost/site-vitrine-nec-ingenierie.fr/connection_formulaire.php");
+    $host = $_SERVER['HTTP_HOST'];
+    header("Location: ../connection_formulaire.php");
 }
 
