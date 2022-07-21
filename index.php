@@ -118,7 +118,7 @@
                 </div>
                 <div class="home-header-bottom page-container m-3">
                     <div class="home-header-bottom-card card flex-column align-items-center justify-content-center w-100 text-center text-white" style="background-color: #ED6939">
-                        <h1 class="home-header-bottom-title ttitle th4">NEW Économies de la Construction</h1>
+                        <h1 class="home-header-bottom-title ttitle th4">NEW Économie de la Construction</h1>
                         <!--p class="home-header-bottom-text th5 text-uppercase">Bureau d'études techniques spécialisé dans le contrôle<br class="d-none d-md-block"> sur site des différentes réglementations thermiques</p-->
                         <p class="home-header-bottom-text th5 text-uppercase">Bureau d'économie de la construction "Tout corps d'Etat"</p>
                     </div>
