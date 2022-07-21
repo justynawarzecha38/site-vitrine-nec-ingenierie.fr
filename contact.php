@@ -87,7 +87,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-12 align-self-end">
-                                        <img class="mx-auto d-block w-50 rounded" src="./images/france/carte_france_NEC.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte_france_NEC.svg'))) ?>" alt="Responsive image">
+                                        <img class="mx-auto d-block w-50 rounded" src="./images/france/carte_france_NEC.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte_france_NEC.png'))) ?>" alt="Responsive image">
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label">Agence<sup>*</sup></label>

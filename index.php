@@ -160,7 +160,7 @@
                 <div class="page-section-header text-center">
                     <h2 class="ttitle th1">Qui sommes-nous ?</h2>
                     <br>
-                    <img class="mx-auto d-block w-50 rounded" src="./images/france/carte_france_NEC.svg?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte_france_NEC.svg'))) ?>" alt="Responsive image">
+                    <img class="mx-auto d-block w-50 rounded" src="./images/france/carte_france_NEC.png?v=<?php echo(date("Y-m-d-H-i-s", filemtime('./images/france/carte_france_NEC.png'))) ?>" alt="Responsive image">
                 </div>
                 <div class="page-section-block text-center">
                     <p>Nous sommes basés à Lyon, Épinal et Paris, cela nous permet de rayonner sur la grande majorité du territoire
