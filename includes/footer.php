@@ -13,7 +13,7 @@
 </style>
 <aside id="aside-newsletter" class="page-section bg-quinary text-white py-4">
     <div class="page-container">
-        <form id="newsletter-register" action="./controllers/newsletter.php" method="post" class="row g-0">
+        <form name="form" method="post" action="./controllers/newsletter.php" class="row g-0">
             <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-4 text-center text-lg-start">
                 <div class="ttitle th4">Inscrivez-vous à notre newsletter</div>
                 <p class="tsize-xsmall">et soyez le premier à être informé de nos dernières actus, réalisations, etc...</p>
@@ -22,7 +22,7 @@
                 <div class="input-group h-100">
                     <input type="text" name="email" class="form-control flex-column flex-md-row" placeholder="Entrez votre email"
                            aria-label="Entrer votre email" aria-describedby="aside-newsletter-submit">
-                    <button type="submit" class="btn btn-primary btn-lg tlink tfont-bold text-uppercase px-5" id="aside-newsletter-submit">S'inscrire</button>
+                    <input type="submit" class="btn btn-primary btn-lg tlink tfont-bold text-uppercase px-5" id="aside-newsletter-submit" value="S'inscrire" />
                 </div>
             </div>
         </form>
