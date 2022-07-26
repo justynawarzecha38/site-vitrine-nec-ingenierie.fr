@@ -1,7 +1,7 @@
 <?php
 
     //$dir = explode('\controllers', __DIR__)[0];
-    $dir = $_SERVER["DOCUMENT_ROOT"] . "/site-vitrine-nec-ingenierie.fr";
+    $dir = $_SERVER["DOCUMENT_ROOT"];
     if (empty($_POST['email'])) {
         header('Content-type: application/json');
         echo json_encode([
