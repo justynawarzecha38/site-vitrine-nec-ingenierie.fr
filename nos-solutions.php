@@ -51,7 +51,7 @@
                         'title' => "Avant-projet définitif",
                         'text' => <<<"IF_1"
 <ul class="my-0"><!--
---><li>Vérification des plans et des besoins d'adaptation liés à l'implantation et à la circulation des équipements techniques</li><!--
+--><li>Vérification à des plans et des besoins d'adaptation liés à l'implantation et à la circulation des équipements techniques</li><!--
 --><li>Bilan de puissance électrique et prédimensionnement des bassins de rétention d'eaux pluviales</li><!--
 --></ul>
 IF_1,
