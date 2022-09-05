@@ -55,11 +55,7 @@
                 'adresse' => "1293 route de Lyon 38110 SAINT JEAN DE SOUDAIN",
                 'background-color' => "#ff595f",
             ],
-            [
-                'NEC' => 'NEW ENERGIE CARBONE',
-                'adresse' => "29 ter Rue des Forges 88000 CHANTRAINE",
-                'background-color' => "#e90001",
-            ],
+           
             [
                 'NEC' => 'NEW ENERGIE CONCEPT',
                 'adresse' => "1 rue Saint Nicolas 88000 EPINAL",
